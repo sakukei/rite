@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/* =Base
+-------------------------------------------------------------- */
+
+
+/* =item-single.php
+-------------------------------------------------------------- */
+
+select::-ms-expand {
+	display: none;
+}
+select {
+	height: 35px;
+	padding: 0 30px 0 8px;
+	background: url(images/select-arrow.png) center right 10px no-repeat;
+}

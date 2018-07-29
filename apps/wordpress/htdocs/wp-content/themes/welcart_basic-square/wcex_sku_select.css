@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+
+/* =item-single.php
+-------------------------------------------------------------- */
+
+.skuform dl.item-sku {
+	margin-bottom: 10px;
+}
+
+/* - .skubutton - */
+.service .item-info .skubutton {
+	margin-left: 0;
+}
+
+/* - dl,dt,dd - */
+dl.item-sku {
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+dl.item-sku dt,
+dl.item-sku dd {
+	width: auto;
+	display: block;
+}
+dl.item-sku dt {
+	margin-bottom: 5px;
+	padding: 0;
+	background: none;
+	border: none;
+}
+dl.item-sku dd {
+	margin-bottom: 10px;
+	padding-left: 0;
+	border: none;
+}
+dl.item-sku dd:last-child {
+	margin-bottom: 0;
+}
+
+/* - table - */
+table.item-sku {
+	border: none;
+}
+.item-sku th {
+	font-weight: normal;
+}
+
+/* - select - */
+.item-sku select {
+	width: 100%;
+	height: 40px;
+	padding: 0 2.14286em 0 .5714285em;
+	line-height: 40px;
+}
+
+
+/**
+ * 16.2 Tablet Small 740px
+ */
+@media screen and (min-width: 46.25em) {
+
+	/* -- table -- */
+	table.item-sku {
+		width: 100%;
+		border-collapse: collapse;	
+	}
+	.item-sku thead,
+	.item-sku tbody	{
+		position: static;
+	}
+	.item-info .item-sku th,
+	.item-info .item-sku tbody tr th,
+	.item-info .item-sku th:last-child,
+	.item-info .item-sku td,
+	.item-info .item-sku td:last-child {
+		border: 1px solid #dfdfdf;
+	}
+
+	/* =WCEX Auto Delivery
+	-------------------------------------------------------------- */
+	
+	#wc_regular dl.item-sku dt,
+	#wc_regular dl.item-sku dd {
+		float: none;
+	}
+
+}

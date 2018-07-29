@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* =WCEX Slide Showcase
+-------------------------------------------------------------- */
+
+.jcarousel-skin-welcart_1 .jcarousel-container {
+	background: none;
+}
+
+.jcarousel-container .thumtitle,
+.jcarousel-container .price {
+	font-weight: bold;
+}
+.jcarousel-container .thumtitle {
+	margin: 10px 0;
+	text-align: left;
+}
+.jcarousel-container .price {
+	text-align: right;	
+}
+
+/* -- vertical -- */
+#secondary .jcarousel-container-vertical,
+.sidebar .jcarousel-container-vertical {
+	clear: both;
+	width: 230px !important;
+	margin-top: 0;
+	margin-bottom: 15px;
+	padding: 10px !important;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.jcarousel-container-vertical li {
+	float: none !important;
+}
+.jcarousel-container-vertical li img {
+	width: 150px;
+	height: auto;
+}
+
+/**
+ * 16.4 Desktop Small 1000px
+ */
+@media screen and (min-width: 62.5em) {}

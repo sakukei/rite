@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/* =Cart
+-------------------------------------------------------------- */
+
+/* -- #wc_delivery -- */
+
+/* - table - */
+#multi_cart_table{
+	margin: 0 15px;
+}
+#cart_table td.msa-destination,
+#cart_table td.msa-postage-title,
+#cart_table td.msa-postage-detail {
+	background-color: #fff;
+}
+
+/* - customer form - */
+
+/* - dialog - */
+#new_alloc_button,
+#memberinfo .msa_area .return_navi a,
+.ui-widget-content .go_destination a,
+#determine, #new_alloc_button,
+input[type=button].allocation_edit_button{
+	padding: 0 20px;
+	border: none;
+	line-height: 40px
+}
+#determine,
+input[type=button].allocation_edit_button {
+	-webkit-transition: .3s ease all;
+	-moz-transition: .3s ease all;
+	-o-transition: .3s ease all;
+}
+input[type=button].allocation_delete_button {
+	border: none;
+	line-height: 40px;
+}
+.ui-dialog .ui-dialog-buttonpane {
+	border: none;
+	border-top: 1px solid #ddd;
+}
+.ui-dialog.allocation select#destination {
+	width: auto;
+}
+#allocation_newarea .msa_table th,
+#allocation_newarea .msa_table td {
+	border: none;
+}
+
+/* =Member
+-------------------------------------------------------------- */
+
+/* -- #wc_member_msa -- */
+
+/* - table - */
+#wc_member_msa table {
+	width: 100%;
+}
+#wc_member_msa table th,
+#wc_member_msa table td {
+	display: block;
+	font-weight: normal;
+	padding: 10px 15px;
+	border: none;
+}
+#wc_member_msa table th {
+	background-color: #fafafa;
+}
+#wc_member_msa table .space {
+	display: none;
+}
+
+/* - .msa_area - */
+#wc_member_msa h3 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 30px 0 10px;
+}
+/* - #new_destination - */
+#new_destination {
+	padding: 0 20px;
+	border: none;
+}
+/* - .return_navi - */
+.return_navi a {
+	display: block;
+	padding: 0 20px;
+	border: none;
+	text-align: center;
+	line-height: 40px;
+}
+/* - .allocation_dialog_exp - */
+.allocation_dialog_exp {
+	margin: 10px 0 0;
+}
+/* - .msa_field - */
+.msa_field_block .msa_field {
+	padding: 10px 0;
+	border-top: none;
+	border-bottom: 1px solid #ddd;
+}
+.msa_field_block .msa_field label {
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+/* - .msa_field_block - */
+.msa_field_block .msa_title {
+	margin: 0;
+	padding: 0 0 15px;
+	border-bottom: 1px solid #ddd;
+}
+/* - #destination_title - */
+#destination_title {
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+/* - textarea input text select - */
+.msa_area textarea,
+.msa_area input[type="text"] {
+	padding: 0 10px;
+}
+.msa_operation #destination,
+.msa_area select {
+	margin: 0;
+	padding: 0 2.14286em 0 .5714285em;
+	line-height: 40px;
+}
+.msa_operation #destination option {
+	background-color: #fff;
+}
+.member-page input[type=button].search-zipcode {
+	margin: 0 5px;
+	padding: 0 20px;
+}
+/* - #msa_button - */
+#msa_button {
+	border-top: none;
+}
+#add_destination,
+#edit_destination {
+	padding: 0 20px;
+	border: none;
+}
+#cancel_destination,
+#del_destination {
+	padding: 0 30px;
+	border: none;
+}
+#AllAllocationPDF,
+#del_destination,
+#cancel_destination,
+.allocation_delete_button {
+	background-color: #efefef;
+}
+#del_destination:hover,
+#cancel_destination:hover,
+.allocation_delete_button:hover {
+	background-color: #ddd;
+}
+
+
+/**
+ * 16.2 Tablet Small 740px
+ */
+@media screen and (min-width: 46.25em) {
+
+	/* =Cart
+	-------------------------------------------------------------- */
+
+	#multi_cart_table {
+		margin: 0;
+	}
+	.msa_area .msa_total,
+	.msa_area .msa_operation {
+		margin: 0;
+	}
+	#wc_member_msa h3 {
+		margin: 40px 0 20px;
+	}
+	#new_destination {
+		display: block;
+		width: auto;
+		margin: 0;
+	}
+	.return_navi {
+		margin: 0;
+		top: 20px;
+	}
+	.allocation_dialog_exp {
+		margin: 20px 0 0;
+	}
+	.msa_field_block .msa_title {
+		padding: 0 0 15px;
+	}
+	.msa_field_block .msa_field {
+		padding: 20px 0;
+	}
+	.msa_field #msa_company,
+	.msa_field #msa_address1,
+	.msa_field #msa_address2,
+	.msa_field #msa_address3,
+	.msa_field #msa_note {
+		width: 60%;
+	}
+	.msa_field #msa_name,
+	.msa_field #msa_name2,
+	.msa_field #msa_furigana,
+	.msa_field #msa_furigana2 {
+		width: 20%;
+	}
+	.msa_operation #destination {
+		display: block;
+	}
+	
+	/* =Member
+	-------------------------------------------------------------- */
+
+	.return_navi a {
+		display: inline-block;
+	}
+	
+
+}
+
+/**
+ * 16.2 Tablet Small 740px
+ */
+@media screen and (min-width: 55em) {
+
+	/* =Cart
+	-------------------------------------------------------------- */
+	#wc_member_msa table {
+		margin-bottom: 30px;
+	}
+	#wc_member_msa table th,
+	#wc_member_msa table td,
+	#wc_member_msa table .space {
+		display: table-cell;
+		border: 1px solid #ddd;
+	}
+}

@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* = Theme Customizer
+-------------------------------------------------------------- */
+#accordion-section-title_tagline #customize-control-control_facebook_id,
+#accordion-section-title_tagline #customize-control-control_twitter_id,
+#accordion-section-title_tagline #customize-control-control_instagram_id,
+#accordion-section-welcart_basic_design #customize-control-h_itemcat,
+#accordion-section-welcart_basic_design #customize-control-h_itemnum,
+#accordion-section-welcart_basic_design #customize-control-control_display_soldout,
+#accordion-section-welcart_basic_design #customize-control-control_display_inquiry,
+#accordion-section-welcart_basic_design #customize-control-control_display_inquiry_text,
+#accordion-section-welcart_basic_design #customize-control-control_inquiry_link,
+#accordion-section-welcart_basic_design #customize-control-control_continue_shopping_button,
+#accordion-section-welcart_basic_design #customize-control-control_display_info,
+#accordion-section-welcart_basic_design #customize-control-info_cat {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+#accordion-section-welcart_basic_design #customize-control-info_cat {
+	padding-bottom: 10px;
+}
+#accordion-section-title_tagline .customize-control,
+#accordion-section-welcart_basic_design .customize-control {
+	padding-bottom: 15px;
+}
+#customize-control-control_facebook_id:before,
+#customize-control-control_display_soldout:before,
+#customize-control-control_review:before,
+#customize-control-control_continue_shopping_button:before,
+#customize-control-control_display_info:before,
+#customize-control-control_cat_image:before {
+	display: block;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+#accordion-section-welcart_basic_design #customize-control-control_display_inquiry_text,
+#accordion-section-welcart_basic_design #customize-control-control_continue_shopping_url,
+#accordion-section-welcart_basic_design #customize-control-info_cat,
+#accordion-section-welcart_basic_design #customize-control-info_num {
+	-webkit-box-sizing: inherit; 
+	-moz-box-sizing: inherit;
+	box-sizing: inherit; 
+	padding-left: 1.45rem;
+}
+
+/* = Category Term Meta
+-------------------------------------------------------------- */
+.wcct-image-uploader .thumbnail-form {
+	overflow: hidden;
+}
+.wcct-image-uploader .thumbnail-form input,
+.wcct-image-uploader .thumbnail-form button {
+	float: left;
+}
+.wcct-image-uploader .thumbnail-form input {
+	width: 70%;
+}
+.wcct-image-uploader .wcct-tag-thumbnail-preview {
+	padding: 1px;
+}
+.wcct-image-uploader .wcct-tag-thumbnail-preview img {
+	width: 100%;
+	height: auto;
+}
+.edit-form-field .wcct-tag-thumbnail-preview img {
+	width: 50%;
+}

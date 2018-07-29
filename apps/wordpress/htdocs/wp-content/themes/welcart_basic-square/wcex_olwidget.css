@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+#secondary .widget_wcex_olwidget tr {
+	background-color: #fff;
+}
+#secondary .widget_wcex_olwidget tr:nth-child(odd) {
+	background-color: #f2f2f2;
+}
+#secondary .widget_wcex_olwidget td {
+	border: 1px solid #ddd;
+}
+

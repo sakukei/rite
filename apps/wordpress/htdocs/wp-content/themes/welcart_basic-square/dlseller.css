@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* =wc_item_single_.php
+-------------------------------------------------------------- */
+
+/* -- table.dlseller -- */
+
+#itempage table.dlseller {
+	margin: 20px 0 0;
+	border: 1px solid #ddd;
+}
+#itempage table.dlseller th,
+#itempage table.dlseller td {
+	background-color: #fff;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	vertical-align: middle;
+}
+#itempage table.dlseller th {
+	white-space: normal;
+	font-weight: bold;
+	width: auto;
+}
+
+/* -- .field_frequency -- */
+.field_frequency {
+	color: #fff;
+	display: inline-block;
+	line-height: 20px;
+	padding: 0 10px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+/* =Cart-page + Member-page
+-------------------------------------------------------------- */
+
+#dlseller_terms .dlseller_terms {
+	width: 100%;
+	overflow: visible;
+	overflow-y: scroll;
+}
+
+/* -- download-btn -- */
+#memberinfo table.retail .redownload_link a {
+	display: inline-block;
+	margin-top: 5px;
+	background: #fff;
+}
+
+/* =wc_completion_page.php
+-------------------------------------------------------------- */
+
+#wc_ordercompletion .dllist .thumb {
+	float: none;
+	padding: 0;
+	border: none;
+}
+#cart_completion .item_info_list,
+.download .item_info_list {
+	width: 100%;
+	margin: 0 auto;
+}
+#wc_ordercompletion a.redownload_button {
+	color: #d3222a;
+	background: none;
+	border: 1px solid #d3222a;
+}
+#wc_ordercompletion a.redownload_button:hover {
+	color: #fff;
+	background-color: #d3222a;	
+}
+
+
+/**
+ * 16.4 Desktop Small 1000px
+ */
+@media screen and (min-width: 62.5em) {
+
+	/* =wc_completion_page.php
+	-------------------------------------------------------------- */
+	
+	#wc_ordercompletion .dllist .thumb {
+		float: left;
+	}
+	#cart_completion .item_info_list,
+	.download .item_info_list {
+		width: auto;
+		margin: 0 0 0 210px;
+	}
+
+	
+}
+
+/**
+ * 16.6 Desktop Large 1240px
+ */
+@media screen and (min-width: 77.5em) {}
