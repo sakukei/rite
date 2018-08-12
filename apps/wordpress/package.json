@@ -1,0 +1,14 @@
+{
+  "name": "wordpress",
+  "version": "1.0.0",
+  "description": "ここに説明",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node-sass src/css/main.scss wp-content/themes/welcart_basic-square/main.css --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
