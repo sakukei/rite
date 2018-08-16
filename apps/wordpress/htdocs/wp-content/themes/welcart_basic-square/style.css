@@ -144,6 +144,7 @@ caption {
 html, body { min-height: 100%; }
 
 body {
+	border: none !important;
 	overflow: hidden;
 }
 
@@ -204,8 +205,20 @@ body {
 -------------------------------------------------------------- */
 
 header {
-	margin-bottom: 10px;
-	padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none !important;
+	margin-bottom: 0;
+}
+
+.header-logo {
+    display: inline-block;
+    width: 120px;
+}
+
+.header-logo img {
+    max-width: 100%;
 }
 
 /* -- .site-description -- */
@@ -264,9 +277,9 @@ div.site-title img {
 
 /* -- .menu-bar -- */
 .menu-bar {
-	position: absolute;
-	bottom: 8px;
-	right: 55px;
+	/*position: absolute;*/
+	/*bottom: 8px;*/
+	/*right: 55px;*/
 }
 .menu-trigger,
 .menu-trigger span {
@@ -418,18 +431,18 @@ div.site-title img {
 
 /* -- #mobile-menu -- */
 #mobile-menu {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width:70%;
-	padding: 20px;
-	background-color: rgba( 255,255,255,1);
-	border-left: 3px solid #f6f6f6;
-	transition-duration: .8s;
-	-webkit-transition-duration: .8s;
-	-moz-transition-duration: .8s;
-	z-index: 4;
+	/*display: block;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*left: -100%;*/
+	/*width:70%;*/
+	/*padding: 20px;*/
+	/*background-color: rgba( 255,255,255,1);*/
+	/*border-left: 3px solid #f6f6f6;*/
+	/*transition-duration: .8s;*/
+	/*-webkit-transition-duration: .8s;*/
+	/*-moz-transition-duration: .8s;*/
+	/*z-index: 4;*/
 }
 .display-desc #mobile-menu {
 	top: -25px;
@@ -506,6 +519,7 @@ div.site-title img {
 
 /* -- #site-navigation -- */
 #site-navigation {
+    display: none;
 	padding: 20px 0;
 	border-bottom: 1px solid #ececec;
 }
@@ -1324,7 +1338,7 @@ p.no-date {
 		padding: 10px 20px 0;
 	}
 	header {
-		padding: 10px 20px;
+		/*padding: 10px 20px;*/
 	}
 	.display-desc #mobile-menu {
 		top: -30px;
@@ -1333,7 +1347,7 @@ p.no-date {
 		right: 20px;
 	}
 	.menu-bar {
-		right: 60px;
+		/*right: 60px;*/
 	}
 
 
@@ -1474,14 +1488,7 @@ p.no-date {
 	-------------------------------------------------------------- */
 
 	header {
-		width: 230px;
-		float: left;
-		margin: 0 0 15px;
-		padding: 0;
-		background-color: #fff;
-		border-radius: 8px;
-		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-		box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+		/*padding: 20px;*/
 	}
 
 	/* -- .site-description -- */
@@ -1519,15 +1526,20 @@ p.no-date {
 		min-width: inherit;
 		min-width: initial;
 		float: right;
-		margin: 0 0 20px;
 		z-index: 2;
 	}
 	.incart-btn a {
+        width: 145px;
+        height: 36px;
+        line-height: 36px;
 		padding: 0;
-		background: none;
+        border-radius: 6px;
+		background: #FF9B75;
+        box-shadow: 0 1px 2px 0 #CFABAB;
+        color: #fff;
 	}
 	.incart-btn a:hover {
-		background: none;
+		/*background: none;*/
 	}
 	.incart-btn i {
 		color: #fff;
@@ -1552,14 +1564,14 @@ p.no-date {
 		display: none;	
 	}
 	#mobile-menu {
-		position: relative;
-		left: 0;
-		width: auto;
-		height: auto !important;
-		padding: 0;
-		background: none;
-		border: none;
-		z-index: 1;
+		/*position: relative;*/
+		/*left: 0;*/
+		/*width: auto;*/
+		/*height: auto !important;*/
+		/*padding: 0;*/
+		/*background: none;*/
+		/*border: none;*/
+		/*z-index: 1;*/
 	}
 	.display-desc #mobile-menu {
 		top: 0;
@@ -1587,7 +1599,7 @@ p.no-date {
 	.snav .search-box form,
 	.snav .membership ul {
 		position: absolute;
-		padding: 20px;
+		/*padding: 20px;*/
 		-webkit-transition-duration: .5s;
 		-moz-transition-duration: .5s;
 		transition-duration: .5s;
@@ -1614,41 +1626,43 @@ p.no-date {
 		color: #fff;
 		font-size: 20px;
 		width: 76.6667px;
-		border-right: 1px solid #aaa;
+		/*border-right: 1px solid #aaa;*/
 		text-align: center;
 	}
 	.snav .search-box form {
-		display: none;
+		display: inline-block;
 		position: absolute;
 		top: 100%;
 		right: auto;
 		left: 50%;
 		width: auto;
 		height: auto !important;
-		padding: 10px;
 		background: none;
 		border: none;
 		border-radius: 0;
-		opacity: 0;
-		z-index: 3;
+		/*opacity: 0;*/
+		/*z-index: 3;*/
 	}
 	.snav .search-box .s-box { 
-		box-shadow: 0 5px 7px 0 rgba(0,0,0,0.22);
+		/*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);*/
+        border: 1px solid #979797;
+        border-radius: 3px;
 	}
 	.snav .search-box.On form {
 		display: block;
 	}
 	.search-box input[type="text"] {
 		height: 44px;;
-		padding: 0 45px 0 10px;
+		padding: 0 10px 0 45px;
 		background-color: #fff;
 		line-height: 44px;
 	}
 	.search-box #searchsubmit {
 		position: absolute;
+        left: 0;
 		width: auto;
 		height: 44px;
-		color: #fff;
+		color: #D8D8D8 !important;
 		padding: 0 15px;
 		line-height: 44px;
 		-moz-box-shadow: none;
@@ -1888,14 +1902,16 @@ p.no-date {
 	-------------------------------------------------------------- */
 	
 	#main {
+        display: flex;
 		width: 100%;
 		position: relative;
 		margin: 0;
+        padding: 40px 0 0;
 	}
 	#primary {
 		width: 100%;
-		float: right;
-		margin-left: -230px;
+		/*float: right;*/
+		/*margin-left: -230px;*/
 	}
 	#content {
 		width: 100%;
@@ -1914,7 +1930,7 @@ p.no-date {
 	/* -- .two-column -- */
 	#main.two-column #content {
 		width: 100%;
-		padding-left: 238px;
+		/*padding-left: 238px;*/
 	}
 	.two-column .column-wrap {
 		position: relative;
