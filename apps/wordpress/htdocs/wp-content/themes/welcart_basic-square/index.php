@@ -6,7 +6,6 @@
 
 get_header(); ?>
 
-    <p class="contents-title">あなたへのおすすめ</p>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 		

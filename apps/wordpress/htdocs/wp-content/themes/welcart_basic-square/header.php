@@ -31,6 +31,10 @@
 		
 		<header id="masthead" class="site-header" role="banner">
 
+            <div class="l-inner">
+
+                <div class="header-column">
+
             <div id="mobile-menu">
 
                 <div class="snav">
@@ -79,33 +83,42 @@
 
 
 			<?php if(! welcart_basic_is_cart_page()): ?>
-			
-			<div class="incart-btn">
-				<?php if(! defined( 'WCEX_WIDGET_CART' ) ): ?>
-					<a href="<?php echo USCES_CART_URL; ?>" class="header-incart-btn">
-                        カートを見る
-<!--                    <i class="fa fa-shopping-cart"></i><span class="total-quant" id="widgetcart-total-quant">--><?php //usces_totalquantity_in_cart(); ?><!--</span>-->
-                    </a>
-				<?php else: ?>
-					<i class="fa fa-shopping-cart widget-cart"></i><span class="total-quant" id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
 
-					<div class="view-cart">
-						<ul class="wcex_widgetcart_body ucart_widget_body"><li>
-							<?php if( usces_is_login() && usces_is_membersystem_point() ): ?>
-							<div id="wgct_point">
-							<span class="wgct_point_label"><?php _e('Your member points', 'widgetcart'); ?></span> : <span class="wgct_point"><?php usces_memberinfo( 'point' ); ?></span>pt
-							</div>
-							<?php endif; ?>
-							<div id="wgct_row">
-							<?php echo widgetcart_get_cart_row(); ?>
-							</div>
-						</li></ul>
-					</div><!-- .view-cart -->
-					<div id="wgct_alert"></div>
+            <div class="header-link-block">
+
+                <div class="header-link-wrap">
+                    <p class="header-link"><a href="">お問い合わせ</a></p>
+                    <p class="header-link"><a href="">ご利用ガイド</a></p>
+                </div>
+
+                <div class="incart-btn">
+                    <?php if(! defined( 'WCEX_WIDGET_CART' ) ): ?>
+                        <a href="<?php echo USCES_CART_URL; ?>" class="header-incart-btn">
+                            カートを見る
+    <!--                    <i class="fa fa-shopping-cart"></i><span class="total-quant" id="widgetcart-total-quant">--><?php //usces_totalquantity_in_cart(); ?><!--</span>-->
+                        </a>
+                    <?php else: ?>
+                        <i class="fa fa-shopping-cart widget-cart"></i><span class="total-quant" id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
+
+                        <div class="view-cart">
+                            <ul class="wcex_widgetcart_body ucart_widget_body"><li>
+                                <?php if( usces_is_login() && usces_is_membersystem_point() ): ?>
+                                <div id="wgct_point">
+                                <span class="wgct_point_label"><?php _e('Your member points', 'widgetcart'); ?></span> : <span class="wgct_point"><?php usces_memberinfo( 'point' ); ?></span>pt
+                                </div>
+                                <?php endif; ?>
+                                <div id="wgct_row">
+                                <?php echo widgetcart_get_cart_row(); ?>
+                                </div>
+                            </li></ul>
+                        </div><!-- .view-cart -->
+                        <div id="wgct_alert"></div>
 
 
-				<?php endif; ?>
-			</div>
+                    <?php endif; ?>
+                </div>
+
+            </div>
 
 
 			<div class="menu-bar">
@@ -119,6 +132,10 @@
 
 			
 			<?php endif; ?>
+
+                </div>
+
+            </div>
 				
 	
 		</header><!-- #masthead -->
@@ -150,4 +167,5 @@
 		?>
 	
 		<div id="main" class="cf <?php echo $class;?>">
-		
+            <div class="l-inner">
+                <div class="contents-column">

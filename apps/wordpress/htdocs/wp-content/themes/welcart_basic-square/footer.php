@@ -1,5 +1,7 @@
 
-		</div><!-- #main -->
+            </div><!-- .contents-column -->
+        </div><!-- .l-inner -->
+    </div><!-- #main -->
 
 		<?php if(! wp_is_mobile()): ?>
 		
@@ -9,6 +11,10 @@
 		
 		
 		<footer id="colophon" role="contentinfo">
+
+            <div class="l-inner">
+
+                <div class="footer-column">
 		
 			<nav id="site-info" class="footer-navigation cf">
 				<?php
@@ -36,10 +42,15 @@
 				<?php endif; ?>
 	
 			</ul><!-- sns -->
+                <p class="copyright"><?php usces_copyright(); ?></p>
 			</div><!-- sns-wrapper -->
 			<?php endif; ?>
 			
-			<p class="copyright"><?php usces_copyright(); ?></p>
+
+
+                </div>
+
+            </div>
 		
 		</footer><!-- #colophon -->
 
