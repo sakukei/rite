@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 	<div id="primary" class="site-content">
+        <p class="contents-title">あなたへのおすすめ</p>
 		<div id="content" role="main">
 
 		<div class="column-wrap">

@@ -44,6 +44,13 @@
                         <?php get_search_form(); ?>
                     </div>
 
+                    <?php
+                    $page_c	=	get_page_by_path('usces-cart');
+                    $page_m	=	get_page_by_path('usces-member');
+                    $pages	=	"{$page_c->ID},{$page_m->ID}";
+                    wp_nav_menu(array( 'theme_location' => 'header', 'exclude' => $pages , 'menu_class' => 'header-menu cf' ));
+                    ?>
+
 
                     <!--					--><?php //if(usces_is_membersystem_state()): ?>
                     <!--					<div class="membership">-->
@@ -78,7 +85,7 @@
 
             </div><!-- #mobile-menu -->
 
-            <div class="header-logo"><img src="/wp-content/themes/welcart_basic-square/images/header-logo.jpg" alt="rite"></div>
+                    <div class="header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="/wp-content/themes/welcart_basic-square/images/header-logo.jpg" alt="rite"></a></div>
 
 
 
@@ -87,8 +94,8 @@
             <div class="header-link-block">
 
                 <div class="header-link-wrap">
-                    <p class="header-link"><a href="">お問い合わせ</a></p>
-                    <p class="header-link"><a href="">ご利用ガイド</a></p>
+                    <p class="header-link"><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">お問い合わせ</a></p>
+                    <p class="header-link"><a href=<?php echo esc_url( home_url( '/guide/' ) ); ?>">ご利用ガイド</a></p>
                 </div>
 
                 <div class="incart-btn">
