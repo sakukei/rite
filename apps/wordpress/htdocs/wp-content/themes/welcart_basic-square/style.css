@@ -1103,14 +1103,18 @@ footer nav a {
 
 /* -- .post-info-wrap -- */
 .post-info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 	padding: 10px;
 }
 .post-info-wrap .post-title a {
-	font-weight: bold;
-    letter-spacing: 1px;	
+    font-size: 16px;
+    color: #111;	
 }
 .post-info-wrap .post-excerpt {
 	font-size: 12px;
+    color: #5e5e5e;
 	margin-top: 10px;
 }
 .post-info-wrap .post-date {
@@ -1132,6 +1136,28 @@ footer nav a {
 }
 .post-info-wrap .post-cat:before {
 	content: "\f02d";
+}
+.post-info-wrap .post-character {
+    width: 70%;
+}
+.post-info-wrap .post-contributor {
+    width: 25%;
+    padding-left: 5%;
+}
+.post-info-wrap .post-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+}
+.post-info-wrap .post-icon img {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.post-info-wrap .post-name {
+    padding-top: 6px;
+    text-align: center;
+    font-size: 10px;
 }
 
 /* -- .pagination -- */
@@ -2034,7 +2060,7 @@ p.no-date {
 	}
 	/* -- .post-info-wrap -- */
 	.post-info-wrap {
-		padding: 10px 15px;
+		padding: 12px;
 	}
 	
 	/* -- .opt-tag -- */

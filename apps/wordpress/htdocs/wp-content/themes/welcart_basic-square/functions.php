@@ -172,3 +172,4 @@ function wcct_excerpt_more( $more ) {
 	return '…';
 }
 add_filter( 'excerpt_more', 'wcct_excerpt_more' );
+
