@@ -173,5 +173,11 @@ function wcct_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'wcct_excerpt_more' );
 
+
+
+/***********************************************************
+ * 追加
+ ***********************************************************/
+
 // 記事の自動整形を無効化
 remove_filter('the_content', 'wpautop');
