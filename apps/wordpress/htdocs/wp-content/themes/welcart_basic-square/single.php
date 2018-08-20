@@ -24,7 +24,7 @@ get_header(); ?>
 						<div class="feedback">
 						<?php wp_link_pages(); ?>
 						</div>
-						<?php comments_template( '', true ); ?>
+<!--						--><?php //comments_template( '', true ); ?>
 						</div><!-- .comment-area -->
 					
 					<?php endif; ?>
@@ -38,7 +38,7 @@ get_header(); ?>
 				</div><!-- column -->
 			</div><!-- column-wrap -->	
 
-			<?php get_sidebar('other'); ?>
+<!--			--><?php //get_sidebar('other'); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

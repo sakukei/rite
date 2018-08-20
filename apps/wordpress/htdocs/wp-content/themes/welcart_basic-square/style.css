@@ -599,7 +599,7 @@ header div.header-nav-container {
 	padding: 20px 0 10px;
 }
 #secondary section {
-    margin-bottom: 10px;
+    margin-bottom: 0;
     padding: 10px;
     background-color: #fff;
     /*border: 1px solid #ddd;*/
@@ -614,7 +614,7 @@ header div.header-nav-container {
 	font-size: 14px;
     font-weight: normal;
 	margin-bottom: 15px;
-	padding: 0 0 10px 10px;
+	padding: 0 0 8px 4px;
 	border-bottom: 1px solid #909090;
 	letter-spacing: .5px;
 }

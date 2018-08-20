@@ -135,10 +135,16 @@ get_header(); ?>
 										<div class="thumb-img"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
 										<?php endif; ?>
 										<div class="post-info-wrap">
-											<div class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-											<div class="post-excerpt"><?php the_excerpt(); ?></div>
-											<div class="post-cat"><?php the_category(',') ?></div>
-											<div class="post-date"><?php the_date(); ?></div>
+                                            <div class="post-character">
+                                                <div class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                                                <div class="post-excerpt"><?php the_excerpt(); ?></div>
+                                            </div>
+                                            <!--<div class="post-cat">--><?php //the_category(',') ?><!--</div>-->
+                                            <!--<div class="post-date">--><?php //the_date(); ?><!--</div>-->
+                                            <div class="post-contributor">
+                                                <div class="post-icon"><?php echo get_avatar( $id_or_email, 48, $default, $alt, $args ); ?></div>
+                                                <div class="post-name"><?php echo get_the_author(); ?></div>
+                                            </div>
 										</div><!-- post-info-wrap -->
 									</div><!-- inner -->
 								</article>

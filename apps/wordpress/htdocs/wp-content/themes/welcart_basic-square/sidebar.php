@@ -7,6 +7,7 @@
 global $usces; ?>
 
 <aside id="secondary" class="widget-area cf" role="complementary">
+    <p class="contents-title">カテゴリーから検索</p>
 
 <?php if ( ! dynamic_sidebar( 'side-widget-area1' ) ): ?>
 
