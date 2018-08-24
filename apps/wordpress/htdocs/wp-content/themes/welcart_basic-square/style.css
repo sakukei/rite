@@ -587,7 +587,7 @@ header div.header-nav-container {
 /* =primary
 -------------------------------------------------------------- */
 #primary {
-    padding: 0 10px;
+    /*padding: 0 10px;*/
 }
 
 
@@ -935,7 +935,7 @@ footer nav a {
 .home #content,
 .search #content,
 .category #content {
-	padding: 0 5px 10px;
+	padding: 0 0 10px;
 }
 .column {
 	width: 100%;
@@ -1455,6 +1455,110 @@ p.no-date {
     background: transparent;
     border-left: solid 5px #4682B4;
     font-size: 16px;
+}
+
+.contents-column {
+    padding-top: 10px;
+}
+
+#main {
+    background: #f7f7f7;
+}
+
+/* inner */
+.l-inner {
+    padding: 10px;
+}
+
+/* TOPメイン */
+.top-main {
+    display: block;
+}
+.main-article {
+    width: 100%;
+}
+.main-article + .main-article {
+    padding-top: 20px;
+}
+.main-img {
+    width: 100%;
+    margin: 0 auto;
+}
+.main-content {
+    background: #fff;
+}
+.main-content-inner {
+    padding: 20px 10px 10px;
+}
+.main-content-title {
+    display: inline-block;
+    font-size: 16px;
+}
+.main-content-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-content-lead {
+    width: 70%;
+    font-size: 12px;
+}
+.main-contributor {
+    position: relative;
+    top: 50%;
+    padding-top: 0;
+}
+.main-contributor-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-icon {
+    text-align: center;
+}
+.main-name {
+    padding-top: 10px;
+}
+
+
+/* ピックアップ */
+.pickup {
+    display: block;
+}
+.pickup-img {
+    padding-right: 5px;
+}
+.pickup-content {
+    background: #fff;
+}
+.pickup-content-inner {
+    padding: 20px 10px 10px;
+}
+.pickup-content-title {
+    font-size: 16px;
+}
+.pickup-content-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pickup-content-lead {
+    width: 70%;
+    font-size: 12px;
+}
+.pickup-contributor {
+    padding-top: 20px;
+}
+.pickup-contributor-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pickup-article + .pickup-article {
+    padding-top: 20px;
+}
+.pickup-name {
+    padding-left: 10px;
 }
 
 
@@ -2079,8 +2183,8 @@ p.no-date {
 		/*margin-left: -230px;*/
 	}
 	#content {
-		width: 100%;
-		float: right;
+		width: 95%;
+		/*float: right;*/
 		margin-right: 0;
 		padding: 0;
 	}
@@ -2108,7 +2212,7 @@ p.no-date {
 
 	/*-- sidebar -- */
 	#content .sidebar {
-		float: right;
+		/*float: right;*/
 		width: 230px;
 		margin: 0;
 		padding: 0;
@@ -2183,6 +2287,9 @@ p.no-date {
     .main-article {
         width: 33%;
         flex-direction: column;
+    }
+    .main-article + .main-article {
+        padding-top: 0;
     }
     .main-img {
         width: 100%;

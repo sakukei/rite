@@ -18,7 +18,7 @@
                         <div class="main-content-inner">
                             <p class="main-content-title"><?php the_title(); ?></p>
                             <div class="main-content-column">
-                                <p class="main-content-lead"><?php the_content(); ?></p>
+                                <p class="main-content-lead"><?php echo wp_trim_words( get_the_content(), 55, '...' ); ?></p>
                                 <div class="main-contributor">
                                     <div class="main-icon contributor-icon">
                                         <?php echo get_avatar( $id_or_email, 48, $default, $alt, $args ); ?>
@@ -219,7 +219,7 @@
                                         <div class="pickup-content-inner">
                                             <p class="pickup-content-title"><?php the_title(); ?></p>
                                             <div class="pickup-content-column">
-                                                <p class="pickup-content-lead"><?php the_content(); ?></p>
+                                                <p class="pickup-content-lead"><?php echo wp_trim_words( get_the_content(), 120, '...' ); ?></p>
                                                 <div class="pickup-contributor">
                                                     <div class="pickup-contributor-column">
                                                         <div class="pickup-icon contributor-icon">
