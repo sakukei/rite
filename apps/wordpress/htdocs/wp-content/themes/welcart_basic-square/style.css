@@ -850,6 +850,18 @@ header div.header-nav-container {
 		line-height: 35px;
 	}
 
+    /* tag clud */
+    .wp-tag-cloud {
+
+    }
+    .wp-tag-cloud li {
+        display: inline-block;
+        width: 48%;
+    }
+    .wp-tag-cloud li:nth-child(n+2) {
+        padding-top: 20px;
+    }
+
 /* =footer
 -------------------------------------------------------------- */
 
@@ -1613,7 +1625,7 @@ p.no-date {
 	}
 
     .l-inner {
-        max-width: 1500px;
+        max-width: 968px;
         margin: 0 auto;
     }
 
