@@ -2192,8 +2192,8 @@ p.no-date {
 		/*margin: 0 254px 0 238px;*/
 	}
 	.column {
-		margin: 0 8px;
-		float: left;
+		/*margin: 0 8px;*/
+		/*float: left;*/
 	}
 
 	/* -- .two-column -- */
@@ -2314,7 +2314,7 @@ p.no-date {
         font-size: 12px;
     }
     .main-contributor {
-        padding-top: 20px;
+        /*padding-top: 20px;*/
     }
     .main-contributor-column {
         display: flex;
@@ -2354,6 +2354,7 @@ p.no-date {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 20px;
     }
     .pickup-content-lead {
         width: 70%;
