@@ -184,14 +184,14 @@
                         $posts = get_posts( $args );
                         if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); ?>
                         <article id="post-<?php the_ID(); ?>" class="post pickup-article">
-							<div class="pickup">
-								<div class="pickup-img">
-                                    <?php the_post_thumbnail('thumbnail'); ?>
-								</div>
-								<div class="pickup-content">
-									<a href="<?php the_permalink(); ?>">
-										<div class="pickup-content-inner">
-										    <p class="pickup-content-title"><?php the_title(); ?></p>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="pickup">
+                                    <div class="pickup-img">
+                                        <?php the_post_thumbnail('thumbnail'); ?>
+                                    </div>
+                                    <div class="pickup-content">
+                                        <div class="pickup-content-inner">
+                                            <p class="pickup-content-title"><?php the_title(); ?></p>
                                             <div class="pickup-content-column">
                                                 <p class="pickup-content-lead"><?php the_content(); ?></p>
                                                 <div class="pickup-contributor">
@@ -205,10 +205,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-										</div>
-									</a>
-								</div>
-							</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </article>
 							<?php endforeach; ?>
 							<?php else : //記事が無い場合 ?>
