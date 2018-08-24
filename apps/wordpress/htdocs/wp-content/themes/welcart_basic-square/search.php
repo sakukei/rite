@@ -6,6 +6,9 @@
 
 get_header(); ?>
 
+<!--　TOP2カラム　-->
+<div class="contents-column">
+
 	<section id="primary" class="site-content">
 		<div id="content" role="main">
 
@@ -84,6 +87,7 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
+    <?php get_sidebar(); ?>
+</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

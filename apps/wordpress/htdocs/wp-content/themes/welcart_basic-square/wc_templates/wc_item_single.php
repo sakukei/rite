@@ -16,7 +16,8 @@ default://shipped
 
 get_header();
 ?>
-
+<!--　TOP2カラム　-->
+<div class="contents-column">
 <div id="primary" class="site-content">
 	<div id="content" class="cf" role="main">
 
@@ -176,8 +177,10 @@ get_header();
 
 	</div><!-- #content -->
 </div><!-- #primary -->
+    <?php get_sidebar(); ?>
+</div>
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
 
 <?php endswitch; ?>

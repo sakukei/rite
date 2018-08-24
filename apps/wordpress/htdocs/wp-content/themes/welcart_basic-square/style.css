@@ -1955,6 +1955,7 @@ p.no-date {
 	-------------------------------------------------------------- */
 
 	#main #secondary {
+        float: right;
 		position: relative;
 		width: 230px;
 		margin: 0;
@@ -2084,7 +2085,7 @@ p.no-date {
 		padding: 0;
 	}
 	.column-wrap {
-		margin: 0 254px 0 238px;
+		/*margin: 0 254px 0 238px;*/
 	}
 	.column {
 		margin: 0 8px;
