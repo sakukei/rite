@@ -172,7 +172,7 @@ get_header();
 			</div><!-- column -->
 		</div><!-- column-wrap -->	
 		
-		<?php get_sidebar('item'); ?>
+<!--		--><?php //get_sidebar('item'); ?>
 
 	</div><!-- #content -->
 </div><!-- #primary -->
