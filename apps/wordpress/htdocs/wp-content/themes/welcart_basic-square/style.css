@@ -2069,6 +2069,7 @@ p.no-date {
 
     .contents-column {
         display: flex;
+        padding-top: 36px;
 
     }
 	#primary {
@@ -2170,6 +2171,55 @@ p.no-date {
         border-left: solid 5px #4682B4;
         font-size: 16px;
     }
+
+    /* TOPメイン */
+    .top-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    .main-article {
+        width: 33%;
+        flex-direction: column;
+    }
+    .main-img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main-content {
+        background: #fff;
+    }
+    .main-content-inner {
+        padding: 20px 10px 10px;
+    }
+    .main-content-title {
+        font-size: 16px;
+    }
+    .main-content-column {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-content-lead {
+        width: 70%;
+        font-size: 12px;
+    }
+    .main-contributor {
+        padding-top: 20px;
+    }
+    .main-contributor-column {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-icon {
+        text-align: center;
+    }
+    .main-name {
+        padding-top: 10px;
+    }
+
 
     /* ピックアップ */
     .pickup {

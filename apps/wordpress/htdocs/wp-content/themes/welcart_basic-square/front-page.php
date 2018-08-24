@@ -1,25 +1,47 @@
 <?php get_header(); ?>
 
-<ul>
-	<?php $args = array(
+<div class="top-main">
+    <?php $args = array(
         'numberposts' => 5,                //表示（取得）する記事の数
         'post_type' => 'top_main'    //投稿タイプの指定
     );
     $posts = get_posts( $args );
     if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); ?>
-	<li>
-		<a href="<?php the_permalink(); ?>">
-			<?php the_title(); ?>
-		</a>
-	</li>
-	<?php endforeach; ?>
-	<?php else : //記事が無い場合 ?>
-	<li>
-		<p>記事はまだありません。</p>
-	</li>
-	<?php endif;
+        <article id="post-<?php the_ID(); ?>" class="post main-article">
+            <a href="<?php the_permalink(); ?>">
+                <div class="main">
+                    <div class="main-img">
+                        <?php the_post_thumbnail('thumbnail'); ?>
+                    </div>
+                    <div class="main-content">
+                        <div class="main-content-inner">
+                            <p class="main-content-title"><?php the_title(); ?></p>
+                            <div class="main-content-column">
+                                <p class="main-content-lead"><?php the_content(); ?></p>
+                                <div class="main-contributor">
+                                    <div class="main-icon contributor-icon">
+                                        <?php echo get_avatar( $id_or_email, 48, $default, $alt, $args ); ?>
+                                    </div>
+                                    <div class="main-name">
+                                        <?php echo get_the_author(); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </article>
+    <?php endforeach; ?>
+    <?php else : //記事が無い場合 ?>
+        <div>
+            <p>記事はまだありません。</p>
+        </div>
+    <?php endif;
     wp_reset_postdata(); //クエリのリセット ?>
-</ul>
+
+</div>
+
 <div class="contents-column">
 
 	<div id="primary" class="site-content">
