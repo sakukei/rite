@@ -172,7 +172,7 @@
 				
 			};
 		?>
-	
+
 		<div id="main" class="cf <?php echo $class;?>">
             <div class="l-inner">
-                <div class="contents-column">
+<!--                <div class="contents-column">-->

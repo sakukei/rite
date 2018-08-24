@@ -182,20 +182,20 @@ add_filter( 'excerpt_more', 'wcct_excerpt_more' );
 // 記事の自動整形を無効化
 remove_filter('the_content', 'wpautop');
 
-// カスタム投稿タイプ
-function cptui_register_my_cpts() {
+// カスタム投稿タイプ - ピックアップ記事 -
+function cptui_register_my_cpts_top_pickup() {
 
     /**
-     * Post Type: pickup.
+     * Post Type: top_pickup.
      */
 
     $labels = array(
-        "name" => __( "pickup", "" ),
-        "singular_name" => __( "pickup", "" ),
+        "name" => __( "top_pickup", "" ),
+        "singular_name" => __( "top_pickup", "" ),
     );
 
     $args = array(
-        "label" => __( "pickup", "" ),
+        "label" => __( "top_pickup", "" ),
         "labels" => $labels,
         "description" => "",
         "public" => true,
@@ -210,12 +210,51 @@ function cptui_register_my_cpts() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => array( "slug" => "pickup", "with_front" => true ),
+        "rewrite" => array( "slug" => "top_pickup", "with_front" => true ),
         "query_var" => true,
         "supports" => array( "title", "editor", "thumbnail" ),
     );
 
-    register_post_type( "pickup", $args );
+    register_post_type( "top_pickup", $args );
 }
 
-add_action( 'init', 'cptui_register_my_cpts' );
+add_action( 'init', 'cptui_register_my_cpts_top_pickup' );
+
+// カスタム投稿タイプ - メイン記事 -
+function cptui_register_my_cpts_top_main() {
+
+    /**
+     * Post Type: top_main.
+     */
+
+    $labels = array(
+        "name" => __( "top_main", "" ),
+        "singular_name" => __( "top_main", "" ),
+    );
+
+    $args = array(
+        "label" => __( "top_main", "" ),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => false,
+        "rest_base" => "",
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "top_main", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "editor", "thumbnail" ),
+    );
+
+    register_post_type( "top_main", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_top_main' );
+

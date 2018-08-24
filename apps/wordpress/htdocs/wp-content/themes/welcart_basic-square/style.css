@@ -2171,6 +2171,50 @@ p.no-date {
         font-size: 16px;
     }
 
+    /* ピックアップ */
+    .pickup {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .pickup-img {
+        padding-right: 5px;
+    }
+    .pickup-content {
+        background: #fff;
+    }
+    .pickup-content-inner {
+        padding: 20px 10px 10px;
+    }
+    .pickup-content-title {
+        font-size: 16px;
+    }
+    .pickup-content-column {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pickup-content-lead {
+        width: 70%;
+        font-size: 12px;
+    }
+    .pickup-contributor {
+        padding-top: 20px;
+    }
+    .pickup-contributor-column {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pickup-article + .pickup-article {
+        padding-top: 20px;
+    }
+    .pickup-name {
+        padding-left: 10px;
+    }
+
+
+
 	/* category.php
 	-------------------------------------------------------------- */
 
@@ -2308,3 +2352,11 @@ p.no-date {
  * 16.6 Desktop Large 1240px
  */
 @media screen and (min-width: 1500px) {}
+
+
+/* 共通 */
+.contributor-icon img {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
