@@ -858,7 +858,7 @@ header div.header-nav-container {
         display: inline-block;
         width: 48%;
     }
-    .wp-tag-cloud li:nth-child(n+2) {
+    .wp-tag-cloud li:nth-child(n+3) {
         padding-top: 20px;
     }
 
@@ -1969,7 +1969,7 @@ p.no-date {
 	#secondary h3 {
 		margin-bottom: 10px;
 	}
-	#secondary section:last-child {
+	#secondary section {
 		margin-bottom: 0;
 		padding: 15px;
 	}

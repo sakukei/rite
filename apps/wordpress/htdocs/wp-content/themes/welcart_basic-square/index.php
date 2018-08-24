@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
+    <div id="primary" class="site-content">
 		<div id="content" role="main">
 		
 		<div class="column-wrap">
@@ -61,6 +61,9 @@ get_header(); ?>
 		</div><!-- .column-wrap -->			
 		</div><!-- #content -->
 	</div><!-- #primary -->
+
+
+
 
 
 <?php get_sidebar(); ?>
