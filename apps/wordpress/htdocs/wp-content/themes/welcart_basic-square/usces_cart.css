@@ -246,9 +246,9 @@
 	padding: 0;
 }
 .item-info .zaikostatus {
-	float: none;
+	float: left;
 	margin-bottom: 5px;
-	text-align: right;
+	text-align: left;
 }
 .item-info .field_price {
 	font-size: 20px;
@@ -264,20 +264,31 @@
 	letter-spacing: normal;
 }
 .item-info .c-box {
-	margin-top: 5px;
+	margin-top: 15px;
 	padding: 0;
 }
 
 /* -- .quantity -- */
+.item-info .quantity {
+	display: block;
+	text-align: left;
+}
+
 .quantity select {
 	width: auto;
-	height: 50px;
+	height: 30px;
 	font-size: 16px;
 	margin-left: 5px;
-	padding: 0 30px 0 20px;
+	padding: 0 20px;
 	text-align: right;
-	line-height: 50px;
+	line-height: 30px;
 	border-radius: 3px;
+}
+
+.item-info .cart-button {
+	display: block;
+	padding-top: 40px;
+	text-align: center;
 }
 
 /* -- .skubutton -- */
@@ -285,6 +296,7 @@
 	height: 50px;
 	padding: 0 30px;
 	line-height: 50px;
+	background: #FF9B75!important;
 }
 
 /* -- .itemsoldout -- */
@@ -349,7 +361,7 @@
 #tab .item-description,
 #tab #wc_reviews {
 	margin-bottom: 0;
-	padding-top: 30px;
+	padding-top: 10px;
 }
 
 /* - .item-description - */
@@ -1176,7 +1188,7 @@ div.footer_explanation .send {
 		margin: 0;
 	}
 	.detail-box .item-name {
-		font-size: 16px;	
+		font-size: 18px;
 	}
 	/* -- .item-info -- */
 	.item-info .skuform {
@@ -1212,7 +1224,8 @@ div.footer_explanation .send {
 		margin: 10px 0 20px;
 	}
 	.item-info .field_price {
-		margin-bottom: 0;
+		margin-bottom: 20px;
+		color: #FF9B75!important;
 	}
 
 	/* -- #tab -- */

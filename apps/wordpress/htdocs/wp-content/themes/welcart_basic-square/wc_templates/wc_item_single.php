@@ -23,7 +23,7 @@ get_header();
 
 		<div class="column-wrap">
 
-		<h1 class="item_page_title"><?php the_title(); ?></h1>
+<!--		<h1 class="item_page_title">--><?php //the_title(); ?><!--</h1>-->
 
 			<div class="column">
 
@@ -62,8 +62,8 @@ get_header();
 		
 							<div id="item-box">
 								<div class="detail-box">
-									<h2 class="item-name"><?php usces_the_itemName(); ?></h2>
-									<div class="itemcode"><?php usces_the_itemCode(); ?></div>
+									<h1 class="item-name"><?php usces_the_itemName(); ?></h1>
+<!--									<div class="itemcode">--><?php //usces_the_itemCode(); ?><!--</div>-->
 	
 									<?php wcct_produt_tag(); ?>
 									<?php welcart_basic_campaign_message(); ?>
@@ -129,6 +129,21 @@ get_header();
 												<div class="itemsoldout"><?php echo apply_filters( 'usces_filters_single_sku_zaiko_message', __('At present we cannot deal with this product.','welcart_basic') ); ?></div>
 												<?php endif; ?>
 											<?php else : ?>
+
+                                            <div id="tab">
+                                                <ul class="tab-list cf">
+                                                    <li><?php _e('Product Details', 'welcart_basic_square'); ?></li>
+                                                    <?php if(wcct_get_options('review')): ?>
+                                                        <li><?php _e('Review', 'welcart_basic_square'); ?><span class="review-num">（ <?php echo get_comments_number(); ?> ）</span></li>
+                                                    <?php endif; ?>
+                                                </ul>
+
+                                                <div class="item-description tab-box">
+                                                    <?php the_content(); ?>
+                                                </div>
+                                                <?php if( wcct_get_options( 'review' ) ) comments_template( '/wc_templates/wc_review.php', false ); ?>
+                                            </div>
+
 											<div class="c-box">
 												<span class="quantity"><?php _e('Quantity', 'usces'); ?><?php wcct_the_itemQuant_select(); ?><?php usces_the_itemSkuUnit(); ?></span>
 												<span class="cart-button"><?php usces_the_itemSkuButton( wcct_get_options('cart_button'), 0 ); ?></span>
@@ -145,19 +160,19 @@ get_header();
 								</div><!-- .item-info -->
 							</div><!-- #item-box -->
 							
-							<div id="tab">
-								<ul class="tab-list cf">
-									<li><?php _e('Product Details', 'welcart_basic_square'); ?></li>
-									<?php if(wcct_get_options('review')): ?>
-									<li><?php _e('Review', 'welcart_basic_square'); ?><span class="review-num">（ <?php echo get_comments_number(); ?> ）</span></li>
-									<?php endif; ?>
-								</ul>
-								
-								<div class="item-description tab-box">
-									<?php the_content(); ?>
-								</div>
-								<?php if( wcct_get_options( 'review' ) ) comments_template( '/wc_templates/wc_review.php', false ); ?>		
-							</div>
+<!--							<div id="tab">-->
+<!--								<ul class="tab-list cf">-->
+<!--									<li>--><?php //_e('Product Details', 'welcart_basic_square'); ?><!--</li>-->
+<!--									--><?php //if(wcct_get_options('review')): ?>
+<!--									<li>--><?php //_e('Review', 'welcart_basic_square'); ?><!--<span class="review-num">（ --><?php //echo get_comments_number(); ?><!-- ）</span></li>-->
+<!--									--><?php //endif; ?>
+<!--								</ul>-->
+<!--								-->
+<!--								<div class="item-description tab-box">-->
+<!--									--><?php //the_content(); ?>
+<!--								</div>-->
+<!--								--><?php //if( wcct_get_options( 'review' ) ) comments_template( '/wc_templates/wc_review.php', false ); ?>
+<!--							</div>-->
 		
 							<?php usces_assistance_item( $post->ID, __('An article concerned', 'usces') ); ?>
 		

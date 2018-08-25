@@ -12,7 +12,7 @@
             <a href="<?php the_permalink(); ?>">
                 <div class="main">
                     <div class="main-img">
-                        <?php the_post_thumbnail('thumbnail'); ?>
+                        <?php the_post_thumbnail(array(313, 313)); ?>
                     </div>
                     <div class="main-content">
                         <div class="main-content-inner">

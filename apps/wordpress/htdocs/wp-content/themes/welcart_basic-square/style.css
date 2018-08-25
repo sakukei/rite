@@ -1301,6 +1301,7 @@ p.no-date {
 }
 .product-title {
     padding-left: 0!important;
+    margin-bottom: 10px!important;
     border-left: none!important;
     font-size: 18px;
     font-weight: bold!important;
