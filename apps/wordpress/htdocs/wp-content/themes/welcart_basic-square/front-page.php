@@ -11,8 +11,8 @@
         <article id="post-<?php the_ID(); ?>" class="post main-article">
             <a href="<?php the_permalink(); ?>">
                 <div class="main">
-                    <div class="main-img">
-                        <?php the_post_thumbnail(array(313, 313)); ?>
+                    <div class="main-img thumb">
+                        <?php the_post_thumbnail('full'); ?>
                     </div>
                     <div class="main-content">
                         <div class="main-content-inner">
@@ -218,7 +218,7 @@
                                 <a href="<?php the_permalink(); ?>">
                                     <div class="pickup">
                                         <div class="pickup-img">
-                                            <?php the_post_thumbnail(array(100, 100)); ?>
+                                            <?php the_post_thumbnail(array(100,100)); ?>
                                         </div>
                                         <div class="pickup-content">
                                             <div class="pickup-content-inner">

@@ -2499,7 +2499,7 @@ p.no-date {
 	/* -- .post-li -- */
 	.post-li .grid-sizer,
 	.post-li .grid-item {
-		width: 25%;
+		/*width: 25%;*/
 	}
 
 	/* =search.php
@@ -2507,7 +2507,7 @@ p.no-date {
 
 	/* -- .search-li -- */
 	.search-li .grid-item {
-		width: 25%;
+		/*width: 25%;*/
 	}
 
 }
@@ -2524,4 +2524,14 @@ p.no-date {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
+}
+
+.thumb {
+    text-align: center;
+}
+.thumb img {
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
 }
