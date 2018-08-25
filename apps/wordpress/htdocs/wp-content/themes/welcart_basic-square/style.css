@@ -1499,6 +1499,7 @@ p.no-date {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 10px;
 }
 .main-content-lead {
     width: 70%;
@@ -2300,7 +2301,7 @@ p.no-date {
         background: #fff;
     }
     .main-content-inner {
-        padding: 20px 10px 10px;
+        padding: 20px 10px;
     }
     .main-content-title {
         font-size: 16px;
@@ -2332,7 +2333,8 @@ p.no-date {
 
     /* ピックアップ */
     .top-pickup {
-        padding-top: 30px;
+        width: 95%;
+        /*padding-top: 30px;*/
     }
     .pickup {
         display: flex;
@@ -2346,7 +2348,7 @@ p.no-date {
         background: #fff;
     }
     .pickup-content-inner {
-        padding: 20px 10px 10px;
+        padding: 10px;
     }
     .pickup-content-title {
         font-size: 16px;
@@ -2355,7 +2357,7 @@ p.no-date {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 20px;
+        padding-top: 10px;
     }
     .pickup-content-lead {
         width: 70%;

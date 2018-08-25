@@ -46,7 +46,7 @@ get_header(); ?>
                                     <!--<div class="post-cat">--><?php //the_category(',') ?><!--</div>-->
                                     <!--<div class="post-date">--><?php //the_date(); ?><!--</div>-->
                                     <div class="post-contributor">
-                                        <div class="post-icon"><?php echo get_avatar( $id_or_email, 48, $default, $alt, $args ); ?></div>
+                                        <div class="post-icon"><?php echo get_avatar( get_the_author_meta( 'ID' ), 30 ); ?></div>
                                         <div class="post-name"><?php echo get_the_author(); ?></div>
                                     </div>
 								</div><!-- post-info-wrap -->

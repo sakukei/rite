@@ -117,7 +117,7 @@ function wcct_enqueue_styles() {
 
 	wp_enqueue_style( 'parent-style', $template_dir . '/style.css' );
 	wp_enqueue_style( 'parent-welcart-style', $template_dir . '/usces_cart.css', array(), '1.0' );
-	
+
 	if( defined( 'WCEX_MSA_VERSION' ) ) {
 		wp_enqueue_style( 'parent-msa', $template_dir . '/wcex_multi_shipping.css', array('msa_style'), WCEX_MSA_VERSION, false );	
 	}
@@ -257,4 +257,18 @@ function cptui_register_my_cpts_top_main() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts_top_main' );
+
+// Gravator
+function validate_gravatar($email) {
+    // 使われる URL を作成しヘッダーをテスト
+    $hash = md5($email);
+    $uri = 'http://www.gravatar.com/avatar/' . $hash . '?d=404';
+    $headers = @get_headers($uri);
+    if (!preg_match("|200|", $headers[0])) {
+        $has_valid_avatar = FALSE;
+    } else {
+        $has_valid_avatar = TRUE;
+    }
+    return $has_valid_avatar;
+}
 

@@ -14,7 +14,7 @@
             <?php if ( is_single() ): ?>
                 <div class="entry-meta">
                     <div class="entry-contributor">
-                        <div class="entry-icon"><?php echo get_avatar( $id_or_email, 48, $default, $alt, $args ); ?></div>
+                        <div class="entry-icon"><?php echo get_avatar( get_the_author_meta( 'ID' ), 46 ); ?></div>
                         <div class="entry-name"><?php echo get_the_author(); ?></div>
                     </div>
     <!--<span class="date"><time>--><?php //the_date(); ?><!--</time></span>-->
