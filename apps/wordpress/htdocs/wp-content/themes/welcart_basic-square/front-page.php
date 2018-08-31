@@ -228,7 +228,7 @@
                                                     <div class="pickup-contributor">
                                                         <div class="pickup-contributor-column">
                                                             <div class="pickup-icon contributor-icon">
-                                                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 46 ); ?>
+                                                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 30 ); ?>
                                                             </div>
                                                             <div class="pickup-name">
                                                                 <?php echo get_the_author(); ?>

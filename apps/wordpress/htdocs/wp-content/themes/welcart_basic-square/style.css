@@ -219,6 +219,8 @@ header {
     display: inline-block;
     width: 120px;
 	margin: 0 auto;
+	position: relative;
+	left: auto;
 }
 
 .header-logo img {
@@ -1247,6 +1249,9 @@ p.no-date {
 }
 
 /* -- .entry-thumb -- */
+.entry-thumb {
+	margin-bottom: 14px;
+}
 .entry-thumb img {
 	width: 100%;
 	height: auto;
@@ -1262,6 +1267,14 @@ p.no-date {
 	margin-bottom: 10px;
 	padding-left: 0;
 	border-left: none;
+}
+
+.entry-icon {
+	text-align: center;
+}
+
+.entry-icon img {
+	border-radius: 100px;
 }
 
 /* -- .entry-content -- */
@@ -1280,7 +1293,7 @@ p.no-date {
 	margin-right: .1em;
 }
 .entry-content p {
-    font-size: 16px;
+    font-size: 14px;
 	line-height: 160%;
 }
 .entry-content a {
@@ -1779,6 +1792,10 @@ p.no-date {
         display: block;
     }
 
+	.header-logo {
+		left: 70px;
+	}
+
     .header-menu {
         display: none;
     }
@@ -2262,6 +2279,7 @@ p.no-date {
 		padding: 0;
 	}
 	#content .entry-title {
+		width: 85%;
         margin-bottom: 0;
 		font-size: 24px;
         font-weight: normal;
@@ -2451,6 +2469,7 @@ p.no-date {
 
 	/* -- .entry-meta -- */
 	.entry-meta {
+		width: 15%;
 		margin-bottom: 46px;
         border-left: none;
 	}
