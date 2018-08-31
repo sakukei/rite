@@ -238,6 +238,10 @@ header {
     font-size: 11px;
 }
 
+.header-contact {
+	display: block;
+}
+
 .header-menu {
     display: block;
 }
@@ -1798,6 +1802,10 @@ p.no-date {
     .header-link {
         display: block;
     }
+
+	.header-contact {
+		display: none;
+	}
 
 	.header-logo {
 		left: 70px;

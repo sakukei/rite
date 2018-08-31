@@ -50,7 +50,7 @@
                     $pages	=	"{$page_c->ID},{$page_m->ID}";
                     wp_nav_menu(array( 'theme_location' => 'header', 'exclude' => $pages , 'menu_class' => 'header-menu cf' ));
                     ?>
-                    <ul>
+                    <ul class="header-contact">
                         <li><a href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda" target="_blank">お問い合わせ</a></li>
                     </ul>
 
