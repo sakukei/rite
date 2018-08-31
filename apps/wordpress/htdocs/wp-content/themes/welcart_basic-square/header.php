@@ -85,7 +85,7 @@
 
             </div><!-- #mobile-menu -->
 
-                    <div class="header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/header-logo.jpg" alt="rite"></a></div>
+                    <div class="header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/header-logo.png" alt="rite"></a></div>
 
 
 
