@@ -218,7 +218,7 @@
                                 <a href="<?php the_permalink(); ?>">
                                     <div class="pickup">
                                         <div class="pickup-img">
-                                            <?php the_post_thumbnail(array( 'class' => 'pickup-thumbnail' )); ?>
+                                            <?php the_post_thumbnail('full'); ?>
                                         </div>
                                         <div class="pickup-content">
                                             <div class="pickup-content-inner">
@@ -228,7 +228,7 @@
                                                     <div class="pickup-contributor">
                                                         <div class="pickup-contributor-column">
                                                             <div class="pickup-icon contributor-icon">
-                                                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 30 ); ?>
+                                                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 46 ); ?>
                                                             </div>
                                                             <div class="pickup-name">
                                                                 <?php echo get_the_author(); ?>

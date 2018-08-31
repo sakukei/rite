@@ -1466,7 +1466,7 @@ p.no-date {
 }
 
 .contents-column {
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 #main {
@@ -1535,13 +1535,17 @@ p.no-date {
     display: block;
 }
 .pickup-img {
-    padding-right: 5px;
+	width: 100%;
+    padding-right: 0;
 }
 .pickup-img img {
+	width: auto;
+	height: auto;
 	max-width: 100%;
 	max-height: 100%;
 }
 .pickup-content {
+	width: 100%;
     background: #fff;
 }
 .pickup-content-inner {
@@ -1554,24 +1558,30 @@ p.no-date {
     display: flex;
     justify-content: space-between;
     align-items: center;
+	padding-top: 10px;
 }
 .pickup-content-lead {
     width: 70%;
     font-size: 12px;
 }
 .pickup-contributor {
-    padding-top: 20px;
+    padding-top: 0;
 }
 .pickup-contributor-column {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
 }
 .pickup-article + .pickup-article {
     padding-top: 20px;
 }
+.pickup-icon {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
 .pickup-name {
-    padding-left: 10px;
+	padding-top: 10px;
+    padding-left: 0;
+	text-align: center;
 }
 
 /* 記事内画像 */
@@ -2367,9 +2377,11 @@ p.no-date {
         align-items: stretch;
     }
     .pickup-img {
+		width: 20%;
         padding-right: 5px;
     }
     .pickup-content {
+		width: 80%;
         background: #fff;
     }
     .pickup-content-inner {
@@ -2400,6 +2412,7 @@ p.no-date {
         padding-top: 10px;
     }
     .pickup-name {
+		padding-top: 0;
         padding-left: 10px;
     }
 	.pickup-thumbnail {
