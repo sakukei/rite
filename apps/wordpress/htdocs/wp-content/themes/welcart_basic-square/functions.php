@@ -179,9 +179,6 @@ add_filter( 'excerpt_more', 'wcct_excerpt_more' );
  * 追加
  ***********************************************************/
 
-// 記事の自動整形を無効化
-remove_filter('the_content', 'wpautop');
-
 // カスタム投稿タイプ - ピックアップ記事 -
 function cptui_register_my_cpts_top_pickup() {
 

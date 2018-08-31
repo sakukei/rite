@@ -243,7 +243,7 @@
 
 /* -- .field -- */
 .item-info .field {
-	padding: 0;
+	padding: 0 0 20px;
 }
 .item-info .zaikostatus {
 	float: left;
@@ -264,7 +264,7 @@
 	letter-spacing: normal;
 }
 .item-info .c-box {
-	margin-top: 15px;
+	margin-top: 20px;
 	padding: 0;
 }
 
