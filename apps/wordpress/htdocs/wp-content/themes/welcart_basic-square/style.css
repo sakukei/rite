@@ -597,7 +597,7 @@ header div.header-nav-container {
 -------------------------------------------------------------- */
 
 #secondary {
-	margin: 0 10px;
+	margin: 0;
 	padding: 20px 0 10px;
 }
 #secondary section {
