@@ -3,11 +3,9 @@
 Template Name: 固定ページ
 */
 ?>
-    <h1>固定ページの新規テンプレートです。</h1>
-<?php
-if(have_posts()): while(have_posts()): the_post();?>
-    <h2><?php the_title(); ?></h2>
+<!-- ヘッダー -->
+<?php get_header(); ?>
 
-    <?php the_content(); ?>
 
-<?php endwhile; endif; ?>
+<!--　フッター　-->
+<?php get_footer(); ?>
