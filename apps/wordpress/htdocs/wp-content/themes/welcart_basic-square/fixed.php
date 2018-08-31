@@ -9,8 +9,10 @@ Template Name: 固定ページ
 <?php
 if(have_posts()): while(have_posts()): the_post();?>
 
-    <?php the_content(); ?>
-
+    <?php remove_filter(‘the_content’, ‘wpautop’); ?>
+    <div class="fixed-bg">
+        <?php the_content(); ?>
+    </div>
 <?php endwhile; endif; ?>
 
 <!--　フッター　-->

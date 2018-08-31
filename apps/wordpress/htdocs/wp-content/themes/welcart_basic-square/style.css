@@ -2586,6 +2586,11 @@ p.no-date {
 		color: #fff;
 	}
 
+	/* 固定ページテンプレート */
+	.fixed-bg {
+		padding: 36px 24px;
+		background: #fff;
+	}
 }
 
 
