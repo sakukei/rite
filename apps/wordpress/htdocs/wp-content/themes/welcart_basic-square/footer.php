@@ -21,8 +21,11 @@
 					$page_c	=	get_page_by_path('usces-cart');
 					$page_m	=	get_page_by_path('usces-member');
 					$pages	=	"{$page_c->ID},{$page_m->ID}";
-					wp_nav_menu(array( 'theme_location' => 'footer', 'exclude' => $pages , 'menu_class' => 'footer-menu cf' )); 
+					wp_nav_menu(array( 'theme_location' => 'footer', 'exclude' => $pages , 'menu_class' => 'footer-menu cf' ));
 				?>
+                <ul>
+                    <li class="page-item footer-contact"><a href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda" target="_blank">お問い合わせ</a></li>
+                </ul>
 			</nav>
 
 			<?php if( wcct_get_options( 'facebook_button' ) || wcct_get_options( 'twitter_button' ) || wcct_get_options( 'instagram_button' ) ): ?>
