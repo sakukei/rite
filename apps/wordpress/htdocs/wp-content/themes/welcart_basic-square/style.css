@@ -2397,11 +2397,14 @@ p.no-date {
         align-items: center;
     }
     .pickup-article + .pickup-article {
-        padding-top: 20px;
+        padding-top: 10px;
     }
     .pickup-name {
         padding-left: 10px;
     }
+	.pickup-thumbnail {
+		width: 100%;
+	}
 
 
 
