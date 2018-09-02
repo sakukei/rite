@@ -1757,9 +1757,9 @@ footer nav li:nth-of-type(6n) {
 		width: 22%;
 		margin-right: 4%;
 	}
-	.search-li article:nth-of-type(even) {
-		margin-right: 4%;
-	}
+	/*.search-li article:nth-of-type(even) {*/
+		/*margin-right: 4%;*/
+	/*}*/
 	.search-li article:nth-of-type(4n) {
 		margin-right: 0;
 	}

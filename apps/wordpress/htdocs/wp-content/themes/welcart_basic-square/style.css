@@ -1812,6 +1812,10 @@ p.no-date {
 		border: 1px solid #ddd;
 	}
 
+	.search-li .grid-item {
+		width: 50%;
+	}
+
 }
 
 
@@ -2607,6 +2611,7 @@ p.no-date {
 
 	/* -- .search-li -- */
 	.search-li .grid-item {
+		width: 48%;
 		padding: 0 0 8px !important;
 	}
 
