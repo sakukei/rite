@@ -102,6 +102,7 @@
                         <h3 class="sidebar-title">たびびと検索</h3>
                         <ul class="sidebar-list">
                             <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/hasegawa_aya">長谷川あや</a></li>
+                            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/yoshino_hitomi">良野仁美</a></li>
                         </ul>
                     </section>
                 </div>
