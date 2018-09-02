@@ -1613,6 +1613,15 @@ p.no-date {
 	width: 100%!important;
 	max-width: 100%;
 	height: auto;
+	background: none;
+	border: none;
+}
+
+/* 記事内画像キャプション */
+.wp-caption-text {
+	padding: 10px 10px 0 0;
+	text-align: right;
+	color: #999;
 }
 
 /**
