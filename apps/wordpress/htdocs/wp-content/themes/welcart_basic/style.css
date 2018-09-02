@@ -1156,8 +1156,8 @@ footer nav li:nth-of-type(6n) {
 
 /* - blog - */
 .blog #content article {
-	margin-bottom: 1.42857em;
-	padding-bottom: 1.42857em;
+	/*margin-bottom: 1.42857em;*/
+	/*padding-bottom: 1.42857em;*/
 	border-bottom: 1px solid #eaeaea;
 }
 .blog #content .entry-title {

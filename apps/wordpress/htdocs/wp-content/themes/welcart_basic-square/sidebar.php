@@ -39,6 +39,12 @@ global $usces; ?>
 //		the_widget( 'Welcart_calendar', $Welcart_calendar, $args );
 //	?>
 <?php //endif; ?>
+    <section class="sidebar sidebar-item">
+        <h3 class="sidebar-title">お買い物検索</h3>
+        <ul class="sidebar-list">
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/apparel">アパレル</a></li>
+        </ul>
+    </section>
     <section class="sidebar sidebar-area">
         <h3 class="sidebar-title">エリア検索</h3>
         <ul class="sidebar-list">
