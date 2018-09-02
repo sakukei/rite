@@ -482,6 +482,10 @@ div.site-title img {
 	padding: 0;
 }
 
+.snav-sidebar {
+	padding-top: 20px;
+}
+
 /* -- .search-box -- */
 .search-box {
 	float: none;
@@ -1003,6 +1007,26 @@ footer nav a {
     vertical-align: text-bottom;	
 }
 
+/*-- sidebar -- */
+.sidebar-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.sidebar-list li {
+	width: 48%;
+	padding-bottom: 20px;
+}
+.sidebar-list li img {
+	max-width: 100%;
+}
+
+.sidebar-area .sidebar-list li img {
+	width: 36px;
+	margin-right: 4px;
+}
+
 /* -- .grid -- */
 .grid:after {
 	clear: both;
@@ -1130,11 +1154,11 @@ footer nav a {
 	padding: 10px;
 }
 .post-info-wrap .post-title a {
-    font-size: 16px;
+    font-size: 14px;
     color: #111;	
 }
 .post-info-wrap .post-excerpt {
-	font-size: 12px;
+	font-size: 11px;
     color: #5e5e5e;
 	margin-top: 10px;
 }
@@ -1162,12 +1186,12 @@ footer nav a {
     width: 70%;
 }
 .post-info-wrap .post-contributor {
-    width: 25%;
+    width: 30%;
     padding-left: 5%;
 }
 .post-info-wrap .post-icon {
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 30px;
     margin: 0 auto;
 }
 .post-info-wrap .post-icon img {
@@ -2091,6 +2115,11 @@ p.no-date {
 	#site-navigation li.current-menu-parent a {
 		border-radius: 8px;
 	}
+
+	.snav-sidebar {
+		display: none;
+	}
+
 	
 	/* =footer
 	-------------------------------------------------------------- */
@@ -2294,6 +2323,24 @@ p.no-date {
 		margin: 0;
 		padding: 0;
 		border-top: none !important;
+	}
+	.sidebar-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.sidebar-list li {
+		width: 48%;
+		padding-bottom: 20px;
+	}
+	.sidebar-list li img {
+		max-width: 100%;
+	}
+
+	.sidebar-area .sidebar-list li img {
+		width: 36px;
+		margin-right: 4px;
 	}
 
 	/* -- .title -- */

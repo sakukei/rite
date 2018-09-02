@@ -86,6 +86,25 @@
 
                 </nav><!-- #site-navigation -->
 
+                <div class="snav-sidebar">
+                    <section class="sidebar sidebar-area">
+                        <h3 class="sidebar-title">エリア検索</h3>
+                        <ul class="sidebar-list">
+                            <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-thailand.png" alt="">タイ</a></li>
+                            <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-vietnam.png" alt="">ベトナム</a></li>
+                            <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-hongkong.png" alt="">香港</a></li>
+                            <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-korea.png" alt="">韓国</a></li>
+                            <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-japan.png" alt="">日本</a></li>
+                        </ul>
+                    </section>
+                    <section class="sidebar sidebar-contributor">
+                        <h3 class="sidebar-title">たびびと検索</h3>
+                        <ul class="sidebar-list">
+                            <li><img src="<?php echo get_template_directory_uri(); ?>/images/.png" alt=""><a href="">長谷川あや</a></li>
+                        </ul>
+                    </section>
+                </div>
+
             </div><!-- #mobile-menu -->
 
                     <div class="header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/header-logo.png" alt="rite"></a></div>
