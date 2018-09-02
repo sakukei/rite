@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* =ALL
+-------------------------------------------------------------- */
+
+.itemsoldout,
+.c-box,
+.inquiry {
+    display: none;
+}
+
+
+/* =item-single.php
+-------------------------------------------------------------- */
+
+dl.item-sku {
+    display: table;
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+dl.item-sku dt,
+dl.item-sku dd {
+    display: table-cell;
+    text-align: left;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+dl.item-sku dt {
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+dl.item-sku dd {
+    margin: 0;
+    padding-left: 2px;
+}
+
+dl.item-sku dd:last-child {
+    margin-bottom: 0;
+}
+
+dl.item-sku dd input[type=radio] {
+    display: none;
+}
+
+dl.item-sku dd input[type=radio]:checked + label,
+dl.item-sku dd label:hover {
+    padding: 0 20px;
+    border: 2px solid #333;
+}
+
+dl.item-sku dd label {
+    display: inline-block;
+    padding: 1px 21px;
+    color: #000;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+table.item-sku,
+table.item-sku th,
+table.item-sku td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table.item-sku th,
+table.item-sku td {
+    padding: 1px 10px;
+    text-align: center;
+}
+
+table.item-sku th {
+    background-color: #f0f0f0;
+}
+
+
+/* =WCEX DL Selller / Service
+-------------------------------------------------------------- */
+
+.service_skuform {
+    margin-top: 10px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.service_skuform .item-sku,
+.service_skuform table.item_option {
+    float: right;
+}
+
+.service_skuform table.item_option {
+    clear: both;
+}
+
+.service_skuform .field_button,
+.service_skuform .itemsoldout {
+    clear: both;
+    padding-top: 10px;
+}

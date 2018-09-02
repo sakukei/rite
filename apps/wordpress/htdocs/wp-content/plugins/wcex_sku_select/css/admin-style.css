@@ -1,0 +1,105 @@
+#meta_box_sku_select_box #select_sku_new {
+    padding: .5em 0;
+}
+
+#meta_box_sku_select_box #select_sku_new a {
+    margin-left: 0;
+    padding: 4px 3em;
+}
+
+#meta_box_sku_select_box table,
+#meta_box_sku_select_box table th,
+#meta_box_sku_select_box table td,
+#sku_select_field table,
+#sku_select_field table th,
+#sku_select_field table td {
+    border-collapse: collapse;
+}
+
+#meta_box_sku_select_box table,
+#sku_select_field table {
+    margin: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-spacing: 0;
+    background-color: #f9f9f9;
+}
+
+#sku_select_field table th,
+#sku_select_field table td {
+    border-top: 1px solid #ddd;
+}
+
+#meta_box_sku_select_box table th,
+#sku_select_field table th {
+    padding: 5px 8px 8px;
+    background-color: #f1f1f1;
+}
+
+#meta_box_sku_select_box table td {
+    vertical-align: top;
+}
+
+#sku_select_field table td {
+    vertical-align: middle;
+}
+
+#meta_box_sku_select_box table .left {
+    width: 38%;
+}
+
+#meta_box_sku_select_box select,
+#meta_box_sku_select_box input[type=text],
+#meta_box_sku_select_box textarea,
+#sku_select_field table select,
+#sku_select_field table input[type=text] {
+    margin: 8px;
+    width: 92%;
+}
+
+#meta_box_sku_select_box select {
+    margin-bottom: 0;
+}
+
+#meta_box_sku_select_box textarea {
+    min-height: 10em;
+}
+
+#meta_box_sku_select_box #select_sku_button {
+    margin: 0 8px 8px;
+}
+
+#meta_box_sku_select_box #select_sku_button input[type=button] {
+    margin-right: 5px;
+}
+
+#select_sku_attention {
+    line-height: 26px;
+    float: right;
+    margin-right: 1em;
+}
+
+#sku_select_field .item-sku-key,
+#sku_select_field .item-sku-cprice,
+#sku_select_field .item-sku-price,
+#sku_select_field .item-sku-zaikonum,
+#sku_select_field .item-sku-zaiko,
+#sku_select_field .item-sku-cprice{
+    width:auto;   
+}
+
+#sku_select_field .item-sku-cprice,
+#sku_select_field .item-sku-price {
+    max-width: 80px;
+}
+
+#sku_select_field .item-sku-zaikonum {
+    max-width: 50px;
+}
+
+#sku_select_field .item-sku-zaiko {
+    max-width: 100px;
+    min-width: 90px;
+}
+
+
