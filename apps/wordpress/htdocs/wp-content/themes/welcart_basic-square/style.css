@@ -485,6 +485,14 @@ div.site-title img {
 .snav-sidebar {
 	padding-top: 20px;
 }
+.snav-sidebar .sidebar-title {
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 15px;
+	padding: 0 0 8px 4px;
+	border-bottom: 1px solid #909090;
+	letter-spacing: .5px;
+}
 
 /* -- .search-box -- */
 .search-box {
