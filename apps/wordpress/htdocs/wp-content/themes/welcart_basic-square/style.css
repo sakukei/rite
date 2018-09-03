@@ -1747,7 +1747,7 @@ p.no-date {
 	/* -- .post-li -- */
 	.post-li .grid-sizer,
 	.post-li .grid-item {
-		width: 33.333%;
+		width: 48%;
 	}
 
 	/* =search.php
@@ -2548,10 +2548,10 @@ p.no-date {
 	}
 	/* -- .post-li -- */
 	.post-li .grid-sizer {
-		width: 33.3333%;
+		width: 47%;
 	}
 	.post-li .grid-item {
-		width: 33.3333%;
+		width: 47%;
 	}
 
 	/* =single.php + page.php
