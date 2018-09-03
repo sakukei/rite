@@ -42,6 +42,24 @@
                     <div class="search-box">
 <!--                        <i class="fa fa-search"></i>-->
                         <?php get_search_form(); ?>
+                        <div class="snav snav-sp">
+                            <?php if(usces_is_membersystem_state()): ?>
+                                <div class="membership">
+                                    <i class="fa fa-user"></i>
+                                    <ul class="cf">
+                                        <?php if( usces_is_login() ): ?>
+                                            <li><?php printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?></li>
+                                            <li><?php usces_loginout(); ?></li>
+                                            <li><a href="<?php echo USCES_MEMBER_URL; ?>"><?php _e('My page', 'welcart_basic') ?></a></li>
+                                        <?php else: ?>
+                                            <li><?php _e('guest', 'usces'); ?></li>
+                                            <li><?php usces_loginout(); ?></li>
+                                            <li><a href="<?php echo USCES_NEWMEMBER_URL; ?>"><?php _e('New Membership Registration','usces') ?></a></li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
 
                     <?php
@@ -55,22 +73,22 @@
                     </ul>
 
 
-                    <!--					--><?php //if(usces_is_membersystem_state()): ?>
-                    <!--					<div class="membership">-->
-                    <!--						<i class="fa fa-user"></i>-->
-                    <!--						<ul class="cf">-->
-                    <!--							--><?php //if( usces_is_login() ): ?>
-                    <!--								<li>--><?php //printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?><!--</li>-->
-                    <!--								<li>--><?php //usces_loginout(); ?><!--</li>-->
-                    <!--								<li><a href="--><?php //echo USCES_MEMBER_URL; ?><!--">--><?php //_e('My page', 'welcart_basic') ?><!--</a></li>-->
-                    <!--							--><?php //else: ?>
-                    <!--								<li>--><?php //_e('guest', 'usces'); ?><!--</li>-->
-                    <!--								<li>--><?php //usces_loginout(); ?><!--</li>-->
-                    <!--								<li><a href="--><?php //echo USCES_NEWMEMBER_URL; ?><!--">--><?php //_e('New Membership Registration','usces') ?><!--</a></li>-->
-                    <!--							--><?php //endif; ?>
-                    <!--						</ul>-->
-                    <!--					</div>-->
-                    <!--					--><?php //endif; ?>
+<!--                    					--><?php //if(usces_is_membersystem_state()): ?>
+<!--                    					<div class="membership">-->
+<!--                    						<i class="fa fa-user"></i>-->
+<!--                    						<ul class="cf">-->
+<!--                    							--><?php //if( usces_is_login() ): ?>
+<!--                    								<li>--><?php //printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?><!--</li>-->
+<!--                    								<li>--><?php //usces_loginout(); ?><!--</li>-->
+<!--                    								<li><a href="--><?php //echo USCES_MEMBER_URL; ?><!--">--><?php //_e('My page', 'welcart_basic') ?><!--</a></li>-->
+<!--                    							--><?php //else: ?>
+<!--                    								<li>--><?php //_e('guest', 'usces'); ?><!--</li>-->
+<!--                    								<li>--><?php //usces_loginout(); ?><!--</li>-->
+<!--                    								<li><a href="--><?php //echo USCES_NEWMEMBER_URL; ?><!--">--><?php //_e('New Membership Registration','usces') ?><!--</a></li>-->
+<!--                    							--><?php //endif; ?>
+<!--                    						</ul>-->
+<!--                    					</div>-->
+<!--                    					--><?php //endif; ?>
 
                 </div><!-- .sub-nav -->
 
@@ -117,8 +135,31 @@
 
             <div class="header-link-block">
 
-                <div class="header-link-wrap">
-                    <p class="header-link"><a href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda" target="_blank">お問い合わせ</a></p>
+                <div class="header-menber-wrap">
+
+                    <div class="snav">
+                        <?php if(usces_is_membersystem_state()): ?>
+                            <div class="membership">
+                                <i class="fa fa-user"></i>
+                                <ul class="cf">
+                                    <?php if( usces_is_login() ): ?>
+                                        <li><?php printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?></li>
+                                        <li><?php usces_loginout(); ?></li>
+                                        <li><a href="<?php echo USCES_MEMBER_URL; ?>"><?php _e('My page', 'welcart_basic') ?></a></li>
+                                    <?php else: ?>
+                                        <li><?php _e('guest', 'usces'); ?></li>
+                                        <li><?php usces_loginout(); ?></li>
+                                        <li><a href="<?php echo USCES_NEWMEMBER_URL; ?>"><?php _e('New Membership Registration','usces') ?></a></li>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="header-link-wrap">
+                        <p class="header-link"><a href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda" target="_blank">お問い合わせ</a></p>
+                    </div>
+
                 </div>
 
                 <div class="incart-btn">

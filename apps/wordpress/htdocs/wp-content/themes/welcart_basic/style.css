@@ -1995,7 +1995,7 @@ footer nav li:nth-of-type(6n) {
 		transition: .3s ease all;
 	}
 	.incart-btn a:hover {
-		background-color: #ffa500;
+		/*background-color: #ffa500;*/
 	}
 	.incart-btn i {
 		padding: 0;

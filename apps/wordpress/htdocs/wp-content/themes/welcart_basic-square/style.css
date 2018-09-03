@@ -561,6 +561,14 @@ div.site-title img {
 	text-decoration: none;
 }
 
+.snav-sp {
+	display: block;
+}
+
+.header-menber-wrap {
+	display: none;
+}
+
 /* -- #site-navigation -- */
 #site-navigation {
     display: none;
@@ -1919,6 +1927,7 @@ p.no-date {
 	}
 	.incart-btn a:hover {
 		/*background: none;*/
+		color: #fff;
 	}
 	.incart-btn i {
 		color: #fff;
@@ -2140,6 +2149,30 @@ p.no-date {
 		display: none;
 	}
 
+	/* マイページ */
+	.snav-sp {
+		display: none;
+	}
+
+	.header-menber-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header-menber-wrap .snav {
+		position: static;
+	}
+
+	.header-menber-wrap .snav i {
+		border-right: none;
+		color: #808080!important;
+	}
+
+	.header-menber-wrap .snav .membership ul {
+		left: 67.4%;
+		padding: 10px;
+	}
 	
 	/* =footer
 	-------------------------------------------------------------- */
@@ -2672,6 +2705,9 @@ p.no-date {
 		background: #FF9B75;
 		box-shadow: 0 1px 2px 0 #CFABAB;
 		font-size: 14px;
+		color: #fff;
+	}
+	.product-btn a:hover {
 		color: #fff;
 	}
 
