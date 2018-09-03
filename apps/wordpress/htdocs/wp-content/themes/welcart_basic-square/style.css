@@ -25,6 +25,7 @@ body {
 	color: #333;
 	font-family: 'Quattrocento Sans',"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 13px;
+	-webkit-font-smoothing: antialiased;
 }
 input, select, textarea {
 	font-family: 'Quattrocento Sans',"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
