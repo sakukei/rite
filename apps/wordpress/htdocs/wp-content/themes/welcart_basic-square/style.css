@@ -299,6 +299,9 @@ div.site-title img {
 	left: auto;
 	padding: 2px;
 }
+.incart-btn-text {
+	display: none;
+}
 
 
 /* -- .menu-bar -- */
@@ -1960,6 +1963,13 @@ p.no-date {
 		top: -5px;
 		right: 8px;
 		margin: 0;
+	}
+	.incart-btn-text {
+		display: block;
+	}
+	.incart-btn .fa,
+	.incart-btn .total-quant {
+		display: none;
 	}
 	
 	.menu-bar {

@@ -165,8 +165,8 @@
                 <div class="incart-btn">
                     <?php if(! defined( 'WCEX_WIDGET_CART' ) ): ?>
                         <a href="<?php echo USCES_CART_URL; ?>" class="header-incart-btn">
-                            カートを見る
-    <!--                    <i class="fa fa-shopping-cart"></i><span class="total-quant" id="widgetcart-total-quant">--><?php //usces_totalquantity_in_cart(); ?><!--</span>-->
+                            <span class="incart-btn-text">カートを見る</span>
+                        <i class="fa fa-shopping-cart"></i><span class="total-quant" id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
                         </a>
                     <?php else: ?>
                         <i class="fa fa-shopping-cart widget-cart"></i><span class="total-quant" id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
