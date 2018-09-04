@@ -209,7 +209,7 @@
                     <div class="top-pickup">
                         <p class="contents-title">ピックアップ</p>
                         <?php $args = array(
-                            'numberposts' => 5,                //表示（取得）する記事の数
+                            'numberposts' => -1,                //表示（取得）する記事の数
                             'post_type' => 'top_pickup'    //投稿タイプの指定
                         );
                         $posts = get_posts($args);
