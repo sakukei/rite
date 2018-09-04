@@ -2101,7 +2101,7 @@ p.no-date {
 		display: block;
 		color: #fff;
 		font-size: 20px;
-		width: 76px;
+		width: 20px;
 		text-align: center;
 		border-right: 1px solid #aaa;
 	}
@@ -2170,7 +2170,7 @@ p.no-date {
 
 	.header-menber-wrap {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		align-items: center;
 	}
 
@@ -2596,10 +2596,10 @@ p.no-date {
 	}
 	/* -- .post-li -- */
 	.post-li .grid-sizer {
-		width: 47%;
+		width: 48%;
 	}
 	.post-li .grid-item {
-		width: 47%;
+		width: 48%;
 	}
 
 	/* =single.php + page.php

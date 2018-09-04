@@ -270,3 +270,14 @@ function validate_gravatar($email) {
     return $has_valid_avatar;
 }
 
+// カスタム投稿タイプに通常の投稿と同じカテゴリーとタグの設定
+function my_main_query( $query ) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+    if ( $query->is_category() || $query->is_tag() ) {
+        $query->set( 'post_type', array( 'post', 'top_main', 'top_pickup' ) );
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'my_main_query' );
