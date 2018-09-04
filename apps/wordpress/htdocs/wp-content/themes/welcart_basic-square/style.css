@@ -505,7 +505,7 @@ div.site-title img {
 .search-box {
 	float: none;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #ececec;
+	/*border-bottom: 1px solid #ececec;*/
 }
 .search-box div.s-box {
 	float: none;
@@ -1041,13 +1041,27 @@ footer nav a {
 	width: 48%;
 	padding-bottom: 20px;
 }
+.sidebar-list li a {
+	display: flex;
+	align-items: center;
+}
 .sidebar-list li img {
 	max-width: 100%;
 }
 
-.sidebar-area .sidebar-list li img {
+.sidebar-contributor .sidebar-list li {
+	width: 100%;
+}
+
+.sidebar-area .sidebar-list li img,
+.sidebar-contributor .sidebar-list li img {
 	width: 36px;
 	margin-right: 4px;
+}
+.sidebar-contributor .sidebar-list li img {
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
 }
 
 /* -- .grid -- */
@@ -2338,7 +2352,7 @@ p.no-date {
     }
 	#primary {
 		width: 100%;
-		max-width: 718px;
+		/*max-width: 718px;*/
 		/*float: right;*/
 		/*margin-left: -230px;*/
 	}

@@ -42,7 +42,7 @@ global $usces; ?>
     <section class="sidebar sidebar-item">
         <h3 class="sidebar-title">お買い物検索</h3>
         <ul class="sidebar-list">
-            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/apparel">アパレル</a></li>
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/apparel"><span>アパレル</span></a></li>
         </ul>
     </section>
     <section class="sidebar sidebar-area">
@@ -52,14 +52,14 @@ global $usces; ?>
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/vietnam"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-vietnam.png" alt="">ベトナム</a></li>-->
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/hongkong"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-hongkong.png" alt="">香港</a></li>-->
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/taiwan"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-taiwan.png" alt="">台湾</a></li>-->
-            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-korea.png" alt="">韓国</a></li>
-            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/japan"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-japan.png" alt="">日本</a></li>
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-korea.png" alt=""><span>韓国</span></a></li>
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/japan"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-japan.png" alt=""><span>日本</span></a></li>
         </ul>
     </section>
     <section class="sidebar sidebar-contributor">
         <h3 class="sidebar-title">たびびと検索</h3>
         <ul class="sidebar-list">
-            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/hasegawa_aya">長谷川あや</a></li>
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img src="<?php echo get_template_directory_uri(); ?>/images/icon_hasegawa_aya.jpeg" alt=""><span>長谷川あや</span></a></li>
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/yoshino_hitomi">良野仁美</a></li>-->
         </ul>
     </section>
