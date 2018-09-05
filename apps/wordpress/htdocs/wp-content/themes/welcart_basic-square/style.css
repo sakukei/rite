@@ -1204,6 +1204,7 @@ footer nav a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+	min-height: 260px;
 	padding: 10px;
 }
 .post-info-wrap .post-title a {
@@ -2482,6 +2483,7 @@ p.no-date {
 	}
 	/* -- .post-info-wrap -- */
 	.post-info-wrap {
+		min-height: 148px;
 		padding: 12px;
 	}
 	
