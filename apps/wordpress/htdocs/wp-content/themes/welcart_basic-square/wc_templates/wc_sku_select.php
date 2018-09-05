@@ -22,7 +22,7 @@ get_header();
 
 		<div class="column-wrap">
 
-		<h1 class="item_page_title"><?php the_title(); ?></h1>
+<!--		<h1 class="item_page_title">--><?php //the_title(); ?><!--</h1>-->
 
 			<div class="column">
 
@@ -176,5 +176,5 @@ get_header();
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
