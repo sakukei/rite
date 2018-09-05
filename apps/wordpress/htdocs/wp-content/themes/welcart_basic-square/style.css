@@ -627,6 +627,10 @@ header div.header-nav-container {
     /*padding: 0 10px;*/
 }
 
+.sku-select-column #primary {
+	max-width: 100%;
+}
+
 
 /* =secondary
 -------------------------------------------------------------- */
@@ -2391,6 +2395,9 @@ p.no-date {
         padding-top: 24px;
 
     }
+	.sku-select-column #primary {
+		max-width: 718px;
+	}
 	#primary {
 		width: 100%;
 		/*max-width: 718px;*/

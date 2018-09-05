@@ -17,7 +17,7 @@ default://shipped
 get_header();
 ?>
 <!--　TOP2カラム　-->
-<div class="contents-column">
+<div class="contents-column sku-select-column">
     <div id="primary" class="site-content">
         <div id="content" class="cf" role="main">
 
