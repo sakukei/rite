@@ -218,7 +218,7 @@ header {
 
 .header-logo {
     display: inline-block;
-    width: 120px;
+	width: 90px;
 	margin: 0 auto;
 	position: relative;
 	left: auto;
@@ -283,7 +283,7 @@ div.site-title img {
 /* -- .incart-btn -- */
 .incart-btn {
 	position: absolute;
-	bottom: 15px;
+	bottom: 8px;
 	left: 15px;
 	float: none;
 }
@@ -307,7 +307,7 @@ div.site-title img {
 /* -- .menu-bar -- */
 .menu-bar {
 	position: absolute;
-	bottom: 15px;
+	bottom: 8px;
 	right: 20px;
 }
 .menu-trigger,
@@ -523,6 +523,7 @@ div.site-title img {
 	font-size: 20px;
 	padding: 0 10px;
 	line-height: 30px;
+	top: -3px;
 }
 
 /* -- .membership -- */
@@ -1055,7 +1056,15 @@ footer nav a {
 .sidebar-contributor .sidebar-list li {
 	width: 100%;
 }
+.sidebar-list span {
+	font-size: 12px;
+}
 
+.sidebar-item .sidebar-list li {
+	width: 100%;
+}
+
+.sidebar-item .sidebar-list li img,
 .sidebar-area .sidebar-list li img,
 .sidebar-contributor .sidebar-list li img {
 	width: 36px;
@@ -1886,6 +1895,10 @@ p.no-date {
 	}
 
 	.header-logo {
+		display: inline-block;
+		width: 120px;
+		margin: 0 auto;
+		position: relative;
 		left: 70px;
 	}
 
@@ -2062,19 +2075,23 @@ p.no-date {
 		display: block;
 	}
 	.search-box input[type="text"] {
-		height: 44px;;
+		height: 36px;
 		padding: 0 10px 0 45px;
 		background-color: #fff;
-		line-height: 44px;
+		line-height: 36px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
 	}
 	.search-box #searchsubmit {
 		position: absolute;
+		top: 0;
         left: 0;
 		width: auto;
-		height: 44px;
+		height: 36px;
 		color: #D8D8D8 !important;
 		padding: 0 15px;
-		line-height: 44px;
+		line-height: 36px;
 		-moz-box-shadow: none;
 		-webkit-box-shadow: none;
 		box-shadow: none;
@@ -2815,6 +2832,10 @@ p.no-date {
     height:auto;
     max-width:100%;
     max-height:100%;
+}
+
+.footer-about {
+	padding-bottom: 1.071428em;
 }
 
 .footer-contact {

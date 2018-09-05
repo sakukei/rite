@@ -42,7 +42,7 @@ global $usces; ?>
     <section class="sidebar sidebar-item">
         <h3 class="sidebar-title">お買い物検索</h3>
         <ul class="sidebar-list">
-            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/apparel"><span>アパレル</span></a></li>
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/taxyg/fashion"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-fashion.png" alt=""><span>ファッション</span></a></li>
         </ul>
     </section>
     <section class="sidebar sidebar-area">

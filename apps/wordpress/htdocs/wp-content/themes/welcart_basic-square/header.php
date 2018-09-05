@@ -62,15 +62,15 @@
                         </div>
                     </div>
 
-                    <?php
-                    $page_c	=	get_page_by_path('usces-cart');
-                    $page_m	=	get_page_by_path('usces-member');
-                    $pages	=	"{$page_c->ID},{$page_m->ID}";
-                    wp_nav_menu(array( 'theme_location' => 'header', 'exclude' => $pages , 'menu_class' => 'header-menu cf' ));
-                    ?>
-                    <ul class="header-contact">
-                        <li><a href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda" target="_blank">お問い合わせ</a></li>
-                    </ul>
+<!--                    --><?php
+//                    $page_c	=	get_page_by_path('usces-cart');
+//                    $page_m	=	get_page_by_path('usces-member');
+//                    $pages	=	"{$page_c->ID},{$page_m->ID}";
+//                    wp_nav_menu(array( 'theme_location' => 'header', 'exclude' => $pages , 'menu_class' => 'header-menu cf' ));
+//                    ?>
+<!--                    <ul class="header-contact">-->
+<!--                        <li><a href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda" target="_blank">お問い合わせ</a></li>-->
+<!--                    </ul>-->
 
 
 <!--                    					--><?php //if(usces_is_membersystem_state()): ?>
@@ -108,7 +108,7 @@
                     <section class="sidebar sidebar-item">
                         <h3 class="sidebar-title">お買い物検索</h3>
                         <ul class="sidebar-list">
-                            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/apparel"><span>アパレル</span></a></li>
+                            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/fashion"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-fashion.png" alt=""><span>ファッション</span></a></li>
                         </ul>
                     </section>
                     <section class="sidebar sidebar-area">

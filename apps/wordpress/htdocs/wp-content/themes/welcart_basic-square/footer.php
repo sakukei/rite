@@ -17,6 +17,9 @@
                 <div class="footer-column">
 		
 			<nav id="site-info" class="footer-navigation cf">
+                <ul>
+                    <li class="page-item footer-about"><a href="http://company.rite.co.jp/" target="_blank">会社概要</a></li>
+                </ul>
 				<?php
 					$page_c	=	get_page_by_path('usces-cart');
 					$page_m	=	get_page_by_path('usces-member');
