@@ -12,6 +12,7 @@ get_header(); ?>
 <!--            <div class="column-wrap">-->
 <!---->
 <!--                <div class="column">-->
+    <div class="fixed-bg">
 
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -23,7 +24,7 @@ get_header(); ?>
                         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 
                     <?php endif; ?>
-
+    </div>
 <!--                </div><!-- column -->
 <!--            </div><!-- column-wrap -->
 <!---->
