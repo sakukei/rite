@@ -54,7 +54,7 @@ get_header();
 
                                         <div class="detail-box">
                                             <h2 class="item-name"><?php usces_the_itemName(); ?></h2>
-                                            <div class="itemcode">(<?php usces_the_itemCode(); ?>)</div>
+<!--                                            <div class="itemcode">(--><?php //usces_the_itemCode(); ?><!--)</div>-->
 
                                             <?php wcct_produt_tag(); ?>
                                             <?php welcart_basic_campaign_message(); ?>
