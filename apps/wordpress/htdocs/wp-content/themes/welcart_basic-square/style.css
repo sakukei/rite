@@ -1697,6 +1697,20 @@ p.no-date {
 	color: #999;
 }
 
+/* 固定ページテンプレート */
+.fixed-bg {
+	padding: 36px 24px;
+	background: #fff;
+}
+.fixed-title {
+	margin: 12px 0;
+	text-align: center;
+	font-size: 20px;
+}
+fixed-bg h2 {
+	margin: 8px 0;
+}
+
 /**
  * 16.1 Mobile Large 620px
  */
@@ -2756,6 +2770,14 @@ p.no-date {
 	.fixed-bg {
 		padding: 36px 24px;
 		background: #fff;
+	}
+	.fixed-title {
+		margin: 12px 0;
+		text-align: center;
+		font-size: 20px;
+	}
+	fixed-bg h2 {
+		margin: 8px 0;
 	}
 }
 
