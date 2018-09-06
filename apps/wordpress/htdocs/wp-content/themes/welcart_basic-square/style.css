@@ -504,6 +504,10 @@ div.site-title img {
 	padding-bottom: 0;
 }
 
+.snav-sidebar .sidebar-contributor .sidebar-list li + li {
+	padding-top: 20px;
+}
+
 /* -- .search-box -- */
 .search-box {
 	float: none;
