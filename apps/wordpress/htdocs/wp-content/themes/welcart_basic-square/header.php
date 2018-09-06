@@ -126,7 +126,7 @@
                         <h3 class="sidebar-title">たびびと検索</h3>
                         <ul class="sidebar-list">
                             <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img src="<?php echo get_template_directory_uri(); ?>/images/icon_hasegawa_aya.jpeg" alt=""><span>長谷川あや</span></a></li>
-                            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/hitostagram12"><img src="<?php echo get_template_directory_uri(); ?>/images/icon_yoshino_hitomi.jpeg" alt=""><span>良野仁美</span></a></li>
+                            <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/hitostagram12"><img src="<?php echo get_template_directory_uri(); ?>/images/icon_yoshino_hitomi.jpeg" alt=""><span>良野仁美</span></a></li>
                         </ul>
                     </section>
                 </div>
@@ -137,7 +137,7 @@
 
 
 
-<!--			--><?php //if(! welcart_basic_is_cart_page()): ?>
+			<?php if(! welcart_basic_is_cart_page()): ?>
 
             <div class="header-link-block">
 
@@ -192,7 +192,7 @@
                         <div id="wgct_alert"></div>
 
 
-<!--                    --><?php //endif; ?>
+                    <?php endif; ?>
                 </div>
 
             </div>
