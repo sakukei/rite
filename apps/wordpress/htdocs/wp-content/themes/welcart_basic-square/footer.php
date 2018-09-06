@@ -27,7 +27,7 @@
 					wp_nav_menu(array( 'theme_location' => 'footer', 'exclude' => $pages , 'menu_class' => 'footer-menu cf' ));
 				?>
                 <ul>
-                    <li class="page-item footer-contact"><a href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda" target="_blank">お問い合わせ</a></li>
+                    <li class="page-item footer-contact"><a href="https://tayori.com/form/8efb7c3fbcb6b6d6cf6ab92d35f8bb1b7d053978" target="_blank">お問い合わせ</a></li>
                 </ul>
 			</nav>
 
