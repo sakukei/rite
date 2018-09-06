@@ -1450,10 +1450,6 @@ div.footer_explanation .send {
 	/* =header =>  widget_cart.css
 	-------------------------------------------------------------- */
 
-	.header-logo {
-		left: 0;
-	}
-
 	.upper_menu .in_cart a:hover {
 		background: none;
 	}

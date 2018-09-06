@@ -6,7 +6,7 @@
 
 get_header(); ?>
 <!--　TOP2カラム　-->
-<div class="contents-column">
+<div class="contents-column contents-column-404">
 	<div id="primary" class="content-area">
 		<main id="content" class="site-main" role="main">
 		

@@ -1060,6 +1060,11 @@ footer nav a {
 .sidebar-contributor .sidebar-list li {
 	width: 100%;
 }
+
+.sidebar-contributor .sidebar-list li + li {
+	padding-top: 0;
+}
+
 .sidebar-list span {
 	font-size: 12px;
 }
@@ -1204,7 +1209,7 @@ footer nav a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-	min-height: 260px;
+	/*min-height: 260px;*/
 	padding: 10px;
 }
 .post-info-wrap .post-title a {
@@ -1509,7 +1514,7 @@ p.no-date {
 
 /* -- .post-li -- */
 .post-li .grid-item {
-	width: 50%;
+	width: 100%;
 	margin: 0 0 10px;
 	padding: 0;
 	border: none;
@@ -2396,6 +2401,9 @@ p.no-date {
         padding-top: 24px;
 
     }
+	.contents-column-404 #primary {
+		margin-right: 10px;
+	}
 	.sku-select-column #primary {
 		max-width: 718px;
 	}
@@ -2461,6 +2469,9 @@ p.no-date {
 	.sidebar-area .sidebar-list li img {
 		width: 36px;
 		margin-right: 4px;
+	}
+	.sidebar-contributor .sidebar-list li + li {
+		padding-top: 20px;
 	}
 
 	/* -- .title -- */
@@ -2549,6 +2560,7 @@ p.no-date {
         padding: 20px 10px;
     }
     .main-content-title {
+		min-height: 38px;
         font-size: 16px;
     }
     .main-content-column {
@@ -2611,6 +2623,7 @@ p.no-date {
         font-size: 12px;
     }
     .pickup-contributor {
+		min-width: 105px;
         padding-top: 20px;
     }
     .pickup-contributor-column {
@@ -2625,6 +2638,7 @@ p.no-date {
 		width: 250%;
 		padding-top: 0;
         padding-left: 10px;
+		text-align: left;
     }
 	.pickup-thumbnail {
 		width: 100%;
