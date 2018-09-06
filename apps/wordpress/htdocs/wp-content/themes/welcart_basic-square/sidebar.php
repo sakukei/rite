@@ -53,7 +53,7 @@ global $usces; ?>
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/hongkong"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-hongkong.png" alt="">香港</a></li>-->
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/taiwan"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-taiwan.png" alt="">台湾</a></li>-->
             <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-korea.png" alt=""><span>韓国</span></a></li>
-            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-bali.jpg" alt=""><span>バリ</span></a></li>
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-bali.png" alt=""><span>バリ</span></a></li>
         </ul>
     </section>
     <section class="sidebar sidebar-contributor">
