@@ -53,14 +53,14 @@ global $usces; ?>
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/hongkong"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-hongkong.png" alt="">香港</a></li>-->
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/taiwan"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-taiwan.png" alt="">台湾</a></li>-->
             <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-korea.png" alt=""><span>韓国</span></a></li>
-            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-bali.png" alt=""><span>バリ</span></a></li>
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-bali.jpg" alt=""><span>バリ</span></a></li>
         </ul>
     </section>
     <section class="sidebar sidebar-contributor">
         <h3 class="sidebar-title">たびびと検索</h3>
         <ul class="sidebar-list">
             <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img src="<?php echo get_template_directory_uri(); ?>/images/icon_hasegawa_aya.jpeg" alt=""><span>長谷川あや</span></a></li>
-            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/hitostagram12"><img src="<?php echo get_template_directory_uri(); ?>/images/icon_yoshino_hitomi.jpg" alt=""><span>良野仁美</span></a></li>
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/hitostagram12"><img src="<?php echo get_template_directory_uri(); ?>/images/icon_yoshino_hitomi.jpeg" alt=""><span>良野仁美</span></a></li>
         </ul>
     </section>
 </aside><!-- #secondary -->
