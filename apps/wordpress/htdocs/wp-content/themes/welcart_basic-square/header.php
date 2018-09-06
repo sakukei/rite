@@ -137,7 +137,7 @@
 
 
 
-			<?php if(! welcart_basic_is_cart_page()): ?>
+<!--			--><?php //if(! welcart_basic_is_cart_page()): ?>
 
             <div class="header-link-block">
 
@@ -192,7 +192,7 @@
                         <div id="wgct_alert"></div>
 
 
-                    <?php endif; ?>
+<!--                    --><?php //endif; ?>
                 </div>
 
             </div>
