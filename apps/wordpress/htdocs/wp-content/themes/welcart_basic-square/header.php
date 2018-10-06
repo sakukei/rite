@@ -130,9 +130,10 @@ $opt = ' class="display-desc"';
                         <section class="sidebar sidebar-area">
                             <h3 class="sidebar-title">エリア検索</h3>
                             <ul class="sidebar-list">
-                                <!--                            <li><a href="-->
-                                <?php //get_stylesheet_directory_uri(); ?><!--/tag/thailand"><img src="-->
-                                <?php //echo get_template_directory_uri(); ?><!--/images/sidebar-thailand.png" alt="">タイ</a></li>-->
+                                <li><a href="
+                                <?php get_stylesheet_directory_uri(); ?>/tag/thailand"><img src="
+                                <?php echo get_template_directory_uri(); ?>/images/sidebar-thailand.png" alt="">タイ</a>
+                                </li>
                                 <!--                            <li><a href="-->
                                 <?php //get_stylesheet_directory_uri(); ?><!--/tag/vietnam"><img src="-->
                                 <?php //echo get_template_directory_uri(); ?><!--/images/sidebar-vietnam.png" alt="">ベトナム</a></li>-->
@@ -170,89 +171,89 @@ $opt = ' class="display-desc"';
                 </div>
 
 
-<!--                --><?php //if (!welcart_basic_is_cart_page()): ?>
+                <!--                --><?php //if (!welcart_basic_is_cart_page()): ?>
 
-                    <div class="header-link-block">
+                <div class="header-link-block">
 
-                        <div class="header-menber-wrap">
+                    <div class="header-menber-wrap">
 
-                            <div class="snav">
-                                <?php if (usces_is_membersystem_state()): ?>
-                                    <div class="membership">
-                                        <i class="fa fa-user"></i>
-                                        <ul class="cf">
-                                            <?php if (usces_is_login()): ?>
-                                                <li><?php printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?></li>
-                                                <li><?php usces_loginout(); ?></li>
-                                                <li>
-                                                    <a href="<?php echo USCES_MEMBER_URL; ?>"><?php _e('My page', 'welcart_basic') ?></a>
-                                                </li>
-                                            <?php else: ?>
-                                                <li><?php _e('guest', 'usces'); ?></li>
-                                                <li><?php usces_loginout(); ?></li>
-                                                <li>
-                                                    <a href="<?php echo USCES_NEWMEMBER_URL; ?>"><?php _e('New Membership Registration', 'usces') ?></a>
-                                                </li>
-                                            <?php endif; ?>
-                                        </ul>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-
-                            <div class="header-link-wrap">
-                                <p class="header-link"><a
-                                            href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda"
-                                            target="_blank">お問い合わせ</a></p>
-                            </div>
-
-                        </div>
-
-                        <div class="incart-btn">
-                            <?php if (!defined('WCEX_WIDGET_CART')): ?>
-                                <a href="<?php echo USCES_CART_URL; ?>" class="header-incart-btn">
-                                    <span class="incart-btn-text">カートを見る</span>
-                                    <i class="fa fa-shopping-cart"></i><span class="total-quant"
-                                                                             id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
-                                </a>
-                            <?php else: ?>
-                                <i class="fa fa-shopping-cart widget-cart"></i><span class="total-quant"
-                                                                                     id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
-
-                                <div class="view-cart">
-                                    <ul class="wcex_widgetcart_body ucart_widget_body">
-                                        <li>
-                                            <?php if (usces_is_login() && usces_is_membersystem_point()): ?>
-                                                <div id="wgct_point">
-                                                    <span class="wgct_point_label"><?php _e('Your member points', 'widgetcart'); ?></span>
-                                                    :
-                                                    <span class="wgct_point"><?php usces_memberinfo('point'); ?></span>pt
-                                                </div>
-                                            <?php endif; ?>
-                                            <div id="wgct_row">
-                                                <?php echo widgetcart_get_cart_row(); ?>
-                                            </div>
-                                        </li>
+                        <div class="snav">
+                            <?php if (usces_is_membersystem_state()): ?>
+                                <div class="membership">
+                                    <i class="fa fa-user"></i>
+                                    <ul class="cf">
+                                        <?php if (usces_is_login()): ?>
+                                            <li><?php printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?></li>
+                                            <li><?php usces_loginout(); ?></li>
+                                            <li>
+                                                <a href="<?php echo USCES_MEMBER_URL; ?>"><?php _e('My page', 'welcart_basic') ?></a>
+                                            </li>
+                                        <?php else: ?>
+                                            <li><?php _e('guest', 'usces'); ?></li>
+                                            <li><?php usces_loginout(); ?></li>
+                                            <li>
+                                                <a href="<?php echo USCES_NEWMEMBER_URL; ?>"><?php _e('New Membership Registration', 'usces') ?></a>
+                                            </li>
+                                        <?php endif; ?>
                                     </ul>
-                                </div><!-- .view-cart -->
-                                <div id="wgct_alert"></div>
-
-
+                                </div>
                             <?php endif; ?>
                         </div>
 
+                        <div class="header-link-wrap">
+                            <p class="header-link"><a
+                                        href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda"
+                                        target="_blank">お問い合わせ</a></p>
+                        </div>
+
                     </div>
 
+                    <div class="incart-btn">
+                        <?php if (!defined('WCEX_WIDGET_CART')): ?>
+                            <a href="<?php echo USCES_CART_URL; ?>" class="header-incart-btn">
+                                <span class="incart-btn-text">カートを見る</span>
+                                <i class="fa fa-shopping-cart"></i><span class="total-quant"
+                                                                         id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
+                            </a>
+                        <?php else: ?>
+                            <i class="fa fa-shopping-cart widget-cart"></i><span class="total-quant"
+                                                                                 id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
 
-                    <div class="menu-bar">
-                        <a class="menu-trigger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
+                            <div class="view-cart">
+                                <ul class="wcex_widgetcart_body ucart_widget_body">
+                                    <li>
+                                        <?php if (usces_is_login() && usces_is_membersystem_point()): ?>
+                                            <div id="wgct_point">
+                                                <span class="wgct_point_label"><?php _e('Your member points', 'widgetcart'); ?></span>
+                                                :
+                                                <span class="wgct_point"><?php usces_memberinfo('point'); ?></span>pt
+                                            </div>
+                                        <?php endif; ?>
+                                        <div id="wgct_row">
+                                            <?php echo widgetcart_get_cart_row(); ?>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- .view-cart -->
+                            <div id="wgct_alert"></div>
+
+
+                        <?php endif; ?>
                     </div>
 
+                </div>
 
-<!--                --><?php //endif; ?>
+
+                <div class="menu-bar">
+                    <a class="menu-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+
+
+                <!--                --><?php //endif; ?>
 
             </div>
 

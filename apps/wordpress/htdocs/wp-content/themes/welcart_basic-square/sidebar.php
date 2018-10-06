@@ -48,7 +48,7 @@ global $usces; ?>
     <section class="sidebar sidebar-area">
         <h3 class="sidebar-title">エリア検索</h3>
         <ul class="sidebar-list">
-<!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/thailand"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-thailand.png" alt="">タイ</a></li>-->
+            <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/thailand"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-thailand.png" alt="">タイ</a></li>
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/vietnam"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-vietnam.png" alt="">ベトナム</a></li>-->
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/hongkong"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-hongkong.png" alt="">香港</a></li>-->
 <!--            <li><a href="--><?php //get_stylesheet_directory_uri(); ?><!--/tag/taiwan"><img src="--><?php //echo get_template_directory_uri(); ?><!--/images/sidebar-taiwan.png" alt="">台湾</a></li>-->

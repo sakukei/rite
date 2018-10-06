@@ -500,7 +500,7 @@ div.site-title img {
 	border-bottom: 1px solid #909090;
 	letter-spacing: .5px;
 }
-.snav-sidebar .sidebar-list li:nth-last-child(-n+2) {
+.snav-sidebar .sidebar-list li:last-child
 	padding-bottom: 0;
 }
 
@@ -2463,7 +2463,7 @@ p.no-date {
 		width: 48%;
 		padding-bottom: 20px;
 	}
-	.sidebar-list li:nth-last-child(-n+2) {
+	.sidebar-list li:last-child {
 		padding-bottom: 0;
 	}
 	.sidebar-list li img {
