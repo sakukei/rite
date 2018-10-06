@@ -2475,7 +2475,7 @@ p.no-date {
 		margin-right: 4px;
 	}
 	.sidebar-contributor .sidebar-list li + li {
-		padding-top: 20px;
+		padding-top: 0;
 	}
 
 	/* -- .title -- */
