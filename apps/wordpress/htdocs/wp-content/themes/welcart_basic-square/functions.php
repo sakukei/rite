@@ -211,6 +211,7 @@ function cptui_register_my_cpts_top_pickup() {
         "rewrite" => array( "slug" => "top_pickup", "with_front" => true ),
         "query_var" => true,
         "supports" => array( "title", "editor", "thumbnail" ),
+        "yarpp_support" => true,
     );
 
     register_post_type( "top_pickup", $args );
@@ -249,6 +250,7 @@ function cptui_register_my_cpts_top_main() {
         "rewrite" => array( "slug" => "top_main", "with_front" => true ),
         "query_var" => true,
         "supports" => array( "title", "editor", "thumbnail" ),
+        "yarpp_support" => true,
     );
 
     register_post_type( "top_main", $args );
@@ -281,3 +283,17 @@ function my_main_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'my_main_query' );
+
+// YARPPのwidget.cssを削除
+add_action('wp_print_styles','crunchify_dequeue_header_styles');
+function crunchify_dequeue_header_styles()
+{
+    wp_dequeue_style('yarppWidgetCss');
+}
+
+// YARPPのrelated.cssを削除
+add_action('get_footer','crunchify_dequeue_footer_styles');
+function crunchify_dequeue_footer_styles()
+{
+    wp_dequeue_style('yarppRelatedCss');
+}
