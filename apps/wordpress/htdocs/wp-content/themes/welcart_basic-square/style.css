@@ -2456,6 +2456,7 @@ p.no-date {
 	}
 	#content {
 		width: 98%;
+		max-width: 690px;
 		/*float: right;*/
 		margin-right: 0;
 		padding: 0;
@@ -2767,7 +2768,7 @@ p.no-date {
 		margin: 0;
 	}
 	.related-entry-list li {
-		width: calc(230px - 8px);
+		margin: 0 5px;
 		background: #fff;
 		list-style-type: none!important;
 	}

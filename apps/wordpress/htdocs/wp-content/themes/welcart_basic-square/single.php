@@ -44,7 +44,7 @@ get_header(); ?>
             <?php
                 $args = array(
                     // 関連記事を表示する最大件数
-                    'limit'    => 3,
+                    'limit'    => 10,
                     // 使用するテンプレートの名前を指定
                     'template' => 'yarpp-template-relative.php',
                 );

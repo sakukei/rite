@@ -64,5 +64,25 @@
 
 		
 	<?php wp_footer(); ?>
+            <script>
+                jQuery(function($) {
+                    $('.slider').slick({
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        speed: 800,
+                        dots: false,
+                        arrows: false,
+                        slidesToShow: 3,
+                        responsive: [
+                            {
+                                breakpoint: 768, //767px以下のサイズに適用
+                                settings: {
+                                    slidesToShow: 1
+                                }
+                            }
+                        ]
+                    });
+                });
+            </script>
 	</body>
 </html>

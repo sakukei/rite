@@ -1,7 +1,7 @@
 <h3>あなたにおすすめの記事</h3>
 <?php if (have_posts()): ?>
     <div class="related-entry-list">
-        <ul>
+        <ul class="slider">
             <?php while (have_posts()) : the_post(); ?>
                 <li>
                     <div>
