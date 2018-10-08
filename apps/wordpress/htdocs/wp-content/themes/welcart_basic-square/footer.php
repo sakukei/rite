@@ -66,7 +66,12 @@
 	<?php wp_footer(); ?>
             <script>
                 jQuery(function($) {
-                    $('.slider').slick({
+                    // 関連商品にclass追加
+                    $('.assistance_item').find('ul').addClass('slider');
+                    // 関連商品の文言変更
+                    $('.assistance_item').find('h3').html('関連おすすめ商品');
+                    //　slickスライダーの設定
+                    $('.slider').not('.slick-initialized').slick({
                         autoplay: true,
                         autoplaySpeed: 3000,
                         speed: 800,

@@ -242,49 +242,50 @@
 }
 
 /*---- assistance_item ---*/
-.assistance_item h3 {
-	color: #000;
-	margin: 1.42857em 0 0;
-	border-bottom: 3px solid #eee;	
-}
-.assistance_item ul {
-	overflow: hidden;
-	letter-spacing: -.5em;
-}
-.assistance_item li {
-	display: inline-block;
-	width: 46%;
-	margin-right: 8%;
-	padding: 1.42857em 0 0;
-	letter-spacing: normal;
-	vertical-align: text-top;
-}
-.assistance_item li:nth-child(even) {
-	margin-right: 0;
-}
-.assistance_item li .slit a {
-	display: block;
-	margin-bottom: .357143em;
-}
-.assistance_item li .slit img {
-	width: 100%;
-	height: auto;
-}
-.assistance_item li .detail h4 {
-	font-weight: normal;
-	height: 43px;
-	margin: 0;
-	overflow: hidden;
-}
-.assistance_item li .detail p {
-	height: 60px;
-	overflow: hidden;
-}
-.assistance_item li .detail .assist_price {
-	font-weight: bold;
-	height: 22px;	
-	text-align: right;
-}
+/*.assistance_item h3 {*/
+	/*color: #000;*/
+	/*margin: 1.42857em 0 0;*/
+	/*border-bottom: 3px solid #eee;	*/
+/*}*/
+/*.assistance_item ul {*/
+	/*overflow: hidden;*/
+	/*letter-spacing: -.5em;*/
+/*}*/
+/*.assistance_item li {*/
+	/*display: inline-block;*/
+	/*width: 46%;*/
+	/*margin-right: 8%;*/
+	/*padding: 1.42857em 0 0;*/
+	/*letter-spacing: normal;*/
+	/*vertical-align: text-top;*/
+/*}*/
+/*.assistance_item li:nth-child(even) {*/
+	/*margin-right: 0;*/
+/*}*/
+/*.assistance_item li .slit a {*/
+	/*display: block;*/
+
+	/*margin-bottom: .357143em;*/
+/*}*/
+/*.assistance_item li .slit img {*/
+	/*width: 100%;*/
+	/*height: auto;*/
+/*}*/
+/*.assistance_item li .detail h4 {*/
+	/*font-weight: normal;*/
+	/*height: 43px;*/
+	/*margin: 0;*/
+	/*overflow: hidden;*/
+/*}*/
+/*.assistance_item li .detail p {*/
+	/*height: 60px;*/
+	/*overflow: hidden;*/
+/*}*/
+/*.assistance_item li .detail .assist_price {*/
+	/*font-weight: bold;*/
+	/*height: 22px;	*/
+	/*text-align: right;*/
+/*}*/
 
 /*---- .date sku-form ---*/
 .date .item-info .skuform {
@@ -1568,17 +1569,17 @@ wc_changepassword .whitebox {
 		margin-bottom: .357143em;
 		float: none;
 	}
-	.assistance_item li {
-		width: 22%;
-		margin-right: 4%;
-		padding: 1.42857em 0 0;
-	}
-	.assistance_item li:nth-child(even) {
-		margin-right: 4%;
-	}
-	.assistance_item li:nth-child(4n) {
-		margin-right: 0;
-	}
+	/*.assistance_item li {*/
+		/*width: 22%;*/
+		/*margin-right: 4%;*/
+		/*padding: 1.42857em 0 0;*/
+	/*}*/
+	/*.assistance_item li:nth-child(even) {*/
+		/*margin-right: 4%;*/
+	/*}*/
+	/*.assistance_item li:nth-child(4n) {*/
+		/*margin-right: 0;*/
+	/*}*/
 
 	/* =cart
 	-------------------------------------------------------------- */
@@ -1862,9 +1863,9 @@ wc_changepassword .whitebox {
 	}
 	
 	/*---- assistance_item ---*/
-	.assistance_item h3 {
-		margin: 2.142856em 0 0;
-	}
+	/*.assistance_item h3 {*/
+		/*margin: 2.142856em 0 0;*/
+	/*}*/
 
 	/* =member
 	-------------------------------------------------------------- */		
