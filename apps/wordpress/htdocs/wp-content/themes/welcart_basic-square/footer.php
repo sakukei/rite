@@ -83,7 +83,8 @@
                             {
                                 breakpoint: 768, //767px以下のサイズに適用
                                 settings: {
-                                    slidesToShow: 1
+                                    slidesToShow: 1,
+                                    speed: 400,
                                 }
                             }
                         ]
