@@ -3,3 +3,5 @@
 node_modules
 package-lock.json
 /.idea/
+apps/wordpress/htdocs/wp-content/uploads/
+apps/wordpress/htdocs/wp-content/plugins/
