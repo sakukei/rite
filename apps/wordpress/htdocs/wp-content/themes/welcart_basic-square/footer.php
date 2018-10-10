@@ -78,6 +78,7 @@
                         dots: false,
                         arrows: false,
                         slidesToShow: 3,
+                        touchMove: false,
                         responsive: [
                             {
                                 breakpoint: 768, //767px以下のサイズに適用
