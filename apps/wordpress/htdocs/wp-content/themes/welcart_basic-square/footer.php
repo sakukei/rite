@@ -74,7 +74,7 @@
                     $('.slider').not('.slick-initialized').slick({
                         autoplay: true,
                         autoplaySpeed: 3000,
-                        speed: 800,
+                        speed: 400,
                         dots: false,
                         arrows: false,
                         slidesToShow: 3,

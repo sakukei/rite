@@ -1756,6 +1756,7 @@ p.no-date {
 	min-height: auto;
 }
 .related-entry-list .post-excerpt {
+    min-height: 57px;
 	margin-top: 0;
 }
 
@@ -2880,6 +2881,7 @@ p.no-date {
 	}
 
 	.related-entry-list .post-excerpt {
+        min-height: 76px;
 		margin-top: 0;
 	}
 
