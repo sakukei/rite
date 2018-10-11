@@ -8,10 +8,7 @@
                         <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"
                            class="related-entry">
                             <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail(
-                                    array('full'),
-                                    array('alt' => $title, 'title' => $title));
-                                ?>
+                                <?php the_post_thumbnail(); ?>
                             <?php else : ?>
                                 <img src="<?php echo plugins_url() . '/' . 'yet-another-related-posts-plugin/images/default.png' ?>"
                                      alt="no thumbnail"
