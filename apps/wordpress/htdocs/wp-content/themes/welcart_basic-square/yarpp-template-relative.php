@@ -1,5 +1,6 @@
-<h3>あなたにおすすめの記事</h3>
+
 <?php if (have_posts()): ?>
+    <h3>あなたにおすすめの記事</h3>
     <div class="related-entry-list">
         <ul class="slider">
             <?php while (have_posts()) : the_post(); ?>
@@ -49,5 +50,5 @@
         </ul>
     </div>
 <?php else : ?>
-    <p>関連するページはありません。</p>
+<!--    <p>関連するページはありません。</p>-->
 <?php endif; ?>
