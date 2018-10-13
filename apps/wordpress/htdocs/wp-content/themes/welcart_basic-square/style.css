@@ -1503,14 +1503,15 @@ p.no-date {
     transform: translateY(-50%);
 }
 .page-header.over .taxonomy-img {
-	margin-bottom: 0;
+	margin: 0 auto;
 }
 .page-header.over .taxonomy-description {
 	margin-top: 0;
+	color: #5e5e5e;
 }
 #content .page-header.over .page-title {
-	color: #fff !important;
 	margin-bottom: 20px;
+	color: #111;
 }
 
 /* -- .post-li -- */
@@ -1845,7 +1846,7 @@ p.no-date {
 	/* -- .post-li -- */
 	.post-li .grid-sizer,
 	.post-li .grid-item {
-		width: 48%;
+		width: 33%;
 	}
 
 	/* =search.php
@@ -2779,12 +2780,58 @@ p.no-date {
 
 	/* -- .post-li -- */
 	.post-li .grid-sizer {
-		width: 48%;
+		width: 33%;
 	}
 
 	.post-li .grid-item {
-		width: 48%;
+		width: 33%;
 	}
+
+	#Category #content {
+		max-width: 100%;
+	}
+
+	#Category .grid-item {
+		float: none;
+	}
+
+	#Category .post-column-wrap {
+		min-width: 0;
+		min-height: 0;
+	}
+
+	#Category .post-column {
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+		min-width: 100%;
+		width: 0;
+	}
+
+	/* インフルエンサー紹介部分 */
+	.page-header.over .taxonomy-img {
+		width: 100px;
+		-webkit-border-radius: 100px;
+		-moz-border-radius: 100px;
+		border-radius: 100px;
+	}
+	.page-header.over .wrap {
+		position: static;
+		background: none;
+	}
+	.page-header.over .in {
+		position: static;
+		top: auto;
+		transform: translateY(0);
+	}
+
+	#Category .post-title {
+		min-height: 2em;
+	}
+	#Category .post-excerpt {
+		min-height: 3em;
+	}
+
 
 	/* =single.php + page.php
 	-------------------------------------------------------------- */
