@@ -1485,24 +1485,17 @@ p.no-date {
 
 /* -- taxnomy -- */
 .page-header.over .wrap {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    color: #fff;
-    background-color: rgba(0,0,0,.6);
 }
 .page-header.over .in {
     padding: 0 25px;
     text-align: center;
     position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 .page-header.over .taxonomy-img {
+    width: 100px;
+    height: 100px;
 	margin: 0 auto;
 }
 .page-header.over .taxonomy-description {
@@ -1510,7 +1503,7 @@ p.no-date {
 	color: #5e5e5e;
 }
 #content .page-header.over .page-title {
-	margin-bottom: 20px;
+    margin: 10px 0;
 	color: #111;
 }
 
@@ -1527,6 +1520,26 @@ p.no-date {
 .post-li .post-title {
 	font-size: 1em;
 	margin-bottom: 0;
+}
+
+/* インフルエンサー紹介部分 */
+.page-header.over .taxonomy-img {
+    width: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+.page-header.over .in {
+    position: static;
+    top: auto;
+    transform: translateY(0);
+}
+
+#Category .post-title {
+    min-height: 2em;
+}
+#Category .post-excerpt {
+    min-height: 3em;
 }
 
 
@@ -1848,6 +1861,15 @@ p.no-date {
 	.post-li .grid-item {
 		width: 33%;
 	}
+
+    #Category .post-column .grid-item {
+        min-height: 375px;
+    }
+
+    #Category .post-title {
+        min-height: 35px;
+    }
+
 
 	/* =search.php
 	-------------------------------------------------------------- */

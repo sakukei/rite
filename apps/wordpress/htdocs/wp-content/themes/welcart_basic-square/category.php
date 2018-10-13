@@ -12,6 +12,11 @@ get_header(); ?>
 
             <div class="column-wrap">
                 <div class="column">
+                    <?php if( get_field('instagram') ):?>
+                        <a href="<?php echo the_field('instagram'); ?>" target="_blank">
+                            <img alt="リンクはこちら" src="<?php echo get_template_directory_uri(); ?>/images/icon_instagram.png" />
+                        </a>
+                    <?php endif; ?>
 
 
                     <?php if (usces_is_cat_of_item(get_query_var('cat'))): ?>
@@ -127,6 +132,7 @@ get_header(); ?>
                                             echo $term_after;
                                             ?>
                                         </div><!-- .page-header -->
+
                                         <?php if( get_field('instagram') ):?>
                                             <a href="<?php echo the_field('instagram'); ?>" target="_blank">
                                                 <img alt="リンクはこちら" src="<?php echo get_template_directory_uri(); ?>/images/icon_instagram.png" />
@@ -190,16 +196,36 @@ get_header(); ?>
 
                     <?php endif; ?>
 
-                    <div class="pagination_wrapper">
+                    <?php query_posts('cat=2&status=post&posts_per_page=3&orderby=rand'); ?>
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <?php
-                        $args = array(
-                            'type' => 'list',
-                            'prev_text' => __(' &laquo; ', 'welcart_basic'),
-                            'next_text' => __(' &raquo; ', 'welcart_basic'),
-                        );
-                        echo paginate_links($args);
+                        usces_the_item();
+                        usces_have_skus();
                         ?>
-                    </div><!-- .pagenation-wrapper -->
+
+
+
+                        <div class="item-img"><a href="<?php the_permalink(); ?>"><?php usces_the_itemImage(0, 230, 230); ?></a>
+                            <br><span class="price-tag"><?php usces_the_itemName(); ?></span><br><?php if (usces_is_skus()) : ?>
+                                <span class="price-tag">&yen; <?php usces_the_firstPrice(); ?><?php usces_guid_tax(); ?></span>
+                            <?php endif; ?>
+                            <?php echo $post->post_excerpt; ?>
+                        </div>
+
+                    <?php endwhile; else: ?>
+                        <p>商品が見つかりません。</p>
+                    <?php endif; ?>
+
+<!--                    <div class="pagination_wrapper">-->
+<!--                        --><?php
+//                        $args = array(
+//                            'type' => 'list',
+//                            'prev_text' => __(' &laquo; ', 'welcart_basic'),
+//                            'next_text' => __(' &raquo; ', 'welcart_basic'),
+//                        );
+//                        echo paginate_links($args);
+//                        ?>
+<!--                    </div><!-- .pagenation-wrapper -->
 
                 </div><!-- column -->
             </div><!-- column-wrap -->
