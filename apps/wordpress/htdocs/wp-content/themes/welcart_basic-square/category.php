@@ -12,12 +12,6 @@ get_header(); ?>
 
             <div class="column-wrap">
                 <div class="column">
-                    <?php if( get_field('instagram') ):?>
-                        <a href="<?php echo the_field('instagram'); ?>" target="_blank">
-                            <img alt="リンクはこちら" src="<?php echo get_template_directory_uri(); ?>/images/icon_instagram.png" />
-                        </a>
-                    <?php endif; ?>
-
 
                     <?php if (usces_is_cat_of_item(get_query_var('cat'))): ?>
 
@@ -29,7 +23,6 @@ get_header(); ?>
 
                                 <div class="grid-item main">
                                     <div class="inner">
-
                                         <?php
                                         $term_img = $term_class = $term_before = $term_after = '';
                                         $term_id = get_query_var('cat');
@@ -125,12 +118,29 @@ get_header(); ?>
                                         ?>
                                         <div class="page-header<?php echo $term_class; ?>">
                                             <?php
-                                            echo $term_img;
-                                            echo $term_before;
-                                            the_archive_title('<h1 class="page-title">', '</h1>');
-                                            the_archive_description('<div class="taxonomy-description">', '</div>');
-                                            echo $term_after;
+                                            //カスタムフィールドを読み込むために、カテゴリIDを取得
+                                            $cat=get_the_category();
+                                            $cat = $cat[0];
+                                            $catid=$cat->cat_ID ;
+                                            $post_id = 'category_'.$catid;
                                             ?>
+                                            <?php if( get_field('instagram', $post_id) ):?>
+                                                <div class="category-instagram">
+                                                    <a href="<?php echo the_field('instagram', $post_id); ?>" target="_blank">
+                                                        <img alt="リンクはこちら" src="<?php echo get_template_directory_uri(); ?>/images/icon_instagram.png" />
+                                                    </a>
+                                                </div>
+                                                <?php
+                                                echo $term_img;
+                                                echo $term_before;
+                                                the_archive_title('<h1 class="page-title">', '</h1>');
+                                                echo
+
+                                                the_archive_description('<div class="taxonomy-description">', '</div>');
+                                                echo $term_after;
+                                                ?>
+                                            <?php endif; ?>
+
                                         </div><!-- .page-header -->
 
                                         <?php if( get_field('instagram') ):?>
@@ -142,8 +152,9 @@ get_header(); ?>
                                     </div><!-- .inner -->
                                 </div>
 
+                                <h3 class="contents-title">関連記事</h3>
                                 <div class="post-column-wrap">
-                                    <div class="post-column">
+                                    <div class="post-column slider">
                                         <?php while (have_posts()) : the_post(); ?>
                                             <article id="post-<?php the_ID(); ?>" class="grid-item">
                                                 <div class="inner">
@@ -195,26 +206,55 @@ get_header(); ?>
                         <?php endif; ?>
 
                     <?php endif; ?>
-
-                    <?php query_posts('cat=2&status=post&posts_per_page=3&orderby=rand'); ?>
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    <h3 class="contents-title">関連商品</h3>
+                    <div class="relatied-item">
                         <?php
-                        usces_the_item();
-                        usces_have_skus();
+                        $CAT = get_categories();
                         ?>
+                        <?php query_posts('cat=CAT&status=post&posts_per_page=6&orderby=rand'); ?>
+                        <div class="post-column-wrap">
+                            <div class="post-column slider">
+                                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                    <?php
+                                    usces_the_item();
+                                    usces_have_skus();
+                                    ?>
+                                    <div class="relatied-item">
+                                        <div class="itemimg">
+                                            <a href="<?php the_permalink() ?>">
+                                                <?php usces_the_itemImage(0); ?>
+                                                <?php if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
+                                                    <div class="itemsoldout">
 
+                                                        <div class="inner">
 
+                                                            <?php _e('SOLD OUT', 'welcart_basic_square'); ?>
 
-                        <div class="item-img"><a href="<?php the_permalink(); ?>"><?php usces_the_itemImage(0, 230, 230); ?></a>
-                            <br><span class="price-tag"><?php usces_the_itemName(); ?></span><br><?php if (usces_is_skus()) : ?>
-                                <span class="price-tag">&yen; <?php usces_the_firstPrice(); ?><?php usces_guid_tax(); ?></span>
-                            <?php endif; ?>
-                            <?php echo $post->post_excerpt; ?>
+                                                            <?php if (wcct_get_options('display_inquiry')): ?>
+                                                                <span class="text"><?php wcct_options('display_inquiry_text'); ?></span>
+                                                            <?php endif; ?>
+
+                                                        </div>
+
+                                                    </div>
+                                                <?php endif; ?>
+                                            </a>
+                                        </div>
+                                        <?php wcct_produt_tag(); ?>
+                                        <?php welcart_basic_campaign_message(); ?>
+                                        <div class="item-info-wrap">
+                                            <div class="itemname">
+                                                <a href="<?php the_permalink(); ?>" rel="bookmark"><?php usces_the_itemName(); ?></a>
+                                            </div>
+                                            <div class="itemprice"><?php usces_crform(usces_the_firstPrice('return'), true, false) . usces_guid_tax(); ?></div>
+                                        </div><!-- item-info-box -->
+                                    </div>
+                                <?php endwhile; else: ?>
+                                    <p>商品が見つかりません。</p>
+                                <?php endif; ?>
+                            </div>
                         </div>
-
-                    <?php endwhile; else: ?>
-                        <p>商品が見つかりません。</p>
-                    <?php endif; ?>
+                    </div>
 
 <!--                    <div class="pagination_wrapper">-->
 <!--                        --><?php
