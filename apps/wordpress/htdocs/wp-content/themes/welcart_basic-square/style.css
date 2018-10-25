@@ -2140,7 +2140,10 @@ p.no-date {
     max-width: 100%;
   }
 
-  .relatied-item {
+  #Category .relatied .grid-item {
+    visibility: visible;
+  }
+  #Category .relatied .grid-item .inner {
     margin: 0 6px;
   }
 

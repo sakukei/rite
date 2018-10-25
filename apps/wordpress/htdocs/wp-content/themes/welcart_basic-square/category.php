@@ -95,7 +95,7 @@ get_header(); ?>
 
           <?php else : ?>
 
-        <?php if (have_posts()) : ?>
+          <?php if (have_posts()) : ?>
 
           <div class="post-li grid">
 
@@ -163,7 +163,7 @@ get_header(); ?>
             <div class="tab-container">
               <div class="tab-contents is-current">
                 <div class="post-column-wrap">
-                  <div class="post-column slider">
+                  <div class="post-column">
                     <?php while (have_posts()) : the_post(); ?>
                       <article id="post-<?php the_ID(); ?>" class="grid-item">
                         <div class="inner">
@@ -215,75 +215,77 @@ get_header(); ?>
               <?php endif; ?>
 
               <?php endif; ?>
-            <div class="tab-contents">
+              <div class="tab-contents">
 
-              <div class="relatied-item">
-                <?php
-                $CAT = get_categories();
-                ?>
-                <?php query_posts('cat=CAT&status=post&posts_per_page=6&orderby=rand'); ?>
-                <div class="post-column-wrap">
-                  <div class="post-column slider">
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                      <?php
-                      usces_the_item();
-                      usces_have_skus();
-                      ?>
-                      <div class="relatied-item">
-                        <div class="itemimg">
-                          <a href="<?php the_permalink() ?>">
-                            <?php usces_the_itemImage(0); ?>
-                            <?php if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
-                              <div class="itemsoldout">
+                <div class="relatied">
+                  <?php
+                  $CAT = get_categories();
+                  ?>
+                  <?php query_posts('cat=CAT&status=post&posts_per_page=6&orderby=rand'); ?>
+                  <div class="post-column-wrap">
+                    <div class="post-column">
+                      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <?php
+                        usces_the_item();
+                        usces_have_skus();
+                        ?>
+                        <div class="grid-item">
+                          <div class="inner">
+                            <div class="itemimg">
+                              <a href="<?php the_permalink() ?>">
+                                <?php usces_the_itemImage(0); ?>
+                                <?php if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
+                                  <div class="itemsoldout">
 
-                                <div class="inner">
+                                    <div class="inner">
 
-                                  <?php _e('SOLD OUT', 'welcart_basic_square'); ?>
+                                      <?php _e('SOLD OUT', 'welcart_basic_square'); ?>
 
-                                  <?php if (wcct_get_options('display_inquiry')): ?>
-                                    <span class="text"><?php wcct_options('display_inquiry_text'); ?></span>
-                                  <?php endif; ?>
+                                      <?php if (wcct_get_options('display_inquiry')): ?>
+                                        <span class="text"><?php wcct_options('display_inquiry_text'); ?></span>
+                                      <?php endif; ?>
 
-                                </div>
+                                    </div>
 
+                                  </div>
+                                <?php endif; ?>
+                              </a>
+                            </div>
+                            <?php wcct_produt_tag(); ?>
+                            <?php welcart_basic_campaign_message(); ?>
+                            <div class="item-info-wrap">
+                              <div class="itemname">
+                                <a href="<?php the_permalink(); ?>" rel="bookmark"><?php usces_the_itemName(); ?></a>
                               </div>
-                            <?php endif; ?>
-                          </a>
-                        </div>
-                        <?php wcct_produt_tag(); ?>
-                        <?php welcart_basic_campaign_message(); ?>
-                        <div class="item-info-wrap">
-                          <div class="itemname">
-                            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php usces_the_itemName(); ?></a>
+                              <div
+                                class="itemprice"><?php usces_crform(usces_the_firstPrice('return'), true, false) . usces_guid_tax(); ?></div>
+                            </div><!-- item-info-box -->
                           </div>
-                          <div
-                            class="itemprice"><?php usces_crform(usces_the_firstPrice('return'), true, false) . usces_guid_tax(); ?></div>
-                        </div><!-- item-info-box -->
-                      </div>
-                    <?php endwhile; else: ?>
-                      <p>商品が見つかりません。</p>
-                    <?php endif; ?>
+                        </div>
+                      <?php endwhile; else: ?>
+                        <p>商品が見つかりません。</p>
+                      <?php endif; ?>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!--                    <div class="pagination_wrapper">-->
-          <!--                        --><?php
-          //                        $args = array(
-          //                            'type' => 'list',
-          //                            'prev_text' => __(' &laquo; ', 'welcart_basic'),
-          //                            'next_text' => __(' &raquo; ', 'welcart_basic'),
-          //                        );
-          //                        echo paginate_links($args);
-          //                        ?>
-          <!--                    </div><!-- .pagenation-wrapper -->
+            <!--                    <div class="pagination_wrapper">-->
+            <!--                        --><?php
+            //                        $args = array(
+            //                            'type' => 'list',
+            //                            'prev_text' => __(' &laquo; ', 'welcart_basic'),
+            //                            'next_text' => __(' &raquo; ', 'welcart_basic'),
+            //                        );
+            //                        echo paginate_links($args);
+            //                        ?>
+            <!--                    </div><!-- .pagenation-wrapper -->
 
-        </div><!-- column -->
-      </div><!-- column-wrap -->
+          </div><!-- column -->
+        </div><!-- column-wrap -->
 
-    </div><!-- #content -->
+      </div><!-- #content -->
   </section><!-- #primary -->
   <!--    --><?php //get_sidebar(); ?>
 </div>
