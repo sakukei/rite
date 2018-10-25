@@ -541,10 +541,6 @@ div.site-title img {
   letter-spacing: .5px;
 }
 
-.snav-sidebar .sidebar-list li:last-child {
-  padding-bottom: 0;
-}
-
 /* -- .search-box -- */
 .search-box {
   float: none;
@@ -2688,7 +2684,7 @@ p.no-date {
 
   #secondary section {
     margin-bottom: 0;
-    padding: 15px;
+    padding: 15px 15px 0;
   }
 
   /* -- Welcart widget-style -- */
@@ -2861,10 +2857,6 @@ p.no-date {
   .sidebar-list li {
     width: 48%;
     padding-bottom: 20px;
-  }
-
-  .sidebar-list li:last-child {
-    padding-bottom: 0;
   }
 
   .sidebar-list li img {
