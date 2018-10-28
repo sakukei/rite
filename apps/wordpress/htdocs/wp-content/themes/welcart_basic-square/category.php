@@ -233,7 +233,7 @@ get_header(); ?>
                           <div class="inner">
                             <div class="itemimg">
                               <a href="<?php the_permalink() ?>">
-                                <?php usces_the_itemImage(0); ?>
+                                <?php usces_the_itemImage(0, 1000, 9999); ?>
                                 <?php if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
                                   <div class="itemsoldout">
 
