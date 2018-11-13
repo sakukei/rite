@@ -1714,6 +1714,10 @@ p.no-date {
   min-height: 35px;
 }
 
+.category-instagram-head {
+	position: relative;
+}
+
 #Category .category-instagram {
   position: absolute;
   top: 74%;
@@ -1723,6 +1727,12 @@ p.no-date {
   width: 40px;
   height: 40px;
   z-index: 1;
+}
+
+#Category .category-instagram-head .category-instagram {
+	top: 50%;
+	right: 12px;
+	margin-top: -4px;
 }
 
 #Category .category-instagram a {
@@ -2115,7 +2125,11 @@ p.no-date {
 
   #Category .post-title {
     min-height: 35px;
-  }
+	}
+
+	.category-instagram-head {
+		position: relative;
+	}
 
   #Category .category-instagram {
     position: absolute;
@@ -2126,7 +2140,13 @@ p.no-date {
     width: 40px;
     height: 40px;
     z-index: 1;
-  }
+	}
+
+	#Category .category-instagram-head .category-instagram {
+		top: 50%;
+		right: 12px;
+		margin-top: -4px;
+	}
 
   #Category .category-instagram a {
     display: block;
@@ -2208,7 +2228,17 @@ p.no-date {
     width: 40px;
     height: 40px;
     z-index: 1;
-  }
+	}
+
+	.category-instagram-head {
+		position: relative;
+	}
+
+	#Category .category-instagram-head .category-instagram {
+		top: 50%;
+		right: 12px;
+		margin-top: -4px;
+	}
 
   /* =page.php
   -------------------------------------------------------------- */
@@ -3133,7 +3163,7 @@ p.no-date {
     position: static;
     top: auto;
     transform: translateY(0);
-  }
+	}
 
   #Category .post-title {
     min-height: 2em;
@@ -3152,7 +3182,17 @@ p.no-date {
     width: 40px;
     height: 40px;
     z-index: 1;
-  }
+	}
+
+	.category-instagram-head {
+		position: relative;
+	}
+
+	#Category .category-instagram-head .category-instagram {
+		top: 50%;
+		right: 12px;
+		margin-top: -4px;
+	}
 
   #Category .tab-list {
     overflow: hidden;
