@@ -73,8 +73,11 @@ global $usces; ?>
             src="<?php echo get_template_directory_uri(); ?>/images/icon_hasegawa_aya.jpeg"
             alt=""><span>長谷川あや</span></a></li>
       <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/hitostagram12"><img
-            src="<?php echo get_template_directory_uri(); ?>/images/icon_yoshino_hitomi.jpeg"
+            src="<?php echo get_template_directory_uri(); ?>/images/icon_yoshino_hitomi.jpg"
             alt=""><span>良野仁美</span></a></li>
+      <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/namiy_73"><img
+            src="<?php echo get_template_directory_uri(); ?>/images/icon_namiy_73.jpg"
+            alt=""><span>なみ</span></a></li>
     </ul>
   </section>
 </aside><!-- #secondary -->
