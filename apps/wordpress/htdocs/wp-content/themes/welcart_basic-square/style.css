@@ -3490,3 +3490,41 @@ p.no-date {
 .footer-contact {
   padding-top: 1.071428em;
 }
+
+#more {
+	margin-top: 24px;
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+#more .incart-btn {
+	float: none;
+	position: static;
+	display: inline-block;
+	margin-top: 8px;
+}
+
+#more .incart-btn a {
+	width: 145px;
+	height: 36px;
+	line-height: 36px;
+	padding: 0;
+	border-radius: 6px;
+	background: #FF9B75;
+	box-shadow: 0 1px 2px 0 #CFABAB;
+	color: #fff;
+}
+
+#more .incart-btn span {
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	vertical-align: middle;
+	letter-spacing: 1px;
+}
+
+.ajax_loading {
+	height: 36px;
+	margin-top: 8px;
+}
