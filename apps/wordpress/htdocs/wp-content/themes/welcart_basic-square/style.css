@@ -3491,20 +3491,24 @@ p.no-date {
   padding-top: 1.071428em;
 }
 
-#more {
+/* more-pickup */
+#more,
+#more-search {
 	margin-top: 24px;
 	margin-bottom: 32px;
 	text-align: center;
 }
 
-#more .incart-btn {
+#more .incart-btn,
+#more-search .incart-btn {
 	float: none;
 	position: static;
 	display: inline-block;
 	margin-top: 8px;
 }
 
-#more .incart-btn a {
+#more .incart-btn a,
+#more-search .incart-btn a {
 	width: 145px;
 	height: 36px;
 	line-height: 36px;
@@ -3515,7 +3519,8 @@ p.no-date {
 	color: #fff;
 }
 
-#more .incart-btn span {
+#more .incart-btn span,
+#more-search .incart-btn span {
 	display: inline-block;
 	color: #fff;
 	font-size: 12px;
