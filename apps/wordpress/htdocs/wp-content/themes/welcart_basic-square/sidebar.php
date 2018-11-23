@@ -78,7 +78,7 @@ global $usces; ?>
       <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/namiy_73"><img
             src="<?php echo get_template_directory_uri(); ?>/images/icon_namiy_73.jpg"
             alt=""><span>なみ</span></a></li>
-      <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/yu-i-k-a"><img
+      <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/yuika"><img
             src="<?php echo get_template_directory_uri(); ?>/images/icon_yu_i_k_a.jpg"
             alt=""><span>yu.i.k.a</span></a></li>
     </ul>
