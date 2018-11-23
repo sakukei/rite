@@ -68,7 +68,7 @@ $item_query = new WP_Query(
 <?php if ( $item_query->have_posts() ) : ?>
 	<div class="top-items">
 		<p class="contents-title">商品一覧</p>
-		<div class="row row-38">
+		<div class="row row-0">
 		<?php
 		while ( $item_query->have_posts() ) :
 			$item_query->the_post();
@@ -86,37 +86,12 @@ $item_query = new WP_Query(
 		</article><!-- /card-item -->
 		<?php endwhile; ?>
 		</div><!-- /row -->
-		<div class="more-items"><a class="btn btn-primary" href="<?php echo esc_url( get_category_link( get_category_by_slug( 'item' )->cat_ID ) ); ?>">もっと見る</a></div>
+		<div class="more-items"><a class="btn btn-primary btn-wide-sp" href="<?php echo esc_url( get_category_link( get_category_by_slug( 'item' )->cat_ID ) ); ?>">もっと見る</a></div>
 	</div><!-- /top-items -->
 	<?php
 endif;
 wp_reset_postdata();
 ?>
-
-
-<!-- 旅人一覧 -->
-<?php $traveller_ids = array( 7, 36, 47, 52 ); // カテゴリーID ?>
-<?php if ( ! empty( $traveller_ids ) ) : ?>
-<div class="top-travellers">
-	<p class="contents-title">たびびと一覧</p>
-	<div class="row row-0">
-	<?php foreach ( $traveller_ids as $traveller_id ) : ?>
-		<?php $traveller = get_category( $traveller_id ); ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-traveller' ); ?>>
-		<a href="<?php echo esc_url( get_category_link( $traveller_id ) ); ?>">
-			<div class="card-traveller-img" style="background: url(<?php echo esc_url( get_term_meta( $traveller_id, 'wcct-tag-thumbnail-url', true ) ); ?>) no-repeat center center / cover;">
-					<!-- <img src="<?php echo esc_url( get_term_meta( $traveller_id, 'wcct-tag-thumbnail-url', true ) ); ?>"> -->
-			</div><!-- /card-traveller-img -->
-		</a>
-		<div class="card-traveller-body">
-			<div class="card-item-title"><a href="<?php echo esc_url( get_category_link( $traveller_id ) ); ?>" rel="bookmark"><?php echo esc_html( $traveller->cat_name ); ?></a></div>
-		</div><!-- /card-traveller-body -->
-	</article><!-- /card-traveller -->
-<?php endforeach; ?>
-	</div><!-- /row -->
-</div><!-- /top-travellers -->
-<?php endif; ?>
-
 
 <!--　TOP2カラム　-->
 <div class="contents-column">
@@ -129,6 +104,30 @@ wp_reset_postdata();
 
 					<!-- TOPピックアップ記事 -->
 					<div class="top-pickup">
+
+					<!-- 旅人一覧 -->
+					<?php $traveller_ids = array( 7, 36, 47, 52 ); // カテゴリーID ?>
+					<?php if ( ! empty( $traveller_ids ) ) : ?>
+					<div class="top-travellers">
+						<p class="contents-title">たびびと一覧</p>
+						<div class="row row-0">
+						<?php foreach ( $traveller_ids as $traveller_id ) : ?>
+							<?php $traveller = get_category( $traveller_id ); ?>
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-traveller' ); ?>>
+							<a href="<?php echo esc_url( get_category_link( $traveller_id ) ); ?>">
+								<div class="card-traveller-img" style="background: url(<?php echo esc_url( get_term_meta( $traveller_id, 'wcct-tag-thumbnail-url', true ) ); ?>) no-repeat center center / cover;">
+										<!-- <img src="<?php echo esc_url( get_term_meta( $traveller_id, 'wcct-tag-thumbnail-url', true ) ); ?>"> -->
+								</div><!-- /card-traveller-img -->
+							</a>
+							<div class="card-traveller-body">
+								<div class="card-traveller-title"><a href="<?php echo esc_url( get_category_link( $traveller_id ) ); ?>" rel="bookmark"><?php echo esc_html( $traveller->cat_name ); ?></a></div>
+							</div><!-- /card-traveller-body -->
+						</article><!-- /card-traveller -->
+					<?php endforeach; ?>
+						</div><!-- /row -->
+					</div><!-- /top-travellers -->
+					<?php endif; ?>
+
 						<p class="contents-title">ピックアップ</p>
 						<?php
 						$count          = 0;
@@ -141,7 +140,9 @@ wp_reset_postdata();
 						);
 						?>
 						<?php
-						if ( $pickup_query->have_posts() ) :
+						if ( $pickup_query->have_posts() ) : ?>
+						<div class="row row-0">
+						<?php
 							while ( $pickup_query->have_posts() ) :
 								$pickup_query->the_post();
 								?>
@@ -175,9 +176,12 @@ wp_reset_postdata();
 								<?php
 								$count++;
 							endwhile;
+							?>
+							</div><!-- /row -->
+							<?php
 							if ( $count === $posts_per_page ) :
 								?>
-							<div id="more"><a href="#" class="btn btn-primary">もっと見る</a></div>
+							<div id="more"><a href="#" class="btn btn-primary btn-wide-sp">もっと見る</a></div>
 							<?php endif; ?>
 						<?php else : // 記事が無い場合. ?>
 							<div><p>記事はまだありません。</p></div>
