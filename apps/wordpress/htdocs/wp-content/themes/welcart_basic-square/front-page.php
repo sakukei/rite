@@ -10,16 +10,17 @@ get_header(); ?>
 <!-- TOPメイン記事 -->
 <div class="top-main">
 	<?php
-	$args  = array(
-		'numberposts' => 5,           // 表示（取得）する記事の数.
-		'post_type'   => 'top_main', // 投稿タイプの指定.
+	$main_query = new WP_Query(
+		array(
+			'posts_per_page' => 3,          // 表示（取得）する記事の数.
+			'post_type'      => 'top_main', // 投稿タイプの指定.
+		)
 	);
-	$posts = get_posts( $args );
-	if ( $posts ) :
-		foreach ( $posts as $post ) :
-			setup_postdata( $post );
+	if ( $main_query->have_posts() ) :
+		while ( $main_query->have_posts() ) :
+			$main_query->the_post();
 			?>
-		<article id="post-<?php the_ID(); ?>" class="post main-article">
+			<article id="post-<?php the_ID(); ?>" class="post main-article">
 			<a href="<?php the_permalink(); ?>">
 				<div class="main">
 					<div class="main-img thumb">
@@ -44,17 +45,78 @@ get_header(); ?>
 				</div>
 			</a>
 		</article>
-		<?php endforeach; ?>
-		<?php else : // 記事が無い場合. ?>
-		<div>
-			<p>記事はまだありません。</p>
-		</div>
+			<?php
+		endwhile;
+		else :
+			?>
+			<div><p>記事はまだありません。</p></div>
+			<?php
+		endif;
+		wp_reset_postdata();
+		?>
+</div><!-- /top-main -->
+
+<!-- 商品一覧 -->
+<?php
+$item_query = new WP_Query(
+	array(
+		'post_type'      => 'post',
+		'posts_per_page' => 8,
+	)
+);
+?>
+<?php if ( $item_query->have_posts() ) : ?>
+	<div class="top-items">
+		<p class="contents-title">商品一覧</p>
+		<div class="row row-38">
+		<?php
+		while ( $item_query->have_posts() ) :
+			$item_query->the_post();
+			?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-item' ); ?>>
+			<div class="card-item-img">
+				<a href="<?php the_permalink(); ?>">
+					<?php usces_the_itemImage( 0, 300, 300 ); ?>
+				</a>
+			</div><!-- /card-item-img -->
+			<div class="card-item-body">
+				<div class="card-item-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php usces_the_itemName(); ?></a></div>
+				<div class="card-item-price"><?php usces_crform( usces_the_firstPrice( 'return' ), true, false ) . usces_guid_tax(); ?></div>
+			</div><!-- /card-item-body -->
+		</article><!-- /card-item -->
+		<?php endwhile; ?>
+		</div><!-- /row -->
+		<div class="more-items"><a class="btn btn-primary" href="<?php echo esc_url( get_category_link( get_category_by_slug( 'item' )->cat_ID ) ); ?>">もっと見る</a></div>
+	</div><!-- /top-items -->
 	<?php
-	endif;
-	wp_reset_postdata(); // クエリのリセット.
+endif;
+wp_reset_postdata();
 ?>
 
-</div>
+
+<!-- 旅人一覧 -->
+<?php $traveller_ids = array( 7, 18, 39, 42 ); // カテゴリーID ?>
+<?php if ( ! empty( $traveller_ids ) ) : ?>
+<div class="top-travellers">
+	<p class="contents-title">たびびと一覧</p>
+	<div class="row row-0">
+	<?php foreach ( $traveller_ids as $traveller_id ) : ?>
+		<?php $traveller = get_category( $traveller_id ); ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-traveller' ); ?>>
+		<a href="<?php echo esc_url( get_category_link( $traveller_id ) ); ?>">
+			<div class="card-traveller-img" style="background: url(<?php echo esc_url( get_term_meta( $traveller_id, 'wcct-tag-thumbnail-url', true ) ); ?>) no-repeat center center / cover;">
+					<!-- <img src="<?php echo esc_url( get_term_meta( $traveller_id, 'wcct-tag-thumbnail-url', true ) ); ?>"> -->
+			</div><!-- /card-traveller-img -->
+		</a>
+		<div class="card-traveller-body">
+			<div class="card-item-title"><a href="<?php echo esc_url( get_category_link( $traveller_id ) ); ?>" rel="bookmark"><?php echo esc_html( $traveller->cat_name ); ?></a></div>
+		</div><!-- /card-traveller-body -->
+	</article><!-- /card-traveller -->
+<?php endforeach; ?>
+	</div><!-- /row -->
+</div><!-- /top-travellers -->
+<?php endif; ?>
+
 
 <!--　TOP2カラム　-->
 <div class="contents-column">
@@ -88,7 +150,7 @@ get_header(); ?>
 									<div class="pickup">
 										<div class="pickup-img">
 											<?php the_post_thumbnail( 'full' ); ?>
-										</div>
+										</div><!-- /pickup-img -->
 										<div class="pickup-content">
 											<div class="pickup-content-inner">
 												<p class="pickup-content-title"><?php the_title(); ?></p>
@@ -102,12 +164,12 @@ get_header(); ?>
 															<div class="pickup-name">
 																<?php echo get_the_author(); ?>
 															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+														</div><!-- /pickup-contributor-column -->
+													</div><!-- /pickup-contributor -->
+												</div><!-- /pickup-content-column -->
+											</div><!-- /pickup-content-inner -->
+										</div><!-- /pickup-content -->
+									</div><!-- /pickup -->
 								</a>
 							</article>
 								<?php
@@ -115,17 +177,15 @@ get_header(); ?>
 							endwhile;
 							if ( $count === $posts_per_page ) :
 								?>
-							<div id="more"><p class="incart-btn"><a href="#" class="header-incart-btn"><span class="incart-btn-text">もっと見る</span></a></p></div>
+							<div id="more"><a href="#" class="btn btn-primary">もっと見る</a></div>
 							<?php endif; ?>
 						<?php else : // 記事が無い場合. ?>
-							<div>
-								<p>記事はまだありません。</p>
-							</div>
+							<div><p>記事はまだありません。</p></div>
 						<?php
 						endif;
 						wp_reset_postdata();
 ?>
-					</div>
+					</div><!-- /top-pickup -->
 				</div><!-- /column -->
 			</div><!-- /column-wrap -->
 		</div><!-- /#content -->
