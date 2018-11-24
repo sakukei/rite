@@ -3799,3 +3799,10 @@ img {
     padding: 0 16px;
 	}
 }
+
+/* カテゴリーページ用 */
+@media screen and (min-width: 62.5em) {
+  #Category #primary {
+    width: 100%;
+  }
+}
