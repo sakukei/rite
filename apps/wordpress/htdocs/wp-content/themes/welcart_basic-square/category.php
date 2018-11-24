@@ -93,6 +93,17 @@ get_header(); ?>
 
             <?php endif; ?>
 
+						<div class="pagination_wrapper">
+            <?php
+							$args = array(
+									'type' => 'list',
+									'prev_text' => __(' &laquo; ', 'welcart_basic'),
+									'next_text' => __(' &raquo; ', 'welcart_basic'),
+							);
+							echo paginate_links($args);
+            ?>
+            </div><!-- .pagenation-wrapper -->
+
           <?php else : ?>
 
           <?php if (have_posts()) : ?>
