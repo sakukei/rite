@@ -234,7 +234,7 @@ get_header(); ?>
                 <div class="relatied">
                   <?php
 										$this_cat_slug = get_category( $cat )->slug;
-										$cat_query = new WP_Query( array( 'tag' => $this_cat_slug, 'status' => 'post', 'posts_per_page' => 6, 'orderby' => 'rand' ) );
+										$cat_query = new WP_Query( array( 'tag' => $this_cat_slug, 'status' => 'post', 'posts_per_page' => 20, 'orderby' => 'rand' ) );
                   ?>
                   <div class="post-column-wrap">
                     <div class="post-column">
