@@ -156,7 +156,11 @@ wp_reset_postdata();
 											<div class="pickup-content-inner">
 												<p class="pickup-content-title"><?php the_title(); ?></p>
 												<div class="pickup-content-column">
+													<?php if ( wp_is_mobile() ) : ?>
+													<p class="pickup-content-lead"><?php echo wp_kses_post( wp_trim_words( get_the_content(), 36, '...' ) ); ?></p>
+													<?php else : ?>
 													<p class="pickup-content-lead"><?php echo wp_kses_post( wp_trim_words( get_the_content(), 50, '...' ) ); ?></p>
+													<?php endif; ?>
 													<div class="pickup-contributor">
 														<div class="pickup-contributor-column">
 															<div class="pickup-icon contributor-icon">

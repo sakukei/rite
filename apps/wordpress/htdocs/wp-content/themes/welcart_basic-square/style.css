@@ -1217,12 +1217,13 @@ footer nav a {
 
 .blog #content article.pickup-article {
   /*margin: 0 0 8px;*/
-  padding-bottom: 0;
+  padding-bottom: 62px;
 	border: none;
 	width: 49%;
 	padding-top: 0;
 	background: #fff;
 	margin-bottom: 10px;
+	position: relative;
 }
 
 @media screen and (min-width: 62.5em) {
@@ -1231,6 +1232,7 @@ footer nav a {
 		width: 100%;
 		background: transparent;
 		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
 	.blog #content article.pickup-article + .pickup-article {
@@ -1930,11 +1932,25 @@ p.no-date {
 }
 
 .pickup-content-inner {
-  padding: 20px 10px 10px;
+  padding: 20px 6px 10px;
+}
+
+@media screen and (min-width: 62.5em) {
+
+	.pickup-content-inner {
+		padding: 20px 10px 10px;
+	}
 }
 
 .pickup-content-title {
-  font-size: 16px;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 62.5em) {
+
+	.pickup-content-title {
+		font-size: 16px;
+	}
 }
 
 .pickup-content-column {
@@ -1968,7 +1984,20 @@ p.no-date {
 }
 
 .pickup-contributor {
-  padding-top: 0;
+	padding-top: 0;
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	width: 100%;
+	display: block;
+}
+
+@media screen and (min-width: 62.5em) {
+
+	.pickup-contributor {
+		position: static;
+		width: auto;
+	}
 }
 
 .pickup-contributor-column {
