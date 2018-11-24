@@ -106,7 +106,7 @@ wp_reset_postdata();
 					<div class="top-pickup">
 
 					<!-- 旅人一覧 -->
-					<?php $traveller_ids = array( 7, 36, 47, 52 ); // カテゴリーID ?>
+					<?php $traveller_ids = array( 7, 36, 47, 58 ); // カテゴリーID ?>
 					<?php if ( ! empty( $traveller_ids ) ) : ?>
 					<div class="top-travellers">
 						<p class="contents-title">たびびと一覧</p>
