@@ -2774,7 +2774,7 @@ p.no-date {
     border-top: none !important;
     z-index: 0;
   }
-
+  .card-traveller
   #secondary section {
     width: 244px;
     float: left;
@@ -3757,7 +3757,7 @@ img {
 
 .card-traveller {
 	margin: 0 0 10px;
-	padding: 0 8px;
+	padding: 0 24px;
 	width: 49%;
 	background: transparent;
 	box-shadow: none;
@@ -3796,5 +3796,6 @@ img {
 @media screen and (min-width: 46.25em) {
 	.top-travellers .card-traveller {
 		width: 24%;
+    padding: 0 16px;
 	}
 }
