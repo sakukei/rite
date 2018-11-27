@@ -170,12 +170,12 @@ get_header(); ?>
 
             <div class="tab" id="tab">
               <ul class="tab-list">
-                <li class="is-current">関連記事</li>
-                <li>関連商品</li>
+                <li class="firstview is-current">関連記事</li>
+                <li class="no-view">関連商品</li>
               </ul>
             </div>
             <div class="tab-container">
-              <div class="tab-contents is-current">
+              <div class="tab-contents firstview is-current">
                 <div class="post-column-wrap">
                   <div class="post-column">
                     <?php while (have_posts()) : the_post(); ?>
@@ -229,7 +229,7 @@ get_header(); ?>
               <?php endif; ?>
 
               <?php endif; ?>
-              <div class="tab-contents">
+              <div class="tab-contents no-view">
 
                 <div class="relatied">
                   <?php
