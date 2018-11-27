@@ -102,6 +102,24 @@
                     $tabContents.eq(index).addClass("is-current");
                   });
                 })(jQuery);
+
+                (function($) {
+                  var hash = location.hash;
+                  //hashの中に#itemが存在するか確かめる
+                  if(hash.match(/^#item/)){
+                    $(window).on('load', function(){
+                      var $tabList = $(".tab-list li");
+                      var $noViewtabList = $("li.no-view");
+                      var $tabContents = $(".tab-contents");
+                      var $noView = $(".no-view");
+                      $tabList.removeClass("is-current");
+                      $tabList.removeClass("select");
+                      $tabContents.removeClass("is-current");
+                      $noView.addClass("is-current");
+                      $noViewtabList.addClass("select");
+                    });
+                  }
+                })(jQuery);
             </script>
 	</body>
 </html>
