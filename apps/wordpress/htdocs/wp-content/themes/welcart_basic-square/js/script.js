@@ -32,10 +32,13 @@ jQuery( function() {
   //hashの中に#itemが存在するか確かめる
   if(hash.match(/^#item/)){
     var $tabList = $(".tab-list li");
+    var $noViewtabList = $(".no-view li");
     var $tabContents = $(".tab-contents");
-    var $noView =$(".no-view");
+    var $noView = $(".no-view");
     $tabList.removeClass("is-current");
+    $tabList.removeClass("select");
     $tabContents.removeClass("is-current");
     $noView.addClass("is-current");
+    $noViewtabList.addClass("select");
   }
 })(jQuery);
