@@ -170,8 +170,8 @@ get_header(); ?>
 
             <div class="tab" id="tab">
               <ul class="tab-list">
-                <li class="firstview is-current">関連記事</li>
-                <li class="no-view">関連商品</li>
+                <li class="firstview is-current">記事</li>
+                <li class="no-view">商品</li>
               </ul>
             </div>
             <div class="tab-container">
