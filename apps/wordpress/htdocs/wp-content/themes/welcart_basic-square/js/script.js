@@ -25,6 +25,14 @@ jQuery( function() {
 		});
 		return false;
 	});
+	jQuery('.js-cart').on('click',function(){
+		ga('send','event', {
+			eventCategory: 'Link',
+			eventAction: 'click',
+            eventLabel: location.href
+        });
+	});
 });
+
 
 
