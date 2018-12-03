@@ -25,7 +25,7 @@ jQuery( function() {
 		});
 		return false;
 	});
-  jQuery('.js-cart').on('click',function(){
+  jQuery('.skubutton').on('click',function(){
     ga('send','event', {
       eventCategory: 'Link',
       eventAction: 'click',
