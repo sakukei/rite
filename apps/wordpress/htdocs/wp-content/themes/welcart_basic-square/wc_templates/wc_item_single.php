@@ -132,7 +132,7 @@ get_header();
 
                                                 <div class="c-box">
                                                     <span class="quantity"><?php _e('Quantity', 'usces'); ?><?php wcct_the_itemQuant_select(); ?><?php usces_the_itemSkuUnit(); ?></span>
-                                                    <span class="cart-button"><?php usces_the_itemSkuButton( wcct_get_options('cart_button'), 0 ); ?></span>
+                                                    <span class="cart-button js-cart"><?php usces_the_itemSkuButton( wcct_get_options('cart_button'), 0 ); ?></span>
                                                 </div>
                                                 <?php endif; ?>
                                                 <div class="error_message"><?php usces_singleitem_error_message( $post->ID, usces_the_itemSku('return') ); ?></div>
