@@ -131,7 +131,7 @@ wp_reset_postdata();
 						<p class="contents-title">ピックアップ</p>
 						<?php
 						$count          = 0;
-						$posts_per_page = 15; // 15
+						$posts_per_page = -1; // 15
 						$pickup_query   = new WP_Query(
 							array(
 								'posts_per_page' => $posts_per_page, // 表示（取得）する記事の数.
@@ -141,7 +141,7 @@ wp_reset_postdata();
 						?>
 						<?php
 						if ( $pickup_query->have_posts() ) : ?>
-						<div class="row row-0 js-pickupArticle">
+						<div class="row row-0">
 						<?php
 							while ( $pickup_query->have_posts() ) :
 								$pickup_query->the_post();
@@ -185,7 +185,7 @@ wp_reset_postdata();
 							<?php
 							if ( $count === $posts_per_page ) :
 								?>
-							 <div id="more"><a href="#" class="btn btn-primary btn-wide-sp">もっと見る</a></div>
+							<!-- <div id="more"><a href="#" class="btn btn-primary btn-wide-sp">もっと見る</a></div> -->
 							<?php endif; ?>
 						<?php else : // 記事が無い場合. ?>
 							<div><p>記事はまだありません。</p></div>
