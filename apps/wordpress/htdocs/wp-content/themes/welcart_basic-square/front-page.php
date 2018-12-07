@@ -190,8 +190,8 @@ wp_reset_postdata();
                   $count++;
                 endwhile;
                 ?>
-                <?php echo do_shortcode('[ajax_load_more post_type="top_pickup" pause="true" scroll="false" button_label="もっと見る"]')?>
               </div><!-- /row -->
+                <?php echo do_shortcode('[ajax_load_more post_type="top_pickup" pause="true" scroll="false" button_label="もっと見る"]')?>
 
 <!--              --><?php
 //              if ($count === $posts_per_page) :
