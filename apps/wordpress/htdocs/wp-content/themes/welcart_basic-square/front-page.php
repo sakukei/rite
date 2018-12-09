@@ -139,7 +139,7 @@ wp_reset_postdata();
             <p class="contents-title">ピックアップ</p>
             <?php
             $count = 0;
-            $posts_per_page = 15; // 15
+            $posts_per_page = 14; // 15
             $pickup_query = new WP_Query(
               array(
                 'posts_per_page' => $posts_per_page, // 表示（取得）する記事の数.
@@ -191,7 +191,7 @@ wp_reset_postdata();
                 endwhile;
                 ?>
               </div><!-- /row -->
-                <?php echo do_shortcode('[ajax_load_more post_type="top_pickup" pause="true" scroll="false" button_label="もっと見る"]')?>
+                <?php echo do_shortcode('[ajax_load_more post_type="top_pickup" pause="true" scroll="false" posts_per_page="14" offset="14" button_label="もっと見る"]')?>
 
 <!--              --><?php
 //              if ($count === $posts_per_page) :

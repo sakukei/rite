@@ -3749,6 +3749,24 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.alm-btn-wrap .alm-load-more-btn.done {
+  display: none;
+}
+
+.ajax-load-more-wrap .alm-btn-wrap .alm-load-more-btn.loading:before {
+  background: transparent url(http://localhost/wp-content/plugins/ajax-load-more/core/img/ajax-loader.gif) no-repeat center center;
+  bottom: -31px;
+  right: 0;
+  margin: auto;
+  top: auto;
+}
+.ajax-load-more-wrap .alm-btn-wrap .alm-load-more-btn.loading {
+  padding: 0;
+}
+
+.ajax-load-more-wrap .alm-btn-wrap .alm-load-more-btn:hover {
+  background: #ff9b75;
+}
 
 @media screen and (min-width: 46.25em) {
   .btn.btn-wide-sp,
@@ -3758,20 +3776,6 @@ img {
   .ajax-load-more-wrap .alm-btn-wrap .alm-load-more-btn:hover {
     opacity: 0.6;
   }
-  .ajax-load-more-wrap .alm-btn-wrap .alm-load-more-btn.loading:before {
-    background: transparent url(http://localhost/wp-content/plugins/ajax-load-more/core/img/ajax-loader.gif) no-repeat center center;
-    bottom: -31px;
-    right: 0;
-    margin: auto;
-    top: auto;
-  }
-  .ajax-load-more-wrap .alm-btn-wrap .alm-load-more-btn.loading {
-    padding: 0;
-  }
-  .alm-btn-wrap .alm-load-more-btn.done {
-    display: none;
-  }
-
 }
 
 
