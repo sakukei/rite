@@ -110,32 +110,29 @@ wp_reset_postdata();
           <!-- TOPピックアップ記事 -->
           <div class="top-pickup">
 
-            <!-- 旅人一覧 -->
-            <?php $traveller_ids = array(7, 36, 47, 58); // カテゴリーID ?>
-            <?php if (!empty($traveller_ids)) : ?>
-              <div class="top-travellers">
-                <p class="contents-title">たびびと一覧</p>
-                <div class="row row-0">
-                  <?php foreach ($traveller_ids as $traveller_id) : ?>
-                    <?php $traveller = get_category($traveller_id); ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class('card-traveller'); ?>>
-                      <a href="<?php echo esc_url(get_category_link($traveller_id)); ?>">
-                        <div class="card-traveller-img"
-                             style="background: url(<?php echo esc_url(get_term_meta($traveller_id, 'wcct-tag-thumbnail-url', true)); ?>) no-repeat center center / cover;">
-                          <!-- <img src="<?php echo esc_url(get_term_meta($traveller_id, 'wcct-tag-thumbnail-url', true)); ?>"> -->
-                        </div><!-- /card-traveller-img -->
-                      </a>
-                      <div class="card-traveller-body">
-                        <div class="card-traveller-title"><a
-                            href="<?php echo esc_url(get_category_link($traveller_id)); ?>"
-                            rel="bookmark"><?php echo esc_html($traveller->cat_name); ?></a></div>
-                      </div><!-- /card-traveller-body -->
-                    </article><!-- /card-traveller -->
-                  <?php endforeach; ?>
-                </div><!-- /row -->
-              </div><!-- /top-travellers -->
-            <?php endif; ?>
-
+					<!-- 旅人一覧 -->
+					<?php $traveller_ids = array( 7, 36, 47, 58, 39, 40 ); // カテゴリーID ?>
+					<?php if ( ! empty( $traveller_ids ) ) : ?>
+					<div class="top-travellers">
+						<p class="contents-title">たびびと一覧</p>
+						<div class="row row-0 row-start">
+						<?php foreach ( $traveller_ids as $traveller_id ) : ?>
+							<?php $traveller = get_category( $traveller_id ); ?>
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-traveller' ); ?>>
+							<a href="<?php echo esc_url( get_category_link( $traveller_id ) ); ?>">
+								<div class="card-traveller-img" style="background: url(<?php echo esc_url( get_term_meta( $traveller_id, 'wcct-tag-thumbnail-url', true ) ); ?>) no-repeat center center / cover;">
+										<!-- <img src="<?php echo esc_url( get_term_meta( $traveller_id, 'wcct-tag-thumbnail-url', true ) ); ?>"> -->
+								</div><!-- /card-traveller-img -->
+							</a>
+							<div class="card-traveller-body">
+								<div class="card-traveller-title"><a href="<?php echo esc_url( get_category_link( $traveller_id ) ); ?>" rel="bookmark"><?php echo esc_html( $traveller->cat_name ); ?></a></div>
+							</div><!-- /card-traveller-body -->
+						</article><!-- /card-traveller -->
+					<?php endforeach; ?>
+						</div><!-- /row -->
+					</div><!-- /top-travellers -->
+					<?php endif; ?>
+            
             <p class="contents-title">ピックアップ</p>
             <?php
             $count = 0;
