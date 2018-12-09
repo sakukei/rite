@@ -3680,6 +3680,10 @@ img {
 	flex-direction: row;
 }
 
+.row.row-start {
+  justify-content: flex-start;
+}
+
 @media screen and (min-width: 38.75em) {
 
 	.row.row-38 {
@@ -3753,10 +3757,6 @@ img {
 .top-travellers {
 	padding: 0;
 	margin-bottom: 24px;
-}
-
-.top-travellers-list {
-  justify-content: flex-start;
 }
 
 .card-traveller {
