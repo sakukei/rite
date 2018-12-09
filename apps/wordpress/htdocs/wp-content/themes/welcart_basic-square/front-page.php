@@ -110,7 +110,7 @@ wp_reset_postdata();
 					<?php if ( ! empty( $traveller_ids ) ) : ?>
 					<div class="top-travellers">
 						<p class="contents-title">たびびと一覧</p>
-						<div class="row row-0">
+						<div class="row row-0 top-travellers-list">
 						<?php foreach ( $traveller_ids as $traveller_id ) : ?>
 							<?php $traveller = get_category( $traveller_id ); ?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-traveller' ); ?>>

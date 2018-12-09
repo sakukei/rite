@@ -3673,7 +3673,7 @@ img {
 	flex-direction: column;
 	width: 100%;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: space-between;
 }
 
 .row.row-0 {
@@ -3753,6 +3753,10 @@ img {
 .top-travellers {
 	padding: 0;
 	margin-bottom: 24px;
+}
+
+.top-travellers-list {
+  justify-content: flex-start;
 }
 
 .card-traveller {
