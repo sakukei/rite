@@ -82,7 +82,7 @@ global $usces; ?>
             src="<?php echo get_template_directory_uri(); ?>/images/icon_yu_i_k_a.jpg"
             alt=""><span>yu.i.k.a</span></a></li>
       <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/chiha6170"><img
-            src="<?php echo get_template_directory_uri(); ?>/images/icon_china6710.jpg"
+            src="<?php echo get_template_directory_uri(); ?>/images/icon_chiha6710.jpg"
             alt=""><span>chiha</span></a></li>
       <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/oayumi"><img
             src="<?php echo get_template_directory_uri(); ?>/images/icon_oayumi.jpg"
