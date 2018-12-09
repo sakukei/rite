@@ -1264,7 +1264,8 @@ footer nav a {
 
 .grid-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* -- .opt-tag -- */
@@ -1644,6 +1645,10 @@ p.no-date {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   overflow: hidden;
+}
+
+.taxonomy-img img {
+  object-fit: cover;
 }
 
 .taxonomy-description {
