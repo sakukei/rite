@@ -3365,6 +3365,10 @@ p.no-date {
     margin-top: 0;
   }
 
+  .related-entry-list li {
+    width: 216px;
+  }
+
   .related-entry-list li img {
     width: 100%;
     height: 100%;

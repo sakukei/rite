@@ -71,24 +71,27 @@
                     // 関連商品の文言変更
                     $('.assistance_item').find('h3').html('関連おすすめ商品');
                     //　slickスライダーの設定
-                    $('.slider').not('.slick-initialized').slick({
-                        autoplay: true,
-                        autoplaySpeed: 3000,
-                        speed: 400,
-                        dots: false,
-                        arrows: false,
-                        slidesToShow: 3,
-                        touchMove: false,
-                        responsive: [
-                            {
-                                breakpoint: 768, //767px以下のサイズに適用
-                                settings: {
-                                    slidesToShow: 1,
-                                    speed: 400,
+                    var slick_items = jQuery('.slider li').length;
+                    if(slick_items >= 3) {
+                        $('.slider').not('.slick-initialized').slick({
+                            autoplay: true,
+                            autoplaySpeed: 3000,
+                            speed: 400,
+                            dots: false,
+                            arrows: false,
+                            slidesToShow: 3,
+                            touchMove: false,
+                            responsive: [
+                                {
+                                    breakpoint: 768, //767px以下のサイズに適用
+                                    settings: {
+                                        slidesToShow: 1,
+                                        speed: 400,
+                                    }
                                 }
-                            }
-                        ]
-                    });
+                            ]
+                        });
+                    }
                 });
 
                 (function ($) {
