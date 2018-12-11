@@ -73,7 +73,6 @@
                     //　slickスライダーの設定
                     var slick_items = jQuery('.slider li').length;
                     if(slick_items >= 3) {
-                        console.log('aaa')
                         $('.slider').not('.slick-initialized').slick({
                             autoplay: true,
                             autoplaySpeed: 3000,
