@@ -5,8 +5,7 @@
 }
 
 .row-start {
-  overflow: auto;
-  text-align: center;
-  align-content: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: auto auto;
 }
