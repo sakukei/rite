@@ -1,0 +1,16 @@
+.test {
+	text-align: center;
+	pointer-events: none;
+	background-color: blue;
+}
+
+.row-start {
+	overflow: auto;
+	text-align: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
