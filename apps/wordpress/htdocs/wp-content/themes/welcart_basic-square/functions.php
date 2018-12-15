@@ -302,6 +302,6 @@ function crunchify_dequeue_footer_styles()
 //welcart 「次へ」ボタンの文言変更
 add_filter('usces_filter_customerinfo_nextbutton', 'nextbutton_func');
 function nextbutton_func(){
-    $res = '<input name="customerinfo" type="submit" class="to_customerinfo_button" value="会員登録せずに購入"' . apply_filters('usces_filter_cart_nextbutton', NULL) . ' />';
-    echo $res;
+    $value = ' value="会員登録せずに購入"';
+    return $value;
 }
