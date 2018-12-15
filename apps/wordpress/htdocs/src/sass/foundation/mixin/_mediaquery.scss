@@ -1,0 +1,13 @@
+@import '../variable/_breakpoint';
+
+@mixin _mq-max($breakpoint: md) {
+  @media #{map-get($breakpointsMax, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin _mq-min($breakpoint: md) {
+  @media #{map-get($breakpointsMin, $breakpoint)} {
+    @content;
+  }
+}
