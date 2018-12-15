@@ -2922,6 +2922,11 @@ p.no-date {
     padding: 0;
   }
 
+  .cart-page #content {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .column-wrap {
     /*margin: 0 254px 0 238px;*/
   }
