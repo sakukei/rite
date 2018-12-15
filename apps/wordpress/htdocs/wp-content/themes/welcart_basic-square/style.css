@@ -3862,6 +3862,6 @@ img {
 }
 
 /* 購入ページ */
-.to_customerinfo_button {
+.send input.to_customerinfo_button {
   padding: 0 10px;
 }
