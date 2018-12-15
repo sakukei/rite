@@ -298,10 +298,3 @@ function crunchify_dequeue_footer_styles()
 {
     wp_dequeue_style('yarppRelatedCss');
 }
-
-//welcart 「次へ」ボタンの文言変更
-add_filter('usces_filter_customerinfo_nextbutton', 'nextbutton_func');
-function nextbutton_func(){
-    $value = ' value="会員登録せずに購入"';
-    return $value;
-}
