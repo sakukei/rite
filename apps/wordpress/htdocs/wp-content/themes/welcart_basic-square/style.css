@@ -3860,3 +3860,8 @@ img {
 .alm-reveal {
   padding-top: 12px;
 }
+
+/* 購入ページ */
+.to_customerinfo_button {
+  padding: 0 10px;
+}
