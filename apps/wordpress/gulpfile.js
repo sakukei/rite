@@ -7,6 +7,9 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sassGlob = require("gulp-sass-glob");
 const connect = require('gulp-connect-php');
+const prettier = require('gulp-prettier');
+const prettierPlugin = require('gulp-prettier-plugin');
+const babel = require('gulp-babel');
 
 gulp.task('sass', () => {
     return gulp.src('src/sass/**/*.scss')
@@ -34,6 +37,29 @@ gulp.task('sass', () => {
         .pipe(gulp.dest('./htdocs/wp-content/themes/welcart_basic-square/'))
 });
 
+gulp.task('babel', () =>
+    gulp.src('src/es6/**/*.js')
+        .pipe(plumber())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('./htdocs/wp-content/themes/welcart_basic-square/js/'))
+);
+
+gulp.task('prettier', () => {
+    return gulp.src(['src/sass/**/*.scss','src/es6/*.js'])
+        .pipe(
+            prettierPlugin(
+                {
+                    singleQuote: true,
+                },
+                {
+                    filter: true
+                }
+            )
+        )
+        .pipe(gulp.dest(file => file.base))
+});
 
 gulp.task('connect-sync', function() {
     return connect.server({
@@ -51,6 +77,7 @@ gulp.task('reload', function(){
 
 gulp.task('default',['connect-sync'], function() {
     gulp.watch('src/sass/**/*.scss',['sass']);
+    gulp.watch('src/es6/*.js', ['babel', 'bs-reload']);
     gulp.watch('**/**/*.css',['reload']);
     gulp.watch('**/**/*.php',['reload']);
 });

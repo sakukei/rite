@@ -4,13 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "autoprefixer": "^9.4.2",
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
     "gulp-combine-media-queries": "^0.2.0",
     "gulp-connect-php": "^1.0.3",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
+    "gulp-prettier": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9"
   },
