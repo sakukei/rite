@@ -31,7 +31,7 @@ gulp.task('sass', () => {
                 grid: 'autoplace'
             }),
         ]))
-        .pipe(gulp.dest('./src/css'))
+        .pipe(gulp.dest('./htdocs/wp-content/themes/welcart_basic-square/'))
 });
 
 
@@ -51,6 +51,6 @@ gulp.task('reload', function(){
 
 gulp.task('default',['connect-sync'], function() {
     gulp.watch('src/sass/**/*.scss',['sass']);
-    gulp.watch('src/css/**/*.css',['reload']);
+    gulp.watch('**/**/*.css',['reload']);
     gulp.watch('**/**/*.php',['reload']);
 });
