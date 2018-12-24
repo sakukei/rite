@@ -1,0 +1,9 @@
+@import '../variable/global';
+
+//pxをremに変換
+//font-size: _rem(24px); のように使用
+
+@function _rem($px, $key: 'md') {
+  $value: map-get($_font-size, $key);
+  @return ($px / $value) * 1rem;
+}
