@@ -1,0 +1,22 @@
+# editorconfig.org
+
+root = true
+
+[*]
+
+# インデント（tabまたはspace）
+indent_style = space
+# インデントサイズ（数値で指定）
+indent_size = 2
+
+# 改行コード
+end_of_line = lf
+# 文字コード
+charset = utf-8
+# 行末スペースの削除
+trim_trailing_whitespace = true
+# ファイル末尾の改行
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
