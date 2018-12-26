@@ -1,4 +1,4 @@
-@import '../variable/breakpoint';
+@import '../variable/_breakpoint';
 
 @mixin _mq-max($breakpoint: md) {
   @media #{map-get($breakpointsMax, $breakpoint)} {
