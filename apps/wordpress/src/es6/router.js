@@ -12,6 +12,7 @@ import from Traveller '@/views/Traveller.vue'
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  mode: 'history',
   routes: [
     { path: '/', compornent: All },
     { path: '/country', compornent: Country },
