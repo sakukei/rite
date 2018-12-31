@@ -1,3 +1,5 @@
+import Router from './router.js';
+
 Vue.component('testAxios', {
     props: ['theUrl'],
     data () {
@@ -19,8 +21,12 @@ Vue.component('testAxios', {
     </article>`,
 });
 
+
+
 new Vue({
     el: '#app',
+    router,
+    render: h => h(App),
     data: function() {
         const baseUrl = location.origin;
         return {
