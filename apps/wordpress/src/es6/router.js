@@ -1,20 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import from All '@/views/All.vue'
-import from Country '@/views/Country.vue'
-import from Fashion '@/views/Fashion.vue'
-import from Food '@/views/Food.vue'
-import from Pickup '@/views/Pickup.vue'
-import from Spot '@/views/Spot.vue'
-import from Traveller '@/views/Traveller.vue'
+import All from '@/views/All.vue';
+import Country from '@/views/Country.vue';
+import Fashion from '@/views/Fashion.vue';
+import Food from '@/views/Food.vue';
+import Pickup from '@/views/Pickup.vue';
+import Spot from '@/views/Spot.vue';
+import Traveller from '@/views/Traveller.vue';
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/', compornent: All },
+    { path: '/all', compornent: All },
     { path: '/country', compornent: Country },
     { path: '/fashion', compornent: Fashion },
     { path: '/food', compornent: Food },
@@ -24,4 +24,4 @@ const router = new VueRouter({
   ]
 });
 
-export default router;a
+export default router;

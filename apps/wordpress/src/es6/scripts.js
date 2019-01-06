@@ -1,10 +1,12 @@
-import Router from './router.js';
+import Vue from "vue";
+import App from "./App";
+import router from './router.js';
 
 Vue.component('testAxios', {
     props: ['theUrl'],
     data () {
         return {
-            info: '',
+            info: ''
         }
     },
     mounted () {
@@ -18,7 +20,7 @@ Vue.component('testAxios', {
       <p v-html="item.excerpt.rendered"></p>
       <time>{{ item.date.slice(0, 10) }}</time>
     </section>
-    </article>`,
+    </article>`
 });
 
 
@@ -31,7 +33,7 @@ new Vue({
         const baseUrl = location.origin;
         return {
             theUrlAlpha: `${baseUrl}/wp-json/wp/v2/posts/`,
-            theUrlBravo: `${baseUrl}/wp-json/wp/v2/posts/`,
+            theUrlBravo: `${baseUrl}/wp-json/wp/v2/posts/`
         }
-    },
+    }
 });
