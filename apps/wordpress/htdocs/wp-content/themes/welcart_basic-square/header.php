@@ -42,68 +42,8 @@ $opt = ' class="display-desc"';
           <div class="snav">
 
             <div class="search-box">
-              <!--                        <i class="fa fa-search"></i>-->
               <?php get_search_form(); ?>
-              <div class="snav snav-sp">
-                <?php if (usces_is_membersystem_state()): ?>
-                  <div class="membership">
-                    <i class="fa fa-user"></i>
-                    <ul class="cf">
-                      <?php if (usces_is_login()): ?>
-                        <li><?php printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?></li>
-                        <li><?php usces_loginout(); ?></li>
-                        <li>
-                          <a href="<?php echo USCES_MEMBER_URL; ?>"><?php _e('My page', 'welcart_basic') ?></a>
-                        </li>
-                      <?php else: ?>
-                        <li><?php _e('guest', 'usces'); ?></li>
-                        <li><?php usces_loginout(); ?></li>
-                        <li>
-                          <a
-                            href="<?php echo USCES_NEWMEMBER_URL; ?>"><?php _e('New Membership Registration', 'usces') ?></a>
-                        </li>
-                      <?php endif; ?>
-                    </ul>
-                  </div>
-                <?php endif; ?>
-              </div>
             </div>
-
-            <!--                    --><?php
-            //                    $page_c	=	get_page_by_path('usces-cart');
-            //                    $page_m	=	get_page_by_path('usces-member');
-            //                    $pages	=	"{$page_c->ID},{$page_m->ID}";
-            //                    wp_nav_menu(array( 'theme_location' => 'header', 'exclude' => $pages , 'menu_class' => 'header-menu cf' ));
-            //                    ?>
-            <!--                    <ul class="header-contact">-->
-            <!--                        <li><a href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda" target="_blank">お問い合わせ</a></li>-->
-            <!--                    </ul>-->
-
-
-            <!--                    					--><?php //if(usces_is_membersystem_state()): ?>
-            <!--                    					<div class="membership">-->
-            <!--                    						<i class="fa fa-user"></i>-->
-            <!--                    						<ul class="cf">-->
-            <!--                    							--><?php //if( usces_is_login() ): ?>
-            <!--                    								<li>-->
-            <?php //printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?><!--</li>-->
-            <!--                    								<li>-->
-            <?php //usces_loginout(); ?><!--</li>-->
-            <!--                    								<li><a href="-->
-            <?php //echo USCES_MEMBER_URL; ?><!--">-->
-            <?php //_e('My page', 'welcart_basic') ?><!--</a></li>-->
-            <!--                    							--><?php //else: ?>
-            <!--                    								<li>-->
-            <?php //_e('guest', 'usces'); ?><!--</li>-->
-            <!--                    								<li>-->
-            <?php //usces_loginout(); ?><!--</li>-->
-            <!--                    								<li><a href="-->
-            <?php //echo USCES_NEWMEMBER_URL; ?><!--">-->
-            <?php //_e('New Membership Registration','usces') ?><!--</a></li>-->
-            <!--                    							--><?php //endif; ?>
-            <!--                    						</ul>-->
-            <!--                    					</div>-->
-            <!--                    					--><?php //endif; ?>
 
           </div><!-- .sub-nav -->
 
@@ -120,43 +60,8 @@ $opt = ' class="display-desc"';
           </nav><!-- #site-navigation -->
 
           <div class="snav-sidebar">
-            <section class="sidebar sidebar-item">
-              <h3 class="sidebar-title">お買い物検索</h3>
-              <ul class="sidebar-list">
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/fashion"><img
-                      src="<?php echo get_template_directory_uri(); ?>/images/sidebar-fashion.png"
-                      alt=""><span>ファッション</span></a></li>
-              </ul>
-            </section>
-            <section class="sidebar sidebar-area">
-              <h3 class="sidebar-title">エリア検索</h3>
-              <ul class="sidebar-list">
-                <li><a href="
-                                <?php get_stylesheet_directory_uri(); ?>/tag/thailand"><img src="
-                                <?php echo get_template_directory_uri(); ?>/images/sidebar-thailand.png" alt="">タイ</a>
-                </li>
-                <!--                            <li><a href="-->
-                <?php //get_stylesheet_directory_uri(); ?><!--/tag/vietnam"><img src="-->
-                <?php //echo get_template_directory_uri(); ?><!--/images/sidebar-vietnam.png" alt="">ベトナム</a></li>-->
-                <!--                            <li><a href="-->
-                <?php //get_stylesheet_directory_uri(); ?><!--/tag/hongkong"><img src="-->
-                <?php //echo get_template_directory_uri(); ?><!--/images/sidebar-hongkong.png" alt="">香港</a></li>-->
-                <!--                            <li><a href="-->
-                <?php //get_stylesheet_directory_uri(); ?><!--/tag/taiwan"><img src="-->
-                <?php //echo get_template_directory_uri(); ?><!--/images/sidebar-taiwan.png" alt="">台湾</a></li>-->
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img
-                      src="<?php echo get_template_directory_uri(); ?>/images/sidebar-korea.png"
-                      alt="">韓国</a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img
-                      src="<?php echo get_template_directory_uri(); ?>/images/sidebar-bali.png"
-                      alt=""><span>バリ</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/japan"><img
-                      src="<?php echo get_template_directory_uri(); ?>/images/sidebar-japan.png"
-                      alt=""><span>日本</span></a></li>
-              </ul>
-            </section>
             <section class="sidebar sidebar-contributor">
-              <h3 class="sidebar-title">たびびと検索</h3>
+              <h3 class="sidebar-title">traveler</h3>
               <ul class="sidebar-list">
                 <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img
                       src="<?php echo get_template_directory_uri(); ?>/images/icon_hasegawa_aya.jpeg"
@@ -176,6 +81,25 @@ $opt = ' class="display-desc"';
                 <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/oayumi"><img
                       src="<?php echo get_template_directory_uri(); ?>/images/icon_oayumi.jpg"
                       alt=""><span>AYUMI</span></a></li>
+              </ul>
+            </section>
+            <section class="sidebar sidebar-item">
+              <h3 class="sidebar-title">category</h3>
+              <ul class="sidebar-list">
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/All"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-fashion.png" alt=""><span>ALL</span></a></li>
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/Pickup"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-fashion.png" alt=""><span>PICKUP</span></a></li>
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/Spot"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-fashion.png" alt=""><span>SPOT</span></a></li>
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/Fashion"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-fashion.png" alt=""><span>FASHION</span></a></li>
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/Food"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-fashion.png" alt=""><span>FOOD</span></a></li>
+              </ul>
+            </section>
+            <section class="sidebar sidebar-area">
+              <h3 class="sidebar-title">country</h3>
+              <ul class="sidebar-list">
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/japan"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-japan.png" alt=""><span>日本</span></a></li>
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-korea.png" alt="">韓国</a></li>
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/thailand"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-thailand.png" alt="">タイ</a></li>
+                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img src="<?php echo get_template_directory_uri(); ?>/images/sidebar-bali.png" alt=""><span>バリ</span></a></li>
               </ul>
             </section>
           </div>
