@@ -37,6 +37,10 @@ $opt = ' class="display-desc"';
 
       <div class="header-column">
 
+        <div class="header-logo">
+          <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/header-logo.png" alt="rite"></a>
+        </div>
+
         <div id="mobile-menu">
 
           <div class="snav">
@@ -106,48 +110,7 @@ $opt = ' class="display-desc"';
 
         </div><!-- #mobile-menu -->
 
-        <div class="header-logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img
-              src="<?php echo get_template_directory_uri(); ?>/images/header-logo.png" alt="rite"></a>
-        </div>
-
-
-        <!--                --><?php //if (!welcart_basic_is_cart_page()): ?>
-
         <div class="header-link-block">
-
-          <div class="header-menber-wrap">
-
-            <div class="snav">
-              <?php if (usces_is_membersystem_state()): ?>
-                <div class="membership">
-                  <i class="fa fa-user"></i>
-                  <ul class="cf">
-                    <?php if (usces_is_login()): ?>
-                      <li><?php printf(__('Hello %s', 'usces'), usces_the_member_name('return')); ?></li>
-                      <li><?php usces_loginout(); ?></li>
-                      <li>
-                        <a href="<?php echo USCES_MEMBER_URL; ?>"><?php _e('My page', 'welcart_basic') ?></a>
-                      </li>
-                    <?php else: ?>
-                      <li><?php _e('guest', 'usces'); ?></li>
-                      <li><?php usces_loginout(); ?></li>
-                      <li>
-                        <a
-                          href="<?php echo USCES_NEWMEMBER_URL; ?>"><?php _e('New Membership Registration', 'usces') ?></a>
-                      </li>
-                    <?php endif; ?>
-                  </ul>
-                </div>
-              <?php endif; ?>
-            </div>
-
-            <div class="header-link-wrap">
-              <p class="header-link"><a
-                  href="https://tayori.com/form/078ee5a1e0088817f71e52826b33aeaa32485dda"
-                  target="_blank">お問い合わせ</a></p>
-            </div>
-
-          </div>
 
           <div class="incart-btn">
             <?php if (!defined('WCEX_WIDGET_CART')): ?>
@@ -157,8 +120,7 @@ $opt = ' class="display-desc"';
                                                          id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
               </a>
             <?php else: ?>
-              <i class="fa fa-shopping-cart widget-cart"></i><span class="total-quant"
-                                                                   id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
+              <i class="fa fa-shopping-cart widget-cart"></i><span class="total-quant" id="widgetcart-total-quant"><?php usces_totalquantity_in_cart(); ?></span>
 
               <div class="view-cart">
                 <ul class="wcex_widgetcart_body ucart_widget_body">
