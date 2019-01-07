@@ -13,6 +13,7 @@
   <meta name="format-detection" content="telephone=no"/>
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./common.css">
 
   <?php wp_head(); ?>
 </head>
@@ -31,7 +32,7 @@ $opt = ' class="display-desc"';
     <p class="szite-description"><?php bloginfo('description'); ?></p>
   <?php endif; ?>
 
-  <header id="masthead" class="site-header" role="banner">
+  <header id="masthead" class="site-header l-header" role="banner">
 
     <div class="l-inner">
 
