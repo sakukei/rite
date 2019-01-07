@@ -216,7 +216,10 @@ function cptui_register_my_cpts_top_pickup() {
         "yarpp_support" => true,
     );
 
-    register_post_type( "top_pickup", $args );
+    register_post_type('top_pickup', [
+      'show_in_rest' => true,
+      'rest_base' => 'top_pickups',
+    ]);
 }
 
 add_action( 'init', 'cptui_register_my_cpts_top_pickup' );

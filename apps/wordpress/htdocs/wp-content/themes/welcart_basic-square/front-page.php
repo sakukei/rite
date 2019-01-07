@@ -10,12 +10,19 @@ get_header(); ?>
 <!-- TOPメイン記事 -->
 <div class="top-main">
   <div id="app">
-    <h1>Hello App!</h1>
     <p>
-      <router-link to="/foo">Go to Foo</router-link>
-      <router-link to="/bar">Go to Bar</router-link>
+      <router-link to="/country">COUNTRY</router-link>
+      <router-link to="/traveler">TRAVELER</router-link>
     </p>
     <router-view></router-view>
+    <div>
+      <h1>posts</h1>
+      <div>{{this.posts}}</div>
+    </div>
+    <div>
+      <h1>pickup</h1>
+      <div>{{this.pickup}}</div>
+    </div>
   </div>
 </div>
 <?php get_footer(); ?>
