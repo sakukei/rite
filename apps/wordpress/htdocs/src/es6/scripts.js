@@ -1,37 +1,40 @@
 
-const COUNTRY = {
+const PICKUP = {
   template:
     `<div>
-    <h2>ここはホームです、一覧表示させます</h2>
-  </div>`
-};
-const TRAVELER = {
-  template:
-    `<div>
-        <p>aaaaa</p>
+        <h2>PICKUP</h2>
+        <top-pickup></top-pickup>
     </div>`
 };
+const ALL = {
+  template:
+    `<div>
+        <h2>ALL</h2>
+        <all-posts></all-posts>
+    </div>`
+};
+
+
 const routes = [
   {
-    path: '/country',
-    component: COUNTRY,
+    path: '/',
+    component: PICKUP,
     props:true
   },
   {
-    path: '/traveler',
-    component: TRAVELER,
+    path: '/all',
+    component: ALL,
     props:true
   }
 ];
 const router = new VueRouter({
   routes
 });
-const app = new Vue({
-  router,
+
+Vue.component('all-posts', {
   data: function() {
     return {
-      posts: '',
-      pickup: '',
+      posts: ''
     }
   },
   mounted () {
@@ -39,8 +42,31 @@ const app = new Vue({
     axios
       .get(`${baseUrl}/wp-json/wp/v2/posts/`)
       .then(response => (this.posts = response))
+  },
+  template:
+    `<div>
+        <p>{{this.posts}}</p>
+     </div>`
+});
+
+Vue.component('top-pickup', {
+  data: function() {
+    return {
+      pickup: ''
+    }
+  },
+  mounted () {
+    const baseUrl = location.origin;
     axios
       .get(`${baseUrl}/wp-json/wp/v2/top_pickups`)
       .then(response => (this.pickup = response))
-  }
+  },
+  template:
+    `<div>
+        <p>{{this.pickup}}</p>
+     </div>`
+});
+
+const app = new Vue({
+  router
 }).$mount('#app')
