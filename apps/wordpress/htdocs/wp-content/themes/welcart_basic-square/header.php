@@ -13,7 +13,6 @@
   <meta name="format-detection" content="telephone=no"/>
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="./common.css">
 
   <?php wp_head(); ?>
 </head>
