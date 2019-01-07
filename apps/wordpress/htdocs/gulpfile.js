@@ -34,7 +34,7 @@ gulp.task('sass', () => {
                 grid: 'autoplace'
             }),
         ]))
-        .pipe(gulp.dest('./htdocs/wp-content/themes/welcart_basic-square/'))
+        .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/'))
 });
 
 gulp.task('babel', () =>
@@ -43,7 +43,7 @@ gulp.task('babel', () =>
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(gulp.dest('./htdocs/wp-content/themes/welcart_basic-square/js/'))
+        .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/js/'))
 );
 
 gulp.task('prettier', () => {
