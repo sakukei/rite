@@ -62,7 +62,9 @@
 
 	</div><!-- wrapper -->
 
-		
+  <script src="//cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script src="//unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+  <script src="//unpkg.com/axios/dist/axios.min.js"></script>
 	<?php wp_footer(); ?>
             <script>
                 jQuery(function($) {
