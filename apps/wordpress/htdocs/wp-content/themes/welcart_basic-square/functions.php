@@ -201,8 +201,8 @@ function cptui_register_my_cpts_top_pickup() {
         "public" => true,
         "publicly_queryable" => true,
         "show_ui" => true,
-        "show_in_rest" => false,
-        "rest_base" => "",
+        "show_in_rest" => true,
+        "rest_base" => "top_pickups",
         "has_archive" => false,
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
@@ -216,10 +216,7 @@ function cptui_register_my_cpts_top_pickup() {
         "yarpp_support" => true,
     );
 
-    register_post_type('top_pickup', [
-      'show_in_rest' => true,
-      'rest_base' => 'top_pickups',
-    ]);
+  register_post_type( "top_pickup", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts_top_pickup' );
