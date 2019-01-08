@@ -11,10 +11,24 @@ const ALL = {
     </div>`
 };
 
+const TRAVELER = {
+  template:`
+    <div>
+        <h2>TRAVELER</h2>
+        <traveler-posts></traveler-posts>
+    </div>
+  `
+};
+
 const routes = [
   {
     path: '/',
     component: PICKUP,
+    props: true
+  },
+  {
+    path: '/traveler',
+    component: TRAVELER,
     props: true
   },
   {
@@ -67,6 +81,27 @@ Vue.component('top-pickup', {
                 <img :src="item._embedded['wp:featuredmedia'][0].source_url" alt="">
                  <h4>{{item.title.rendered}}</h4>
                 </a>
+            </li>
+        </ul>
+     </div>`
+});
+
+Vue.component('traveler-posts', {
+  data: function() {
+    return {
+      traveler: ''
+    };
+  },
+  mounted() {
+    const baseUrl = location.origin;
+    axios
+      .get(`${baseUrl}/wp-json/wp/v2/categories/37?_embed`)
+      .then(response => (this.traveler = response));
+  },
+  template: `<div>
+        <ul>
+            <li v-for="item in traveler.data" :key="item.id">
+                {{item}}
             </li>
         </ul>
      </div>`

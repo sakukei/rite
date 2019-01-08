@@ -6,9 +6,16 @@ var PICKUP = {
 var ALL = {
   template: "<div>\n        <h2>ALL</h2>\n        <all-posts></all-posts>\n    </div>"
 };
+var TRAVELER = {
+  template: "\n    <div>\n        <h2>TRAVELER</h2>\n        <traveler-posts></traveler-posts>\n    </div>\n  "
+};
 var routes = [{
   path: '/',
   component: PICKUP,
+  props: true
+}, {
+  path: '/traveler',
+  component: TRAVELER,
   props: true
 }, {
   path: '/all',
@@ -49,6 +56,22 @@ Vue.component('top-pickup', {
     });
   },
   template: "<div>\n        <ul>\n            <li v-for=\"item in pickup.data\" :key=\"item.id\">\n                <a :href=\"item.link\">\n                <img :src=\"item._embedded['wp:featuredmedia'][0].source_url\" alt=\"\">\n                 <h4>{{item.title.rendered}}</h4>\n                </a>\n            </li>\n        </ul>\n     </div>"
+});
+Vue.component('traveler-posts', {
+  data: function data() {
+    return {
+      traveler: ''
+    };
+  },
+  mounted: function mounted() {
+    var _this3 = this;
+
+    var baseUrl = location.origin;
+    axios.get("".concat(baseUrl, "/wp-json/wp/v2/categories/37?_embed")).then(function (response) {
+      return _this3.traveler = response;
+    });
+  },
+  template: "<div>\n        <ul>\n            <li v-for=\"item in traveler.data\" :key=\"item.id\">\n                {{item}}\n            </li>\n        </ul>\n     </div>"
 });
 var app = new Vue({
   router: router

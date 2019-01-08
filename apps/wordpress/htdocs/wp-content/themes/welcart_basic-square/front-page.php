@@ -13,6 +13,7 @@ get_header(); ?>
     <p>
       <router-link to="/">PICKUP</router-link>
       <router-link to="/all">ALL</router-link>
+      <router-link to="/traveler">TRAVELER</router-link>
     </p>
     <router-view></router-view>
   </div>
