@@ -68,11 +68,11 @@ Vue.component('top-pickup', {
   template:
     `<div>
         <ul>
-            <li v-for="item in pickup.data" :key="item.id">
-                <h4>{{item.title.rendered}}</h4>
-                <div v-html="item.content.rendered"></div>
+            <li v-for="item in pickup.data" :key="item.id" style="width:300px">
+                <a :href="item.link">
                 <img :src="item._embedded['wp:featuredmedia'][0].source_url" alt="">
-                <p>{{item._links.self}}</p>
+                 <h4>{{item.title.rendered}}</h4>
+                </a>
             </li>
         </ul>
      </div>`

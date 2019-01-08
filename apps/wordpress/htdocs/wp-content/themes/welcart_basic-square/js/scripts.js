@@ -48,7 +48,7 @@ Vue.component('top-pickup', {
       return _this2.pickup = response;
     });
   },
-  template: "<div>\n        <ul>\n            <li v-for=\"item in pickup.data\" :key=\"item.id\">\n                <h4>{{item.title.rendered}}</h4>\n                <div v-html=\"item.content.rendered\"></div>\n                <img :src=\"item._embedded['wp:featuredmedia'][0].source_url\" alt=\"\">\n                <p>{{item._links.self}}</p>\n            </li>\n        </ul>\n     </div>"
+  template: "<div>\n        <ul>\n            <li v-for=\"item in pickup.data\" :key=\"item.id\" style=\"width:300px\">\n                <a :href=\"item.link\">\n                <img :src=\"item._embedded['wp:featuredmedia'][0].source_url\" alt=\"\">\n                 <h4>{{item.title.rendered}}</h4>\n                </a>\n            </li>\n        </ul>\n     </div>"
 });
 var app = new Vue({
   router: router
