@@ -45,10 +45,9 @@ Vue.component('all-posts', {
   },
   template:
     `<div>
-        <p>{{this.posts}}</p>
         <ul>
-        <li v-for="item in posts" :key="item.id">
-                <h4>{{item.date}}</h4>
+        <li v-for="item in posts.data" :key="item.id">
+                <h4>{{item.title.rendered}}</h4>
             </li>
             </ul>
      </div>`
@@ -63,15 +62,17 @@ Vue.component('top-pickup', {
   mounted () {
     const baseUrl = location.origin;
     axios
-      .get(`${baseUrl}/wp-json/wp/v2/top_pickups`)
+      .get(`${baseUrl}/wp-json/wp/v2/top_pickups?_embed`)
       .then(response => (this.pickup = response))
   },
   template:
     `<div>
         <ul>
-        <p>{{pickup}}</p>
-            <li v-for="item in pickup" :key="item.id">
-                <!--<h4>{{item.title.rendered}}</h4>-->
+            <li v-for="item in pickup.data" :key="item.id">
+                <h4>{{item.title.rendered}}</h4>
+                <div v-html="item.content.rendered"></div>
+                <img :src="item._embedded['wp:featuredmedia'][0].source_url" alt="">
+                <p>{{item._links.self}}</p>
             </li>
         </ul>
      </div>`
