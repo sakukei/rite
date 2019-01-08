@@ -12,7 +12,7 @@ const ALL = {
 };
 
 const TRAVELER = {
-  template:`
+  template: `
     <div>
         <h2>TRAVELER</h2>
         <traveler-posts></traveler-posts>
@@ -95,13 +95,16 @@ Vue.component('traveler-posts', {
   mounted() {
     const baseUrl = location.origin;
     axios
-      .get(`${baseUrl}/wp-json/wp/v2/categories/37?_embed`)
+      .get(`${baseUrl}/wp-json/wp/v2/top_pickups?_embed`)
       .then(response => (this.traveler = response));
   },
   template: `<div>
         <ul>
             <li v-for="item in traveler.data" :key="item.id">
-                {{item}}
+                <a :href="item.link">
+                <img :src="item._embedded['wp:featuredmedia'][0].source_url" alt="">
+                 <h4>{{item._embedded['wp:term']}}</h4>
+                </a>
             </li>
         </ul>
      </div>`

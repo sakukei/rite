@@ -67,11 +67,11 @@ Vue.component('traveler-posts', {
     var _this3 = this;
 
     var baseUrl = location.origin;
-    axios.get("".concat(baseUrl, "/wp-json/wp/v2/categories/37?_embed")).then(function (response) {
+    axios.get("".concat(baseUrl, "/wp-json/wp/v2/top_pickups?_embed")).then(function (response) {
       return _this3.traveler = response;
     });
   },
-  template: "<div>\n        <ul>\n            <li v-for=\"item in traveler.data\" :key=\"item.id\">\n                {{item}}\n            </li>\n        </ul>\n     </div>"
+  template: "<div>\n        <ul>\n            <li v-for=\"item in traveler.data\" :key=\"item.id\">\n                <a :href=\"item.link\">\n                <img :src=\"item._embedded['wp:featuredmedia'][0].source_url\" alt=\"\">\n                 <h4>{{item._embedded['wp:term']}}</h4>\n                </a>\n            </li>\n        </ul>\n     </div>"
 });
 var app = new Vue({
   router: router
