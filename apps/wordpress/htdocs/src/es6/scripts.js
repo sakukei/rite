@@ -46,6 +46,11 @@ Vue.component('all-posts', {
   template:
     `<div>
         <p>{{this.posts}}</p>
+        <ul>
+        <li v-for="item in posts" :key="item.id">
+                <h4>{{item.date}}</h4>
+            </li>
+            </ul>
      </div>`
 });
 
@@ -63,7 +68,12 @@ Vue.component('top-pickup', {
   },
   template:
     `<div>
-        <p>{{this.pickup}}</p>
+        <ul>
+        <p>{{pickup}}</p>
+            <li v-for="item in pickup" :key="item.id">
+                <!--<h4>{{item.title.rendered}}</h4>-->
+            </li>
+        </ul>
      </div>`
 });
 
