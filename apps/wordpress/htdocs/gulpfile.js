@@ -10,6 +10,12 @@ const connect = require('gulp-connect-php');
 const prettier = require('gulp-prettier');
 const prettierPlugin = require('gulp-prettier-plugin');
 const babel = require('gulp-babel');
+const webpackStream = require('webpack-stream');
+const webpack = require('webpack');
+
+
+// webpackの設定ファイルの読み込み
+const webpackConfig = require('./webpack.config');
 
 gulp.task('sass', () => {
     return gulp.src('src/sass/**/*.scss')
@@ -37,17 +43,8 @@ gulp.task('sass', () => {
         .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/'))
 });
 
-gulp.task('babel', () =>
-    gulp.src('src/es6/**/*.js')
-        .pipe(plumber())
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/js/'))
-);
-
 gulp.task('prettier', () => {
-    return gulp.src(['src/sass/**/*.scss','src/es6/*.js'])
+    return gulp.src(['src/sass/**/*.scss','src/js/*.js'])
         .pipe(
             prettierPlugin(
                 {
@@ -59,6 +56,14 @@ gulp.task('prettier', () => {
             )
         )
         .pipe(gulp.dest(file => file.base))
+});
+
+// webpack
+gulp.task('webpack', ()=> {
+  return webpackStream(webpackConfig, webpack).on('error', function (e) {
+    this.emit('end');
+  })
+    .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/js/'));
 });
 
 gulp.task('connect-sync', function() {
@@ -77,7 +82,9 @@ gulp.task('reload', function(){
 
 gulp.task('default',['connect-sync'], function() {
     gulp.watch('src/sass/**/*.scss',['sass']);
-    gulp.watch('src/es6/*.js', ['babel', 'reload']);
+    gulp.watch('src/js/*.js', ['webpack']);
+    gulp.watch('src/js/**/*.vue', ['webpack']);
+    gulp.watch('./wp-content/themes/welcart_basic-square/js/**.js',['reload']);
     gulp.watch('**/**/*.css',['reload']);
     gulp.watch('**/**/*.php',['reload']);
 });
