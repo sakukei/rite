@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <h1>Traveler</h1>
-  </div>
+
 </template>
 
 <script>
-  export default {}
+  export default {
+  }
 </script>
 
 <style scoped>
