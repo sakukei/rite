@@ -44,7 +44,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('babel', () =>
-    gulp.src('src/es6/**/*.js')
+    gulp.src('src/js/**/*.js')
         .pipe(plumber())
         .pipe(babel({
             presets: ['@babel/env']
@@ -53,7 +53,7 @@ gulp.task('babel', () =>
 );
 
 gulp.task('prettier', () => {
-    return gulp.src(['src/sass/**/*.scss','src/es6/*.js'])
+    return gulp.src(['src/sass/**/*.scss','src/js/*.js'])
         .pipe(
             prettierPlugin(
                 {
@@ -89,7 +89,9 @@ gulp.task('reload', function(){
 
 gulp.task('default',['connect-sync'], function() {
     gulp.watch('src/sass/**/*.scss',['sass']);
-    gulp.watch('src/es6/*.js', ['webpack', 'reload']);
+    gulp.watch('src/js/*.js', ['webpack']);
+    gulp.watch('src/js/**/*.vue', ['webpack']);
+    gulp.watch('./wp-content/themes/welcart_basic-square/js/**.js',['reload']);
     gulp.watch('**/**/*.css',['reload']);
     gulp.watch('**/**/*.php',['reload']);
 });

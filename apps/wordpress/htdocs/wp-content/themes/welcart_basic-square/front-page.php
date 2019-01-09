@@ -6,7 +6,9 @@
  */
 
 get_header(); ?>
+<div id="app">
 
+</div>
 <!-- TOPメイン記事 -->
 <div class="top-main">
   <?php

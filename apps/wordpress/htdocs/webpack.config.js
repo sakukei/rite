@@ -30,7 +30,7 @@ module.exports = {
     new VueLoaderPlugin()
   ],
   // エントリポイントのファイル
-  entry: './src/es6/index.js',
+  entry: './src/js/index.js',
   output: {
     // 出力ファイル名
     filename: 'bundle.js'
