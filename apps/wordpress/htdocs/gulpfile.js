@@ -43,15 +43,6 @@ gulp.task('sass', () => {
         .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/'))
 });
 
-gulp.task('babel', () =>
-    gulp.src('src/js/**/*.js')
-        .pipe(plumber())
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/js/'))
-);
-
 gulp.task('prettier', () => {
     return gulp.src(['src/sass/**/*.scss','src/js/*.js'])
         .pipe(
@@ -69,7 +60,9 @@ gulp.task('prettier', () => {
 
 // webpack
 gulp.task('webpack', ()=> {
-  return webpackStream(webpackConfig, webpack)
+  return webpackStream(webpackConfig, webpack).on('error', function (e) {
+    this.emit('end');
+  })
     .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/js/'));
 });
 
