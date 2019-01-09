@@ -1,5 +1,5 @@
 <template>
-
+  <h1>Spot</h1>
 </template>
 
 <script>
