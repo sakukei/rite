@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <p>{{message}}</p>
@@ -6,16 +5,17 @@
 </template>
 
 <script>
-    export default {
-        data() {
-          return {
-            message: 'たか'
-          }
-        }
-
+  export default {
+    data() {
+      return {
+        message: 'hello'
+      }
     }
+  }
 </script>
 
 <style scoped>
 
 </style>
+
+
