@@ -89,7 +89,7 @@ gulp.task('reload', function(){
 
 gulp.task('default',['connect-sync'], function() {
     gulp.watch('src/sass/**/*.scss',['sass']);
-    gulp.watch('src/es6/*.js', ['babel', 'reload']);
+    gulp.watch('src/es6/*.js', ['webpack', 'reload']);
     gulp.watch('**/**/*.css',['reload']);
     gulp.watch('**/**/*.php',['reload']);
 });
