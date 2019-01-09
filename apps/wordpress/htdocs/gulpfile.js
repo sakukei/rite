@@ -10,6 +10,12 @@ const connect = require('gulp-connect-php');
 const prettier = require('gulp-prettier');
 const prettierPlugin = require('gulp-prettier-plugin');
 const babel = require('gulp-babel');
+const webpackStream = require('webpack-stream');
+const webpack = require('webpack');
+
+
+// webpackの設定ファイルの読み込み
+const webpackConfig = require('./webpack.config');
 
 gulp.task('sass', () => {
     return gulp.src('src/sass/**/*.scss')
@@ -59,6 +65,12 @@ gulp.task('prettier', () => {
             )
         )
         .pipe(gulp.dest(file => file.base))
+});
+
+// webpack
+gulp.task('webpack', ()=> {
+  return webpackStream(webpackConfig, webpack)
+    .pipe(gulp.dest('./wp-content/themes/welcart_basic-square/js/'));
 });
 
 gulp.task('connect-sync', function() {
