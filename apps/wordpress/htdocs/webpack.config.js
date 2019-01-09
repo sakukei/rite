@@ -6,7 +6,14 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/, // ファイルが.vueで終われば...
-        loader: 'vue-loader' // vue-loaderを使う
+        loader: 'vue-loader', // vue-loaderを使う
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ],
       },
       {
         test: /\.js$/,
