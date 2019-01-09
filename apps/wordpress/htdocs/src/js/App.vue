@@ -1,6 +1,10 @@
 <template>
   <div>
-    <p>{{message}}</p>
+    <nav>
+      <router-link to ='/'>Pickup</router-link>
+      <router-link to ='/traveler'>Traveler</router-link>
+    </nav>
+    <router-view />
   </div>
 </template>
 
