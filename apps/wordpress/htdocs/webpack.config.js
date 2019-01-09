@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   // エントリポイントのファイル
-  entry: './src/es6/scripts.js',
+  entry: './src/es6/index.js',
   output: {
     // 出力ファイル名
     filename: 'bundle.js'

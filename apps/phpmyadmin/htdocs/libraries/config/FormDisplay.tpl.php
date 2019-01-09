@@ -103,7 +103,7 @@ function PMA_displayFieldsetTop($title = '', $description = '', $errors = null,
     if (!empty($description)) {
         $htmlOutput .= '<p>' . $description . '</p>';
     }
-    // this must match with displayErrors() in scripts.js
+    // this must match with displayErrors() in index.js
     if (is_array($errors) && count($errors) > 0) {
         $htmlOutput .= '<dl class="errors">';
         foreach ($errors as $error) {
