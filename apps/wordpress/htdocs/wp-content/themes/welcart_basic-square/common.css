@@ -359,6 +359,10 @@ html {
 	box-sizing: border-box;
 }
 
+.p-button {
+	font-size: 30px;
+}
+
 @media screen and (min-width: 768px) {
 
 html {

@@ -7,8 +7,8 @@
 
 get_header(); ?>
 <div id="app">
-
 </div>
+<button type="button" class="p-button">テスト用</button>
 <!-- TOPメイン記事 -->
 <div class="top-main">
   <?php
