@@ -1,30 +1,9 @@
 "use strict";
 
-var PICKUP = {
-  template: "<div>\n        <h2>PICKUP</h2>\n        <top-pickup></top-pickup>\n    </div>"
-};
-var ALL = {
-  template: "<div>\n        <h2>ALL</h2>\n        <all-posts></all-posts>\n    </div>"
-};
-var TRAVELER = {
-  template: "\n    <div>\n        <h2>TRAVELER</h2>\n        <traveler-posts></traveler-posts>\n    </div>\n  "
-};
-var routes = [{
-  path: '/',
-  component: PICKUP,
-  props: true
-}, {
-  path: '/traveler',
-  component: TRAVELER,
-  props: true
-}, {
-  path: '/all',
-  component: ALL,
-  props: true
-}];
-var router = new VueRouter({
-  routes: routes
-});
+var _router = _interopRequireDefault(require("./router.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 Vue.component('all-posts', {
   data: function data() {
     return {
@@ -74,5 +53,5 @@ Vue.component('traveler-posts', {
   template: "<div>\n        <ul>\n            <li v-for=\"item in traveler.data\" :key=\"item.id\">\n                <a :href=\"item.link\">\n                <img :src=\"item._embedded['wp:featuredmedia'][0].source_url\" alt=\"\">\n                 <h4>{{item._embedded['wp:term']}}</h4>\n                </a>\n            </li>\n        </ul>\n     </div>"
 });
 var app = new Vue({
-  router: router
+  router: _router.default
 }).$mount('#app');

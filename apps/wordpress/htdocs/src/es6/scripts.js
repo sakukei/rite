@@ -1,46 +1,4 @@
-const PICKUP = {
-  template: `<div>
-        <h2>PICKUP</h2>
-        <top-pickup></top-pickup>
-    </div>`
-};
-const ALL = {
-  template: `<div>
-        <h2>ALL</h2>
-        <all-posts></all-posts>
-    </div>`
-};
-
-const TRAVELER = {
-  template: `
-    <div>
-        <h2>TRAVELER</h2>
-        <traveler-posts></traveler-posts>
-    </div>
-  `
-};
-
-const routes = [
-  {
-    path: '/',
-    component: PICKUP,
-    props: true
-  },
-  {
-    path: '/traveler',
-    component: TRAVELER,
-    props: true
-  },
-  {
-    path: '/all',
-    component: ALL,
-    props: true
-  }
-];
-const router = new VueRouter({
-  routes
-});
-
+import router from './router.js'
 Vue.component('all-posts', {
   data: function() {
     return {
@@ -113,3 +71,5 @@ Vue.component('traveler-posts', {
 const app = new Vue({
   router
 }).$mount('#app');
+
+
