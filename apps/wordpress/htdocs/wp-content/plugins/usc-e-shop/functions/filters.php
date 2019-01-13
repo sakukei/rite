@@ -1469,16 +1469,16 @@ function usces_wp_enqueue_scripts(){
 	global $usces;
 	$no_cart_css = isset($usces->options['system']['no_cart_css']) ? $usces->options['system']['no_cart_css'] : 0;
 	
-	wp_enqueue_style( 'usces_default_css', USCES_FRONT_PLUGIN_URL . '/css/usces_default.css', array(), USCES_VERSION );
-
-	if( !$no_cart_css ){
-		wp_enqueue_style( 'usces_cart_css', USCES_FRONT_PLUGIN_URL . '/css/usces_cart.css', array('usces_default_css'), USCES_VERSION );
-	}
-	
-	$theme_version = defined( 'USCES_THEME_VERSION' ) ? USCES_THEME_VERSION : USCES_VERSION;
-	if( file_exists(get_stylesheet_directory() . '/usces_cart.css') ){
-		wp_enqueue_style( 'theme_cart_css', get_stylesheet_directory_uri() . '/usces_cart.css', array('usces_default_css'), $theme_version );
-	}
+//	wp_enqueue_style( 'usces_default_css', USCES_FRONT_PLUGIN_URL . '/css/usces_default.css', array(), USCES_VERSION );
+//
+//	if( !$no_cart_css ){
+//		wp_enqueue_style( 'usces_cart_css', USCES_FRONT_PLUGIN_URL . '/css/usces_cart.css', array('usces_default_css'), USCES_VERSION );
+//	}
+//
+//	$theme_version = defined( 'USCES_THEME_VERSION' ) ? USCES_THEME_VERSION : USCES_VERSION;
+//	if( file_exists(get_stylesheet_directory() . '/usces_cart.css') ){
+//		wp_enqueue_style( 'theme_cart_css', get_stylesheet_directory_uri() . '/usces_cart.css', array('usces_default_css'), $theme_version );
+//	}
 
 	if( $usces->is_cart_or_member_page($_SERVER['REQUEST_URI']) ) {
 	
