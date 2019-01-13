@@ -34,4 +34,7 @@
 img {
   max-width: 100%;
 }
+  li {
+    max-width: 200px;
+  }
 </style>
