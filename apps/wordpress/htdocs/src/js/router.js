@@ -10,6 +10,7 @@ import Spot from './views/Spot'
 
 Vue.use(VueRouter);
 
+Vue.config.devtools = true;
 const router = new VueRouter({
   mode: 'history',
   routes: [

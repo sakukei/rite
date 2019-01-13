@@ -2,6 +2,7 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
+  mode: 'development',
   module: {
     rules: [
       {
@@ -45,5 +46,6 @@ module.exports = {
   devServer: {
     // webpackの扱わないファイル(HTMLや画像など)が入っているディレクトリ
     contentBase: path.resolve(__dirname, 'public')
-  }
+  },
+  cache: true
 }
