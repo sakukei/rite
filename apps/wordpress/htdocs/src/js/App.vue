@@ -15,10 +15,10 @@
 
 <script>
   export default {
-    data() {
-      return {
-        message: 'hello'
-      }
+    created(){
+      console.log(this.$store.state.count)
+      this.$store.commit('increment')
+      console.log(this.$store.state.count)
     }
   }
 </script>
