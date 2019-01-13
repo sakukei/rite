@@ -1,0 +1,29 @@
+// 投稿者情報
+.p-user {
+  width: 100%;
+  padding: 32px 16px;
+  margin: 0 auto;
+  text-align: center;
+  background: #f1f0ec;
+  &-icon {
+    width: 64px;
+    height: 64px;
+  }
+  &-iconWrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+  &_name {
+    padding-top: 16px;
+    font-size: _rem(20px);
+  }
+  &_description {
+    padding-top: 16px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &_account {
+    padding-top: 16px;
+  }
+}
+

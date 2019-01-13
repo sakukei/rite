@@ -16,6 +16,10 @@ default://shipped
 
 get_header();
 ?>
+  // 記事の自動整形を無効にする
+  <?php remove_filter('the_content', 'wpautop'); ?>
+  // 抜粋の自動整形を無効にする
+  <?php remove_filter( 'the_excerpt', 'wpautop' ); ?>
 <!--　TOP2カラム　-->
 <div class="contents-column sku-select-column">
     <div id="primary" class="site-content">

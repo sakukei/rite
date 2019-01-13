@@ -3,3 +3,12 @@ $_font-size: (
   'sm': 15px,
   'md': 16px
 ) !default;
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+}
