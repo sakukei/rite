@@ -29,7 +29,7 @@
         .get(`${baseUrl}/wp-json/wp/v2/posts?_embed;`)
         .then(response => {
           const posts = response.data;
-          this.posts = posts.filter(x => x.type === 'post');
+          this.posts = posts.filter(x => x.category_name !== '商品');
           }
         );
     },
