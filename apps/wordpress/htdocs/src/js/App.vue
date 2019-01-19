@@ -9,8 +9,7 @@
       <router-link to ='/spot'>Spot</router-link>
       <router-link to ='/all'>All</router-link>
     </nav>
-    <router-view />
-    {{posts}}
+    <router-view :posts="posts"/>
   </div>
 </template>
 

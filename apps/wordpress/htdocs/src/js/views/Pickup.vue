@@ -10,24 +10,25 @@
         <!--</a>-->
       <!--</li>-->
     </ul>
+    {{posts}}
   </div>
 </template>
 
 <script>
-  // import axios from 'axios'
-  // export default {
-  //   data: function() {
-  //     return {
-  //       pickup: ''
-  //     };
-  //   },
-  //   mounted() {
-  //     const baseUrl = location.origin;
-  //     axios
-  //       .get(`${baseUrl}/wp-json/wp/v2/`)
-  //       .then(response => (this.pickup = response));
-  //   },
-  // }
+  export default {
+    props:['posts'],
+    data: function() {
+      return {
+        pickup:''
+      };
+    },
+    watch: {
+      posts(post) {
+        console.log(post);
+        this.pickup = post.filter(x => x.category_name[0] === 'pickup');
+      }
+    }
+  }
 </script>
 
 <style scoped>

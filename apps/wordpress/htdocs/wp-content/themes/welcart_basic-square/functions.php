@@ -227,6 +227,8 @@ function register_category_name() {
 //$objectは現在の投稿の詳細データが入る
 function get_category_name( $object ) {
   $category = get_the_category($object[ 'id' ]);
-  $cat_name = $category[0]->cat_name;
+  for ($i = 0; $i < count($category); ++$i) {
+    $cat_name[$i] = $category[$i]->cat_name;
+  }
   return $cat_name;
 }
