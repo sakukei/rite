@@ -500,6 +500,54 @@ table {
 	border-spacing: 0;
 }
 
+.l-header {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.l-header-column {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.p-header-inner {
+	padding: 18px 20px;
+}
+
+.p-header-logo {
+	width: 60px;
+	margin-right: auto;
+}
+
+.p-header-nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.p-header-nav-unshown {
+	display: none;
+}
+
+.p-header-icon {
+	width: 24px;
+}
+
+.p-header-icon:not(:last-child) {
+	margin-right: 16px;
+}
+
+.p-header-search {
+	position: relative;
+}
+
 .c-account_link {
 	position: relative;
 	display: inline-block;

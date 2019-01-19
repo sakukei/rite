@@ -1,0 +1,33 @@
+.l-header {
+  width: 100%;
+  margin: 0 auto;
+  &-column {
+    display: flex;
+  }
+}
+.p-header {
+  &-inner {
+    padding: 18px 20px;
+  }
+  &-logo {
+    width: 60px;
+    margin-right: auto;
+  }
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-nav-unshown {
+    display: none;
+  }
+  &-icon {
+    width: 24px;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+  &-search {
+    position: relative;
+  }
+}
