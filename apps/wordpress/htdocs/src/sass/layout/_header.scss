@@ -31,3 +31,52 @@
     position: relative;
   }
 }
+
+// ドロワーメニュー
+.p-drawer {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  &-inner {
+    padding: 56px 16px;
+  }
+  &-nav {
+    padding-top: 32px;
+    &-item {
+      &:not(:first-child) {
+        padding-top: 40px;
+      }
+
+    }
+    &-item-title {
+      font-size: _rem(20px);
+    }
+    &-item-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      li {
+        width: 84px;
+        padding: 16px 0;
+      }
+      a {
+        display: block;
+      }
+      img {
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin: 0 auto;
+        border-radius: 100%;
+      }
+    }
+    &-item-list-name {
+      display: block;
+      padding-top: 8px;
+      text-align: center;
+      font-size: _rem(12px);
+    }
+  }
+}
