@@ -19,14 +19,19 @@
   export default {
     data: function() {
       return {
-        posts: ''
+        posts: '',
+        mainPost: ''
       };
     },
     mounted() {
       const baseUrl = location.origin;
       axios
-        .get(`${baseUrl}/wp-json/wp/v2/posts`)
-        .then(response => (this.posts = response.data));
+        .get(`${baseUrl}/wp-json/wp/v2/posts?_embed;`)
+        .then(response => {
+          const posts = response.data;
+          this.posts = posts.filter(x => x.type === 'post');
+          }
+        );
     },
   }
 </script>
