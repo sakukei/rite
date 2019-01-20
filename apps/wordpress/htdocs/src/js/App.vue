@@ -9,14 +9,15 @@
       <router-link to ='/spot'>Spot</router-link>
       <router-link to ='/all'>All</router-link>
     </nav>
-    <router-view :posts="posts"/>
+    <router-view :posts="mainPost"/>
   </div>
 </template>
 
 <script>
   import axios from 'axios';
+
   export default {
-    data: function() {
+    data: function () {
       return {
         posts: '',
         mainPost: ''
@@ -27,8 +28,18 @@
       axios
         .get(`${baseUrl}/wp-json/wp/v2/posts?_embed;`)
         .then(response => {
-          const posts = response.data;
-          this.posts = posts.filter(x => x.category_name !== '商品');
+            this.posts = response.data;
+            console.log(this.posts)
+            // const category = posts.category_name;
+            // this.mainPost = category.filter(function(post){
+            //   console.log(post)
+            // })
+          // console.log(this.posts.category_name)
+
+          //一応できてるけど最初のだけ
+           this.mainPost = this.posts.filter(function(post){
+             return post.category_name[0] !== '商品';
+           })
           }
         );
     },

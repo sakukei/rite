@@ -25,7 +25,6 @@
     watch: {
       posts(post) {
         console.log(post);
-        this.pickup = post.filter(x => x.category_name[0] === 'pickup');
       }
     }
   }
