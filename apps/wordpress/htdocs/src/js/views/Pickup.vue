@@ -1,11 +1,12 @@
 <template>
   <div class="test">
     <h1>Pickup</h1>
-    <ul>
+    <ul class="feature-pickup">
       <li v-for="item in featurePickup" :key="item.id">
         <a :href="item.link">
-        {{item.title.rendered}}
-      </a>
+          <img :src="item.featured_image.src"/>
+          {{item.title.rendered}}
+        </a>
       </li>
     </ul>
   </div>
@@ -34,11 +35,19 @@
   }
 </script>
 
-<style scoped>
-img {
-  max-width: 100%;
-}
+<style lang="scss">
+  img {
+    max-width: 100%;
+  }
+
   li {
-    max-width: 200px;
+    max-width: 100px;
+  }
+
+  .feature-pickup {
+    display: flex;
+    img {
+      border-radius: 10px;
+    }
   }
 </style>
