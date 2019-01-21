@@ -2,15 +2,12 @@
   <div class="test">
     <h1>Pickup</h1>
     <ul>
-      <!--<li v-for="item in pickup.data" :key="item.id">-->
-        <!--<a :href="item.link">-->
-
-          <!--{{item.title.rendered}}-->
-          <!--<img :src="item._embedded['wp:featuredmedia'][0].source_url" alt="">-->
-        <!--</a>-->
-      <!--</li>-->
+      <li v-for="item in featurePickup" :key="item.id">
+        <a :href="item.link">
+        {{item.title.rendered}}
+      </a>
+      </li>
     </ul>
-    {{posts}}
   </div>
 </template>
 
@@ -19,17 +16,16 @@
     props:['posts'],
     data: function() {
       return {
-        pickup:[]
+        featurePickup: []
       };
     },
     watch: {
       posts(posts) {
-        console.log(posts);
-        for(let i = 0; i < posts.length; i++){
-          console.log(posts[i].category_name)
-          for(let a = 0; a < posts[i].category_name.length; a++){
-            if(posts[i].category_name[a] === 'Pickup'){
-              this.pickup.push(posts[i])
+        for (let i = 0; i < posts.length; i++) {
+          for (let a = 0; a < posts[i].category_name.length; a++) {
+            if (posts[i].category_name[a] === 'Pickup-feature') {
+              this.featurePickup.push(posts[i]);
+              break;
             }
           }
         }

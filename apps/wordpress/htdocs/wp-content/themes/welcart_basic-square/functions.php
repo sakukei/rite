@@ -232,3 +232,25 @@ function get_category_name( $object ) {
   }
   return $cat_name;
 }
+
+add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
+function wp_add_thumbnail_to_JSON() {
+//Add featured image
+  register_rest_field('post',
+    'featured_image', //NAME OF THE NEW FIELD TO BE ADDED - you can call this anything
+    array(
+      'get_callback' => 'wp_get_image',
+      'update_callback' => null,
+      'schema' => null,
+    )
+  );
+}
+
+function wp_get_image($object, $field_name, $request) {
+  $feat_img_array = wp_get_attachment_image_src($object['featured_media'], 'large', true);
+  return [
+    'src' => $feat_img_array[0],
+    'width' => $feat_img_array[1],
+    'height' => $feat_img_array[2],
+  ];
+}
