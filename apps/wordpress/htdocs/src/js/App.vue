@@ -20,7 +20,7 @@
     data: function () {
       return {
         posts: '',
-        mainPost: ''
+        mainPost: []
       };
     },
     mounted() {
@@ -34,12 +34,27 @@
             // this.mainPost = category.filter(function(post){
             //   console.log(post)
             // })
-          // console.log(this.posts.category_name)
+            // console.log(this.posts.category_name)
 
-          //一応できてるけど最初のだけ
-           this.mainPost = this.posts.filter(function(post){
-             return post.category_name[0] !== '商品';
-           })
+            //一応できてるけど最初のだけ
+            //  this.mainPost = this.posts.filter(function(post){
+            //    return post.category_name[0] !== '商品';
+            //  })
+            //一応できてるけど最初のだけ
+            // this.mainPost = this.posts.filter(function (post) {
+            //   return post.forEach(function (category) {
+            //     return console.log(category.category__name)
+            //   })
+              // return post.category_name[0] !== '商品';
+            // })
+            for(let i = 0; i < this.posts.length; i++){
+              for(let a = 0; a < this.posts[i].category_name.length; a++){
+                if(this.posts[i].category_name[a] === 'Pickup'){
+                  this.mainPost.push(this.posts[i])
+                }
+              }
+            }
+
           }
         );
     },
