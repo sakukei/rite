@@ -19,12 +19,20 @@
     props:['posts'],
     data: function() {
       return {
-        pickup:''
+        pickup:[]
       };
     },
     watch: {
-      posts(post) {
-        console.log(post);
+      posts(posts) {
+        console.log(posts);
+        for(let i = 0; i < posts.length; i++){
+          console.log(posts[i].category_name)
+          for(let a = 0; a < posts[i].category_name.length; a++){
+            if(posts[i].category_name[a] === 'Pickup'){
+              this.pickup.push(posts[i])
+            }
+          }
+        }
       }
     }
   }
