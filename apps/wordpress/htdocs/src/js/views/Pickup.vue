@@ -40,14 +40,13 @@
     max-width: 100%;
   }
 
-  li {
-    max-width: 100px;
-  }
-
   .feature-pickup {
     display: flex;
     img {
       border-radius: 10px;
+    }
+    li {
+     width: 60%;
     }
   }
 </style>

@@ -4207,7 +4207,7 @@ eval("__webpack_require__(/*! ./modules/es6.symbol */ \"./node_modules/core-js/m
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"img {\\n  max-width: 100%;\\n}\\nli {\\n  max-width: 100px;\\n}\\n.feature-pickup {\\n  display: flex;\\n}\\n.feature-pickup img {\\n    border-radius: 10px;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/js/views/Pickup.vue?./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"img {\\n  max-width: 100%;\\n}\\n.feature-pickup {\\n  display: flex;\\n}\\n.feature-pickup img {\\n    border-radius: 10px;\\n}\\n.feature-pickup li {\\n    width: 60%;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/js/views/Pickup.vue?./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
