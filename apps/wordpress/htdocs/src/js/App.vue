@@ -9,7 +9,7 @@
       <router-link to ='/spot'>Spot</router-link>
       <router-link to ='/all'>All</router-link>
     </nav>
-    <router-view :posts="posts"/>
+    <router-view :posts="posts" :getCategory="getCategory"/>
   </div>
 </template>
 
@@ -19,8 +19,7 @@
   export default {
     data: function () {
       return {
-        posts: '',
-        mainPost: []
+        posts: ''
       };
     },
     mounted() {
@@ -32,6 +31,18 @@
           }
         );
     },
+    methods: {
+      getCategory: function(filterBy,objList) {
+        return objList.filter(function (obj) {
+          return obj.category_name.some(function (item) {
+            return item.indexOf(filterBy) >= 0;
+          })
+        })
+      }
+    },
+    computed: {
+
+    }
   }
 </script>
 

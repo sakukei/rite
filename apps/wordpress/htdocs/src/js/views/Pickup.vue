@@ -24,7 +24,7 @@
 
 <script>
   export default {
-    props:['posts'],
+    props:['posts','getCategory'],
     data: function() {
       return {
         featurePickup: [],
@@ -34,24 +34,15 @@
     },
     watch: {
       posts(posts) {
-        const getCategory = (filterBy,objList) => {
-          return objList.filter(function (obj) {
-            return obj.category_name.some(function (item) {
-              return item.indexOf(filterBy) >= 0;
-            })
-          })
-        };
-        this.featurePickup = getCategory('Pickup-feature',posts);
-        this.pickup = getCategory('Pickup',posts);
+        this.featurePickup = this.getCategory('Pickup-feature',posts);
+        this.pickup = this.getCategory('Pickup',posts);
         this.pickupOnly = this.pickup.filter(function(obj){
           return obj.category_name.every(function(item){
             return item.indexOf('Pickup-feature') === -1;
           })
         })
-
       }
     }
-
   }
 </script>
 
