@@ -1,11 +1,21 @@
 <template>
   <div class="test">
     <h1>Pickup</h1>
+    <h2>FeaturePickup</h2>
     <ul class="feature-pickup">
       <li v-for="item in featurePickup" :key="item.id">
         <a :href="item.link">
-          <img :src="item.featured_image.src"/>
-          {{item.title.rendered}}
+          <div><img :src="item.featured_image.src"/></div>
+          <p>{{item.title.rendered}}</p>
+        </a>
+      </li>
+    </ul>
+    <h2>Pickup</h2>
+    <ul class="feature-pickup">
+      <li v-for="item in pickupOnly" :key="item.id">
+        <a :href="item.link">
+          <div><img :src="item.featured_image.src"/></div>
+          <p>{{item.title.rendered}}</p>
         </a>
       </li>
     </ul>
@@ -17,21 +27,31 @@
     props:['posts'],
     data: function() {
       return {
-        featurePickup: []
+        featurePickup: [],
+        pickup: [],
+        pickupOnly:[]
       };
     },
     watch: {
       posts(posts) {
-        for (let i = 0; i < posts.length; i++) {
-          for (let a = 0; a < posts[i].category_name.length; a++) {
-            if (posts[i].category_name[a] === 'Pickup-feature') {
-              this.featurePickup.push(posts[i]);
-              break;
-            }
-          }
-        }
+        const getCategory = (filterBy,objList) => {
+          return objList.filter(function (obj) {
+            return obj.category_name.some(function (item) {
+              return item.indexOf(filterBy) >= 0;
+            })
+          })
+        };
+        this.featurePickup = getCategory('Pickup-feature',posts);
+        this.pickup = getCategory('Pickup',posts);
+        this.pickupOnly = this.pickup.filter(function(obj){
+          return obj.category_name.every(function(item){
+            return item.indexOf('Pickup-feature') === -1;
+          })
+        })
+
       }
     }
+
   }
 </script>
 
@@ -41,12 +61,9 @@
   }
 
   .feature-pickup {
-    display: flex;
-    img {
-      border-radius: 10px;
-    }
     li {
-     width: 60%;
+     width: 200px;
+      margin: 0 0 20px;
     }
   }
 </style>
