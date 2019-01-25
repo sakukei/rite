@@ -158,6 +158,76 @@ a {
 	text-decoration: none;
 }
 
+.l-footer {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.p-footer-nav-list li,
+.p-footer-accordion-label,
+.p-footer-copyright {
+	background: #2f303a;
+	color: #fff;
+}
+
+.p-footer-accordion-label {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	margin-top: 1px;
+}
+
+.p-footer-accordion-label::after {
+	display: inline-block;
+	content: '';
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 12px;
+	height: 12px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.p-footer-link,
+.p-footer-copyright {
+	display: block;
+	padding: 12px 16px;
+}
+
+.p-footer-copyright {
+	font-size: 0.875rem;
+}
+
+.p-footer-menu-child li:first-child {
+	display: none;
+}
+
+.p-footer-nav-list-accodion {
+	overflow-y: hidden;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.p-footer-nav-list-accodion a {
+	display: block;
+	padding: 12px 16px;
+	font-size: 0.875rem;
+	color: #000;
+}
+
+.p-footer-nav-list-accodion a:hover {
+	color: #000;
+	opacity: 0.6;
+}
+
+.p-footer-accordion-check:checked ~ .p-footer-nav-list-accodion li {
+	max-height: 50px;
+	opacity: 1;
+}
+
 .l-header {
 	width: 100%;
 	margin: 0 auto;
@@ -265,6 +335,15 @@ a {
 	padding-top: 8px;
 	text-align: center;
 	font-size: 0.75rem;
+}
+
+.c-accordion-label {
+	display: block;
+	cursor: pointer;
+}
+
+.c-accordion-check {
+	display: none;
 }
 
 .c-account_link {
