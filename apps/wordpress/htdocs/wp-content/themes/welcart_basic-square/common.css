@@ -181,14 +181,14 @@ a {
 	display: inline-block;
 	content: '';
 	position: absolute;
-	top: 16px;
+	top: 10px;
 	right: 16px;
 	width: 12px;
 	height: 12px;
 	border-top: 2px solid #fff;
 	border-right: 2px solid #fff;
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
 }
 
 .p-footer-link,
@@ -198,6 +198,7 @@ a {
 }
 
 .p-footer-copyright {
+	margin-top: 1px;
 	font-size: 0.875rem;
 }
 
@@ -205,27 +206,42 @@ a {
 	display: none;
 }
 
-.p-footer-nav-list-accodion {
+.p-footer-nav-list-accordion li {
+	max-height: 0;
 	overflow-y: hidden;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
 
-.p-footer-nav-list-accodion a {
+.p-footer-nav-list-accordion li a {
 	display: block;
 	padding: 12px 16px;
 	font-size: 0.875rem;
 	color: #000;
 }
 
-.p-footer-nav-list-accodion a:hover {
+.p-footer-nav-list-accordion li a:hover {
 	color: #000;
 	opacity: 0.6;
 }
 
-.p-footer-accordion-check:checked ~ .p-footer-nav-list-accodion li {
+#p-footer-accordion-label:checked ~ .p-footer-nav-list-accordion li {
 	max-height: 50px;
 	opacity: 1;
+}
+
+#p-footer-accordion-label:checked + .p-footer-accordion-label::after {
+	display: inline-block;
+	content: '';
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 12px;
+	height: 12px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 .l-header {
