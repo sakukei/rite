@@ -47,9 +47,9 @@ $opt = ' class="display-desc"';
         <div class="p-header-nav">
           <div class="l-header-column p-header-nav-column">
             <div class="p-header-icon p-header-search">
-              <!--              <input id="p-header-nav-input" type="checkbox" class="p-header-nav-unshown">-->
-              <!--              <label id="p-header-nav-open" for="p-header-nav-input"><span></span></label>-->
-              <!--              <label class="p-header-nav-unshown" id="nav-close" for="nav-input"></label>-->
+              <!--<input id="p-header-nav-input" type="checkbox" class="p-header-nav-unshown">-->
+              <!--<label id="p-header-nav-open" for="p-header-nav-input"><span></span></label>-->
+              <!--<label class="p-header-nav-unshown" id="nav-close" for="nav-input"></label>-->
               <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search.png"
                                            alt="検索のアイコン""></a>
             </div>
