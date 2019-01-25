@@ -264,7 +264,7 @@ function welcart_basic_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" action="'.home_url( '/' ).'" >
 		<div class="s-box">
 			<input type="text" value="' . get_search_query() . '" name="s" id="s" />
-			<input type="submit" id="searchsubmit" value="&#xf002" />
+			<input type="submit" id="searchsubmit" value="" />
 		</div>
     </form>';
     return $form;
