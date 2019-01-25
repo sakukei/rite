@@ -338,6 +338,21 @@ a {
 	padding-top: 16px;
 }
 
+.p-drawer-nav-item-list::before {
+	content: "";
+	display: block;
+	width: 23%;
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
+	order: 1;
+}
+
+.p-drawer-nav-item-list::after {
+	content: "";
+	display: block;
+	width: 23%;
+}
+
 .p-drawer-nav-item-list li {
 	width: 84px;
 	padding: 16px 0;

@@ -81,6 +81,17 @@
       align-items: center;
       flex-wrap: wrap;
       padding-top: 16px;
+      &::before {
+        content:"";
+        display: block;
+        width:23%;
+        order:1;
+      }
+      &::after {
+        content:"";
+        display: block;
+        width:23%;
+      }
       li {
         width: 84px;
         padding: 16px 0;

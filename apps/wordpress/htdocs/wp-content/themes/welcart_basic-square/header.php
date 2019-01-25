@@ -66,103 +66,105 @@ $opt = ' class="display-desc"';
 
       </div>
 
-      <div class="p-drawer">
+    </div>
 
-        <div class="p-drawer-inner">
+    <div class="p-drawer">
 
-          <div class="p-drawer-searchBox">
-            <?php get_search_form(); ?>
+      <div class="p-drawer-inner">
+
+        <div class="p-drawer-searchBox">
+          <?php get_search_form(); ?>
+        </div>
+
+        <div class="p-drawer-nav">
+          <div class="p-drawer-nav-item">
+            <h3 class="p-drawer-nav-item-title">traveler</h3>
+            <ul class="p-drawer-nav-item-list">
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_hasegawa_aya.jpeg"
+                    alt=""><span class="p-drawer-nav-item-list-name">長谷川あや</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/hitostagram12"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yoshino_hitomi.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">良野仁美</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/namiy_73"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_namiy_73.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">なみ</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/yuika"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yu_i_k_a.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">yu.i.k.a</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/chiha6170"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_chiha6710.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">chiha</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/oayumi"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_oayumi.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">AYUMI</span></a></li>
+            </ul>
           </div>
-
-          <div class="p-drawer-nav">
-            <div class="p-drawer-nav-item">
-              <h3 class="p-drawer-nav-item-title">traveler</h3>
-              <ul class="p-drawer-nav-item-list">
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_hasegawa_aya.jpeg"
-                      alt=""><span class="p-drawer-nav-item-list-name">長谷川あや</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/hitostagram12"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yoshino_hitomi.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">良野仁美</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/namiy_73"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_namiy_73.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">なみ</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/yuika"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yu_i_k_a.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">yu.i.k.a</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/chiha6170"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_chiha6710.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">chiha</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/oayumi"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_oayumi.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">AYUMI</span></a></li>
-              </ul>
-            </div>
-            <div class="p-drawer-nav-item">
-              <h3 class="p-drawer-nav-item-title">categoly</h3>
-              <ul class="p-drawer-nav-item-list">
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_hasegawa_aya.jpeg"
-                      alt=""><span class="p-drawer-nav-item-list-name">長谷川あや</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/hitostagram12"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yoshino_hitomi.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">良野仁美</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/namiy_73"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_namiy_73.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">なみ</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/yuika"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yu_i_k_a.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">yu.i.k.a</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/chiha6170"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_chiha6710.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">chiha</span></a></li>
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/oayumi"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_oayumi.jpg"
-                      alt=""><span class="p-drawer-nav-item-list-name">AYUMI</span></a></li>
-              </ul>
-            </div>
-            <div class="p-drawer-nav-item">
-              <h3 class="p-drawer-nav-item-title">country</h3>
-              <ul class="p-drawer-nav-item-list">
-                <li>
-                  <a href="<?php get_stylesheet_directory_uri(); ?>/tag/japan">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_japan.png"
-                         alt=""><span class="p-drawer-nav-item-list-name">日本</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_korea.png"
-                      alt=""><span class="p-drawer-nav-item-list-name">韓国</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_bali.png"
-                      alt=""><span class="p-drawer-nav-item-list-name">インドネシア</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="<?php get_stylesheet_directory_uri(); ?>/tag/thailand">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_thailand.png"
-                         alt=""><span class="p-drawer-nav-item-list-name">タイ</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="p-drawer-nav-item">
-              <h3 class="p-drawer-nav-item-title">fashion</h3>
-              <ul class="p-drawer-nav-item-list">
-                <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/fashion"><img
-                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_fashion_fashion.png"
-                      alt=""><span class="p-drawer-nav-item-list-name">ファッション</span></a></li>
-              </ul>
-            </div>
+          <div class="p-drawer-nav-item">
+            <h3 class="p-drawer-nav-item-title">categoly</h3>
+            <ul class="p-drawer-nav-item-list">
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_hasegawa_aya.jpeg"
+                    alt=""><span class="p-drawer-nav-item-list-name">長谷川あや</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/hitostagram12"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yoshino_hitomi.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">良野仁美</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/namiy_73"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_namiy_73.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">なみ</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/yuika"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yu_i_k_a.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">yu.i.k.a</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/chiha6170"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_chiha6710.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">chiha</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/oayumi"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_oayumi.jpg"
+                    alt=""><span class="p-drawer-nav-item-list-name">AYUMI</span></a></li>
+            </ul>
           </div>
-
+          <div class="p-drawer-nav-item">
+            <h3 class="p-drawer-nav-item-title">country</h3>
+            <ul class="p-drawer-nav-item-list">
+              <li>
+                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/japan">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_japan.png"
+                       alt=""><span class="p-drawer-nav-item-list-name">日本</span>
+                </a>
+              </li>
+              <li>
+                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_korea.png"
+                    alt=""><span class="p-drawer-nav-item-list-name">韓国</span>
+                </a>
+              </li>
+              <li>
+                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_bali.png"
+                    alt=""><span class="p-drawer-nav-item-list-name">インドネシア</span>
+                </a>
+              </li>
+              <li>
+                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/thailand">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_thailand.png"
+                       alt=""><span class="p-drawer-nav-item-list-name">タイ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-drawer-nav-item">
+            <h3 class="p-drawer-nav-item-title">fashion</h3>
+            <ul class="p-drawer-nav-item-list">
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/fashion"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_fashion_fashion.png"
+                    alt=""><span class="p-drawer-nav-item-list-name">ファッション</span></a></li>
+            </ul>
+          </div>
         </div>
 
       </div>
+
+    </div>
 
   </header>
 
