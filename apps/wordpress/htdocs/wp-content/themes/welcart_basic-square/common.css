@@ -195,11 +195,11 @@ a {
 .p-footer-copyright {
 	display: block;
 	padding: 12px 16px;
+	font-size: 0.875rem;
 }
 
 .p-footer-copyright {
 	margin-top: 1px;
-	font-size: 0.875rem;
 }
 
 .p-footer-menu-child li:first-child {
