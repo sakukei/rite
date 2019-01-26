@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="p-feature-pickup">
-      <ul class="p-feature-pickup__list">
-        <li v-for="item in featurePickup" :key="item.id">
+      <swiper class="p-feature-pickup__list">
+        <swiper-slide v-for="item in featurePickup" :key="item.id">
           <a :href="item.link">
-            <div><img :src="item.featured_image.src"/></div>
-            <p class="feature-pickup__title">{{item.title.rendered}}</p>
-            <p></p>
+            <div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>
+            <p class="p-feature-pickup__title">{{item.title.rendered}}</p>
+            <p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,20)}}</p>
           </a>
-        </li>
-      </ul>
+        </swiper-slide>
+      </swiper>
     </div>
     <ul class="p-main-grid">
       <li v-for="item in pickupOnly" :key="item.id">
@@ -22,11 +22,20 @@
 </template>
 
 <script>
+  import 'swiper/dist/css/swiper.css';
+  import { swiper, swiperSlide } from 'vue-awesome-swiper';
   export default {
     props:['getCategory'],
-    data: function() {
+    components: {
+      swiper,
+      swiperSlide
+    },
+    data() {
       return {
-      };
+        swiperOption: {
+
+        }
+      }
     },
     computed: {
       posts() {
@@ -62,24 +71,30 @@
     margin: 50px 0;
 
   }
-  .p-feature-pickup__list {
-    display: flex;
-    width: 400%;
-    justify-content: flex-start;
-    li {
-      width: 20%;
-      margin: 0 5px;
-    }
-    img {
-      height: 200px;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-  }
-  .feature-pickup__title {
+  .p-feature-pickup__title {
     margin: 10px 0;
     font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .p-feature-pickup__image {
+    height: 150px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 15px;
+    }
   }
 
 </style>
