@@ -15,7 +15,7 @@ const store = new Vuex.Store({
   },
   actions: {
     getPosts({dispatch}) {
-      return axios.get('http://localhost:3002/wp-json/wp/v2/posts?_embed;',{});
+      return axios.get(`http://localhost:3002/wp-json/wp/v2/posts?per_page=100`,{});
     },
   },
   getters: {
