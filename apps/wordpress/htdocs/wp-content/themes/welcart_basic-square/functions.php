@@ -182,83 +182,6 @@ add_filter( 'excerpt_more', 'wcct_excerpt_more' );
  * 追加
  ***********************************************************/
 
-// カスタム投稿タイプ - ピックアップ記事 -
-function cptui_register_my_cpts_top_pickup() {
-
-    /**
-     * Post Type: top_pickup.
-     */
-
-    $labels = array(
-        "name" => __( "top_pickup", "" ),
-        "singular_name" => __( "top_pickup", "" ),
-    );
-
-    $args = array(
-        "label" => __( "top_pickup", "" ),
-        "labels" => $labels,
-        "description" => "",
-        "public" => true,
-        "publicly_queryable" => true,
-        "show_ui" => true,
-        "show_in_rest" => true,
-        "rest_base" => "top_pickups",
-        "has_archive" => false,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "exclude_from_search" => false,
-        "capability_type" => "post",
-        "map_meta_cap" => true,
-        "hierarchical" => false,
-        "rewrite" => array( "slug" => "top_pickup", "with_front" => true ),
-        "query_var" => true,
-        "supports" => array( "title", "editor", "thumbnail" ),
-        "yarpp_support" => true,
-    );
-
-    register_post_type( "top_pickup", $args );
-}
-
-add_action( 'init', 'cptui_register_my_cpts_top_pickup' );
-
-// カスタム投稿タイプ - メイン記事 -
-function cptui_register_my_cpts_top_main() {
-
-    /**
-     * Post Type: top_main.
-     */
-
-    $labels = array(
-        "name" => __( "top_main", "" ),
-        "singular_name" => __( "top_main", "" ),
-    );
-
-    $args = array(
-        "label" => __( "top_main", "" ),
-        "labels" => $labels,
-        "description" => "",
-        "public" => true,
-        "publicly_queryable" => true,
-        "show_ui" => true,
-        "show_in_rest" => false,
-        "rest_base" => "",
-        "has_archive" => false,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "exclude_from_search" => false,
-        "capability_type" => "post",
-        "map_meta_cap" => true,
-        "hierarchical" => false,
-        "rewrite" => array( "slug" => "top_main", "with_front" => true ),
-        "query_var" => true,
-        "supports" => array( "title", "editor", "thumbnail" ),
-        "yarpp_support" => true,
-    );
-
-    register_post_type( "top_main", $args );
-}
-
-add_action( 'init', 'cptui_register_my_cpts_top_main' );
 
 // Gravator
 function validate_gravatar($email) {
@@ -274,18 +197,6 @@ function validate_gravatar($email) {
     return $has_valid_avatar;
 }
 
-// カスタム投稿タイプに通常の投稿と同じカテゴリーとタグの設定
-function my_main_query( $query ) {
-    if ( is_admin() || ! $query->is_main_query() )
-        return;
-
-    if ( $query->is_category() || $query->is_tag() ) {
-        $query->set( 'post_type', array( 'post', 'top_main', 'top_pickup' ) );
-        return;
-    }
-}
-add_action( 'pre_get_posts', 'my_main_query' );
-
 // YARPPのwidget.cssを削除
 add_action('wp_print_styles','crunchify_dequeue_header_styles');
 function crunchify_dequeue_header_styles()
@@ -298,4 +209,48 @@ add_action('get_footer','crunchify_dequeue_footer_styles');
 function crunchify_dequeue_footer_styles()
 {
     wp_dequeue_style('yarppRelatedCss');
+}
+
+//カテゴリ名を取得する関数を登録
+add_action( 'rest_api_init', 'register_category_name' );
+
+function register_category_name() {
+//register_rest_field関数を用いget_category_name関数からカテゴリ名を取得し、追加する
+  register_rest_field( 'post',
+    'category_name',
+    array(
+      'get_callback'    => 'get_category_name'
+    )
+  );
+}
+
+//$objectは現在の投稿の詳細データが入る
+function get_category_name( $object ) {
+  $category = get_the_category($object[ 'id' ]);
+  for ($i = 0; $i < count($category); ++$i) {
+    $cat_name[$i] = $category[$i]->cat_name;
+  }
+  return $cat_name;
+}
+
+add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
+function wp_add_thumbnail_to_JSON() {
+//Add featured image
+  register_rest_field('post',
+    'featured_image', //NAME OF THE NEW FIELD TO BE ADDED - you can call this anything
+    array(
+      'get_callback' => 'wp_get_image',
+      'update_callback' => null,
+      'schema' => null,
+    )
+  );
+}
+
+function wp_get_image($object, $field_name, $request) {
+  $feat_img_array = wp_get_attachment_image_src($object['featured_media'], 'large', true);
+  return [
+    'src' => $feat_img_array[0],
+    'width' => $feat_img_array[1],
+    'height' => $feat_img_array[2],
+  ];
 }

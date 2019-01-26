@@ -1,12 +1,21 @@
 <template>
   <div class="test">
     <h1>Pickup</h1>
-    <ul>
-      <li v-for="item in pickup.data" :key="item.id">
+    <h2>FeaturePickup</h2>
+    <ul class="feature-pickup">
+      <li v-for="item in featurePickup" :key="item.id">
         <a :href="item.link">
-
-          {{item.title.rendered}}
-          <img :src="item._embedded['wp:featuredmedia'][0].source_url" alt="">
+          <div><img :src="item.featured_image.src"/></div>
+          <p>{{item.title.rendered}}</p>
+        </a>
+      </li>
+    </ul>
+    <h2>Pickup</h2>
+    <ul class="feature-pickup">
+      <li v-for="item in pickupOnly" :key="item.id">
+        <a :href="item.link">
+          <div><img :src="item.featured_image.src"/></div>
+          <p>{{item.title.rendered}}</p>
         </a>
       </li>
     </ul>
@@ -14,27 +23,62 @@
 </template>
 
 <script>
-  import axios from 'axios'
   export default {
+    props:['getCategory'],
     data: function() {
       return {
-        pickup: ''
+        // featurePickup: [],
+        // pickup: [],
+        // pickupOnly:[]
       };
     },
-    mounted() {
-      const baseUrl = location.origin;
-      axios
-        .get(`${baseUrl}/wp-json/wp/v2/top_pickups?_embed`)
-        .then(response => (this.pickup = response));
-    },
+    // watch: {
+    //   posts(posts) {
+    //     this.featurePickup = this.getCategory('Pickup-feature', posts);
+    //     this.pickup = this.getCategory('Pickup', posts);
+    //     this.pickupOnly = this.pickup.filter(function (obj) {
+    //       return obj.category_name.every(function (item) {
+    //         return item.indexOf('Pickup-feature') === -1;
+    //       })
+    //     })
+    //   }
+    // },
+    // mounted (){
+    //   this.featurePickup = this.getCategory('Pickup-feature', this.posts);
+    //   this.pickup = this.getCategory('Pickup', this.posts);
+    //   this.pickupOnly =
+    //   })
+    // },
+    computed: {
+      posts() {
+        return this.$store.state.posts
+      },
+      featurePickup: function () {
+          return this.getCategory('Pickup-feature', this.posts);
+      },
+      pickup: function () {
+        return this.getCategory('Pickup', this.posts);
+      },
+      pickupOnly: function() {
+        return this.pickup.filter(function (obj) {
+          return obj.category_name.every(function (item) {
+            return item.indexOf('Pickup-feature') === -1;
+          })
+        })
+      }
+    }
   }
 </script>
 
-<style scoped>
-img {
-  max-width: 100%;
-}
-  li {
-    max-width: 200px;
+<style lang="scss">
+  img {
+    max-width: 100%;
+  }
+
+  .feature-pickup {
+    li {
+     width: 200px;
+      margin: 0 0 20px;
+    }
   }
 </style>

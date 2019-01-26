@@ -10,13 +10,6 @@ module.exports = {
         loader: 'vue-loader', // vue-loaderを使う
       },
       {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ],
-      },
-      {
         test: /\.js$/,
         loader: 'babel-loader',
       },
@@ -24,6 +17,10 @@ module.exports = {
         test: /\.css$/,
         use: ['vue-style-loader', 'css-loader'] // css-loader -> vue-style-loaderの順で通していく
       },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      }
     ]
   },
   resolve: {
