@@ -20,9 +20,9 @@
              class="p-footer-link">お問い合わせ</a>
         </li>
       </ul>
+      <input type="checkbox" id="p-footer-accordion-label" class="c-accordion-check p-footer-accordion-check"/>
       <label for="p-footer-accordion-label" class="c-accordion-label p-footer-accordion-label p-footer-link">会社概要・規約</label>
-      <input type="checkbox" id=p-footer-accordion-label" class="c-accordion-check p-footer-accordion-check"/>
-      <ul class="p-footer-nav-list-accodion">
+      <ul class="p-footer-nav-list-accordion">
         <li class="page-item footer-about">
           <a href="http://company.rite.co.jp/" target="_blank">会社概要</a>
         </li>
