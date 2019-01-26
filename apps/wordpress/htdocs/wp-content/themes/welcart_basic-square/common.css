@@ -393,6 +393,89 @@ a {
 	font-size: 0.75rem;
 }
 
+.p-category-nav {
+	overflow-x: scroll;
+}
+
+.p-category-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	width: 200%;
+}
+
+.p-category-list li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 84px;
+	height: 72px;
+}
+
+.p-category-list li a {
+	display: block;
+}
+
+.p-category-list li a::before {
+	display: block;
+	content: '';
+	width: 48px;
+	height: 48px;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-size: 48px;
+	border-radius: 50%;
+}
+
+.p-category-list li a.-pickup::before {
+	background-image: url(images/icon_traveler_hasegawa_aya.jpeg);
+}
+
+.p-category-list li a.-traveler::before {
+	background-image: url(images/icon_traveler_yoshino_hitomi.jpg);
+}
+
+.p-category-list li a.-country::before {
+	background-image: url(images/icon_traveler_namiy_73.jpg);
+}
+
+.p-category-list li a.-fashion::before {
+	background-image: url(images/icon_traveler_yu_i_k_a.jpg);
+}
+
+.p-category-list li a.-food::before {
+	background-image: url(images/icon_traveler_chiha6710.jpg);
+}
+
+.p-category-list li a.-spot::before {
+	background-image: url(images/icon_traveler_oayumi.jpg);
+}
+
+.p-category-list li a.-all::before {
+	background-image: url(images/icon_traveler_yoshino_hitomi.jpg);
+}
+
+.p-category-list-name {
+	display: inline-block;
+	width: 100%;
+	padding-top: 8px;
+	text-align: center;
+}
+
 .c-accordion-label {
 	display: block;
 	cursor: pointer;
