@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 
 Vue.config.devtools = true;
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',
