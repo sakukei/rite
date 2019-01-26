@@ -9,7 +9,7 @@
       <router-link to ='/spot'>Spot</router-link>
       <router-link to ='/all'>All</router-link>
     </nav>
-    <router-view :posts="posts" :getCategory="getCategory"/>
+    <router-view :getCategory="getCategory"/>
     <!--<div>{{posts}}</div>-->
   </div>
 </template>
@@ -27,7 +27,6 @@
         })
       }
     },
-    props: ['post'],
     data () {
       return {
         posts: ''
@@ -39,7 +38,12 @@
         this.posts = this.$store.state.posts
         return;
       })
-    }
+    },
+    // computed :{
+    //   message() {
+    //     return this.$store.state.posts
+    //   }
+    // }
   }
 </script>
 

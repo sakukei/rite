@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state :{
-    posts :'初期化'
+    posts :[]
   },
   mutations: {
     setPosts(state, payload) {

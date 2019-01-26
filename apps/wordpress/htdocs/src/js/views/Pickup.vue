@@ -24,33 +24,48 @@
 
 <script>
   export default {
-    props:['posts','getCategory'],
+    props:['getCategory'],
     data: function() {
       return {
-        featurePickup: [],
-        pickup: [],
-        pickupOnly:[]
+        // featurePickup: [],
+        // pickup: [],
+        // pickupOnly:[]
       };
     },
-    watch: {
-      posts(posts) {
-        this.featurePickup = this.getCategory('Pickup-feature', posts);
-        this.pickup = this.getCategory('Pickup', posts);
-        this.pickupOnly = this.pickup.filter(function (obj) {
+    // watch: {
+    //   posts(posts) {
+    //     this.featurePickup = this.getCategory('Pickup-feature', posts);
+    //     this.pickup = this.getCategory('Pickup', posts);
+    //     this.pickupOnly = this.pickup.filter(function (obj) {
+    //       return obj.category_name.every(function (item) {
+    //         return item.indexOf('Pickup-feature') === -1;
+    //       })
+    //     })
+    //   }
+    // },
+    // mounted (){
+    //   this.featurePickup = this.getCategory('Pickup-feature', this.posts);
+    //   this.pickup = this.getCategory('Pickup', this.posts);
+    //   this.pickupOnly =
+    //   })
+    // },
+    computed: {
+      posts() {
+        return this.$store.state.posts
+      },
+      featurePickup: function () {
+          return this.getCategory('Pickup-feature', this.posts);
+      },
+      pickup: function () {
+        return this.getCategory('Pickup', this.posts);
+      },
+      pickupOnly: function() {
+        return this.pickup.filter(function (obj) {
           return obj.category_name.every(function (item) {
             return item.indexOf('Pickup-feature') === -1;
           })
         })
       }
-    },
-    mounted (){
-      this.featurePickup = this.getCategory('Pickup-feature', this.posts);
-      this.pickup = this.getCategory('Pickup', this.posts);
-      this.pickupOnly = this.pickup.filter(function (obj) {
-        return obj.category_name.every(function (item) {
-          return item.indexOf('Pickup-feature') === -1;
-        })
-      })
     }
   }
 </script>
