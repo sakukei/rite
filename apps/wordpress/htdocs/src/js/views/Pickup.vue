@@ -1,21 +1,20 @@
 <template>
-  <div class="test">
-    <h1>Pickup</h1>
-    <h2>FeaturePickup</h2>
-    <ul class="feature-pickup">
-      <li v-for="item in featurePickup" :key="item.id">
-        <a :href="item.link">
-          <div><img :src="item.featured_image.src"/></div>
-          <p>{{item.title.rendered}}</p>
-        </a>
-      </li>
-    </ul>
-    <h2>Pickup</h2>
-    <ul class="feature-pickup">
+  <div>
+    <div class="p-feature-pickup">
+      <swiper class="p-feature-pickup__list">
+        <swiper-slide v-for="item in featurePickup" :key="item.id">
+          <a :href="item.link">
+            <div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>
+            <p class="p-feature-pickup__title">{{item.title.rendered}}</p>
+            <p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,20)}}</p>
+          </a>
+        </swiper-slide>
+      </swiper>
+    </div>
+    <ul class="p-main-grid">
       <li v-for="item in pickupOnly" :key="item.id">
         <a :href="item.link">
           <div><img :src="item.featured_image.src"/></div>
-          <p>{{item.title.rendered}}</p>
         </a>
       </li>
     </ul>
@@ -23,32 +22,21 @@
 </template>
 
 <script>
+  import 'swiper/dist/css/swiper.css';
+  import { swiper, swiperSlide } from 'vue-awesome-swiper';
   export default {
     props:['getCategory'],
-    data: function() {
-      return {
-        // featurePickup: [],
-        // pickup: [],
-        // pickupOnly:[]
-      };
+    components: {
+      swiper,
+      swiperSlide
     },
-    // watch: {
-    //   posts(posts) {
-    //     this.featurePickup = this.getCategory('Pickup-feature', posts);
-    //     this.pickup = this.getCategory('Pickup', posts);
-    //     this.pickupOnly = this.pickup.filter(function (obj) {
-    //       return obj.category_name.every(function (item) {
-    //         return item.indexOf('Pickup-feature') === -1;
-    //       })
-    //     })
-    //   }
-    // },
-    // mounted (){
-    //   this.featurePickup = this.getCategory('Pickup-feature', this.posts);
-    //   this.pickup = this.getCategory('Pickup', this.posts);
-    //   this.pickupOnly =
-    //   })
-    // },
+    data() {
+      return {
+        swiperOption: {
+
+        }
+      }
+    },
     computed: {
       posts() {
         return this.$store.state.posts
@@ -73,12 +61,40 @@
 <style lang="scss">
   img {
     max-width: 100%;
+    vertical-align: bottom;
   }
 
-  .feature-pickup {
-    li {
-     width: 200px;
-      margin: 0 0 20px;
+  .p-feature-pickup {
+    background-color: #f6f5f3;
+    padding: 50px 0;
+    overflow: auto;
+    margin: 50px 0;
+
+  }
+  .p-feature-pickup__title {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .p-feature-pickup__image {
+    height: 150px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 15px;
     }
   }
+
 </style>

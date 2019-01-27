@@ -12,12 +12,10 @@
       </ul>
     </nav>
     <router-view :getCategory="getCategory"/>
-    <!--<div>{{posts}}</div>-->
   </div>
 </template>
 
 <script>
-  import axios from 'axios';
 
   export default {
     methods: {
@@ -40,17 +38,28 @@
         this.posts = this.$store.state.posts
         return;
       })
-    },
-    // computed :{
-    //   message() {
-    //     return this.$store.state.posts
-    //   }
-    // }
+    }
   }
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+.p-main-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 5px;
+  li {
+    &:nth-child(5n){
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+}
 </style>
 
 
