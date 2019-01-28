@@ -46,7 +46,8 @@
 .p-main-grid {
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 5px;
+  gap: 4px;
+  padding: 0 4px;
   li {
     &:nth-child(5n){
       grid-column: span 2;

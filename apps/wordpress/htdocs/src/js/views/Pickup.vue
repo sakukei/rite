@@ -66,34 +66,48 @@
 
   .p-feature-pickup {
     background-color: #f6f5f3;
-    padding: 50px 0;
+    padding: 40px 0 24px;
     overflow: auto;
-    margin: 50px 0;
+    margin: 24px 0 40px;
 
   }
   .p-feature-pickup__title {
-    margin: 10px 0;
-    font-size: 18px;
-    line-height: 1.5;
-    font-weight: bold;
+    padding: 24px 40px 0;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .p-feature-pickup__text {
+    padding-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
   }
   .swiper-container {
     width: 100%;
     height: 100%;
   }
+  .swiper-wrapper {
+    /*width: 256px;*/
+    /*margin: 0 auto;*/
+  }
   .swiper-slide {
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100% !important;
+    margin: 0 auto;
+    text-align: center;
   }
   .p-feature-pickup__image {
-    height: 150px;
+    width: 240px;
+    height: 160px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    border-radius: 8px;
     img {
       object-fit: cover;
       height: 100%;
       width: 100%;
-      border-radius: 15px;
+      border-radius: 8px;
     }
   }
 

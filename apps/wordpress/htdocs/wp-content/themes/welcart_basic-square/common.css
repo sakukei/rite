@@ -402,6 +402,7 @@ a {
 }
 
 .p-category-nav {
+	padding: 16px 0;
 	overflow-x: scroll;
 }
 
