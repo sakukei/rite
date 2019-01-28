@@ -257,6 +257,11 @@ a {
 	display: flex;
 }
 
+.p-header {
+	position: relative;
+	z-index: 2;
+}
+
 .p-header-inner {
 	padding: 18px 20px;
 }
@@ -510,6 +515,24 @@ a {
 
 .c-icon-user {
 	border-radius: 50%;
+}
+
+.p-content {
+	position: relative;
+	top: -60px;
+}
+
+.p-content-entry-thumb {
+	position: relative;
+}
+
+.p-content-entry-title {
+	position: absolute;
+	bottom: 12px;
+	padding: 0 16px;
+	line-height: 32px;
+	font-size: 1.5rem;
+	color: #fff;
 }
 
 .p-article {

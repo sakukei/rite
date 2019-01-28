@@ -8,6 +8,8 @@
 }
 
 .p-header {
+  position: relative;
+  z-index: 2;
   &-inner {
     padding: 18px 20px;
   }

@@ -194,6 +194,5 @@ $opt = ' class="display-desc"';
   };
   ?>
 
-  <div id="main" class="cf <?php echo $class; ?>">
+  <div id="main" class="<?php echo $class; ?>">
     <div class="l-inner">
-      <!--                <div class="contents-column">-->

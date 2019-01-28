@@ -1,3 +1,19 @@
+// 記事ページ
+.p-content {
+  position: relative;
+  top: -60px;
+  &-entry-thumb {
+    position: relative;
+  }
+  &-entry-title {
+    position: absolute;
+    bottom: 12px;
+    padding: 0 16px;
+    line-height: 32px;
+    font-size: _rem(24px);
+    color: #fff;
+  }
+}
 .p-article {
   width: 100%;
   padding: 0 16px;
