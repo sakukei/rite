@@ -23,7 +23,7 @@
 $opt = ' class="display-desc"';
 ?>
 
-<div id="wrapper" <?php if (wcct_get_options('display_description')) {
+<div class="p-main" <?php if (wcct_get_options('display_description')) {
   echo $opt;
 } ?>>
 

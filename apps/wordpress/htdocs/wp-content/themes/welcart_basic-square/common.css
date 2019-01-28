@@ -485,6 +485,10 @@ a {
 	text-align: center;
 }
 
+.p-main {
+	padding-bottom: 136px;
+}
+
 .c-accordion-label {
 	display: block;
 	cursor: pointer;
