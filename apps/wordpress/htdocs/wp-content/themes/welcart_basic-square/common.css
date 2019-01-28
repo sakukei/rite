@@ -128,6 +128,7 @@ section {
 }
 
 body {
+	border: none !important;
 	line-height: 1;
 }
 
@@ -247,6 +248,7 @@ a {
 .l-header {
 	width: 100%;
 	margin: 0 auto;
+	border-bottom: none;
 }
 
 .l-header-column {
@@ -293,6 +295,7 @@ a {
 }
 
 .p-drawer {
+	display: none;
 	width: 100%;
 	margin: 0 auto;
 	background: #fff;

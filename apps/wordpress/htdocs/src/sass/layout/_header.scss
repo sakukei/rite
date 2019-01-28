@@ -1,6 +1,7 @@
 .l-header {
   width: 100%;
   margin: 0 auto;
+  border-bottom: none;
   &-column {
     display: flex;
   }
@@ -35,6 +36,7 @@
 
 // ドロワーメニュー
 .p-drawer {
+  display: none;
   width: 100%;
   margin: 0 auto;
   background: #fff;
