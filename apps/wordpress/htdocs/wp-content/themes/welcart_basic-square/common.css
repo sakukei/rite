@@ -128,6 +128,7 @@ section {
 }
 
 body {
+	border: none !important;
 	line-height: 1;
 }
 
@@ -247,12 +248,18 @@ a {
 .l-header {
 	width: 100%;
 	margin: 0 auto;
+	border-bottom: none;
 }
 
 .l-header-column {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+}
+
+.p-header {
+	position: relative;
+	z-index: 2;
 }
 
 .p-header-inner {
@@ -293,6 +300,7 @@ a {
 }
 
 .p-drawer {
+	display: none;
 	width: 100%;
 	margin: 0 auto;
 	background: #fff;
@@ -394,6 +402,7 @@ a {
 }
 
 .p-category-nav {
+	padding: 16px 0;
 	overflow-x: scroll;
 }
 
@@ -476,6 +485,10 @@ a {
 	text-align: center;
 }
 
+.p-main {
+	padding-bottom: 136px;
+}
+
 .c-accordion-label {
 	display: block;
 	cursor: pointer;
@@ -501,12 +514,30 @@ a {
 	content: '';
 	width: 24px;
 	height: 24px;
-	background: url(../../../../wp-content/themes/welcart_basic/images/icon_instagram.png) no-repeat;
+	background: url(images/icon_instagram.png) no-repeat;
 	background-size: contain;
 }
 
 .c-icon-user {
 	border-radius: 50%;
+}
+
+.p-content {
+	position: relative;
+	top: -60px;
+}
+
+.p-content-entry-thumb {
+	position: relative;
+}
+
+.p-content-entry-title {
+	position: absolute;
+	bottom: 12px;
+	padding: 0 16px;
+	line-height: 32px;
+	font-size: 1.5rem;
+	color: #fff;
 }
 
 .p-article {
@@ -655,6 +686,40 @@ a {
 
 .p-infoItem_listColor.color-yellow {
 	background: #f8ee6a;
+}
+
+.p-related {
+	padding: 32px 16px 40px;
+}
+
+.p-related-title {
+	padding-bottom: 4px;
+	border-bottom: 1px solid #ccc;
+	font-size: 1rem;
+}
+
+.p-related-list {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 8px 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px;
+	padding-top: 8px;
+}
+
+.p-related-list li:first-child {
+	-ms-grid-column-span: 2;
+	grid-column: span 2;
+	-ms-grid-row-span: 2;
+	grid-row: span 2;
+}
+
+.p-related-list img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	vertical-align: bottom;
 }
 
 .p-user {

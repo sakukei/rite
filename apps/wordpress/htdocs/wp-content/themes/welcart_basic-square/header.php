@@ -23,7 +23,7 @@
 $opt = ' class="display-desc"';
 ?>
 
-<div id="wrapper" <?php if (wcct_get_options('display_description')) {
+<div class="p-main" <?php if (wcct_get_options('display_description')) {
   echo $opt;
 } ?>>
 
@@ -194,6 +194,5 @@ $opt = ' class="display-desc"';
   };
   ?>
 
-  <div id="main" class="cf <?php echo $class; ?>">
+  <div id="main" class="<?php echo $class; ?>">
     <div class="l-inner">
-      <!--                <div class="contents-column">-->
