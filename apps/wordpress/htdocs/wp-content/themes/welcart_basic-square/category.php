@@ -93,15 +93,15 @@ get_header(); ?>
 
             <?php endif; ?>
 
-						<div class="pagination_wrapper">
-            <?php
-							$args = array(
-									'type' => 'list',
-									'prev_text' => __(' &laquo; ', 'welcart_basic'),
-									'next_text' => __(' &raquo; ', 'welcart_basic'),
-							);
-							echo paginate_links($args);
-            ?>
+            <div class="pagination_wrapper">
+              <?php
+              $args = array(
+                'type' => 'list',
+                'prev_text' => __(' &laquo; ', 'welcart_basic'),
+                'next_text' => __(' &raquo; ', 'welcart_basic'),
+              );
+              echo paginate_links($args);
+              ?>
             </div><!-- .pagenation-wrapper -->
 
           <?php else : ?>
@@ -139,19 +139,20 @@ get_header(); ?>
                   <?php if (get_field('instagram', $post_id)): ?>
                     <?php
                     echo $term_img;
-										echo $term_before;
-										?>
-										<div class="category-instagram-head">
-										<?php
-										the_archive_title('<h1 class="page-title">', '</h1>');
-										?>
-										<div class="category-instagram">
-                      <a href="<?php echo the_field('instagram', $post_id); ?>" target="_blank">
-                        <img alt="リンクはこちら" src="<?php echo get_template_directory_uri(); ?>/images/icon_instagram.png"/>
-                      </a>
-                    </div><!-- /category-instagram -->
-										</div><!-- /category-instagram-head -->
-										<?php
+                    echo $term_before;
+                    ?>
+                    <div class="category-instagram-head">
+                      <?php
+                      the_archive_title('<h1 class="page-title">', '</h1>');
+                      ?>
+                      <div class="category-instagram">
+                        <a href="<?php echo the_field('instagram', $post_id); ?>" target="_blank">
+                          <img alt="リンクはこちら"
+                               src="<?php echo get_template_directory_uri(); ?>/images/icon_instagram.png"/>
+                        </a>
+                      </div><!-- /category-instagram -->
+                    </div><!-- /category-instagram-head -->
+                    <?php
                     the_archive_description('<div class="taxonomy-description">', '</div>');
                     echo $term_after;
                     ?>
@@ -233,8 +234,8 @@ get_header(); ?>
 
                 <div class="relatied">
                   <?php
-										$this_cat_slug = get_category( $cat )->slug;
-										$cat_query = new WP_Query( array( 'tag' => $this_cat_slug, 'status' => 'post', 'posts_per_page' => 20, 'orderby' => 'rand' ) );
+                  $this_cat_slug = get_category($cat)->slug;
+                  $cat_query = new WP_Query(array('tag' => $this_cat_slug, 'status' => 'post', 'posts_per_page' => 20, 'orderby' => 'rand'));
                   ?>
                   <div class="post-column-wrap">
                     <div class="post-column">
@@ -279,7 +280,7 @@ get_header(); ?>
                       <?php endwhile; else: ?>
                         <p>商品が見つかりません。</p>
                       <?php endif; ?>
-											<?php wp_reset_postdata(); ?>
+                      <?php wp_reset_postdata(); ?>
                     </div>
                   </div>
                 </div>
