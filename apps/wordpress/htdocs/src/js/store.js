@@ -6,17 +6,20 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state :{
-    posts :[]
+    posts :[],
+    pickup: [],
+    categories:[]
   },
   mutations: {
-    setPosts(state, payload) {
-      state.posts = payload;
+    getCategory(state, payload) {
+      state.categories = payload;
     }
   },
   actions: {
-    getPosts({dispatch}) {
+    getCategory({dispatch}) {
       const baseUrl = location.origin ;
-      return axios.get(`${baseUrl}/wp-json/wp/v2/posts?per_page=100`,{});
+      return axios.get(`${baseUrl}/wp-json/wp/v2/categories?per_page=100`,{});
+
     },
   },
   getters: {
