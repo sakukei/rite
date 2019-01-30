@@ -11,7 +11,7 @@
         <li><router-link class="-all" to ='/all'><span class="p-category-list-name">All</span></router-link></li>
       </ul>
     </nav>
-    <router-view :getCategory="getCategory"/>
+    <router-view :getCategory="getCategory" :categories="categories" />
   </div>
 </template>
 
@@ -19,23 +19,33 @@
 
   export default {
     methods: {
-      getCategory: function(filterBy,objList) {
-        return objList.filter(function (obj) {
-          return obj.category_name.some(function (item) {
-            return item.indexOf(filterBy) >= 0;
-          })
+      // getCategory: function(filterBy,objList) {
+      //   return objList.filter(function (obj) {
+      //     return obj.category_name.some(function (item) {
+      //       return item.indexOf(filterBy) >= 0;
+      //     })
+      //   })
+      // },
+      getCategory: function(categoriesList,categoryName) {
+        return categoriesList.find(function(obj){
+          return obj.name === categoryName;
         })
       }
     },
     data () {
       return {
-        posts: ''
+        // categories: ''
       }
     },
     mounted () {
       this.$store.dispatch('getCategory').then((res)=>{
         this.$store.commit('getCategory', res.data )
       })
+    },
+    computed : {
+      categories() {
+        return this.$store.state.categories
+      },
     }
   }
 </script>

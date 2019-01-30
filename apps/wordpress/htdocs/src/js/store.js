@@ -7,7 +7,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state :{
     posts :[],
-    pickup: [],
+    pickups: [],
     categories:[]
   },
   mutations: {
@@ -23,7 +23,7 @@ const store = new Vuex.Store({
     },
   },
   getters: {
-    posts(state) { return state.posts}
+    posts(state) { return state.categories}
   }
 });
 export default store;

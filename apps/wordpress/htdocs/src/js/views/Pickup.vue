@@ -1,23 +1,24 @@
 <template>
   <div>
-    <div class="p-feature-pickup">
-      <swiper class="p-feature-pickup__list">
-        <swiper-slide v-for="item in featurePickup" :key="item.id">
-          <a :href="item.link">
-            <div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>
-            <p class="p-feature-pickup__title">{{item.title.rendered}}</p>
-            <p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,20)}}</p>
-          </a>
-        </swiper-slide>
-      </swiper>
-    </div>
-    <ul class="p-main-grid">
-      <li v-for="item in pickupOnly" :key="item.id">
-        <a :href="item.link">
-          <div><img :src="item.featured_image.src"/></div>
-        </a>
-      </li>
-    </ul>
+    <!--<div class="p-feature-pickup">-->
+      <!--<swiper class="p-feature-pickup__list">-->
+        <!--<swiper-slide v-for="item in featurePickup" :key="item.id">-->
+          <!--<a :href="item.link">-->
+            <!--<div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>-->
+            <!--<p class="p-feature-pickup__title">{{item.title.rendered}}</p>-->
+            <!--<p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,20)}}</p>-->
+          <!--</a>-->
+        <!--</swiper-slide>-->
+      <!--</swiper>-->
+    <!--</div>-->
+    <!--<ul class="p-main-grid">-->
+      <!--<li v-for="item in pickupOnly" :key="item.id">-->
+        <!--<a :href="item.link">-->
+          <!--<div><img :src="item.featured_image.src"/></div>-->
+        <!--</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+    {{posts}}
   </div>
 </template>
 
@@ -25,7 +26,7 @@
   import 'swiper/dist/css/swiper.css';
   import { swiper, swiperSlide } from 'vue-awesome-swiper';
   export default {
-    props:['getCategory'],
+    props:['getCategory','categories'],
     components: {
       swiper,
       swiperSlide
@@ -38,21 +39,11 @@
       }
     },
     computed: {
-      posts() {
-        return this.$store.state.posts
+      pickupCategory (){
+        return this.getCategory(this.categories,'Pickup')
       },
-      featurePickup: function () {
-          return this.getCategory('Pickup-feature', this.posts);
-      },
-      pickup: function () {
-        return this.getCategory('Pickup', this.posts);
-      },
-      pickupOnly: function() {
-        return this.pickup.filter(function (obj) {
-          return obj.category_name.every(function (item) {
-            return item.indexOf('Pickup-feature') === -1;
-          })
-        })
+      featurePickupCategory() {
+        return this.getCategory(this.categories,'Pickup-feature')
       }
     }
   }
