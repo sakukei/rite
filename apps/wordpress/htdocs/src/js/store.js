@@ -13,17 +13,30 @@ const store = new Vuex.Store({
   mutations: {
     getCategory(state, payload) {
       state.categories = payload;
+    },
+    getPickup(state, payload) {
+     state.pickups = payload;
     }
   },
   actions: {
     getCategory({dispatch}) {
+      console.log('a')
       const baseUrl = location.origin ;
       return axios.get(`${baseUrl}/wp-json/wp/v2/categories?per_page=100`,{});
-
+    },
+    getPickup({dispatch},id) {
+      console.log(id)
+      const baseUrl = location.origin ;
+      return axios.get(`${baseUrl}/wp-json/wp/v2/posts?categories=${id}&per_page=14`,{});
     },
   },
   getters: {
-    posts(state) { return state.categories}
+    categories(state) {
+      return state.categories;
+    },
+    pickup(state) {
+      return state.pickups;
+    }
   }
 });
 export default store;

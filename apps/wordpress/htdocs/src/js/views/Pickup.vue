@@ -18,7 +18,7 @@
         <!--</a>-->
       <!--</li>-->
     <!--</ul>-->
-    {{posts}}
+    <button v-on:click="testEvent">1botann</button>
   </div>
 </template>
 
@@ -44,8 +44,20 @@
       },
       featurePickupCategory() {
         return this.getCategory(this.categories,'Pickup-feature')
+      },
+    },
+    mounted () {
+
+    },
+    methods: {
+      testEvent(){
+        this.$store.dispatch('getPickup',this.pickupCategory.id).then((res)=>{
+          this.$store.commit('getPickup', res.data )
+        })
       }
+
     }
+
   }
 </script>
 
