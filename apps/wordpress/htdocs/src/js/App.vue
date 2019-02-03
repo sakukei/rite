@@ -11,7 +11,7 @@
         <li><router-link class="-all" to ='/all'><span class="p-category-list-name">All</span></router-link></li>
       </ul>
     </nav>
-    <router-view :getCategory="getCategory" :categories="categories" />
+    <router-view />
   </div>
 </template>
 
@@ -26,11 +26,11 @@
       //     })
       //   })
       // },
-      getCategory: function(categoriesList,categoryName) {
-        return categoriesList.find(function(obj){
-          return obj.name === categoryName;
-        })
-      }
+      // getCategory: function(categoriesList,categoryName) {
+      //   return categoriesList.find(function(obj){
+      //     return obj.name === categoryName;
+      //   })
+      // }
     },
     data () {
       return {

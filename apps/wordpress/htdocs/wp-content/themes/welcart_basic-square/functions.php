@@ -254,3 +254,10 @@ function wp_get_image($object, $field_name, $request) {
     'height' => $feat_img_array[2],
   ];
 }
+
+add_filter( 'rest_query_vars', 'flux_allow_meta_query' );
+function flux_allow_meta_query( $valid_vars )
+{
+  $valid_vars = array_merge( $valid_vars, array( 'meta_key', 'meta_value', 'meta_compare' ) );
+  return $valid_vars;
+}

@@ -11,13 +11,13 @@
         <!--</swiper-slide>-->
       <!--</swiper>-->
     <!--</div>-->
-    <!--<ul class="p-main-grid">-->
-      <!--<li v-for="item in pickupOnly" :key="item.id">-->
-        <!--<a :href="item.link">-->
-          <!--<div><img :src="item.featured_image.src"/></div>-->
-        <!--</a>-->
-      <!--</li>-->
-    <!--</ul>-->
+    <ul class="p-main-grid">
+      <li v-for="item in pickup" :key="item.id">
+        <a :href="item.link">
+          <div><img :src="item.featured_image.src"/></div>
+        </a>
+      </li>
+    </ul>
     <button v-on:click="testEvent">1botann</button>
   </div>
 </template>
@@ -26,7 +26,6 @@
   import 'swiper/dist/css/swiper.css';
   import { swiper, swiperSlide } from 'vue-awesome-swiper';
   export default {
-    props:['getCategory','categories'],
     components: {
       swiper,
       swiperSlide
@@ -39,19 +38,16 @@
       }
     },
     computed: {
-      pickupCategory (){
-        return this.getCategory(this.categories,'Pickup')
-      },
-      featurePickupCategory() {
-        return this.getCategory(this.categories,'Pickup-feature')
-      },
+      pickup(){
+        return this.$store.state.pickups
+      }
     },
     mounted () {
 
     },
     methods: {
       testEvent(){
-        this.$store.dispatch('getPickup',this.pickupCategory.id).then((res)=>{
+        this.$store.dispatch('getPickup').then((res)=>{
           this.$store.commit('getPickup', res.data )
         })
       }

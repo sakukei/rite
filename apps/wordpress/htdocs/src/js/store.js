@@ -8,7 +8,8 @@ const store = new Vuex.Store({
   state :{
     posts :[],
     pickups: [],
-    categories:[]
+    categories:[],
+    baseUrl: location.origin
   },
   mutations: {
     getCategory(state, payload) {
@@ -20,14 +21,15 @@ const store = new Vuex.Store({
   },
   actions: {
     getCategory({dispatch}) {
-      console.log('a')
-      const baseUrl = location.origin ;
-      return axios.get(`${baseUrl}/wp-json/wp/v2/categories?per_page=100`,{});
+      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/categories?per_page=100`,{});
     },
-    getPickup({dispatch},id) {
-      console.log(id)
-      const baseUrl = location.origin ;
-      return axios.get(`${baseUrl}/wp-json/wp/v2/posts?categories=${id}&per_page=14`,{});
+    getPickup({dispatch}) {
+      console.log(this.state.categories)
+      const id = this.state.categories.find(function(category){
+        return category.name === 'Pickup';
+      });
+      console.log(id);
+      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?categories=${id.id}&per_page=14`,{});
     },
   },
   getters: {
