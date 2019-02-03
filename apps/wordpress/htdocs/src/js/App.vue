@@ -18,18 +18,15 @@
 <script>
 
   export default {
-    methods: {
-
-    },
     data () {
       return {
       }
     },
-    created () {
+    mounted () {
+      this.$store.dispatch('getCategory').then((res)=>{
+        this.$store.commit('getCategory', res.data )
+      })
     },
-    computed : {
-
-    }
   }
 </script>
 
