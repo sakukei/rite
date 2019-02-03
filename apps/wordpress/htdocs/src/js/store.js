@@ -6,10 +6,11 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state :{
+    baseUrl: location.origin,
+    getPosts: 14,
     posts :[],
     pickups: [],
-    baseUrl: location.origin,
-    featurePickups:[]
+    featurePickups:[],
   },
   mutations: {
     getPickup(state, payload) {
@@ -21,7 +22,7 @@ const store = new Vuex.Store({
   },
   actions: {
     getPickup({dispatch}) {
-      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=14`,{});
+      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=${this.state.getPosts}`,{});
     },
     getFeaturePickup({dispatch}) {
       return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='Pickup-feature'&per_page=14`,{});
