@@ -9,13 +9,9 @@ const store = new Vuex.Store({
     posts :[],
     pickups: [],
     baseUrl: location.origin,
-    categories:[],
     featurePickups:[]
   },
   mutations: {
-    getCategory(state, payload) {
-      state.categories = payload;
-    },
     getPickup(state, payload) {
      state.pickups = payload;
     },
