@@ -19,33 +19,17 @@
 
   export default {
     methods: {
-      // getCategory: function(filterBy,objList) {
-      //   return objList.filter(function (obj) {
-      //     return obj.category_name.some(function (item) {
-      //       return item.indexOf(filterBy) >= 0;
-      //     })
-      //   })
-      // },
-      // getCategory: function(categoriesList,categoryName) {
-      //   return categoriesList.find(function(obj){
-      //     return obj.name === categoryName;
-      //   })
-      // }
+
     },
     data () {
       return {
         // categories: ''
       }
     },
-    mounted () {
-      this.$store.dispatch('getCategory').then((res)=>{
-        this.$store.commit('getCategory', res.data )
-      })
+    created () {
     },
     computed : {
-      categories() {
-        return this.$store.state.categories
-      },
+
     }
   }
 </script>

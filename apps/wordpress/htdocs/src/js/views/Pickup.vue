@@ -1,16 +1,16 @@
 <template>
   <div>
-    <!--<div class="p-feature-pickup">-->
-      <!--<swiper class="p-feature-pickup__list">-->
-        <!--<swiper-slide v-for="item in featurePickup" :key="item.id">-->
-          <!--<a :href="item.link">-->
-            <!--<div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>-->
-            <!--<p class="p-feature-pickup__title">{{item.title.rendered}}</p>-->
-            <!--<p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,20)}}</p>-->
-          <!--</a>-->
-        <!--</swiper-slide>-->
-      <!--</swiper>-->
-    <!--</div>-->
+    <div class="p-feature-pickup">
+      <swiper class="p-feature-pickup__list">
+        <swiper-slide v-for="item in featurePickup" :key="item.id">
+          <a :href="item.link">
+            <div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>
+            <p class="p-feature-pickup__title">{{item.title.rendered}}</p>
+            <p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,20)}}</p>
+          </a>
+        </swiper-slide>
+      </swiper>
+    </div>
     <ul class="p-main-grid">
       <li v-for="item in pickup" :key="item.id">
         <a :href="item.link">
@@ -18,7 +18,6 @@
         </a>
       </li>
     </ul>
-    <button v-on:click="testEvent">1botann</button>
   </div>
 </template>
 
@@ -40,18 +39,20 @@
     computed: {
       pickup(){
         return this.$store.state.pickups
+      },
+      featurePickup(){
+        return this.$store.state.featurePickups
       }
     },
-    mounted () {
-
+    mounted() {
+      this.$store.dispatch('getPickup').then((res)=>{
+        this.$store.commit('getPickup', res.data )
+      });
+      this.$store.dispatch('getFeaturePickup').then((res)=>{
+        this.$store.commit('getFeaturePickup', res.data )
+      });
     },
     methods: {
-      testEvent(){
-        this.$store.dispatch('getPickup').then((res)=>{
-          this.$store.commit('getPickup', res.data )
-        })
-      }
-
     }
 
   }

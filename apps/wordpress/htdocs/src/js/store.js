@@ -8,8 +8,9 @@ const store = new Vuex.Store({
   state :{
     posts :[],
     pickups: [],
+    baseUrl: location.origin,
     categories:[],
-    baseUrl: location.origin
+    featurePickups:[]
   },
   mutations: {
     getCategory(state, payload) {
@@ -17,19 +18,17 @@ const store = new Vuex.Store({
     },
     getPickup(state, payload) {
      state.pickups = payload;
+    },
+    getFeaturePickup(state, payload) {
+     state.featurePickups = payload;
     }
   },
   actions: {
-    getCategory({dispatch}) {
-      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/categories?per_page=100`,{});
-    },
     getPickup({dispatch}) {
-      console.log(this.state.categories)
-      const id = this.state.categories.find(function(category){
-        return category.name === 'Pickup';
-      });
-      console.log(id);
-      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?categories=${id.id}&per_page=14`,{});
+      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=14`,{});
+    },
+    getFeaturePickup({dispatch}) {
+      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='Pickup-feature'&per_page=14`,{});
     },
   },
   getters: {
@@ -38,6 +37,9 @@ const store = new Vuex.Store({
     },
     pickup(state) {
       return state.pickups;
+    },
+    featurePickup(state) {
+      return state.featurePickups;
     }
   }
 });
