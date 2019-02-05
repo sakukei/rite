@@ -31,13 +31,12 @@ const store = new Vuex.Store({
   actions: {
     getCategory({dispatch}) {
       return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/categories?per_page=100`,{});
-
     },
     getPickup({dispatch}) {
       return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=${this.state.getPosts}`,{});
     },
     getFeaturePickup({dispatch}) {
-      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='Pickup-feature'&per_page=14`,{});
+      return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='Pickup-feature'&per_page=${this.state.getPosts}`,{});
     },
     getNami({dispatch}) {
       return axios.get(`${this.state.baseUrl}/wp-json/wp/v2/posts?filter[category_name]='nami'&per_page=6`,{});

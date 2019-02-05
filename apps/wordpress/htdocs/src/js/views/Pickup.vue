@@ -14,7 +14,7 @@
     <ul class="p-main-grid">
       <li v-for="item in pickup" :key="item.id">
         <a :href="item.link">
-          <div><img :src="item.featured_image.src"/></div>
+          <img :src="item.featured_image.src"/>
         </a>
       </li>
     </ul>
