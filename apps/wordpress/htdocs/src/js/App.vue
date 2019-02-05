@@ -11,34 +11,22 @@
         <li><router-link class="-all" to ='/all'><span class="p-category-list-name">All</span></router-link></li>
       </ul>
     </nav>
-    <router-view :getCategory="getCategory"/>
+    <router-view />
   </div>
 </template>
 
 <script>
 
   export default {
-    methods: {
-      getCategory: function(filterBy,objList) {
-        return objList.filter(function (obj) {
-          return obj.category_name.some(function (item) {
-            return item.indexOf(filterBy) >= 0;
-          })
-        })
-      }
-    },
     data () {
       return {
-        posts: ''
       }
     },
-    beforeMount () {
-      this.$store.dispatch('getPosts').then((res)=>{
-        this.$store.commit('setPosts', res.data )
-        this.posts = this.$store.state.posts
-        return;
+    mounted () {
+      this.$store.dispatch('getCategory').then((res)=>{
+        this.$store.commit('getCategory', res.data )
       })
-    }
+    },
   }
 </script>
 

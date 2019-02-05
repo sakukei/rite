@@ -316,7 +316,7 @@ a {
 	width: 100%;
 }
 
-.p-drawer-searchBox input[type="text"] {
+.p-drawer-searchBox input[type='text'] {
 	width: 100%;
 	height: 32px;
 	line-height: 32px;
@@ -363,7 +363,7 @@ a {
 }
 
 .p-drawer-nav-item-list::before {
-	content: "";
+	content: '';
 	display: block;
 	width: 23%;
 	-webkit-box-ordinal-group: 2;
@@ -372,7 +372,7 @@ a {
 }
 
 .p-drawer-nav-item-list::after {
-	content: "";
+	content: '';
 	display: block;
 	width: 23%;
 }
@@ -619,6 +619,31 @@ a {
 	padding-top: 16px;
 }
 
+.p-traveler-name {
+	font-size: 18px;
+	margin: 0 0 20px;
+	padding: 0 0 0 40px;
+	position: relative;
+}
+
+.p-traveler-name::before {
+	content: '';
+	width: 35px;
+	height: 35px;
+	background-image: url(images/icon_traveler_namiy_73.jpg);
+	position: absolute;
+	background-size: contain;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.p-grid-section {
+	padding: 40px 0 0;
+}
+
 .p-infoItem {
 	padding: 16px;
 	background: #fafafa;
@@ -664,7 +689,7 @@ a {
 	height: 24px;
 	padding: 4px 0;
 	text-align: center;
-	background: #F1F0EC;
+	background: #f1f0ec;
 	border-radius: 50%;
 	line-height: 16px;
 }

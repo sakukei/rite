@@ -12,9 +12,9 @@
       </swiper>
     </div>
     <ul class="p-main-grid">
-      <li v-for="item in pickupOnly" :key="item.id">
+      <li v-for="item in pickup" :key="item.id">
         <a :href="item.link">
-          <div><img :src="item.featured_image.src"/></div>
+          <img :src="item.featured_image.src"/>
         </a>
       </li>
     </ul>
@@ -25,7 +25,6 @@
   import 'swiper/dist/css/swiper.css';
   import { swiper, swiperSlide } from 'vue-awesome-swiper';
   export default {
-    props:['getCategory'],
     components: {
       swiper,
       swiperSlide
@@ -38,23 +37,24 @@
       }
     },
     computed: {
-      posts() {
-        return this.$store.state.posts
+      pickup(){
+        return this.$store.state.pickups
       },
-      featurePickup: function () {
-          return this.getCategory('Pickup-feature', this.posts);
-      },
-      pickup: function () {
-        return this.getCategory('Pickup', this.posts);
-      },
-      pickupOnly: function() {
-        return this.pickup.filter(function (obj) {
-          return obj.category_name.every(function (item) {
-            return item.indexOf('Pickup-feature') === -1;
-          })
-        })
+      featurePickup(){
+        return this.$store.state.featurePickups
       }
+    },
+    mounted() {
+      this.$store.dispatch('getPickup').then((res)=>{
+        this.$store.commit('getPickup', res.data )
+      });
+      this.$store.dispatch('getFeaturePickup').then((res)=>{
+        this.$store.commit('getFeaturePickup', res.data )
+      });
+    },
+    methods: {
     }
+
   }
 </script>
 

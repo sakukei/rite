@@ -1,0 +1,23 @@
+.p-traveler-name {
+  font-size: 18px;
+  margin: 0 0 20px;
+  padding: 0 0 0 40px;
+  position: relative;
+  &::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-image: url(images/icon_traveler_namiy_73.jpg);
+    position: absolute;
+    background-size: contain;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.p-grid-section {
+  padding: 40px 0 0;
+}
