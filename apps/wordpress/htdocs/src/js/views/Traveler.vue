@@ -8,13 +8,14 @@
             <img :src="item.featured_image.src" class="c-grid-img"/>
           </a>
         </li>
-        <li>
-          <a :href="namiLink.link">
-            <img :src="namiLast.featured_image.src" />
-            <div class="p-more"><span>もっとみる</span></div>
-          </a>
-        </li>
+        <!--<li>-->
+          <!--<a :href="namiLink.link">-->
+            <!--<img :src="namiLast.featured_image.src" />-->
+            <!--<div class="p-more"><span>もっとみる</span></div>-->
+          <!--</a>-->
+        <!--</li>-->
       </ul>
+      <!--{{namiLink.link}}-->
     </section>
   </div>
 </template>
@@ -22,11 +23,13 @@
 <script>
   export default {
     computed: {
-      nami() {
+      namiLast() {
+        console.log('a')
         return this.$store.state.namis.slice(0,5);
       },
-      namiLast() {
-        return this.$store.state.namis.pop();
+      nami() {
+        console.log('e')
+        return this.$store.state.namis.slice(0,5);
       },
       namiLink(){
         const nami = this.$store.state.categories.find(function(category){
