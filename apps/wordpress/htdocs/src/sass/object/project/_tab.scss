@@ -1,0 +1,24 @@
+.p-tab {
+  width: 100%;
+  padding: 0 8px;
+  margin: 0 auto;
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      width: 50%;
+      padding-bottom: 4px;
+      margin: 0 auto;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      font-size: _rem(16px);
+      &.is-current {
+        border-bottom: 1px solid #4A90E2;
+      }
+    }
+  }
+  &-container {
+    padding-top: 16px;
+  }
+}
