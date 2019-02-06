@@ -12,9 +12,13 @@ const store = new Vuex.Store({
     pickups: [],
     featurePickups: [],
     namis: [],
-    categories: []
+    categories: [],
+    allPosts:[]
   },
   mutations: {
+    getAllPosts(state, payload) {
+      state.allPosts = payload;
+    },
     getCategory(state, payload) {
       state.categories = payload;
     },
@@ -29,6 +33,12 @@ const store = new Vuex.Store({
     }
   },
   actions: {
+    getAllPosts({ dispatch }) {
+      return axios.get(
+        `${this.state.baseUrl}/wp-json/wp/v2/posts?per_page=14`,
+        {}
+      );
+    },
     getCategory({ dispatch }) {
       return axios.get(
         `${this.state.baseUrl}/wp-json/wp/v2/categories?per_page=100`,
@@ -75,6 +85,9 @@ const store = new Vuex.Store({
       return state.featurePickups;
     },
     nami(state) {
+      return state.namis;
+    },
+    allPosts(state) {
       return state.namis;
     }
   }
