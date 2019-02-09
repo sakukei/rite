@@ -76,3 +76,35 @@
     }
   }
 }
+.p-infoList {
+  .p-infoIcon {
+    position: relative;
+    padding-left: 44px;
+    margin-top: 16px;
+    font-size: _rem(16px);
+    &::before {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: 20px;
+    }
+    &.-address::before {
+      background-image: url(images/icon_spot.svg);
+    }
+    &.-tel::before {
+      background-image: url(images/icon_phone.svg);
+    }
+    &.-url::before {
+      background-image: url(images/icon_internet.svg);
+    }
+    &.-url a {
+      color: #65B2F6;
+    }
+  }
+}

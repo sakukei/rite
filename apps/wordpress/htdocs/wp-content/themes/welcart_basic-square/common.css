@@ -625,6 +625,43 @@ a {
 	padding-top: 16px;
 }
 
+.p-infoList .p-infoIcon {
+	position: relative;
+	padding-left: 44px;
+	margin-top: 16px;
+	font-size: 1rem;
+}
+
+.p-infoList .p-infoIcon::before {
+	display: inline-block;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-size: 20px;
+}
+
+.p-infoList .p-infoIcon.-address::before {
+	background-image: url(images/icon_spot.svg);
+}
+
+.p-infoList .p-infoIcon.-tel::before {
+	background-image: url(images/icon_phone.svg);
+}
+
+.p-infoList .p-infoIcon.-url::before {
+	background-image: url(images/icon_internet.svg);
+}
+
+.p-infoList .p-infoIcon.-url a {
+	color: #65B2F6;
+}
+
 .p-traveler-name {
 	font-size: 18px;
 	margin: 0 0 20px;
