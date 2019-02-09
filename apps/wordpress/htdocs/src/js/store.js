@@ -12,6 +12,11 @@ const store = new Vuex.Store({
     pickups: [],
     featurePickups: [],
     namis: [],
+    ayumis:[],
+    chihas:[],
+    yuikas:[],
+    ayas:[],
+    hitomis:[],
     categories: [],
     allPosts:[]
   },
@@ -30,6 +35,21 @@ const store = new Vuex.Store({
     },
     getNami(state, payload) {
       state.namis = payload;
+    },
+    getAyumi(state, payload) {
+      state.ayumis = payload;
+    },
+    getAya(state, payload) {
+      state.ayas = payload;
+    },
+    getChiha(state, payload) {
+      state.chihas = payload;
+    },
+    getYuika(state, payload) {
+      state.yuikas = payload;
+    },
+    getHitomi(state, payload) {
+      state.hitomis = payload;
     }
   },
   actions: {
@@ -72,6 +92,46 @@ const store = new Vuex.Store({
         }/wp-json/wp/v2/posts?filter[category_name]='nami'&per_page=6`,
         {}
       );
+    },
+    getAyumi({ dispatch }) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+        }/wp-json/wp/v2/posts?filter[category_name]='ayumi'&per_page=6`,
+        {}
+      );
+    },
+    getHitomi({ dispatch }) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+        }/wp-json/wp/v2/posts?filter[category_name]='hitomi'&per_page=6`,
+        {}
+      );
+    },
+    getYuika({ dispatch }) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+        }/wp-json/wp/v2/posts?filter[category_name]='yuika'&per_page=6`,
+        {}
+      );
+    },
+    getAya({ dispatch }) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+        }/wp-json/wp/v2/posts?filter[category_name]='aya'&per_page=6`,
+        {}
+      );
+    },
+    getChiha({ dispatch }) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+        }/wp-json/wp/v2/posts?filter[category_name]='chiha'&per_page=6`,
+        {}
+      );
     }
   },
   getters: {
@@ -85,6 +145,21 @@ const store = new Vuex.Store({
       return state.featurePickups;
     },
     nami(state) {
+      return state.namis;
+    },
+    ayumi(state) {
+      return state.namis;
+    },
+    chiha(state) {
+      return state.namis;
+    },
+    aya(state) {
+      return state.namis;
+    },
+    hitomi(state) {
+      return state.namis;
+    },
+    yuika(state) {
       return state.namis;
     },
     allPosts(state) {
