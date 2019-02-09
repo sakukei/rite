@@ -12,11 +12,10 @@
 }
 .p-infoItem_list {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   margin-top: 4px;
   dt,
   dd {
-    height: 40px;
     line-height: 24px;
     background: #fff;
   }
@@ -30,16 +29,21 @@
   }
   dd {
     width: 100%;
-    padding: 8px 0 8px 8px;
+    padding: 8px;
     font-size: _rem(16px);
   }
   &:first-child {
     margin-top: 0;
   }
 }
+.p-infoItem_listSizes {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
 .p-infoItem_listSize {
   display: inline-block;
-  width: 80px;
+  width: 56px;
   height: 24px;
   padding: 4px 0;
   margin: 0 2px;
@@ -53,6 +57,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  vertical-align: top;
   & + .p-infoItem_listColor {
     margin-left: 10px;
   }
