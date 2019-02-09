@@ -8,6 +8,13 @@
 
 <?php endif; ?>
 
+<section class="p-banner">
+  <div class="p-banner-img">
+    <a href="https://www.instagram.com/ritetravel/" target="_blank">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner_follow.png" alt="rite travel follow画像">
+    </a>
+  </div>  
+</section>
 
 <footer class="l-footer p-footer">
 

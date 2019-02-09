@@ -164,6 +164,10 @@ a {
 	margin: 0 auto;
 }
 
+.p-footer {
+	padding-top: 20px;
+}
+
 .p-footer-nav-list li,
 .p-footer-accordion-label,
 .p-footer-copyright {
@@ -243,6 +247,10 @@ a {
 	border-right: 2px solid #fff;
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
+}
+
+.p-banner {
+	padding: 0 4px;
 }
 
 .l-header {
