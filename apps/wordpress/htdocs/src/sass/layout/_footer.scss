@@ -1,9 +1,11 @@
+//フッター
 .l-footer {
   width: 100%;
   margin: 0 auto;
 }
 
 .p-footer {
+  padding-top: 20px;
   &-nav-list li,
   &-accordion-label,
   &-copyright {
@@ -80,4 +82,9 @@
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
   transform: rotate(-45deg);
+}
+
+//バナー
+.p-banner {
+  padding: 0 4px;
 }

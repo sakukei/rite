@@ -4,7 +4,7 @@
       <ul class="p-category-list">
         <li><router-link class="-pickup" to ='/'><span class="p-category-list-name">Pickup</span></router-link></li>
         <li><router-link class="-traveler" to ='/traveler'><span class="p-category-list-name">Traveler</span></router-link></li>
-        <li><router-link class="-country" to ='/country'><span class="p-category-list-name">Country</span></router-link></li>
+        <!--<li><router-link class="-country" to ='/country'><span class="p-category-list-name">Country</span></router-link></li>-->
         <li><router-link class="-fashion" to ='/fashion'><span class="p-category-list-name">Fashion</span></router-link></li>
         <li><router-link class="-food" to ='/food'><span class="p-category-list-name">Food</span></router-link></li>
         <li><router-link class="-spot" to ='/spot'><span class="p-category-list-name">Spot</span></router-link></li>

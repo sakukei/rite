@@ -141,33 +141,35 @@
       &::before {
         display: block;
         content: '';
-        width: 48px;
-        height: 48px;
+        width: 64px;
+        height: 64px;
         margin: 0 auto;
+        background-color: #f6f5f3;
         background-repeat: no-repeat;
-        background-size: 48px;
+        background-position: center;
+        background-size: 40px;
         border-radius: 50%;
       }
       &.-pickup::before {
-        background-image: url(images/icon_traveler_hasegawa_aya.jpeg);
+        background-image: url(images/icon_pickup.svg);
       }
       &.-traveler::before {
-        background-image: url(images/icon_traveler_yoshino_hitomi.jpg);
+        background-image: url(images/icon_traveler.svg);
       }
-      &.-country::before {
-        background-image: url(images/icon_traveler_namiy_73.jpg);
-      }
+      //&.-country::before {
+      //  background-image: url(images/icon_);
+      //}
       &.-fashion::before {
-        background-image: url(images/icon_traveler_yu_i_k_a.jpg);
+        background-image: url(images/icon_fashion.svg);
       }
       &.-food::before {
-        background-image: url(images/icon_traveler_chiha6710.jpg);
+        background-image: url(images/icon_food.svg);
       }
       &.-spot::before {
-        background-image: url(images/icon_traveler_oayumi.jpg);
+        background-image: url(images/icon_spot.svg);
       }
       &.-all::before {
-        background-image: url(images/icon_traveler_yoshino_hitomi.jpg);
+        background-image: url(images/icon_all.svg);
       }
     }
   }
