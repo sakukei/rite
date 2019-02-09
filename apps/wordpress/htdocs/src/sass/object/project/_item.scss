@@ -1,5 +1,13 @@
+.p-info {
+  .hd2 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $article-subTitle-border;
+    font-size: _rem(16px);
+  }
+}
 .p-infoItem {
   padding: 16px;
+  margin-top: 8px;
   background: #fafafa;
 }
 .p-infoItem_list {
@@ -13,10 +21,12 @@
     background: #fff;
   }
   dt {
-    width: 84px;
-    padding: 8px 0 8px 16px;
+    width: 100%;
+    max-width: 84px;
+    padding: 8px 16px;
     margin-right: 4px;
     font-size: _rem(14px);
+    font-weight: 600;
   }
   dd {
     width: 100%;
@@ -32,9 +42,10 @@
   width: 80px;
   height: 24px;
   padding: 4px 0;
+  margin: 0 2px;
   text-align: center;
   background: #f1f0ec;
-  border-radius: 50%;
+  border-radius: 12px;
   line-height: 16px;
 }
 .p-infoItem_listColor {

@@ -562,6 +562,7 @@ a {
 	padding-top: 8px;
 	font-size: 1rem;
 	color: #555;
+	line-height: 22px;
 }
 
 .p-thumbnail-hd2 {
@@ -573,47 +574,46 @@ a {
 	padding-bottom: 32px;
 }
 
-.p-thumbnailList_main {
+.p-thumbnailListImg {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 8px 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px;
+	padding-top: 8px;
+}
+
+.p-thumbnailListImg li {
 	position: relative;
-	width: 100%;
-	margin-bottom: 8px;
+	counter-increment: list;
 }
 
-.p-thumbnailList-column {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	margin-bottom: 16px;
+.p-thumbnailListImg li:first-child {
+	-ms-grid-column-span: 2;
+	grid-column: span 2;
+	-ms-grid-row-span: 2;
+	grid-row: span 2;
 }
 
-.p-thumbnailList_sub {
-	position: relative;
-	width: 49%;
-}
-
-.p-thumbnailList_num {
+.p-thumbnailListImg li::before {
 	position: absolute;
 	right: 10px;
 	bottom: 10px;
 	font-size: 0.875rem;
 	color: #fff;
+	content: counter(list, decimal-leading-zero);
 }
 
 .p-thumbnailListLead {
+	padding-top: 16px;
 	font-size: 0.875rem;
 	line-height: 1.8;
 }
 
 .p-thumbnailListLead li {
 	counter-increment: section;
-	padding-left: 2.5em;
-	text-indent: -2.5em;
+	padding-left: 2.4em;
+	text-indent: -2.8em;
 }
 
 .p-thumbnailListLead li::before {
@@ -650,8 +650,15 @@ a {
 	padding: 40px 0 0;
 }
 
+.p-info .hd2 {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	font-size: 1rem;
+}
+
 .p-infoItem {
 	padding: 16px;
+	margin-top: 8px;
 	background: #fafafa;
 }
 
@@ -673,10 +680,12 @@ a {
 }
 
 .p-infoItem_list dt {
-	width: 84px;
-	padding: 8px 0 8px 16px;
+	width: 100%;
+	max-width: 84px;
+	padding: 8px 16px;
 	margin-right: 4px;
 	font-size: 0.875rem;
+	font-weight: 600;
 }
 
 .p-infoItem_list dd {
@@ -694,9 +703,10 @@ a {
 	width: 80px;
 	height: 24px;
 	padding: 4px 0;
+	margin: 0 2px;
 	text-align: center;
 	background: #f1f0ec;
-	border-radius: 50%;
+	border-radius: 12px;
 	line-height: 16px;
 }
 

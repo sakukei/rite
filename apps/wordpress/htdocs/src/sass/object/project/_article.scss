@@ -27,6 +27,7 @@
     padding-top: 8px;
     font-size: _rem(16px);
     color: $text-color;
+    line-height: 22px;
   }
 }
 .p-thumbnail-hd2 {
@@ -36,37 +37,36 @@
 .p-thumbnail {
   padding-bottom: 32px;
 }
-.p-thumbnailList {
-  &_main {
+.p-thumbnailListImg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding-top: 8px;
+  li {
     position: relative;
-    width: 100%;
-    margin-bottom: 8px;
-  }
-  &-column {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  &_sub {
-    position: relative;
-    width: 49%;
-  }
-  &_num {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    font-size: _rem(14px);
-    color: $article-thumbnail-color;
+    counter-increment: list;
+    &:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    &::before {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: _rem(14px);
+      color: $article-thumbnail-color;
+      content: counter(list, decimal-leading-zero);
+    }
   }
 }
 .p-thumbnailListLead {
+  padding-top: 16px;
   font-size: _rem(14px);
   line-height: 1.8;
   li {
     counter-increment: section;
-    padding-left: 2.5em;
-    text-indent: -2.5em;
+    padding-left: 2.4em;
+    text-indent: -2.8em;
     &::before {
       content: counter(section, decimal-leading-zero);
       padding: 0 10px;
