@@ -14,18 +14,12 @@
     <router-view />
   </div>
 </template>
-
 <script>
 
   export default {
     data () {
       return {
       }
-    },
-    mounted () {
-      this.$store.dispatch('getCategory').then((res)=>{
-        this.$store.commit('getCategory', res.data )
-      })
     },
   }
 </script>

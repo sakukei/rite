@@ -1,6 +1,6 @@
 <template>
   <div class="l-inner">
-    <section class="p-grid-section">
+    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
       <div class="p-traveler-name -nami">なみ</div>
       <ul class="p-sub-grid">
         <li v-for="item in nami" :key="item.id">
@@ -9,8 +9,8 @@
           </a>
         </li>
         <li>
-          <a :href="namiLink.link">
-            <img :src="namiLast.featured_image.src" />
+          <a :href="namiLink">
+            <img :src="namiLast" />
             <div class="p-more"><span>もっとみる</span></div>
           </a>
         </li>
@@ -21,29 +21,43 @@
 
 <script>
   export default {
+    data(){
+      return {
+        namiLast: '',
+        namiLink: 'default',
+        display: true
+      }
+    },
     computed: {
       nami() {
-        return this.$store.state.namis.slice(0,5);
+        const posts = this.$store.state.namis;
+        return posts;
       },
-      namiLast() {
-        return this.$store.state.namis.pop();
-      },
-      namiLink(){
+    },
+    mounted() {
+        this.$store.dispatch('getCategory').then((res)=>{
+        this.$store.commit('getCategory', res.data )
         const nami = this.$store.state.categories.find(function(category){
           return category.name === 'なみ';
         });
-        return nami;
-      }
-    },
-    mounted() {
+        this.namiLink = nami.link
+      })
       this.$store.dispatch('getNami').then((res)=>{
         this.$store.commit('getNami', res.data )
+        this.namiLast = this.$store.state.namis.pop().featured_image.src;
+        this.display = false;
       });
     },
   }
 </script>
 
 <style scoped lang="scss">
+  .traveler-section {
+    &.is-hidden {
+    display: none
+    }
+
+  }
   .p-sub-grid {
     display: grid;
     grid-template: repeat(3,1fr) / repeat(3,1fr);
