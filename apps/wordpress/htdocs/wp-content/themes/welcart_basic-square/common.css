@@ -700,6 +700,31 @@ a {
 	padding: 40px 0 0;
 }
 
+.p-item-hero {
+	position: relative;
+}
+
+.p-item-title {
+	position: absolute;
+	bottom: 12px;
+	padding: 0 16px;
+	line-height: 32px;
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+.p-item-add {
+	width: 64px;
+	height: 64px;
+	background: #4682aa;
+	border-radius: 50%;
+}
+
+.p-item-add img {
+	width: 24px;
+	fill: #fff;
+}
+
 .p-info .hd2 {
 	padding-bottom: 5px;
 	border-bottom: 1px solid #ccc;

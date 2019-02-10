@@ -1,3 +1,32 @@
+// 商品ページ
+
+.p-item-page {
+
+}
+.p-item-hero {
+  position: relative;
+}
+
+.p-item-title {
+  position: absolute;
+  bottom: 12px;
+  padding: 0 16px;
+  line-height: 32px;
+  font-size: _rem(24px);
+  color: #fff;
+}
+
+.p-item-add {
+  width: 64px;
+  height: 64px;
+  background: #4682aa;
+  border-radius: 50%;
+  img {
+    width: 24px;
+    fill: #fff;
+  }
+}
+
 .p-info {
   .hd2 {
     padding-bottom: 5px;
