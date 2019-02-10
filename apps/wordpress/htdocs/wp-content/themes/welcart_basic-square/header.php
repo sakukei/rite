@@ -123,43 +123,6 @@ $opt = ' class="display-desc"';
                     alt=""><span class="p-drawer-nav-item-list-name">spot</span></a></li>
             </ul>
           </div>
-          <div class="p-drawer-nav-item">
-            <h3 class="p-drawer-nav-item-title">country</h3>
-            <ul class="p-drawer-nav-item-list">
-              <li>
-                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/japan">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_japan.png"
-                       alt=""><span class="p-drawer-nav-item-list-name">日本</span>
-                </a>
-              </li>
-              <li>
-                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_korea.png"
-                    alt=""><span class="p-drawer-nav-item-list-name">韓国</span>
-                </a>
-              </li>
-              <li>
-                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_bali.png"
-                    alt=""><span class="p-drawer-nav-item-list-name">インドネシア</span>
-                </a>
-              </li>
-              <li>
-                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/thailand">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_thailand.png"
-                       alt=""><span class="p-drawer-nav-item-list-name">タイ</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="p-drawer-nav-item">
-            <h3 class="p-drawer-nav-item-title">fashion</h3>
-            <ul class="p-drawer-nav-item-list">
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/fashion"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_fashion_fashion.png"
-                    alt=""><span class="p-drawer-nav-item-list-name">ファッション</span></a></li>
-            </ul>
-          </div>
         </div>
 
       </div>
