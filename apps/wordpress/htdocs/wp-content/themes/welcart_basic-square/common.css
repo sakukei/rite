@@ -308,13 +308,22 @@ a {
 }
 
 .p-drawer {
+	display: none;
 	width: 100%;
 	margin: 0 auto;
 	background: #fff;
 }
 
 .p-drawer-inner {
-	padding: 56px 16px;
+	padding: 16px 16px 56px;
+}
+
+.p-drawer-searchBar {
+	text-align: center;
+}
+
+.p-drawer-searchBox {
+	padding-top: 32px;
 }
 
 .p-drawer-searchBox .s-box {
