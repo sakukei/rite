@@ -38,7 +38,7 @@
 
 // ドロワーメニュー
 .p-drawer {
-  display: none;
+  //display: none;
   width: 100%;
   margin: 0 auto;
   background: #fff;
@@ -116,6 +116,12 @@
       padding-top: 8px;
       text-align: center;
       font-size: _rem(12px);
+    }
+    &-item-list-categoly {
+      img {
+        padding: 10px;
+        background-color: #f6f5f3;
+      }
     }
   }
 }
