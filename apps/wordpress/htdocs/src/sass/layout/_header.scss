@@ -148,6 +148,32 @@
     height: 72px;
     a {
       display: block;
+      &.router-link-exact-active {
+        &::before {
+          background-color: #3ea0c1;
+        }
+        &.-pickup::before {
+          background-image: url(images/icon_pickup_on.svg);
+        }
+        &.-traveler::before {
+          background-image: url(images/icon_traveler_on.svg);
+        }
+        //&.-country::before {
+        //  background-image: url(images/icon_);
+        //}
+        &.-fashion::before {
+          background-image: url(images/icon_fashion_on.svg);
+        }
+        &.-food::before {
+          background-image: url(images/icon_food_on.svg);
+        }
+        &.-spot::before {
+          background-image: url(images/icon_spot_on.svg);
+        }
+        &.-all::before {
+          background-image: url(images/icon_all_on.svg);
+        }
+      }
       &::before {
         display: block;
         content: '';

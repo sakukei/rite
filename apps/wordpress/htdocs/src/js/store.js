@@ -27,6 +27,9 @@ const store = new Vuex.Store({
     getAllPosts(state, payload) {
       state.allPosts = payload;
     },
+    getAllPostsMore(state, payload) {
+      state.allPosts = payload;
+    },
     getCategory(state, payload) {
       state.categories = payload;
     },
@@ -80,6 +83,14 @@ const store = new Vuex.Store({
     getAllPosts({ dispatch }) {
       return axios.get(
         `${this.state.baseUrl}/wp-json/wp/v2/posts?per_page=14`,
+        {}
+      );
+    },
+    getAllPostsMore({ dispatch },offset) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?per_page=${offset}`,
         {}
       );
     },

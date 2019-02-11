@@ -460,6 +460,34 @@ a {
 	display: block;
 }
 
+.p-category-list li a.router-link-exact-active::before {
+	background-color: #3ea0c1;
+}
+
+.p-category-list li a.router-link-exact-active.-pickup::before {
+	background-image: url(images/icon_pickup_on.svg);
+}
+
+.p-category-list li a.router-link-exact-active.-traveler::before {
+	background-image: url(images/icon_traveler_on.svg);
+}
+
+.p-category-list li a.router-link-exact-active.-fashion::before {
+	background-image: url(images/icon_fashion_on.svg);
+}
+
+.p-category-list li a.router-link-exact-active.-food::before {
+	background-image: url(images/icon_food_on.svg);
+}
+
+.p-category-list li a.router-link-exact-active.-spot::before {
+	background-image: url(images/icon_spot_on.svg);
+}
+
+.p-category-list li a.router-link-exact-active.-all::before {
+	background-image: url(images/icon_all_on.svg);
+}
+
 .p-category-list li a::before {
 	display: block;
 	content: '';
