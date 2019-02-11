@@ -206,7 +206,9 @@ get_header();
             </p>
           </div>
 
-          <?php usces_assistance_item($post->ID, __('An article concerned', 'usces')); ?>
+          <div class="p-related">
+            <?php usces_assistance_item($post->ID, __('An article concerned', 'usces')); ?>
+          </div>
 
         </div><!-- .p-itemspage -->
 

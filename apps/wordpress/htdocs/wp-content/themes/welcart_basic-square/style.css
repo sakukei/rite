@@ -971,6 +971,10 @@ a {
 	vertical-align: bottom;
 }
 
+
+.p-related .detail {
+	display: none;
+
 .p-search {
 	padding-top: 24px;
 }
