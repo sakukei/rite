@@ -42,6 +42,9 @@ const store = new Vuex.Store({
     getPickup(state, payload) {
       state.pickups = payload;
     },
+    getPickupMore(state, payload) {
+      state.pickups = payload;
+    },
     getFeaturePickup(state, payload) {
       state.featurePickups = payload;
     },
@@ -84,6 +87,14 @@ const store = new Vuex.Store({
         }/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=${
           this.state.getPosts
         }`,
+        {}
+      );
+    },
+    getPickupMore({ dispatch },offset) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=${offset}`,
         {}
       );
     },

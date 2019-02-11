@@ -18,6 +18,8 @@
         </a>
       </li>
     </ul>
+    <div v-if="loading" class="loader">Loading...</div>
+    <button v-on:click="moreBtn" class="more-btn" v-if="moreView">もっとみる</button>
   </div>
 </template>
 
@@ -33,7 +35,11 @@
       return {
         swiperOption: {
 
-        }
+        },
+        offSet: 15,
+        count:'',
+        loading: false,
+        moreView: false
       }
     },
     computed: {
@@ -51,8 +57,30 @@
       this.$store.dispatch('getFeaturePickup').then((res)=>{
         this.$store.commit('getFeaturePickup', res.data )
       });
-    },
+      this.$store.dispatch('getCategory').then((res)=> {
+        this.$store.commit('getCategory', res.data);
+        const pickupLength = this.$store.state.categories.find(function(category){
+          return category.slug === 'pickup';
+        });
+        this.count = pickupLength.count;
+        if(this.pickup.length < this.count) {
+          this.moreView = true
+        }
+      })
+        },
     methods: {
+      moreBtn: function () {
+        this.loading = true;
+        this.offSet = this.offSet + 14;
+        this.$store.dispatch('getPickupMore',this.offSet).then((res)=>{
+          this.$store.commit('getPickupMore', res.data );
+          console.log(this.offSet)
+          if(this.pickup.length >= this.count) {
+            this.moreView = false
+          }
+          this.loading = false
+        })
+      }
     }
 
   }
@@ -110,5 +138,81 @@
       border-radius: 8px;
     }
   }
+  .more-btn {
+    display: block;
+    width: 200px;
+    font-size: 18px;
+    padding: 6px 0;
+    text-align: center;
+    margin: 10px auto 0 ;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 10px
+  }
+  .loader {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: #898989;
+    background: -moz-linear-gradient(left, #898989 10%, rgba(137,137,137, 0) 42%);
+    background: -webkit-linear-gradient(left, #898989 10%, rgba(137,137,137, 0) 42%);
+    background: -o-linear-gradient(left, #898989 10%, rgba(137,137,137, 0) 42%);
+    background: -ms-linear-gradient(left, #898989 10%, rgba(137,137,137, 0) 42%);
+    background: linear-gradient(to right, #898989 10%, rgba(137,137,137, 0) 42%);
+    position: relative;
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .loader:before {
+    width: 50%;
+    height: 50%;
+    background: #898989;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  .loader:after {
+    background: #ffffff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @-webkit-keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+
 
 </style>

@@ -206,10 +206,10 @@
         });
         this.yuikaLink = yuika.link;
 
-        const hitom = this.$store.state.categories.find(function(category){
+        const hitomi = this.$store.state.categories.find(function(category){
           return category.slug === 'hitomi';
         });
-        this.hitomLink = hitom.link;
+        this.hitomiLink = hitomi.link;
 
         const ayumi = this.$store.state.categories.find(function(category){
           return category.slug === 'ayumi';
