@@ -118,6 +118,9 @@ get_header(); ?>
         }
         ?>
         <div class="p-page-header<?php echo $term_class; ?>">
+          <div class="p-category-headBg">
+            <!-- ここに画像出したい -->
+          </div>
           <?php
           //カスタムフィールドを読み込むために、カテゴリIDを取得
           $cat = get_the_category();
