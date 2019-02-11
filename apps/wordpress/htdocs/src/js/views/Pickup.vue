@@ -19,8 +19,10 @@
       </li>
     </ul>
     <div v-if="loading" class="loader">Loading...</div>
-    <button v-on:click="moreBtn" class="more-btn" v-if="moreView">もっとみる</button>
-  </div>
+    <div class="p-more">
+      <button v-on:click="moreBtn" class="p-more-btn" v-if="moreView">LOAD MORE…</button>
+    </div>
+    </div>
 </template>
 
 <script>
@@ -74,7 +76,6 @@
         this.offSet = this.offSet + 14;
         this.$store.dispatch('getPickupMore',this.offSet).then((res)=>{
           this.$store.commit('getPickupMore', res.data );
-          console.log(this.offSet)
           if(this.pickup.length >= this.count) {
             this.moreView = false
           }
@@ -138,23 +139,28 @@
       border-radius: 8px;
     }
   }
-  .more-btn {
+  .p-more-btn {
     display: block;
-    width: 200px;
-    font-size: 18px;
-    padding: 6px 0;
+    width: 100%;
+    background-color: #efeee9;
+    font-size: 14px;
+    padding: 15px 0;
     text-align: center;
-    margin: 10px auto 0 ;
-    border: 1px solid #000;
-    background-color: #fff;
-    border-radius: 10px
+    color: #4a626f;
+    border: 0;
   }
+
+  .p-more {
+    padding: 0 4px;
+    margin: 15px 0 0;
+  }
+
   .loader {
     font-size: 10px;
-    margin: 50px auto;
+    margin: 15px auto;
     text-indent: -9999em;
-    width: 11em;
-    height: 11em;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: #898989;
     background: -moz-linear-gradient(left, #898989 10%, rgba(137,137,137, 0) 42%);
