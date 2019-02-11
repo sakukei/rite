@@ -128,6 +128,14 @@ const store = new Vuex.Store({
         {}
       );
     },
+    getSpotMore({ dispatch },offset) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?filter[category_name]='Spot'&per_page=${offset}`,
+        {}
+      );
+    },
     getFeaturePickup({ dispatch }) {
       return axios.get(
         `${

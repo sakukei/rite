@@ -849,6 +849,65 @@ a {
 	background: #f8ee6a;
 }
 
+.p-more-btn {
+	display: block;
+	width: 100%;
+	background-color: #efeee9;
+	font-size: 14px;
+	padding: 15px 0;
+	text-align: center;
+	color: #4a626f;
+	border: 0;
+}
+
+.p-more {
+	padding: 0 4px;
+	margin: 15px 0 0;
+}
+
+.loader {
+	font-size: 10px;
+	margin: 15px auto;
+	text-indent: -9999em;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #898989;
+	background: -webkit-linear-gradient(left, #898989 10%, rgba(137, 137, 137, 0) 42%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(10%, #898989), color-stop(42%, rgba(137, 137, 137, 0)));
+	background: linear-gradient(to right, #898989 10%, rgba(137, 137, 137, 0) 42%);
+	position: relative;
+	-webkit-animation: load3 1.4s infinite linear;
+	animation: load3 1.4s infinite linear;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.loader:before {
+	width: 50%;
+	height: 50%;
+	background: #898989;
+	border-radius: 100% 0 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+}
+
+.loader:after {
+	background: #ffffff;
+	width: 75%;
+	height: 75%;
+	border-radius: 50%;
+	content: '';
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
 .p-related {
 	padding: 32px 16px 40px;
 }
@@ -955,6 +1014,34 @@ a {
 
 html {
 	font-size: 16px;
+}
+
+}
+
+@-webkit-keyframes load3 {
+
+0% {
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+100% {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+}
+
+@keyframes load3 {
+
+0% {
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+100% {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
 }
 
 }
