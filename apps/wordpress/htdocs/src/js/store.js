@@ -33,10 +33,19 @@ const store = new Vuex.Store({
     getFashion(state, payload) {
       state.fashions = payload;
     },
+    getFashionMore(state, payload) {
+      state.fashions = payload;
+    },
     getSpot(state, payload) {
       state.spots = payload;
     },
+    getSpotMore(state, payload) {
+      state.spots = payload;
+    },
     getFood(state, payload) {
+      state.foods = payload;
+    },
+    getFoodMore(state, payload) {
       state.foods = payload;
     },
     getPickup(state, payload) {
@@ -105,6 +114,14 @@ const store = new Vuex.Store({
           }/wp-json/wp/v2/posts?filter[category_name]='Fashion'&per_page=${
           this.state.getPosts
           }`,
+        {}
+      );
+    },
+    getFashionMore({ dispatch },offset) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?filter[category_name]='Fashion'&per_page=${offset}`,
         {}
       );
     },

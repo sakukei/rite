@@ -70,15 +70,6 @@
         })
       },
     },
-
-    // mounted() {
-    //   console.log(this.spot.length)
-    //   console.log(this.count)
-    //   if(this.spot.length < this.count) {
-    //     this.moreView = true
-    //   }
-    // }
-
   }
 </script>
 
