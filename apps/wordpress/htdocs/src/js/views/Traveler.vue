@@ -1,48 +1,16 @@
 <template>
   <div class="l-inner">
     <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
-      <div class="p-traveler-name -nami">なみ</div>
+      <div class="p-traveler-name -ayumi">AYUMI</div>
       <ul class="p-sub-grid">
-        <li v-for="item in nami" :key="item.id">
+        <li v-for="item in ayumi" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
           </a>
         </li>
         <li>
-          <a :href="namiLink">
-            <img :src="namiLast" />
-            <div class="p-more"><span>もっとみる</span></div>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
-      <div class="p-traveler-name -aya">長谷川あや</div>
-      <ul class="p-sub-grid">
-        <li v-for="item in aya" :key="item.id">
-          <a :href="item.link">
-            <img :src="item.featured_image.src" class="c-grid-img"/>
-          </a>
-        </li>
-        <li>
-          <a :href="ayaLink">
-            <img :src="ayaLast" />
-            <div class="p-more"><span>もっとみる</span></div>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
-      <div class="p-traveler-name -chiha">chiha</div>
-      <ul class="p-sub-grid">
-        <li v-for="item in chiha" :key="item.id">
-          <a :href="item.link">
-            <img :src="item.featured_image.src" class="c-grid-img"/>
-          </a>
-        </li>
-        <li>
-          <a :href="chihaLink">
-            <img :src="chihaLast" />
+          <a :href="ayumiLink">
+            <img :src="ayumiLast" />
             <div class="p-more"><span>もっとみる</span></div>
           </a>
         </li>
@@ -65,6 +33,22 @@
       </ul>
     </section>
     <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
+      <div class="p-traveler-name -chiha">chiha</div>
+      <ul class="p-sub-grid">
+        <li v-for="item in chiha" :key="item.id">
+          <a :href="item.link">
+            <img :src="item.featured_image.src" class="c-grid-img"/>
+          </a>
+        </li>
+        <li>
+          <a :href="chihaLink">
+            <img :src="chihaLast" />
+            <div class="p-more"><span>もっとみる</span></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
       <div class="p-traveler-name -yuika">yu.i.k.a</div>
       <ul class="p-sub-grid">
         <li v-for="item in yuika" :key="item.id">
@@ -81,21 +65,38 @@
       </ul>
     </section>
     <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
-      <div class="p-traveler-name -ayumi">AYUMI</div>
+      <div class="p-traveler-name -aya">長谷川あや</div>
       <ul class="p-sub-grid">
-        <li v-for="item in ayumi" :key="item.id">
+        <li v-for="item in aya" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
           </a>
         </li>
         <li>
-          <a :href="ayumiLink">
-            <img :src="ayumiLast" />
+          <a :href="ayaLink">
+            <img :src="ayaLast" />
             <div class="p-more"><span>もっとみる</span></div>
           </a>
         </li>
       </ul>
     </section>
+    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
+      <div class="p-traveler-name -nami">なみ</div>
+      <ul class="p-sub-grid">
+        <li v-for="item in nami" :key="item.id">
+          <a :href="item.link">
+            <img :src="item.featured_image.src" class="c-grid-img"/>
+          </a>
+        </li>
+        <li>
+          <a :href="namiLink">
+            <img :src="namiLast" />
+            <div class="p-more"><span>もっとみる</span></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
   </div>
 </template>
 
@@ -115,7 +116,13 @@
         chihaLink: '',
         yuikaLast: '',
         yuikaLink: '',
-        display: true
+        display: true,
+        namiPostLength: '',
+        ayaPostLength: '',
+        ayumiPostLength: '',
+        hitomiPostLength: '',
+        chihaPostLength: '',
+        yuikaPostLength: ''
       }
     },
     computed: {
@@ -142,35 +149,42 @@
       yuika() {
         const posts = this.$store.state.yuikas;
         return posts;
+
       }
     },
     mounted() {
       this.$store.dispatch('getNami').then((res)=>{
-        this.$store.commit('getNami', res.data )
+        this.$store.commit('getNami', res.data );
+        this.namiPostLength = this.$store.state.namis.length;
         this.namiLast = this.$store.state.namis.pop().featured_image.src;
       });
       this.$store.dispatch('getAya').then((res)=>{
-        this.$store.commit('getAya', res.data )
+        this.$store.commit('getAya', res.data );
+        this.ayaPostLength = this.$store.state.ayas.length;
         this.ayaLast = this.$store.state.ayas.pop().featured_image.src;
       });
       this.$store.dispatch('getAyumi').then((res)=>{
-        this.$store.commit('getAyumi', res.data )
-        this.ayaLast = this.$store.state.ayumis.pop().featured_image.src;
+        this.$store.commit('getAyumi', res.data );
+        this.ayumiPostLength = this.$store.state.ayumis;
+        this.ayumiLast = this.$store.state.ayumis.pop().featured_image.src;
       });
       this.$store.dispatch('getChiha').then((res)=>{
-        this.$store.commit('getChiha', res.data )
-        this.ayaLast = this.$store.state.chihas.pop().featured_image.src;
+        this.$store.commit('getChiha', res.data );
+        this.chihaPostLength = this.$store.state.chihas.length;
+        this.chihaLast = this.$store.state.chihas.pop().featured_image.src;
       });
       this.$store.dispatch('getYuika').then((res)=>{
-        this.$store.commit('getYuika', res.data )
-        this.ayaLast = this.$store.state.yuikas.pop().featured_image.src;
+        this.$store.commit('getYuika', res.data );
+        this.yuikaPostLength = this.$store.state.yuikas.length;
+        this.yuikaLast = this.$store.state.yuikas.pop().featured_image.src;
       });
       this.$store.dispatch('getHitomi').then((res)=>{
-        this.$store.commit('getHitomi', res.data )
-        this.ayaLast = this.$store.state.hitomis.pop().featured_image.src;
+        this.$store.commit('getHitomi', res.data );
+        this.hitomiPostLength = this.$store.state.hitomis.length;
+        this.hitomiLast = this.$store.state.hitomis.pop().featured_image.src;
       });
       this.$store.dispatch('getCategory').then((res)=>{
-        this.$store.commit('getCategory', res.data )
+        this.$store.commit('getCategory', res.data );
 
         const nami = this.$store.state.categories.find(function(category){
           return category.slug === 'nami';
@@ -180,27 +194,27 @@
         const aya = this.$store.state.categories.find(function(category){
           return category.slug === 'aya';
         });
-        this.ayaLink = aya.link
+        this.ayaLink = aya.link;
 
         const chiha= this.$store.state.categories.find(function(category){
           return category.slug === 'chiha';
         });
-        this.chihaLink = chiha.link
+        this.chihaLink = chiha.link;
 
         const yuika = this.$store.state.categories.find(function(category){
           return category.slug === 'yuika';
         });
-        this.yuikaLink = yuika.link
+        this.yuikaLink = yuika.link;
 
         const hitom = this.$store.state.categories.find(function(category){
           return category.slug === 'hitomi';
         });
-        this.hitomLink = hitom.link
+        this.hitomLink = hitom.link;
 
         const ayumi = this.$store.state.categories.find(function(category){
           return category.slug === 'ayumi';
         });
-        this.ayumiLink = ayumi.link
+        this.ayumiLink = ayumi.link;
         this.display = false
       })
     },
