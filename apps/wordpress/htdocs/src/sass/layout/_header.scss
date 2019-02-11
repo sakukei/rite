@@ -43,9 +43,13 @@
   margin: 0 auto;
   background: #fff;
   &-inner {
-    padding: 56px 16px;
+    padding: 16px 16px 56px;
+  }
+  &-searchBar {
+    text-align: center;
   }
   &-searchBox {
+    padding-top: 32px;
     .s-box {
       position: relative;
       display: block;
@@ -116,6 +120,12 @@
       padding-top: 8px;
       text-align: center;
       font-size: _rem(12px);
+    }
+    &-item-list-categoly {
+      img {
+        padding: 10px;
+        background-color: #f6f5f3;
+      }
     }
   }
 }

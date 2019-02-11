@@ -71,6 +71,10 @@ $opt = ' class="display-desc"';
     <div class="p-drawer">
 
       <div class="p-drawer-inner">
+        
+        <div class="p-drawer-searchBar">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
+        </div>
 
         <div class="p-drawer-searchBox">
           <?php get_search_form(); ?>
@@ -80,84 +84,47 @@ $opt = ' class="display-desc"';
           <div class="p-drawer-nav-item">
             <h3 class="p-drawer-nav-item-title">traveler</h3>
             <ul class="p-drawer-nav-item-list">
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/aya/"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_hasegawa_aya.jpeg"
                     alt=""><span class="p-drawer-nav-item-list-name">長谷川あや</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/hitostagram12"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/hitomi"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yoshino_hitomi.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">良野仁美</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/namiy_73"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/nami"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_namiy_73.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">なみ</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/yuika"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/yuika"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yu_i_k_a.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">yu.i.k.a</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/chiha6170"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/chiha"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_chiha6710.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">chiha</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/oayumi"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/ayumi"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_oayumi.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">AYUMI</span></a></li>
             </ul>
           </div>
           <div class="p-drawer-nav-item">
             <h3 class="p-drawer-nav-item-title">categoly</h3>
-            <ul class="p-drawer-nav-item-list">
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/ayasuke_0516/"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_hasegawa_aya.jpeg"
-                    alt=""><span class="p-drawer-nav-item-list-name">長谷川あや</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/hitostagram12"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yoshino_hitomi.jpg"
-                    alt=""><span class="p-drawer-nav-item-list-name">良野仁美</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/namiy_73"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_namiy_73.jpg"
-                    alt=""><span class="p-drawer-nav-item-list-name">なみ</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/yuika"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yu_i_k_a.jpg"
-                    alt=""><span class="p-drawer-nav-item-list-name">yu.i.k.a</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/chiha6170"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_chiha6710.jpg"
-                    alt=""><span class="p-drawer-nav-item-list-name">chiha</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/oayumi"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_oayumi.jpg"
-                    alt=""><span class="p-drawer-nav-item-list-name">AYUMI</span></a></li>
-            </ul>
-          </div>
-          <div class="p-drawer-nav-item">
-            <h3 class="p-drawer-nav-item-title">country</h3>
-            <ul class="p-drawer-nav-item-list">
-              <li>
-                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/japan">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_japan.png"
-                       alt=""><span class="p-drawer-nav-item-list-name">日本</span>
-                </a>
-              </li>
-              <li>
-                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/korea"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_korea.png"
-                    alt=""><span class="p-drawer-nav-item-list-name">韓国</span>
-                </a>
-              </li>
-              <li>
-                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/bali"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_bali.png"
-                    alt=""><span class="p-drawer-nav-item-list-name">インドネシア</span>
-                </a>
-              </li>
-              <li>
-                <a href="<?php get_stylesheet_directory_uri(); ?>/tag/thailand">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_country_thailand.png"
-                       alt=""><span class="p-drawer-nav-item-list-name">タイ</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="p-drawer-nav-item">
-            <h3 class="p-drawer-nav-item-title">fashion</h3>
-            <ul class="p-drawer-nav-item-list">
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/tag/fashion"><img
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_fashion_fashion.png"
-                    alt=""><span class="p-drawer-nav-item-list-name">ファッション</span></a></li>
+            <ul class="p-drawer-nav-item-list p-drawer-nav-item-list-categoly">
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/all/"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_all.svg"
+                    alt=""><span class="p-drawer-nav-item-list-name">all</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pickup.svg"
+                    alt=""><span class="p-drawer-nav-item-list-name">pickup</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/traveler/"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler.svg"
+                    alt=""><span class="p-drawer-nav-item-list-name">traveler</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/fashion/"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_fashion.svg"
+                    alt=""><span class="p-drawer-nav-item-list-name">fashion</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/food/"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_food.svg"
+                    alt=""><span class="p-drawer-nav-item-list-name">food</span></a></li>
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/spot/"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_spot.svg"
+                    alt=""><span class="p-drawer-nav-item-list-name">spot</span></a></li>
             </ul>
           </div>
         </div>
