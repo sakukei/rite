@@ -1,28 +1,27 @@
 <template>
   <div>
-  <h1>Food</h1>
-  <ul class="feature-pickup">
-    <li v-for="item in food" :key="item.id">
-      <a :href="item.link">
-        <div><img :src="item.featured_image.src"/></div>
-        <p>{{item.title.rendered}}</p>
-      </a>
-    </li>
-  </ul>
+    <ul class="p-main-grid">
+      <li v-for="item in food" :key="item.id">
+        <a :href="item.link">
+          <img :src="item.featured_image.src"/>
+        </a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
   export default {
-    props: ['getCategory'],
     computed: {
-      posts() {
-        return this.$store.state.posts
+      food (){
+        return this.$store.state.foods
       },
-      food: function () {
-        return this.getCategory('Food', this.posts);
-      },
-    }
+    },
+    mounted() {
+      this.$store.dispatch('getFood').then((res)=>{
+        this.$store.commit('getFood', res.data )
+      });
+    },
   }
 </script>
 

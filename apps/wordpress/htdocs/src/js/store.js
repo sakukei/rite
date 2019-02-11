@@ -18,7 +18,10 @@ const store = new Vuex.Store({
     ayas:[],
     hitomis:[],
     categories: [],
-    allPosts:[]
+    allPosts:[],
+    foods: [],
+    spots: [],
+    fashions : []
   },
   mutations: {
     getAllPosts(state, payload) {
@@ -26,6 +29,15 @@ const store = new Vuex.Store({
     },
     getCategory(state, payload) {
       state.categories = payload;
+    },
+    getFashion(state, payload) {
+      state.fashions = payload;
+    },
+    getSpot(state, payload) {
+      state.spots = payload;
+    },
+    getFood(state, payload) {
+      state.foods = payload;
     },
     getPickup(state, payload) {
       state.pickups = payload;
@@ -72,6 +84,36 @@ const store = new Vuex.Store({
         }/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=${
           this.state.getPosts
         }`,
+        {}
+      );
+    },
+    getFashion({ dispatch }) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?filter[category_name]='Fashion'&per_page=${
+          this.state.getPosts
+          }`,
+        {}
+      );
+    },
+    getFood({ dispatch }) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?filter[category_name]='Food'&per_page=${
+          this.state.getPosts
+          }`,
+        {}
+      );
+    },
+    getSpot({ dispatch }) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?filter[category_name]='Spot'&per_page=${
+          this.state.getPosts
+          }`,
         {}
       );
     },
@@ -140,6 +182,15 @@ const store = new Vuex.Store({
     },
     pickup(state) {
       return state.pickups;
+    },
+    fashion(state) {
+      return state.fashions;
+    },
+    spot(state) {
+      return state.spots;
+    },
+    food(state) {
+      return state.foods;
     },
     featurePickup(state) {
       return state.featurePickups;
