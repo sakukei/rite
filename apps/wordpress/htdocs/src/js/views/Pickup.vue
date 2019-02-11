@@ -56,11 +56,15 @@
       count: function () {
         if(this.pickup.length < this.count) {
           this.moreView = true
+        } else {
+          this.moreView = false
         }
       },
       pickup: function () {
         if(this.pickup.length < this.count) {
           this.moreView = true
+        } else {
+          this.moreView = false
         }
       }
     },

@@ -33,11 +33,15 @@
       count: function () {
         if(this.spot.length < this.count) {
           this.moreView = true
+        } else {
+          this.moreView = false
         }
       },
       spot: function () {
         if(this.spot.length < this.count) {
           this.moreView = true
+        } else {
+          this.moreView = false
         }
       }
     },
