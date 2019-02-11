@@ -27,16 +27,28 @@ const store = new Vuex.Store({
     getAllPosts(state, payload) {
       state.allPosts = payload;
     },
+    getAllPostsMore(state, payload) {
+      state.allPosts = payload;
+    },
     getCategory(state, payload) {
       state.categories = payload;
     },
     getFashion(state, payload) {
       state.fashions = payload;
     },
+    getFashionMore(state, payload) {
+      state.fashions = payload;
+    },
     getSpot(state, payload) {
       state.spots = payload;
     },
+    getSpotMore(state, payload) {
+      state.spots = payload;
+    },
     getFood(state, payload) {
+      state.foods = payload;
+    },
+    getFoodMore(state, payload) {
       state.foods = payload;
     },
     getPickup(state, payload) {
@@ -74,6 +86,14 @@ const store = new Vuex.Store({
         {}
       );
     },
+    getAllPostsMore({ dispatch },offset) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?per_page=${offset}`,
+        {}
+      );
+    },
     getCategory({ dispatch }) {
       return axios.get(
         `${this.state.baseUrl}/wp-json/wp/v2/categories?per_page=100`,
@@ -108,6 +128,14 @@ const store = new Vuex.Store({
         {}
       );
     },
+    getFashionMore({ dispatch },offset) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?filter[category_name]='Fashion'&per_page=${offset}`,
+        {}
+      );
+    },
     getFood({ dispatch }) {
       return axios.get(
         `${
@@ -125,6 +153,14 @@ const store = new Vuex.Store({
           }/wp-json/wp/v2/posts?filter[category_name]='Spot'&per_page=${
           this.state.getPosts
           }`,
+        {}
+      );
+    },
+    getSpotMore({ dispatch },offset) {
+      return axios.get(
+        `${
+          this.state.baseUrl
+          }/wp-json/wp/v2/posts?filter[category_name]='Spot'&per_page=${offset}`,
         {}
       );
     },
