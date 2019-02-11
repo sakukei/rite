@@ -973,8 +973,8 @@ a {
 
 
 .p-related .detail {
-	display: none;
-
+  display: none;
+}
 .p-search {
 	padding-top: 24px;
 }
