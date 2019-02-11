@@ -713,16 +713,27 @@ a {
 	color: #fff;
 }
 
-.p-item-add {
+.p-item-buy {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+.p-item-buy-btn {
+	position: relative;
 	width: 64px;
 	height: 64px;
 	background: #4682aa;
 	border-radius: 50%;
 }
 
-.p-item-add img {
+.p-item-buy-btn img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 	width: 24px;
-	fill: #fff;
 }
 
 .p-info .hd2 {

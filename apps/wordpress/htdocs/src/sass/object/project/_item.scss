@@ -15,17 +15,26 @@
   font-size: _rem(24px);
   color: #fff;
 }
-
-.p-item-add {
-  width: 64px;
-  height: 64px;
-  background: #4682aa;
-  border-radius: 50%;
-  img {
-    width: 24px;
-    fill: #fff;
+.p-item-buy {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  &-btn {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: #4682aa;
+    border-radius: 50%;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+    }
   }
 }
+
 
 .p-info {
   .hd2 {

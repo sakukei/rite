@@ -38,7 +38,7 @@ get_header();
           <div class="p-item-hero">
 
             <?php $imageid = usces_get_itemSubImageNums(); ?>
-            <h1 class="p-item-title"><?php usces_the_itemName(); ?></h1>
+            <h1 class="p-item-title"><?php the_title(); ?></h1>
             <div class="p-item-img">
               <a
                 href="<?php usces_the_itemImageURL(0); ?>" <?php echo apply_filters('usces_itemimg_anchor_rel', NULL); ?>><?php usces_the_itemImage(0, 600, 600, $post); ?></a>
@@ -59,18 +59,19 @@ get_header();
 
           </div>
 
-          <!-- 商品購入 -->
-          <div class="p-item-add">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_item add.svg" alt="商品追加アイコン">
+          <!-- 商品購入導線ボタン -->
+          <div class="p-item-buy">
+            <div class="p-item-buy-btn">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_item_add.svg" alt="商品追加アイコン">
+            </div>
           </div>
-          <div class="p-item-box">
-            <div class="detail-box">
-              <p class="item-name"><?php usces_the_itemName(); ?></p>
-              <!-- <div class="itemcode">--><?php //usces_the_itemCode(); ?><!--</div>-->
 
+          <!-- 商品購入導線モーダル -->
+          <div class="p-item-box">
+            <div class="p-item-box-inner">
+              <p class="p-item-box-name"><?php usces_the_itemName(); ?></p>
               <?php wcct_produt_tag(); ?>
               <?php welcart_basic_campaign_message(); ?>
-
               <?php if ('continue' == welcart_basic_get_item_chargingtype($post->ID)) : ?>
                 <!-- Charging Type Continue shipped -->
                 <div class="field">
@@ -90,7 +91,7 @@ get_header();
               <?php endif; ?>
             </div><!-- .detail-box -->
 
-            <div class="item-info">
+            <div class="p-item-box-info">
 
               <?php if ($item_custom = usces_get_item_custom($post->ID, 'list', 'return')) : ?>
                 <?php echo $item_custom; ?>
@@ -178,8 +179,10 @@ get_header();
             <ul class="tab-list cf">
               <li><?php _e('Product Details', 'welcart_basic_square'); ?></li>
               <?php if (wcct_get_options('review')): ?>
-                <li><?php _e('Review', 'welcart_basic_square'); ?><span
-                    class="review-num">（ <?php echo get_comments_number(); ?> ）</span></li>
+                <li>
+                  <?php _e('Review', 'welcart_basic_square'); ?>
+                  <span class="review-num">（ <?php echo get_comments_number(); ?> ）</span>
+                </li>
               <?php endif; ?>
             </ul>
 
@@ -205,9 +208,9 @@ get_header();
 
           <?php usces_assistance_item($post->ID, __('An article concerned', 'usces')); ?>
 
-        </div><!-- #itemspage -->
+        </div><!-- .p-itemspage -->
 
-      </div><!-- .storycontent -->
+      </div><!-- .p-storycontent -->
 
     </article>
 
