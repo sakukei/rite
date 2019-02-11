@@ -673,7 +673,6 @@ a {
 	content: '';
 	width: 35px;
 	height: 35px;
-	background-image: url(images/icon_traveler_namiy_73.jpg);
 	position: absolute;
 	background-size: contain;
 	border-radius: 50%;
@@ -681,6 +680,30 @@ a {
 	top: 0;
 	bottom: 0;
 	margin: auto;
+}
+
+.p-traveler-name.-nami::before {
+	background-image: url(images/icon_traveler_namiy_73.jpg);
+}
+
+.p-traveler-name.-aya::before {
+	background-image: url(images/icon_traveler_hasegawa_aya.jpeg);
+}
+
+.p-traveler-name.-yuika::before {
+	background-image: url(images/icon_traveler_yu_i_k_a.jpg);
+}
+
+.p-traveler-name.-hitomi::before {
+	background-image: url(images/icon_traveler_yoshino_hitomi.jpg);
+}
+
+.p-traveler-name.-chiha::before {
+	background-image: url(images/icon_traveler_chiha6710.jpg);
+}
+
+.p-traveler-name.-ayumi::before {
+	background-image: url(images/icon_traveler_oayumi.jpg);
 }
 
 .p-grid-section {
