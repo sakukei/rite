@@ -1,0 +1,10 @@
+// 検索結果
+.p-search {
+  padding-top: 24px;
+  &-title {
+    font-size: _rem(14px);
+  }
+  &-list {
+    padding-top: 24px;
+  }
+}
