@@ -4,8 +4,6 @@
 
 <?php if (!wp_is_mobile()): ?>
 
-  <div id="toTop" class="wrap fixed"><a href="#masthead"><i class="fa fa-angle-up"></i></a></div>
-
 <?php endif; ?>
 
 <section class="p-banner">
