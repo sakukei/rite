@@ -26,3 +26,55 @@
     padding-top: 16px;
   }
 }
+
+// カテゴリーページの投稿者情報
+.p-taxonomy-img {
+  width: 64px;
+  height: 64px;
+  padding: 2px;
+  margin: 0 auto;
+  text-align: center;
+  background: #ebebe9;
+  border-radius: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+.p-category {
+  &-head {
+    padding: 0 16px 36px;
+  }
+  &-user-title {
+    padding-top: 16px;
+    text-align: center;
+    font-size: _rem(20px);
+  }
+  &-user-description {
+    padding-top: 16px;
+    line-height: 24px;
+  }
+  &-user-instagram {
+    padding-top: 16px;
+  }
+  &-user-instagramLink {
+    display: block;
+  }
+  &-user-instagramInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-user-instagramIcon {
+    padding-right: 8px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &-user-instagramName {
+    font-size: _rem(14px);
+    color: #333;
+  }
+}

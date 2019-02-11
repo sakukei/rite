@@ -109,15 +109,15 @@ get_header(); ?>
         $term_id = get_query_var('cat');
         $term_img_url = get_term_meta($term_id, 'wcct-tag-thumbnail-url', true);
         if (!empty($term_img_url)) {
-          $term_img = '<p class="taxonomy-img"><img src="' . get_term_meta($term_id, 'wcct-tag-thumbnail-url', true) . '"></p>';
+          $term_img = '<p class="p-taxonomy-img"><img src="' . get_term_meta($term_id, 'wcct-tag-thumbnail-url', true) . '"></p>';
         }
         if (wcct_get_options('cat_image') && !empty($term_img_url)) {
           $term_class = ' over';
-          $term_before = '<div class="wrap"><div class="in">';
-          $term_after = '</div></div>';
+//          $term_before = '<div class="wrap"><div class="in">';
+//          $term_after = '</div></div>';
         }
         ?>
-        <div class="page-header<?php echo $term_class; ?>">
+        <div class="p-page-header<?php echo $term_class; ?>">
           <?php
           //カスタムフィールドを読み込むために、カテゴリIDを取得
           $cat = get_the_category();
@@ -129,23 +129,27 @@ get_header(); ?>
             <?php
             echo $term_img;
             echo $term_before;
-            var_dump($term_img);
             ?>
-            <div class="category-instagram-head">
+            <div class="p-category-head">
               <?php
-              the_archive_title('<h1 class="page-title">', '</h1>');
+              the_archive_title('<h1 class="p-category-user-title">', '</h1>');
               ?>
-              <div class="category-instagram">
-                <a href="<?php echo the_field('instagram', $post_id); ?>" target="_blank">
-                  <img alt="リンクはこちら"
-                       src="<?php echo get_template_directory_uri(); ?>/images/icon_instagram.png"/>
+              <?php
+              the_archive_description('<div class="p-category-user-description">', '</div>');
+              echo $term_after;
+              ?>
+              <div class="p-category-user-instagram">
+                <a href="<?php echo the_field('instagram', $post_id); ?>" target="_blank"
+                   class="p-category-user-instagramLink">
+                  <div class="p-category-user-instagramInner">
+                    <div class="p-category-user-instagramIcon">
+                      <img alt="リンクはこちら" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_instagram.png"/>
+                    </div>
+                    <p class="p-category-user-instagramName"><?php echo the_field('instagram_user', $post_id); ?></p>
+                  </div>
                 </a>
               </div><!-- /category-instagram -->
             </div><!-- /category-instagram-head -->
-            <?php
-            the_archive_description('<div class="taxonomy-description">', '</div>');
-            echo $term_after;
-            ?>
           <?php endif; ?>
 
         </div><!-- .page-header -->

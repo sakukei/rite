@@ -951,6 +951,71 @@ a {
 	padding-top: 16px;
 }
 
+.p-taxonomy-img {
+	width: 64px;
+	height: 64px;
+	padding: 2px;
+	margin: 0 auto;
+	text-align: center;
+	background: #ebebe9;
+	border-radius: 50%;
+}
+
+.p-taxonomy-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.p-category-head {
+	padding: 0 16px 36px;
+}
+
+.p-category-user-title {
+	padding-top: 16px;
+	text-align: center;
+	font-size: 1.25rem;
+}
+
+.p-category-user-description {
+	padding-top: 16px;
+	line-height: 24px;
+}
+
+.p-category-user-instagram {
+	padding-top: 16px;
+}
+
+.p-category-user-instagramLink {
+	display: block;
+}
+
+.p-category-user-instagramInner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.p-category-user-instagramIcon {
+	padding-right: 8px;
+}
+
+.p-category-user-instagramIcon img {
+	width: 24px;
+	height: 24px;
+}
+
+.p-category-user-instagramName {
+	font-size: 0.875rem;
+	color: #333;
+}
+
 @media screen and (min-width: 768px) {
 
 html {
