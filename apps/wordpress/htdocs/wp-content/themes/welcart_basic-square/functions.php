@@ -115,35 +115,35 @@ function wcct_enqueue_styles() {
 
 	$template_dir = get_template_directory_uri();
 
-//	wp_enqueue_style( 'parent-style', $template_dir . '/style.css' );
-//	wp_enqueue_style( 'parent-welcart-style', $template_dir . '/usces_cart.css', array(), '1.0' );
+	wp_enqueue_style( 'parent-style', $template_dir . '/style.css' );
+	wp_enqueue_style( 'parent-welcart-style', $template_dir . '/usces_cart.css', array(), '1.0' );
 
-//	if( defined( 'WCEX_MSA_VERSION' ) ) {
-//		wp_enqueue_style( 'parent-msa', $template_dir . '/wcex_multi_shipping.css', array('msa_style'), WCEX_MSA_VERSION, false );
-//	}
-//	if( defined( 'WCEX_ORDER_LIST_WIDGET' ) ) {
-//		wp_enqueue_style( 'parent-olwidget', $template_dir . '/wcex_olwidget.css', array(), '1.0');
-//	}
-//	if( defined( 'WCEX_WIDGET_CART' ) ) {
-//		wp_enqueue_style( 'parent-widget_cart', $template_dir . '/wcex_widget_cart.css', array(), '1.0');
-//	}
-//	if( defined( 'WCEX_SLIDE_SHOWCASE' ) ) {
-//		wp_enqueue_style( 'parent-slide_showcase', $template_dir . '/slide_showcase.css', array(), '1.0');
-//	}
-//	if( defined( 'WCEX_AUTO_DELIVERY' ) ) {
-//		wp_enqueue_style( 'parent-auto_delivery', $template_dir . '/auto_delivery.css', array(), '1.0');
-//	}
-//	if( defined( 'WCEX_SKU_SELECT' ) ) {
-//		wp_enqueue_style( 'parent-sku_select', $template_dir . '/wcex_sku_select.css', array(), '1.0');
-//	}
-//
-//	if( defined('WCEX_POPLINK') && welcart_basic_is_poplink_page() ) {
-//		wp_enqueue_style( 'wcct_poplink', get_stylesheet_directory_uri() . '/css/poplink.css', array('wc_basic_poplink'), '1.0' );
-//	}
-//
-//	if($is_IE) {
-//		wp_enqueue_style( 'wc_ie', get_stylesheet_directory_uri() . '/css/ie.css', array('wc-basic-ie'), '1.0' );
-//	}
+	if( defined( 'WCEX_MSA_VERSION' ) ) {
+		wp_enqueue_style( 'parent-msa', $template_dir . '/wcex_multi_shipping.css', array('msa_style'), WCEX_MSA_VERSION, false );
+	}
+	if( defined( 'WCEX_ORDER_LIST_WIDGET' ) ) {
+		wp_enqueue_style( 'parent-olwidget', $template_dir . '/wcex_olwidget.css', array(), '1.0');
+	}
+	if( defined( 'WCEX_WIDGET_CART' ) ) {
+		wp_enqueue_style( 'parent-widget_cart', $template_dir . '/wcex_widget_cart.css', array(), '1.0');
+	}
+	if( defined( 'WCEX_SLIDE_SHOWCASE' ) ) {
+		wp_enqueue_style( 'parent-slide_showcase', $template_dir . '/slide_showcase.css', array(), '1.0');
+	}
+	if( defined( 'WCEX_AUTO_DELIVERY' ) ) {
+		wp_enqueue_style( 'parent-auto_delivery', $template_dir . '/auto_delivery.css', array(), '1.0');
+	}
+	if( defined( 'WCEX_SKU_SELECT' ) ) {
+		wp_enqueue_style( 'parent-sku_select', $template_dir . '/wcex_sku_select.css', array(), '1.0');
+	}
+
+	if( defined('WCEX_POPLINK') && welcart_basic_is_poplink_page() ) {
+		wp_enqueue_style( 'wcct_poplink', get_stylesheet_directory_uri() . '/css/poplink.css', array('wc_basic_poplink'), '1.0' );
+	}
+
+	if($is_IE) {
+		wp_enqueue_style( 'wc_ie', get_stylesheet_directory_uri() . '/css/ie.css', array('wc-basic-ie'), '1.0' );
+	}
 	wp_enqueue_script( 'scrollreveal', get_stylesheet_directory_uri() . '/js/scrollreveal.js', array(), '1.0' );
 	wp_enqueue_script( 'wcct_scrollreveal', get_stylesheet_directory_uri() . '/js/wcct_scrollreveal.js', array(), '1.0' );
 	wp_enqueue_script( 'masonry_pkgd', get_stylesheet_directory_uri() . '/js/masonry.pkgd.min.js', array(), '1.0' );
