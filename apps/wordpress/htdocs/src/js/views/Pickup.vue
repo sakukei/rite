@@ -15,6 +15,11 @@
       <li v-for="item in pickup" :key="item.id">
         <a :href="item.link">
           <img :src="item.featured_image.src"/>
+          <ul>
+            <li v-for="tags in item.tag_name">
+              {{tags}}
+            </li>
+          </ul>
         </a>
       </li>
     </ul>
