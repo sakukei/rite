@@ -31,6 +31,7 @@
   gap: 4px;
   padding: 0 4px;
   li {
+    position: relative;
     &:nth-child(5n){
       grid-column: span 2;
       grid-row: span 2;

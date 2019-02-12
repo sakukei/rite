@@ -1,0 +1,50 @@
+.p-tag-list {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.p-tag-lite__item {
+  right: 0;
+  top: 0;
+  margin: 0 0 5px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  content: '';
+  background-size: contain;
+  text-indent: -9999em;
+  border-radius: 50%;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &.fashion {
+    background-color: #fff;
+    &::before {
+      background-image: url(images/icon_fashion.svg);
+    }
+  }
+  &.food {
+    background-color: #fff;
+    &::before {
+      background-image: url(images/icon_food.svg);
+    }
+  }
+  &.country {
+    background-color: #fff;
+    &::before {
+      border-radius: 50%;
+      background-image: url(images/icon_country_bali.png);
+    }
+  }
+}

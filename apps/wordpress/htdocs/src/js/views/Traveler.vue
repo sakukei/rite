@@ -6,6 +6,11 @@
         <li v-for="item in ayumi" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
+                {{tag}}
+              </li>
+            </ul>
           </a>
         </li>
         <li>
@@ -22,6 +27,11 @@
         <li v-for="item in hitomi" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
+                {{tag}}
+              </li>
+            </ul>
           </a>
         </li>
         <li>
@@ -38,6 +48,11 @@
         <li v-for="item in chiha" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
+                {{tag}}
+              </li>
+            </ul>
           </a>
         </li>
         <li>
@@ -54,6 +69,11 @@
         <li v-for="item in yuika" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
+                {{tag}}
+              </li>
+            </ul>
           </a>
         </li>
         <li>
@@ -70,6 +90,11 @@
         <li v-for="item in aya" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
+                {{tag}}
+              </li>
+            </ul>
           </a>
         </li>
         <li>
@@ -86,6 +111,11 @@
         <li v-for="item in nami" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
+                {{tag}}
+              </li>
+            </ul>
           </a>
         </li>
         <li>
@@ -234,6 +264,7 @@
     grid-template-rows: repeat(2,1fr) max-content;
     gap: 3px;
     li {
+      position: relative;
       &:first-child {
         grid-column: span 2;
         grid-row: span 2;
