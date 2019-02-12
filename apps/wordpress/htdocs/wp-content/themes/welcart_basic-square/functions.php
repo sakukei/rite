@@ -233,6 +233,28 @@ function get_category_name( $object ) {
   return $cat_name;
 }
 
+//カテゴリ名を取得する関数を登録
+add_action( 'rest_api_init', 'register_tag_name' );
+
+function register_tag_name() {
+//register_rest_field関数を用いget_category_name関数からカテゴリ名を取得し、追加する
+  register_rest_field( 'post',
+    'tag_name',
+    array(
+      'get_callback'    => 'get_tag_name'
+    )
+  );
+}
+
+//$objectは現在の投稿の詳細データが入る
+function get_tag_name( $object ) {
+  $tag = get_the_tags($object[ 'id' ]);
+  for ($i = 0; $i < count($tag); ++$i) {
+    $tag_name[$i] = $tag[$i]->name;
+  }
+  return $tag_name;
+}
+
 add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
 function wp_add_thumbnail_to_JSON() {
 //Add featured image
