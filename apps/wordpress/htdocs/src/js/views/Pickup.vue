@@ -16,8 +16,8 @@
         <a :href="item.link">
           <img :src="item.featured_image.src"/>
           <ul>
-            <li v-for="tags in item.tag_name">
-              {{tags}}
+            <li v-for="tag in item.tag_name">
+              {{tag}}
             </li>
           </ul>
         </a>
