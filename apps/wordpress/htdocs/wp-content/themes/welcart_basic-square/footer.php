@@ -59,8 +59,8 @@
   });
 
   (function ($) {
-    var $tabList = $(".tab-list li");
-    var $tabContents = $(".tab-contents");
+    var $tabList = $(".p-tab-list li");
+    var $tabContents = $(".p-tab-contents");
     $tabList.on("click", function () {
       var index = $(this).index();
       $tabList.removeClass("is-current");
@@ -75,9 +75,9 @@
     //hashの中に#itemが存在するか確かめる
     if (hash.match(/^#item/)) {
       $(window).on('load', function () {
-        var $tabList = $(".tab-list li");
+        var $tabList = $(".p-tab-list li");
         var $noViewtabList = $("li.no-view");
-        var $tabContents = $(".tab-contents");
+        var $tabContents = $(".p-tab-contents");
         var $noView = $(".no-view");
         $tabList.removeClass("is-current");
         $tabList.removeClass("select");

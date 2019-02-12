@@ -167,7 +167,7 @@ get_header(); ?>
     </div>
 
     <!-- タブ -->
-    <div class="p-tab" id="tab">
+    <div class="p-tab" id="js-tab">
       <ul class="p-tab-list">
         <li class="firstview is-current">記事</li>
         <li class="no-view">商品</li>
@@ -195,59 +195,55 @@ get_header(); ?>
       <?php endif; ?>
 
       <?php endif; ?>
-      <div class="tab-contents no-view">
+      <div class="p-tab-contents no-view">
 
-        <div class="relatied">
+        <div class="p-main-grid">
           <?php
           $this_cat_slug = get_category($cat)->slug;
           $cat_query = new WP_Query(array('tag' => $this_cat_slug, 'status' => 'post', 'posts_per_page' => 20, 'orderby' => 'rand'));
           ?>
-          <div class="post-column-wrap">
-            <div class="post-column">
-              <?php if ($cat_query->have_posts()) : while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
-                <?php
-                usces_the_item();
-                usces_have_skus();
-                ?>
-                <div class="grid-item">
-                  <div class="inner">
-                    <div class="itemimg">
-                      <a href="<?php the_permalink() ?>">
-                        <?php usces_the_itemImage(0, 1000, 9999); ?>
-                        <?php if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
-                          <div class="itemsoldout">
+          <?php if ($cat_query->have_posts()) : while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
+            <?php
+            usces_the_item();
+            usces_have_skus();
+            ?>
+            <div class="grid-item">
+              <div class="inner">
+                <div class="itemimg">
+                  <a href="<?php the_permalink() ?>">
+                    <?php usces_the_itemImage(0, 1000, 9999); ?>
+                    <?php if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
+                      <div class="itemsoldout">
 
-                            <div class="inner">
+                        <div class="inner">
 
-                              <?php _e('SOLD OUT', 'welcart_basic_square'); ?>
+                          <?php _e('SOLD OUT', 'welcart_basic_square'); ?>
 
-                              <?php if (wcct_get_options('display_inquiry')): ?>
-                                <span class="text"><?php wcct_options('display_inquiry_text'); ?></span>
-                              <?php endif; ?>
+                          <?php if (wcct_get_options('display_inquiry')): ?>
+                            <span class="text"><?php wcct_options('display_inquiry_text'); ?></span>
+                          <?php endif; ?>
 
-                            </div>
+                        </div>
 
-                          </div>
-                        <?php endif; ?>
-                      </a>
-                    </div>
-                    <?php wcct_produt_tag(); ?>
-                    <?php welcart_basic_campaign_message(); ?>
-                    <div class="item-info-wrap">
-                      <div class="itemname">
-                        <a href="<?php the_permalink(); ?>" rel="bookmark"><?php usces_the_itemName(); ?></a>
                       </div>
-                      <div
-                        class="itemprice"><?php usces_crform(usces_the_firstPrice('return'), true, false) . usces_guid_tax(); ?></div>
-                    </div><!-- item-info-box -->
-                  </div>
+                    <?php endif; ?>
+                  </a>
                 </div>
-              <?php endwhile; else: ?>
-                <p>商品が見つかりません。</p>
-              <?php endif; ?>
-              <?php wp_reset_postdata(); ?>
+                <?php wcct_produt_tag(); ?>
+                <?php welcart_basic_campaign_message(); ?>
+                <div class="item-info-wrap">
+                  <div class="itemname">
+                    <a href="<?php the_permalink(); ?>" rel="bookmark"><?php usces_the_itemName(); ?></a>
+                  </div>
+                  <div
+                    class="itemprice"><?php usces_crform(usces_the_firstPrice('return'), true, false) . usces_guid_tax(); ?></div>
+                </div><!-- item-info-box -->
+              </div>
             </div>
-          </div>
+          <?php endwhile; else: ?>
+            <p>商品が見つかりません。</p>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
       </div>
     </div>
