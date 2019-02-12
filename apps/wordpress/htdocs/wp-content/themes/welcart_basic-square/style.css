@@ -971,10 +971,10 @@ a {
 	vertical-align: bottom;
 }
 
-
 .p-related .detail {
-  display: none;
+	display: none;
 }
+
 .p-search {
 	padding-top: 24px;
 }
@@ -1020,6 +1020,14 @@ a {
 
 .p-tab-container {
 	padding-top: 16px;
+}
+
+.p-tab-contents {
+	display: none;
+}
+
+.p-tab-contents.is-current {
+	display: block;
 }
 
 .p-user {

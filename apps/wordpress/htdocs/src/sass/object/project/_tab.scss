@@ -21,4 +21,10 @@
   &-container {
     padding-top: 16px;
   }
+  &-contents {
+    display: none;
+    &.is-current {
+      display: block;
+    }
+  }
 }
