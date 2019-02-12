@@ -104,7 +104,7 @@ const store = new Vuex.Store({
       return axios.get(
         `${
           this.state.baseUrl
-        }/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=${
+        }/wp-json/wp/v2/posts?filter[category_name]='Pickup,Pickup-item'&per_page=${
           this.state.getPosts
         }`,
         {}
@@ -114,7 +114,7 @@ const store = new Vuex.Store({
       return axios.get(
         `${
           this.state.baseUrl
-          }/wp-json/wp/v2/posts?filter[category_name]='Pickup'&per_page=${offset}`,
+          }/wp-json/wp/v2/posts?filter[category_name]='Pickup,Pickup-item'&per_page=${offset}`,
         {}
       );
     },
