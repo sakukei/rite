@@ -325,6 +325,10 @@ a {
 	background: #fff;
 }
 
+.p-drawer.is-active {
+	display: block;
+}
+
 .p-drawer-inner {
 	padding: 16px 16px 56px;
 }

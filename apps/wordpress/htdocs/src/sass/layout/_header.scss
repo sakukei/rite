@@ -42,6 +42,9 @@
   width: 100%;
   margin: 0 auto;
   background: #fff;
+  &.is-active {
+    display: block;
+  }
   &-inner {
     padding: 16px 16px 56px;
   }
