@@ -40,7 +40,7 @@ $opt = ' class="display-desc"';
       <div class="l-header-column p-header-column">
 
         <div class="p-header-logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img
-              src="<?php echo get_stylesheet_directory_uri(); ?>/images/header-logo.png"
+              src="<?php echo get_stylesheet_directory_uri(); ?>/images/header-logo.svg"
               alt="rite"></a>
         </div>
 
@@ -50,15 +50,15 @@ $opt = ' class="display-desc"';
               <!--<input id="p-header-nav-input" type="checkbox" class="p-header-nav-unshown">-->
               <!--<label id="p-header-nav-open" for="p-header-nav-input"><span></span></label>-->
               <!--<label class="p-header-nav-unshown" id="nav-close" for="nav-input"></label>-->
-              <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search.png"
+              <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search.svg"
                                            alt="検索のアイコン""></a>
             </div>
             <div class=" p-header-icon p-header-bag">
-              <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_bag.png"
+              <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_shopping_bag.svg"
                                            alt="バッグのアイコン""></a>
             </div>
             <div class=" p-header-icon p-header-account">
-              <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_account.png"
+              <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_account.svg"
                                            alt="アカウントのアイコン""></a>
             </div>
           </div>
@@ -161,5 +161,5 @@ $opt = ' class="display-desc"';
   };
   ?>
 
-  <div id="main" class="<?php echo $class; ?>">
+  <div class="p-main-content <?php echo $class; ?>">
     <div class="l-inner">

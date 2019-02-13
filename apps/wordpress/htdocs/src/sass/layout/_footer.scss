@@ -6,6 +6,10 @@
 
 .p-footer {
   padding-top: 20px;
+  background: none;
+  &-nav {
+    padding: 0;
+  }
   &-nav-list li,
   &-accordion-label,
   &-copyright {
@@ -44,6 +48,7 @@
 
   // ホーム
   &-menu-child {
+    margin: 0;
     li {
       &:first-child {
         display: none;
@@ -52,6 +57,7 @@
   }
   &-nav-list-accordion li {
     max-height: 0;
+    margin-bottom: 0;
     overflow-y: hidden;
     transition: all 0.5s;
     a {
