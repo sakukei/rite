@@ -39,6 +39,11 @@
       background-image: url(images/icon_food.svg);
     }
   }
+  &.Spot {
+    &::before {
+      background-image: url(images/icon_spot.svg);
+    }
+  }
   &.東京 {
     &::before {
       width: 18px;

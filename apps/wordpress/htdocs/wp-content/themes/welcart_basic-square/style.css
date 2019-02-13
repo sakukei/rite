@@ -1111,6 +1111,10 @@ a {
 	background-image: url(images/icon_food.svg);
 }
 
+.p-tag-lite__item.Spot::before {
+	background-image: url(images/icon_spot.svg);
+}
+
 .p-tag-lite__item.東京::before {
 	width: 18px;
 	height: 18px;
