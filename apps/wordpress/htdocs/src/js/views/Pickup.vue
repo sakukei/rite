@@ -17,6 +17,7 @@
           <img :src="item.featured_image.src"/>
           <ul class="p-tag-list">
             <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
+              {{tag}}
             </li>
           </ul>
           <p class="p-tag__price">{{item.tag_price}}</p>
