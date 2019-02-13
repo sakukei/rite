@@ -166,6 +166,11 @@ a {
 
 .p-footer {
 	padding-top: 20px;
+	background: none;
+}
+
+.p-footer-nav {
+	padding: 0;
 }
 
 .p-footer-nav-list li,
@@ -208,12 +213,17 @@ a {
 	margin-top: 1px;
 }
 
+.p-footer-menu-child {
+	margin: 0;
+}
+
 .p-footer-menu-child li:first-child {
 	display: none;
 }
 
 .p-footer-nav-list-accordion li {
 	max-height: 0;
+	margin-bottom: 0;
 	overflow-y: hidden;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
