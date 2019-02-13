@@ -230,10 +230,9 @@ function get_category_name( $object ) {
   for ($i = 0; $i < count($category); ++$i) {
     $cat_name[$i] = $category[$i]->cat_name;
   }
-  return $cat_name;
 }
 
-//カテゴリ名を取得する関数を登録
+//タグ名を取得する関数を登録
 add_action( 'rest_api_init', 'register_tag_name' );
 
 function register_tag_name() {
@@ -254,6 +253,30 @@ function get_tag_name( $object ) {
   }
   return $tag_name;
 }
+
+//値段を取得する関数を登録
+add_action( 'rest_api_init', 'register_price' );
+
+function register_price() {
+  register_rest_field( 'post',
+    'tag_price',
+    array(
+      'get_callback'    => 'get_price'
+    )
+  );
+}
+
+//「¥」が付いていたときprice判定
+function get_price( $object ) {
+  $tag = get_the_tags($object[ 'id' ]);
+  for ($i = 0; $i < count($tag); ++$i) {
+    if(strpos($tag[$i]->name,'¥') !== false) {
+      return $tag[$i]->name;
+    }
+  }
+}
+
+
 
 add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
 function wp_add_thumbnail_to_JSON() {

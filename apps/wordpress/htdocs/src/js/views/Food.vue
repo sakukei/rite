@@ -12,6 +12,7 @@
         </a>
       </li>
     </ul>
+    <p class="p-tag__price">{{item.tag_price}}</p>
     <div v-if="loading" class="loader">Loading...</div>
     <div class="p-more">
       <button v-on:click="moreBtn" class="p-more-btn" v-if="moreView">LOAD MORE…</button>

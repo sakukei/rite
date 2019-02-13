@@ -20,6 +20,7 @@
               {{tag}}
             </li>
           </ul>
+          <p class="p-tag__price">{{item.tag_price}}</p>
         </a>
       </li>
     </ul>
