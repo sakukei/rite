@@ -76,9 +76,9 @@ $opt = ' class="display-desc"';
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
         </div>
 
-        <div class="p-drawer-searchBox">
-          <?php get_search_form(); ?>
-        </div>
+<!--        <div class="p-drawer-searchBox">-->
+<!--          --><?php //get_search_form(); ?>
+<!--        </div>-->
 
         <div class="p-drawer-nav">
           <div class="p-drawer-nav-item">
