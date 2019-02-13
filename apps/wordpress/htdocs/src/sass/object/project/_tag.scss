@@ -15,6 +15,7 @@
   background-size: contain;
   text-indent: -9999em;
   border-radius: 50%;
+  background-color: #fff;
   &::before {
     content: '';
     position: absolute;
@@ -28,23 +29,42 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-  &.fashion {
-    background-color: #fff;
+  &.ファッション {
     &::before {
       background-image: url(images/icon_fashion.svg);
     }
   }
-  &.food {
-    background-color: #fff;
+  &.料理 {
     &::before {
       background-image: url(images/icon_food.svg);
     }
   }
-  &.country {
-    background-color: #fff;
+  &.東京 {
     &::before {
-      border-radius: 50%;
-      background-image: url(images/icon_country_bali.png);
+      width: 18px;
+      height: 18px;
+      background-image: url(images/icon_japan.png);
+    }
+  }
+  &.ソウル {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url(images/icon_korea.png);
+    }
+  }
+  &.バンコク {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url(images/icon_thailand.png);
+    }
+  }
+  &.バリ {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url(images/icon_indonesia.png);
     }
   }
 }
