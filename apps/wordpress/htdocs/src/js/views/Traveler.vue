@@ -1,15 +1,93 @@
 <template>
   <div class="l-inner">
     <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
+      <div class="p-traveler-name -chiha">chiha</div>
+      <ul class="p-sub-grid">
+        <li v-for="item in chiha" :key="item.id">
+          <a :href="item.link">
+            <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">{{tag}}</li>
+            </ul>
+            <p class="p-tag__price">{{item.tag_price}}</p>
+          </a>
+        </li>
+        <li>
+          <a :href="chihaLink">
+            <img :src="chihaLast" />
+            <div class="p-more"><span>もっとみる</span></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
+      <div class="p-traveler-name -nami">なみ</div>
+      <ul class="p-sub-grid">
+        <li v-for="item in nami" :key="item.id">
+          <a :href="item.link">
+            <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">{{tag}}</li>
+            </ul>
+            <p class="p-tag__price">{{item.tag_price}}</p>
+          </a>
+        </li>
+        <li>
+          <a :href="namiLink">
+            <img :src="namiLast" />
+            <div class="p-more"><span>もっとみる</span></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
+      <div class="p-traveler-name -aya">長谷川あや</div>
+      <ul class="p-sub-grid">
+        <li v-for="item in aya" :key="item.id">
+          <a :href="item.link">
+            <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">{{tag}}</li>
+            </ul>
+            <p class="p-tag__price">{{item.tag_price}}</p>
+          </a>
+        </li>
+        <li>
+          <a :href="ayaLink">
+            <img :src="ayaLast" />
+            <div class="p-more"><span>もっとみる</span></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
+      <div class="p-traveler-name -yuika">yu.i.k.a</div>
+      <ul class="p-sub-grid">
+        <li v-for="item in yuika" :key="item.id">
+          <a :href="item.link">
+            <img :src="item.featured_image.src" class="c-grid-img"/>
+            <ul class="p-tag-list">
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">{{tag}}</li>
+            </ul>
+            <p class="p-tag__price">{{item.tag_price}}</p>
+          </a>
+        </li>
+        <li>
+          <a :href="yuikaLink">
+            <img :src="yuikaLast" />
+            <div class="p-more"><span>もっとみる</span></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
       <div class="p-traveler-name -ayumi">AYUMI</div>
       <ul class="p-sub-grid">
         <li v-for="item in ayumi" :key="item.id">
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
             <ul class="p-tag-list">
-              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
-                {{tag}}
-              </li>
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">{{tag}}</li>
             </ul>
             <p class="p-tag__price">{{item.tag_price}}</p>
           </a>
@@ -29,9 +107,7 @@
           <a :href="item.link">
             <img :src="item.featured_image.src" class="c-grid-img"/>
             <ul class="p-tag-list">
-              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
-                {{tag}}
-              </li>
+              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">{{tag}}</li>
             </ul>
             <p class="p-tag__price">{{item.tag_price}}</p>
           </a>
@@ -44,95 +120,6 @@
         </li>
       </ul>
     </section>
-    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
-      <div class="p-traveler-name -chiha">chiha</div>
-      <ul class="p-sub-grid">
-        <li v-for="item in chiha" :key="item.id">
-          <a :href="item.link">
-            <img :src="item.featured_image.src" class="c-grid-img"/>
-            <ul class="p-tag-list">
-              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
-                {{tag}}
-              </li>
-            </ul>
-            <p class="p-tag__price">{{item.tag_price}}</p>
-          </a>
-        </li>
-        <li>
-          <a :href="chihaLink">
-            <img :src="chihaLast" />
-            <div class="p-more"><span>もっとみる</span></div>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
-      <div class="p-traveler-name -yuika">yu.i.k.a</div>
-      <ul class="p-sub-grid">
-        <li v-for="item in yuika" :key="item.id">
-          <a :href="item.link">
-            <img :src="item.featured_image.src" class="c-grid-img"/>
-            <ul class="p-tag-list">
-              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
-                {{tag}}
-              </li>
-            </ul>
-            <p class="p-tag__price">{{item.tag_price}}</p>
-          </a>
-        </li>
-        <li>
-          <a :href="yuikaLink">
-            <img :src="yuikaLast" />
-            <div class="p-more"><span>もっとみる</span></div>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
-      <div class="p-traveler-name -aya">長谷川あや</div>
-      <ul class="p-sub-grid">
-        <li v-for="item in aya" :key="item.id">
-          <a :href="item.link">
-            <img :src="item.featured_image.src" class="c-grid-img"/>
-            <ul class="p-tag-list">
-              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
-                {{tag}}
-              </li>
-            </ul>
-            <p class="p-tag__price">{{item.tag_price}}</p>
-          </a>
-        </li>
-        <li>
-          <a :href="ayaLink">
-            <img :src="ayaLast" />
-            <div class="p-more"><span>もっとみる</span></div>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="p-grid-section traveler-section" v-bind:class="{'is-hidden': display}">
-      <div class="p-traveler-name -nami">なみ</div>
-      <ul class="p-sub-grid">
-        <li v-for="item in nami" :key="item.id">
-          <a :href="item.link">
-            <img :src="item.featured_image.src" class="c-grid-img"/>
-            <ul class="p-tag-list">
-              <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">
-                {{tag}}
-              </li>
-            </ul>
-            <p class="p-tag__price">{{item.tag_price}}</p>
-          </a>
-        </li>
-        <li>
-          <a :href="namiLink">
-            <img :src="namiLast" />
-            <div class="p-more"><span>もっとみる</span></div>
-          </a>
-        </li>
-      </ul>
-    </section>
-
   </div>
 </template>
 
@@ -286,8 +273,12 @@
             height: 100%;
             content: '';
             background-color: rgba(0,0,0,0.6);
+            border-radius: 5px;
           }
         }
+      }
+      img {
+        border-radius: 5px;
       }
     }
   }

@@ -42,6 +42,7 @@
     height: 100%;
     object-fit: cover;
     vertical-align: bottom;
+    border-radius: 5px;
   }
 }
 </style>
