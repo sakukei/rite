@@ -165,7 +165,7 @@ a {
 }
 
 .p-footer {
-	padding-top: 20px;
+	padding-top: 24px;
 	background: none;
 }
 
@@ -323,6 +323,10 @@ a {
 	width: 100%;
 	margin: 0 auto;
 	background: #fff;
+}
+
+.p-drawer.is-active {
+	display: block;
 }
 
 .p-drawer-inner {

@@ -140,6 +140,22 @@
 
     }
 
+    const $searchIcon = $('#js-search');
+    const $drawer = $('#js-drawer');
+    const $close = $('.js-drawer-close');
+    const $header = $('.p-header');
+    $searchIcon.on('click', function() {
+      $drawer.addClass('is-active');
+      $header.css({'position': 'relative'});
+    });
+    $close.on('click', function() {
+      $drawer.removeClass('is-active');
+      $header.css({'position': ''});
+    });
+
+
+
+
 
   })(jQuery);
 </script>
