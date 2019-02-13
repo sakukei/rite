@@ -1093,6 +1093,10 @@ a {
 	background-color: #fff;
 }
 
+.p-tag-lite__item:empty {
+	display: none;
+}
+
 .p-tag-lite__item::before {
 	content: '';
 	position: absolute;
