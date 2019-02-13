@@ -450,7 +450,7 @@ a {
 	align-items: center;
 	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
-	width: 200%;
+	width: 135%;
 }
 
 .p-category-list li {
@@ -541,6 +541,7 @@ a {
 	width: 100%;
 	padding-top: 8px;
 	text-align: center;
+	font-size: 0.6875rem;
 }
 
 .p-main {
@@ -549,7 +550,7 @@ a {
 
 .p-main-content {
 	position: relative;
-	top: 65px;
+	top: 55px;
 }
 
 .c-accordion-label {

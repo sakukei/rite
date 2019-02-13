@@ -139,7 +139,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  width: 200%;
+  width: 135%;
   li {
     display: flex;
     justify-content: center;
@@ -214,5 +214,6 @@
     width: 100%;
     padding-top: 8px;
     text-align: center;
+    font-size: _rem(11px);
   }
 }
