@@ -47,20 +47,39 @@ $opt = ' class="display-desc"';
         <div class="p-header-nav">
           <div class="l-header-column p-header-nav-column">
             <div class="p-header-icon p-header-search" id="js-search">
-              <!--<input id="p-header-nav-input" type="checkbox" class="p-header-nav-unshown">-->
-              <!--<label id="p-header-nav-open" for="p-header-nav-input"><span></span></label>-->
-              <!--<label class="p-header-nav-unshown" id="nav-close" for="nav-input"></label>-->
               <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search.svg"
                                            alt="検索のアイコン""></a>
             </div>
+            <?php if (!defined('WCEX_WIDGET_CART')): ?>
             <div class=" p-header-icon p-header-bag">
-              <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_shopping_bag.svg"
-                                           alt="バッグのアイコン""></a>
+              <a class="menu-trigger" href="<?php echo USCES_CART_URL; ?>"><img
+                  src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_shopping_bag.svg"
+                  alt="バッグのアイコン""></a>
             </div>
-            <div class=" p-header-icon p-header-account">
-              <a class="menu-trigger"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_account.svg"
-                                           alt="アカウントのアイコン""></a>
-            </div>
+            <?php else: ?>
+              <div class=" p-header-icon p-header-bag">
+                <a class="menu-trigger" href="<?php echo USCES_CART_URL; ?>"><img
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_shopping_bag.svg"
+                    alt="バッグのアイコン""></a>
+              </div>
+            <?php endif; ?>
+
+
+            <?php if (usces_is_membersystem_state()): ?>
+              <?php if (usces_is_login()): ?>
+                <div class=" p-header-icon p-header-account">
+                  <a class="menu-trigger" href="<?php echo USCES_MEMBER_URL; ?>"><img
+                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_account.svg"
+                      alt="アカウントのアイコン""></a>
+                </div>
+              <?php else: ?>
+                <div class=" p-header-icon p-header-account">
+                  <a class="menu-trigger" href="<?php echo USCES_NEWMEMBER_URL; ?>"><img
+                      src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_account.svg"
+                      alt="アカウントのアイコン""></a>
+                </div>
+              <?php endif; ?>
+            <?php endif; ?>
           </div>
         </div>
 
@@ -71,14 +90,14 @@ $opt = ' class="display-desc"';
     <div class="p-drawer" id="js-drawer">
 
       <div class="p-drawer-inner">
-        
+
         <div class="p-drawer-searchBar js-drawer-close">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
         </div>
 
-<!--        <div class="p-drawer-searchBox">-->
-<!--          --><?php //get_search_form(); ?>
-<!--        </div>-->
+        <!--        <div class="p-drawer-searchBox">-->
+        <!--          --><?php //get_search_form(); ?>
+        <!--        </div>-->
 
         <div class="p-drawer-nav">
           <div class="p-drawer-nav-item">
