@@ -71,10 +71,6 @@ get_header();
           <!-- 商品購入導線モーダル -->
           <div class="p-modal-content p-item-box">
             <div class="p-item-box-inner">
-              <div class="p-drawer-searchBar">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
-              </div>
-              <p class="p-item-box-name"><?php usces_the_itemName(); ?></p>
               <?php wcct_produt_tag(); ?>
               <?php welcart_basic_campaign_message(); ?>
               <?php if ('continue' == welcart_basic_get_item_chargingtype($post->ID)) : ?>
@@ -121,11 +117,14 @@ get_header();
                       </dl>
                     <?php endif; ?>
 
-                    <div class="field">
-
-                      <div class="zaikostatus">
-                        <?php _e('stock status', 'usces'); ?>: <?php usces_the_itemZaikoStatus(); ?>
+                    <div class="p-item-box-head">
+                      <div class="p-drawer-searchBar">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
                       </div>
+                      <p class="p-item-box-name"><?php usces_the_itemName(); ?></p>
+<!--                      <div class="zaikostatus">-->
+<!--                        --><?php //_e('stock status', 'usces'); ?><!--: --><?php //usces_the_itemZaikoStatus(); ?>
+<!--                      </div>-->
 
                       <?php if ('continue' == welcart_basic_get_item_chargingtype($post->ID)) : ?>
                         <div class="frequency">
@@ -135,11 +134,11 @@ get_header();
                         </div>
                       <?php endif; ?>
 
-                      <div class="field_price">
-                        <?php if (usces_the_itemCprice('return') > 0) : ?>
-                          <span class="field_cprice"><?php usces_the_itemCpriceCr(); ?></span>
-                        <?php endif; ?>
-                        <?php usces_the_itemPriceCr(); ?><?php usces_guid_tax(); ?>
+                      <div class="p-item-box-price">
+<!--                        --><?php //if (usces_the_itemCprice('return') > 0) : ?>
+<!--                          <span class="p-item-cprice">--><?php //usces_the_itemCpriceCr(); ?><!--</span>-->
+<!--                        --><?php //endif; ?>
+                        <?php usces_the_itemPriceCr(); ?><?php //usces_guid_tax(); ?>
                       </div>
                     </div>
 
@@ -158,13 +157,14 @@ get_header();
                       <?php endif; ?>
                     <?php else : ?>
 
-                      <div class="c-box">
-                        <span class="quantity">
-                          <?php _e('Quantity', 'usces'); ?><?php wcct_the_itemQuant_select(); ?><?php usces_the_itemSkuUnit(); ?>
-                        </span>
-                        <span class="cart-button">
-                          <?php usces_the_itemSkuButton(wcct_get_options('cart_button'), 0); ?>
-                        </span>
+                      <div class="p-item-box-quantity">
+                        <div class="p-item-box-quantity-text">
+                          <?php _e('Quantity', 'usces'); ?>
+                        </div>
+                          <?php wcct_the_itemQuant_select(); ?><?php usces_the_itemSkuUnit(); ?>
+                      </div>
+                      <div class="p-item-box-button">
+                        <?php usces_the_itemSkuButton(wcct_get_options('cart_button'), 0); ?>
                       </div>
                     <?php endif; ?>
                     <div class="error_message">

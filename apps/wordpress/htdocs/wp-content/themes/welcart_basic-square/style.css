@@ -809,6 +809,38 @@ a {
 	width: 24px;
 }
 
+.p-item-box-head {
+	padding-bottom: 20px;
+	background: #FAFAFA;
+}
+
+.p-item-box-name {
+	padding: 20px 16px 0;
+}
+
+.p-item-box-price {
+	padding: 20px 16px 0;
+	text-align: right;
+}
+
+.p-item-box-quantity {
+	padding: 20px 16px 0;
+}
+
+.p-item-box-quantity .skuquantity {
+	margin-top: 12px;
+}
+
+.p-item-box-button {
+	padding: 40px 16px 0;
+	text-align: center;
+}
+
+.p-item-box-button .skubutton {
+	background: #327FAA;
+	color: #fff;
+}
+
 .p-info .hd2 {
 	padding-bottom: 5px;
 	border-bottom: 1px solid #ccc;
@@ -905,8 +937,7 @@ a {
 	display: none;
 	width: 88%;
 	margin: 0 auto;
-	padding: 10px 20px;
-	border: 2px solid #aaa;
+	padding-bottom: 28px;
 	background: #fff;
 }
 
