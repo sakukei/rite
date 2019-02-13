@@ -254,11 +254,10 @@ function get_tag_name( $object ) {
   return $tag_name;
 }
 
-//カテゴリ名を取得する関数を登録
+//値段を取得する関数を登録
 add_action( 'rest_api_init', 'register_price' );
 
 function register_price() {
-//register_rest_field関数を用いget_category_name関数からカテゴリ名を取得し、追加する
   register_rest_field( 'post',
     'tag_price',
     array(
@@ -267,7 +266,7 @@ function register_price() {
   );
 }
 
-//$objectは現在の投稿の詳細データが入る
+//「¥」が付いていたときprice判定
 function get_price( $object ) {
   $tag = get_the_tags($object[ 'id' ]);
   for ($i = 0; $i < count($tag); ++$i) {
