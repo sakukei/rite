@@ -1,3 +1,7 @@
 .p-main {
   padding-bottom: 136px;
+  &-content {
+    position: relative;
+    top: 65px;
+  }
 }
