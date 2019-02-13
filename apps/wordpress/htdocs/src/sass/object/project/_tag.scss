@@ -28,23 +28,23 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-  &.fashion {
+  &.ファッション {
     background-color: #fff;
     &::before {
       background-image: url(images/icon_fashion.svg);
     }
   }
-  &.food {
+  &.料理 {
     background-color: #fff;
     &::before {
       background-image: url(images/icon_food.svg);
     }
   }
-  &.country {
+  &.東京 {
     background-color: #fff;
     &::before {
       border-radius: 50%;
-      background-image: url(images/icon_country_bali.png);
+      background-image: url(images/icon_japan.svg);
     }
   }
 }

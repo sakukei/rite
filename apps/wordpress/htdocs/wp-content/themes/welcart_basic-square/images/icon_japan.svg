@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve" preserveAspectRatio="none">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:#ED2E38;}
+	.st1{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+
+	.st7{fill:#C8102E;}
+
+</style>
+<g id="インドネシア">
+</g>
+<g id="タイランド">
+</g>
+<g id="韓国">
+</g>
+<g id="日本">
+	<g>
+		<defs>
+			<circle id="SVGID_7_" cx="250" cy="250" r="250"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_7_"  style="display:none;overflow:visible;"/>
+		</clipPath>
+		<rect class="st1" width="500" height="500"/>
+		<g style="clip-path:url(#SVGID_2_);">
+			<circle class="st7" cx="250" cy="250" r="160"/>
+		</g>
+	</g>
+</g>
+</svg>

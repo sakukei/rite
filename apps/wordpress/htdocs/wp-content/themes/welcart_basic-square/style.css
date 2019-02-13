@@ -1102,29 +1102,29 @@ a {
 	background-repeat: no-repeat;
 }
 
-.p-tag-lite__item.fashion {
+.p-tag-lite__item.ファッション {
 	background-color: #fff;
 }
 
-.p-tag-lite__item.fashion::before {
+.p-tag-lite__item.ファッション::before {
 	background-image: url(images/icon_fashion.svg);
 }
 
-.p-tag-lite__item.food {
+.p-tag-lite__item.料理 {
 	background-color: #fff;
 }
 
-.p-tag-lite__item.food::before {
+.p-tag-lite__item.料理::before {
 	background-image: url(images/icon_food.svg);
 }
 
-.p-tag-lite__item.country {
+.p-tag-lite__item.東京 {
 	background-color: #fff;
 }
 
-.p-tag-lite__item.country::before {
+.p-tag-lite__item.東京::before {
 	border-radius: 50%;
-	background-image: url(images/icon_country_bali.png);
+	background-image: url(images/icon_japan.svg);
 }
 
 .p-tag__price {
