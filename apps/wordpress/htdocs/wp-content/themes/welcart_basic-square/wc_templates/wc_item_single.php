@@ -42,20 +42,22 @@ get_header();
             <div class="p-item-img">
               <a
                 href="<?php usces_the_itemImageURL(0); ?>" <?php echo apply_filters('usces_itemimg_anchor_rel', NULL); ?>><?php usces_the_itemImage(0, 600, 600, $post); ?></a>
-<!--              --><?php //foreach ($imageid as $id) : ?>
-<!--                <a-->
-<!--                  href="--><?php //usces_the_itemImageURL($id); ?><!--" --><?php //echo apply_filters('usces_itemimg_anchor_rel', NULL); ?><!--><?php //usces_the_itemImage($id, 600, 600, $post); ?><!--</a>-->
-<!--              --><?php //endforeach; ?>
+              <!--              --><?php //foreach ($imageid as $id) : ?>
+              <!--                <a-->
+              <!--                  href="--><?php //usces_the_itemImageURL($id); ?><!--" -->
+              <?php //echo apply_filters('usces_itemimg_anchor_rel', NULL); ?><!-->
+              <?php //usces_the_itemImage($id, 600, 600, $post); ?><!--</a>-->
+              <!--              --><?php //endforeach; ?>
             </div>
 
-<!--            --><?php //if (!empty($imageid)): ?>
-<!--              <div class="itemsubimg">-->
-<!--                <div>--><?php //usces_the_itemImage(0, 150, 150, $post); ?><!--</div>-->
-<!--                --><?php //foreach ($imageid as $id) : ?>
-<!--                  <div>--><?php //usces_the_itemImage($id, 150, 150, $post); ?><!--</div>-->
-<!--                --><?php //endforeach; ?>
-<!--              </div>-->
-<!--            --><?php //endif; ?>
+            <!--            --><?php //if (!empty($imageid)): ?>
+            <!--              <div class="itemsubimg">-->
+            <!--                <div>--><?php //usces_the_itemImage(0, 150, 150, $post); ?><!--</div>-->
+            <!--                --><?php //foreach ($imageid as $id) : ?>
+            <!--                  <div>--><?php //usces_the_itemImage($id, 150, 150, $post); ?><!--</div>-->
+            <!--                --><?php //endforeach; ?>
+            <!--              </div>-->
+            <!--            --><?php //endif; ?>
 
           </div>
 
@@ -69,10 +71,6 @@ get_header();
           <!-- 商品購入導線モーダル -->
           <div class="p-modal-content p-item-box">
             <div class="p-item-box-inner">
-              <div class="p-drawer-searchBar">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
-              </div>
-              <p class="p-item-box-name"><?php usces_the_itemName(); ?></p>
               <?php wcct_produt_tag(); ?>
               <?php welcart_basic_campaign_message(); ?>
               <?php if ('continue' == welcart_basic_get_item_chargingtype($post->ID)) : ?>
@@ -119,11 +117,14 @@ get_header();
                       </dl>
                     <?php endif; ?>
 
-                    <div class="field">
-
-                      <div class="zaikostatus">
-                        <?php _e('stock status', 'usces'); ?>: <?php usces_the_itemZaikoStatus(); ?>
+                    <div class="p-item-box-head">
+                      <div class="p-drawer-searchBar">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
                       </div>
+                      <p class="p-item-box-name"><?php usces_the_itemName(); ?></p>
+<!--                      <div class="zaikostatus">-->
+<!--                        --><?php //_e('stock status', 'usces'); ?><!--: --><?php //usces_the_itemZaikoStatus(); ?>
+<!--                      </div>-->
 
                       <?php if ('continue' == welcart_basic_get_item_chargingtype($post->ID)) : ?>
                         <div class="frequency">
@@ -133,11 +134,11 @@ get_header();
                         </div>
                       <?php endif; ?>
 
-                      <div class="field_price">
-                        <?php if (usces_the_itemCprice('return') > 0) : ?>
-                          <span class="field_cprice"><?php usces_the_itemCpriceCr(); ?></span>
-                        <?php endif; ?>
-                        <?php usces_the_itemPriceCr(); ?><?php usces_guid_tax(); ?>
+                      <div class="p-item-box-price">
+<!--                        --><?php //if (usces_the_itemCprice('return') > 0) : ?>
+<!--                          <span class="p-item-cprice">--><?php //usces_the_itemCpriceCr(); ?><!--</span>-->
+<!--                        --><?php //endif; ?>
+                        <?php usces_the_itemPriceCr(); ?><?php //usces_guid_tax(); ?>
                       </div>
                     </div>
 
@@ -156,13 +157,14 @@ get_header();
                       <?php endif; ?>
                     <?php else : ?>
 
-                      <div class="c-box">
-                        <span class="quantity">
-                          <?php _e('Quantity', 'usces'); ?><?php wcct_the_itemQuant_select(); ?><?php usces_the_itemSkuUnit(); ?>
-                        </span>
-                        <span class="cart-button">
-                          <?php usces_the_itemSkuButton(wcct_get_options('cart_button'), 0); ?>
-                        </span>
+                      <div class="p-item-box-quantity">
+                        <div class="p-item-box-quantity-text">
+                          <?php _e('Quantity', 'usces'); ?>
+                        </div>
+                          <?php wcct_the_itemQuant_select(); ?><?php usces_the_itemSkuUnit(); ?>
+                      </div>
+                      <div class="p-item-box-button">
+                        <?php usces_the_itemSkuButton(wcct_get_options('cart_button'), 0); ?>
                       </div>
                     <?php endif; ?>
                     <div class="error_message">
@@ -178,22 +180,18 @@ get_header();
             </div><!-- .item-info -->
           </div><!-- #item-box -->
 
-          <div id="tab">
-<!--            <ul class="tab-list cf">-->
-<!--              <li>--><?php //_e('Product Details', 'welcart_basic_square'); ?><!--</li>-->
-<!--              --><?php //if (wcct_get_options('review')): ?>
-<!--                <li>-->
-<!--                  --><?php //_e('Review', 'welcart_basic_square'); ?>
-<!--                  <span class="review-num">（ --><?php //echo get_comments_number(); ?><!-- ）</span>-->
-<!--                </li>-->
-<!--              --><?php //endif; ?>
-<!--            </ul>-->
+          <!--            <ul class="tab-list cf">-->
+          <!--              <li>--><?php //_e('Product Details', 'welcart_basic_square'); ?><!--</li>-->
+          <!--              --><?php //if (wcct_get_options('review')): ?>
+          <!--                <li>-->
+          <!--                  --><?php //_e('Review', 'welcart_basic_square'); ?>
+          <!--                  <span class="review-num">（ --><?php //echo get_comments_number(); ?><!-- ）</span>-->
+          <!--                </li>-->
+          <!--              --><?php //endif; ?>
+          <!--            </ul>-->
 
-            <div class="item-description">
-              <?php the_content(); ?>
-            </div>
-            <?php if (wcct_get_options('review')) comments_template('/wc_templates/wc_review.php', false); ?>
-          </div>
+          <?php the_content(); ?>l
+          <?php if (wcct_get_options('review')) comments_template('/wc_templates/wc_review.php', false); ?>
 
           <!-- ユーザー情報 -->
           <div class="p-user">
