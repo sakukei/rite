@@ -189,7 +189,7 @@ get_header();
 <!--              --><?php //endif; ?>
 <!--            </ul>-->
 
-            <div class="item-description tab-box">
+            <div class="item-description">
               <?php the_content(); ?>
             </div>
             <?php if (wcct_get_options('review')) comments_template('/wc_templates/wc_review.php', false); ?>
