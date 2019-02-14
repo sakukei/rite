@@ -7,10 +7,10 @@
           <ul class="p-tag-list">
             <li v-for="tag in item.tag_name" v-bind:class="tag" class="p-tag-lite__item">{{tag}}</li>
           </ul>
+          <p class="p-tag__price">{{item.tag_price}}</p>
         </a>
       </li>
     </ul>
-    <p class="p-tag__price">{{item.tag_price}}</p>
     <div v-if="loading" class="loader">Loading...</div>
     <div class="p-more">
       <button v-on:click="moreBtn" class="p-more-btn" v-if="moreView">LOAD MORE…</button>
