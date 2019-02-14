@@ -249,7 +249,9 @@ function register_tag_name() {
 function get_tag_name( $object ) {
   $tag = get_the_tags($object[ 'id' ]);
   for ($i = 0; $i < count($tag); ++$i) {
-    $tag_name[$i] = $tag[$i]->name;
+    if(strpos($tag[$i]->name,'¥') === false) {
+      $tag_name[$i] = $tag[$i]->name;
+    }
   }
   return $tag_name;
 }
