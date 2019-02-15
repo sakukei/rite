@@ -156,6 +156,8 @@
 
 
 
+  // カートの中のボタン文言変更
+    $('.to_customerinfo_button').val('購入へ進む');
 
   })(jQuery);
 </script>
