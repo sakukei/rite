@@ -6,11 +6,9 @@
 
 get_header(); ?>
 
-<!--　TOP2カラム　-->
 <div class="contents-column sku-select-column">
     <div id="primary" class="site-content">
         <div id="content" role="main">
-
 
         <?php if( have_posts() ) : have_posts(); the_post(); ?>
 
@@ -19,7 +17,6 @@ get_header(); ?>
 <!--            <h1 class="page-title">--><?php //the_title(); ?><!--</h1>-->
 
             <div class="column">
-
 
                 <section class="post" id="<?php echo $post->post_name; ?>">
 

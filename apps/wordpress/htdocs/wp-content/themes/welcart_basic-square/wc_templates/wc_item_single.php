@@ -121,10 +121,11 @@ get_header();
                       <div class="p-drawer-searchBar">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
                       </div>
-                      <p class="p-item-box-name"><?php usces_the_itemName(); ?></p>
-<!--                      <div class="zaikostatus">-->
-<!--                        --><?php //_e('stock status', 'usces'); ?><!--: --><?php //usces_the_itemZaikoStatus(); ?>
-<!--                      </div>-->
+                      <h2 class="p-item-box-name"><?php usces_the_itemName(); ?></h2>
+                      <!--                      <div class="zaikostatus">-->
+                      <!--                        -->
+                      <?php //_e('stock status', 'usces'); ?><!--: --><?php //usces_the_itemZaikoStatus(); ?>
+                      <!--                      </div>-->
 
                       <?php if ('continue' == welcart_basic_get_item_chargingtype($post->ID)) : ?>
                         <div class="frequency">
@@ -135,9 +136,10 @@ get_header();
                       <?php endif; ?>
 
                       <div class="p-item-box-price">
-<!--                        --><?php //if (usces_the_itemCprice('return') > 0) : ?>
-<!--                          <span class="p-item-cprice">--><?php //usces_the_itemCpriceCr(); ?><!--</span>-->
-<!--                        --><?php //endif; ?>
+                        <!--                        --><?php //if (usces_the_itemCprice('return') > 0) : ?>
+                        <!--                          <span class="p-item-cprice">-->
+                        <?php //usces_the_itemCpriceCr(); ?><!--</span>-->
+                        <!--                        --><?php //endif; ?>
                         <?php usces_the_itemPriceCr(); ?><?php //usces_guid_tax(); ?>
                       </div>
                     </div>
@@ -161,7 +163,7 @@ get_header();
                         <div class="p-item-box-quantity-text">
                           <?php _e('Quantity', 'usces'); ?>
                         </div>
-                          <?php wcct_the_itemQuant_select(); ?><?php usces_the_itemSkuUnit(); ?>
+                        <?php wcct_the_itemQuant_select(); ?><?php usces_the_itemSkuUnit(); ?>
                       </div>
                       <div class="p-item-box-button">
                         <?php usces_the_itemSkuButton(wcct_get_options('cart_button'), 0); ?>
@@ -207,6 +209,7 @@ get_header();
             </p>
           </div>
 
+          <!-- 関連商品 -->
           <div class="p-related">
             <?php usces_assistance_item($post->ID, __('An article concerned', 'usces')); ?>
           </div>
