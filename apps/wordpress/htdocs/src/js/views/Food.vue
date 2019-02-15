@@ -39,10 +39,13 @@
       });
       this.$store.dispatch('getCategory').then((res)=> {
         this.$store.commit('getCategory', res.data);
-        const foodLength = this.$store.state.categories.find(function(category){
-          return category.slug === 'food';
+        const foodCategory = this.$store.state.categories.filter(function(category){
+          return category.slug === 'food' || category.slug === 'food-item';
         });
-        this.count = foodLength.count;
+        const foodLength = foodCategory.reduce(function(previous,category){
+          return previous + category.count;
+        },0);
+        this.count = foodLength;
       })
     },
     watch: {
