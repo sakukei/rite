@@ -749,6 +749,23 @@ a {
 	text-decoration: underline;
 }
 
+.cart_page_title,
+.currency_code {
+	display: none;
+}
+
+.upbutton input {
+	margin-top: 8px;
+}
+
+#wc_cart .currency_code {
+	padding-top: 8px;
+}
+
+#InCart .p-main {
+	padding-bottom: 60px;
+}
+
 .p-traveler-name {
 	font-size: 18px;
 	margin: 0 0 20px;
