@@ -841,6 +841,10 @@ a {
 	color: #fff;
 }
 
+.p-item-box-info .item-sku {
+	padding: 20px 16px;
+}
+
 .p-info .hd2 {
 	padding-bottom: 5px;
 	border-bottom: 1px solid #ccc;
