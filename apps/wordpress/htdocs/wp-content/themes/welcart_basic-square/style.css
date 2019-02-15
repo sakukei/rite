@@ -899,6 +899,10 @@ a {
 	padding: 20px 16px;
 }
 
+.p-item-box-info .itemsoldout {
+	padding: 0 16px;
+}
+
 .p-info .hd2 {
 	padding-bottom: 5px;
 	border-bottom: 1px solid #ccc;

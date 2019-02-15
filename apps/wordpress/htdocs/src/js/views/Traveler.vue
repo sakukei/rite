@@ -253,8 +253,8 @@
   }
   .p-sub-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr) max-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: calc(100vw/3) calc(100vw/3) calc(100vw/3);
     gap: 3px;
     li {
       position: relative;
@@ -278,6 +278,7 @@
         }
       }
       img {
+        height : 100%;
         border-radius: 5px;
       }
     }
