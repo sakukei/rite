@@ -9,6 +9,7 @@ iframe {
 
 body {
 	font-family: sans-serif;
+	color: #555;
 }
 
 html {
@@ -625,9 +626,10 @@ a {
 
 .p-article p {
 	padding-top: 8px;
-	font-size: 1rem;
+	font-size: 0.875rem;
 	color: #555;
 	line-height: 22px;
+	letter-spacing: 3.4px;
 }
 
 .p-thumbnail-hd2 {
