@@ -597,6 +597,10 @@ a {
 	border-radius: 50%;
 }
 
+.single .p-main {
+	padding-bottom: 0;
+}
+
 .p-content {
 	position: relative;
 	top: -60px;
