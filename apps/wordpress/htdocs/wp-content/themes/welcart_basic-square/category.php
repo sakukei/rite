@@ -213,7 +213,7 @@ get_header(); ?>
           $category = get_category($cat_id);
           $cat_name = $category->slug;
           ?>
-          <?php $cat_item_name = $cat_name.'-traveler-item'?>
+          <?php $cat_item_name = $cat_name.'-item'?>
           <?php
             $cat_obj = get_category_by_slug($cat_item_name);
             $cat_item_id = $cat_obj->term_id;

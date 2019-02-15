@@ -210,32 +210,32 @@
         this.$store.commit('getCategory', res.data );
 
         const nami = this.$store.state.categories.find(function(category){
-          return category.slug === 'nami';
+          return category.slug === 'nami-traveler';
         });
         this.namiLink = nami.link;
 
         const aya = this.$store.state.categories.find(function(category){
-          return category.slug === 'aya';
+          return category.slug === 'aya-traveler';
         });
         this.ayaLink = aya.link;
 
         const chiha= this.$store.state.categories.find(function(category){
-          return category.slug === 'chiha';
+          return category.slug === 'chiha-traveler';
         });
         this.chihaLink = chiha.link;
 
         const yuika = this.$store.state.categories.find(function(category){
-          return category.slug === 'yuika';
+          return category.slug === 'yuika-traveler';
         });
         this.yuikaLink = yuika.link;
 
         const hitomi = this.$store.state.categories.find(function(category){
-          return category.slug === 'hitomi';
+          return category.slug === 'hitomi-traveler';
         });
         this.hitomiLink = hitomi.link;
 
         const ayumi = this.$store.state.categories.find(function(category){
-          return category.slug === 'ayumi';
+          return category.slug === 'ayumi-traveler';
         });
         this.ayumiLink = ayumi.link;
         this.display = false
