@@ -35,17 +35,22 @@
   export default {
     components: {
       swiper,
-      swiperSlide
+      swiperSlide,
     },
     data() {
       return {
         swiperOption: {
-
+          slidesPerView: 3,
+          spaceBetween: 30,
+          freeMode: true,
+          slidesPerGroup: 3,
+          loop: true,
         },
         offSet: 15,
         count:'',
         loading: false,
         moreView: false
+
       }
     },
     computed: {
@@ -117,13 +122,14 @@
     background-color: #f6f5f3;
     padding: 40px 0 24px;
     overflow: auto;
-    margin: 24px 0 40px;
+    margin: 12px 0 40px;
 
   }
   .p-feature-pickup__title {
-    padding: 24px 40px 0;
-    font-size: 16px;
-    line-height: 28px;
+    max-width: 240px;
+    padding: 20px 0 0;
+    font-size: 14px;
+    line-height: 20px;
   }
   .p-feature-pickup__text {
     padding-top: 4px;
