@@ -9,7 +9,7 @@ iframe {
 
 body {
 	font-family: sans-serif;
-	color: #555;
+	color: #555 !important;
 }
 
 html {
@@ -677,14 +677,14 @@ a {
 
 .p-thumbnailListLead {
 	padding-top: 16px;
-	font-size: 0.875rem;
+	font-size: 0.75rem;
 	line-height: 1.8;
 }
 
 .p-thumbnailListLead li {
 	counter-increment: section;
-	padding-left: 2.4em;
-	text-indent: -3.2em;
+	padding-left: 2.8em;
+	text-indent: -3.5em;
 	letter-spacing: 3.4px;
 }
 
@@ -694,7 +694,7 @@ a {
 }
 
 .p-thumbnailListLead li + li {
-	padding-top: 16px;
+	padding-top: 12px;
 }
 
 .p-infoList .p-infoIcon {
@@ -732,6 +732,7 @@ a {
 
 .p-infoList .p-infoIcon.-url a {
 	color: #65B2F6;
+	text-decoration: underline;
 }
 
 .p-traveler-name {
