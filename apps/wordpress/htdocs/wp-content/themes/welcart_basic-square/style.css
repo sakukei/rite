@@ -324,6 +324,10 @@ a {
 	width: 100%;
 	margin: 0 auto;
 	background: #fff;
+	-webkit-box-shadow: 3px -3px 3px -3px rgba(0, 0, 0, 0.4);
+	box-shadow: 3px -3px 3px -3px rgba(0, 0, 0, 0.4);
+	position: relative;
+	top: -15px;
 }
 
 .p-drawer.is-active {
