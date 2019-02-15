@@ -200,8 +200,7 @@ get_header(); ?>
           ?>
           <?php if ($cat_query->have_posts()) : while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
             <?php
-            usces_the_item();
-            usces_have_skus();
+            aaa
             ?>
             <div class="grid-item">
               <div class="inner">
