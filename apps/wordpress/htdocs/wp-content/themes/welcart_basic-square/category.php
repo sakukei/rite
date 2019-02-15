@@ -121,13 +121,9 @@ get_header(); ?>
           <div class="p-category-headBg">
             <!-- ここに画像出したい -->
           </div>
-          <?php
-          //カスタムフィールドを読み込むために、カテゴリIDを取得
-          $cat = get_the_category();
-          $cat = $cat[0];
-          $catid = $cat->cat_ID;
-          $post_id = 'category_' . $catid;
-          ?>
+
+
+          <?php $cat_id = get_queried_object()->cat_ID; $post_id = 'category_'.$cat_id; ?>
           <?php if (get_field('instagram', $post_id)): ?>
             <?php
             echo $term_img;
@@ -181,7 +177,21 @@ get_header(); ?>
           <?php while (have_posts()) : the_post(); ?>
             <?php if (has_post_thumbnail()): ?>
               <li>
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail(); ?>
+                  <ul class="p-tag-list">
+                    <?php
+                    $posttags = get_the_tags();
+                    if ( $posttags ) {
+                      foreach ( $posttags as $tag ) {
+                        if(strpos($tag->name,'¥') === false) {
+                          echo '<li class="' . $tag->name . ' p-tag-lite__item">'. $tag->name .'</li>';
+                        }
+                      }
+                    }
+                    ?>
+                  </ul>
+                </a>
               </li>
             <?php endif; ?>
           <?php endwhile; ?>
@@ -199,17 +209,34 @@ get_header(); ?>
 
         <div class="p-main-grid">
           <?php
-          $this_cat_slug = get_category($cat)->slug;
-          $cat_query = new WP_Query(array('tag' => $this_cat_slug, 'status' => 'post', 'posts_per_page' => 20, 'orderby' => 'rand'));
+          $cat_id   = get_queried_object_id();;
+          $category = get_category($cat_id);
+          $cat_name = $category->slug;
+          ?>
+          <?php $cat_item_name = $cat_name.'-traveler-item'?>
+          <?php
+            $cat_obj = get_category_by_slug($cat_item_name);
+            $cat_item_id = $cat_obj->term_id;
+            ?>
+          <?php
+          $cat_query = new WP_Query(array('category_name' => $cat_item_name, 'status' => 'post', 'posts_per_page' => 20, 'orderby' => 'rand'));
           ?>
           <?php if ($cat_query->have_posts()) : while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
-            <?php
-            usces_the_item();
-            usces_have_skus();
-            ?>
-            <div class="grid-item">
+            <div class="grid-item p-traveler-post__item">
+              <ul class="p-tag-list">
+              <?php
+              $posttags = get_the_tags();
+              if ( $posttags ) {
+                foreach ( $posttags as $tag ) {
+                  if(strpos($tag->name,'¥') === false) {
+                    echo '<li class="' . $tag->name . ' p-tag-lite__item">'. $tag->name .'</li>';
+                  }
+                }
+              }
+              ?>
+              </ul>
               <div class="inner">
-                <div class="itemimg">
+                <div class="p-traveler-post">
                   <a href="<?php the_permalink() ?>">
                     <?php usces_the_itemImage(0, 1000, 9999); ?>
                     <?php if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
@@ -228,16 +255,10 @@ get_header(); ?>
                       </div>
                     <?php endif; ?>
                   </a>
+                    <div class="p-traveler-post__price"><?php usces_crform(usces_the_firstPrice('return'), true, false)?></div>
                 </div>
                 <?php wcct_produt_tag(); ?>
                 <?php welcart_basic_campaign_message(); ?>
-                <div class="item-info-wrap">
-                  <div class="itemname">
-                    <a href="<?php the_permalink(); ?>" rel="bookmark"><?php usces_the_itemName(); ?></a>
-                  </div>
-                  <div
-                    class="itemprice"><?php usces_crform(usces_the_firstPrice('return'), true, false) . usces_guid_tax(); ?></div>
-                </div><!-- item-info-box -->
               </div>
             </div>
           <?php endwhile; else: ?>

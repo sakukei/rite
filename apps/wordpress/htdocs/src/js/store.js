@@ -178,7 +178,7 @@ const store = new Vuex.Store({
       return axios.get(
         `${
           this.state.baseUrl
-        }/wp-json/wp/v2/posts?filter[category_name]='nami'&per_page=6`,
+        }/wp-json/wp/v2/posts?filter[category_name]='nami,nami-traveler-item'&per_page=6`,
         {}
       );
     },
@@ -186,7 +186,7 @@ const store = new Vuex.Store({
       return axios.get(
         `${
           this.state.baseUrl
-        }/wp-json/wp/v2/posts?filter[category_name]='ayumi'&per_page=6`,
+        }/wp-json/wp/v2/posts?filter[category_name]='ayumi,ayumi-traveler-item'&per_page=6`,
         {}
       );
     },
@@ -194,7 +194,7 @@ const store = new Vuex.Store({
       return axios.get(
         `${
           this.state.baseUrl
-        }/wp-json/wp/v2/posts?filter[category_name]='hitomi'&per_page=6`,
+        }/wp-json/wp/v2/posts?filter[category_name]='hitomi,hitomi-traveler-item'&per_page=6`,
         {}
       );
     },
@@ -202,7 +202,7 @@ const store = new Vuex.Store({
       return axios.get(
         `${
           this.state.baseUrl
-        }/wp-json/wp/v2/posts?filter[category_name]='yuika'&per_page=6`,
+        }/wp-json/wp/v2/posts?filter[category_name]='yuika,yuika-traveler-item'&per_page=6`,
         {}
       );
     },
@@ -210,7 +210,7 @@ const store = new Vuex.Store({
       return axios.get(
         `${
           this.state.baseUrl
-        }/wp-json/wp/v2/posts?filter[category_name]='aya'&per_page=6`,
+        }/wp-json/wp/v2/posts?filter[category_name]='aya,aya-traveler-item'&per_page=6`,
         {}
       );
     },
@@ -218,7 +218,7 @@ const store = new Vuex.Store({
       return axios.get(
         `${
           this.state.baseUrl
-        }/wp-json/wp/v2/posts?filter[category_name]='chiha'&per_page=6`,
+        }/wp-json/wp/v2/posts?filter[category_name]='chiha,chiha-traveler-item'&per_page=6`,
         {}
       );
     }
