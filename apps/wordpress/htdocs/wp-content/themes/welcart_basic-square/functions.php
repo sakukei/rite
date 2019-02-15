@@ -230,6 +230,7 @@ function get_category_name( $object ) {
   for ($i = 0; $i < count($category); ++$i) {
     $cat_name[$i] = $category[$i]->cat_name;
   }
+  return $cat_name;
 }
 
 //タグ名を取得する関数を登録
