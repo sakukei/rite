@@ -5,8 +5,8 @@
         <swiper-slide v-for="item in featurePickup" :key="item.id">
           <a :href="item.link">
             <div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>
-            <p class="p-feature-pickup__title">{{item.title.rendered}}</p>
-            <p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,20)}}</p>
+            <p class="p-feature-pickup__title">{{item.title.rendered.slice(0,15)}}...</p>
+            <p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,19)}}</p>
           </a>
         </swiper-slide>
       </swiper>
