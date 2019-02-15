@@ -27,6 +27,7 @@
 <style lang="scss">
 .p-main-grid {
   display: grid;
+  grid-auto-rows: 50vw;
   grid-template-columns: repeat(2,1fr);
   gap: 4px;
   padding: 0 4px;

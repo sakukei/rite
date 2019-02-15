@@ -22,12 +22,16 @@
     padding-bottom: 5px;
     border-bottom: 1px solid $article-subTitle-border;
     font-size: _rem(16px);
+    line-height: 24px;
+    letter-spacing: 1.8px;
+    color: #555;
   }
   p {
     padding-top: 8px;
-    font-size: _rem(16px);
+    font-size: _rem(14px);
     color: $text-color;
     line-height: 22px;
+    letter-spacing: 3.4px;
   }
 }
 .p-thumbnail-hd2 {
@@ -66,7 +70,8 @@
   li {
     counter-increment: section;
     padding-left: 2.4em;
-    text-indent: -2.8em;
+    text-indent: -3.2em;
+    letter-spacing: 3.4px;
     &::before {
       content: counter(section, decimal-leading-zero);
       padding: 0 10px;
