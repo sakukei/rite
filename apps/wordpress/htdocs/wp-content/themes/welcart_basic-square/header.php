@@ -103,22 +103,22 @@ $opt = ' class="display-desc"';
           <div class="p-drawer-nav-item">
             <h3 class="p-drawer-nav-item-title">traveler</h3>
             <ul class="p-drawer-nav-item-list">
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/aya/"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/aya-traveler/"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_hasegawa_aya.jpeg"
                     alt=""><span class="p-drawer-nav-item-list-name">長谷川あや</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/hitomi"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/hitomi-traveler"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yoshino_hitomi.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">良野仁美</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/nami"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/nami-traveler"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_namiy_73.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">なみ</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/yuika"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/yuika-traveler"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_yu_i_k_a.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">yu.i.k.a</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/chiha"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/chiha-traveler"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_chiha6710.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">chiha</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/ayumi"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/category/traveler/ayumi-traveler"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler_oayumi.jpg"
                     alt=""><span class="p-drawer-nav-item-list-name">AYUMI</span></a></li>
             </ul>
@@ -126,22 +126,22 @@ $opt = ' class="display-desc"';
           <div class="p-drawer-nav-item">
             <h3 class="p-drawer-nav-item-title">categoly</h3>
             <ul class="p-drawer-nav-item-list p-drawer-nav-item-list-categoly">
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/all/"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/all/" class="js-drawer-close"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_all.svg"
                     alt=""><span class="p-drawer-nav-item-list-name">all</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/" class="js-drawer-close"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_pickup.svg"
                     alt=""><span class="p-drawer-nav-item-list-name">pickup</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/traveler/"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/traveler/" class="js-drawer-close"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_traveler.svg"
                     alt=""><span class="p-drawer-nav-item-list-name">traveler</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/fashion/"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/fashion/" class="js-drawer-close"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_fashion.svg"
                     alt=""><span class="p-drawer-nav-item-list-name">fashion</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/food/"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/food/" class="js-drawer-close"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_food.svg"
                     alt=""><span class="p-drawer-nav-item-list-name">food</span></a></li>
-              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/spot/"><img
+              <li><a href="<?php get_stylesheet_directory_uri(); ?>/#/spot/" class="js-drawer-close"><img
                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_spot.svg"
                     alt=""><span class="p-drawer-nav-item-list-name">spot</span></a></li>
             </ul>
