@@ -1122,6 +1122,7 @@ a {
 	text-indent: -9999em;
 	border-radius: 50%;
 	background-color: #fff;
+	z-index: 30;
 }
 
 .p-tag-lite__item:empty {
@@ -1191,6 +1192,25 @@ a {
 
 .p-tag__price:empty {
 	display: none;
+}
+
+.p-traveler-post {
+	position: relative;
+}
+
+.p-traveler-post__price {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #333;
+	font-size: 12px;
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+	padding: 5px 12px;
+	border-radius: 5px;
+}
+
+.p-traveler-post__item {
+	position: relative;
 }
 
 .p-user {
