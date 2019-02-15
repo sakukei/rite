@@ -121,13 +121,9 @@ get_header(); ?>
           <div class="p-category-headBg">
             <!-- ここに画像出したい -->
           </div>
-          <?php
-          //カスタムフィールドを読み込むために、カテゴリIDを取得
-          $cat = get_the_category();
-          $cat = $cat[0];
-          $catid = $cat->cat_ID;
-          $post_id = 'category_' . $catid;
-          ?>
+
+
+          <?php $cat_id = get_queried_object()->cat_ID; $post_id = 'category_'.$cat_id; ?>
           <?php if (get_field('instagram', $post_id)): ?>
             <?php
             echo $term_img;
