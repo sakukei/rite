@@ -89,10 +89,13 @@
       });
       this.$store.dispatch('getCategory').then((res)=> {
         this.$store.commit('getCategory', res.data);
-        const pickupLength = this.$store.state.categories.find(function(category){
-          return category.slug === 'pickup';
+        const pickupCategory = this.$store.state.categories.filter(function(category){
+          return category.slug === 'pickup' || category.slug === 'pickup-item';
         });
-        this.count = pickupLength.count;
+        const pickupLength = pickupCategory.reduce(function(previous,category){
+          return previous + category.count;
+        },0);
+        this.count = pickupLength;
       })
     },
     methods: {
