@@ -32,6 +32,13 @@
     color: $text-color;
     line-height: 22px;
     letter-spacing: 3.4px;
+    -webkit-font-smoothing: antialiased;
+  }
+  li {
+    -webkit-font-smoothing: antialiased;
+  }
+  img {
+    border-radius: 4px;
   }
 }
 .p-thumbnail-hd2 {
@@ -40,6 +47,11 @@
 .p-articleBlock,
 .p-thumbnail {
   padding-bottom: 32px;
+}
+.p-thumbnailImg {
+  img + img {
+    padding-top: 4px;
+  }
 }
 .p-thumbnailListImg {
   display: grid;
@@ -65,28 +77,32 @@
 }
 .p-thumbnailListLead {
   padding-top: 16px;
-  font-size: _rem(14px);
+  font-size: _rem(12px);
   line-height: 1.8;
   li {
     counter-increment: section;
-    padding-left: 2.4em;
-    text-indent: -3.2em;
+    padding-left: 2.8em;
+    text-indent: -3.5em;
     letter-spacing: 3.4px;
     &::before {
       content: counter(section, decimal-leading-zero);
       padding: 0 10px;
     }
     & + li {
-      padding-top: 16px;
+      padding-top: 12px;
     }
   }
 }
 .p-infoList {
+  li {
+    color : #555;
+  }
   .p-infoIcon {
     position: relative;
     padding-left: 44px;
     margin-top: 16px;
     font-size: _rem(16px);
+    line-height: normal;
     &::before {
       display: inline-block;
       content: '';
@@ -110,6 +126,11 @@
     }
     &.-url a {
       color: #65B2F6;
+      text-decoration: underline;
     }
   }
+}
+
+.p-googleMap {
+  height: 100vw;
 }

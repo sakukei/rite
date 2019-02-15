@@ -8,8 +8,8 @@ iframe {
 }
 
 body {
-	font-family: sans-serif;
-	color: #555;
+	font-family: sans-serif !important;
+	color: #555 !important;
 }
 
 html {
@@ -630,6 +630,15 @@ a {
 	color: #555;
 	line-height: 22px;
 	letter-spacing: 3.4px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.p-article li {
+	-webkit-font-smoothing: antialiased;
+}
+
+.p-article img {
+	border-radius: 4px;
 }
 
 .p-thumbnail-hd2 {
@@ -639,6 +648,10 @@ a {
 .p-articleBlock,
 .p-thumbnail {
 	padding-bottom: 32px;
+}
+
+.p-thumbnailImg img + img {
+	padding-top: 4px;
 }
 
 .p-thumbnailListImg {
@@ -673,14 +686,14 @@ a {
 
 .p-thumbnailListLead {
 	padding-top: 16px;
-	font-size: 0.875rem;
+	font-size: 0.75rem;
 	line-height: 1.8;
 }
 
 .p-thumbnailListLead li {
 	counter-increment: section;
-	padding-left: 2.4em;
-	text-indent: -3.2em;
+	padding-left: 2.8em;
+	text-indent: -3.5em;
 	letter-spacing: 3.4px;
 }
 
@@ -690,7 +703,11 @@ a {
 }
 
 .p-thumbnailListLead li + li {
-	padding-top: 16px;
+	padding-top: 12px;
+}
+
+.p-infoList li {
+	color: #555;
 }
 
 .p-infoList .p-infoIcon {
@@ -698,6 +715,7 @@ a {
 	padding-left: 44px;
 	margin-top: 16px;
 	font-size: 1rem;
+	line-height: normal;
 }
 
 .p-infoList .p-infoIcon::before {
@@ -728,6 +746,11 @@ a {
 
 .p-infoList .p-infoIcon.-url a {
 	color: #65B2F6;
+	text-decoration: underline;
+}
+
+.p-googleMap {
+	height: 100vw;
 }
 
 .p-traveler-name {
