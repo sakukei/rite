@@ -10,6 +10,10 @@
 .p-header {
   position: fixed;
   z-index: 2;
+  @include _mq-min(){
+    width: 840px;
+    margin: 0 auto;
+  }
   &-inner {
     padding: 16px 20px;
   }

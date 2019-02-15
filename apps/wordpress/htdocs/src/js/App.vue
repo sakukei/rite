@@ -31,6 +31,9 @@
   grid-template-columns: repeat(2,1fr);
   gap: 4px;
   padding: 0 4px;
+  @media all and (min-width: 480px) {
+    grid-auto-rows: 400px;
+  }
   li {
     position: relative;
     &:nth-child(5n){

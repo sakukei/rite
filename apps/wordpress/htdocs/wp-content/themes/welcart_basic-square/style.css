@@ -223,6 +223,8 @@ a {
 }
 
 .p-footer-nav-list-accordion li {
+	float: none;
+	width: 100%;
 	max-height: 0;
 	margin-bottom: 0;
 	overflow-y: hidden;
@@ -1374,6 +1376,36 @@ a {
 
 html {
 	font-size: 16px;
+}
+
+.p-footer {
+	width: 840px;
+	margin: 0 auto;
+}
+
+.p-footer-nav {
+	width: 100%;
+}
+
+.p-footer-nav-list li {
+	width: 100%;
+	float: none;
+}
+
+.p-banner {
+	width: 840px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.p-header {
+	width: 840px;
+	margin: 0 auto;
+}
+
+.p-main {
+	width: 840px;
+	margin: 0 auto;
 }
 
 }
