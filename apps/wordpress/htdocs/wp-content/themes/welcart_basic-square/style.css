@@ -630,6 +630,15 @@ a {
 	color: #555;
 	line-height: 22px;
 	letter-spacing: 3.4px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.p-article li {
+	-webkit-font-smoothing: antialiased;
+}
+
+.p-article img {
+	border-radius: 4px;
 }
 
 .p-thumbnail-hd2 {
@@ -697,11 +706,16 @@ a {
 	padding-top: 12px;
 }
 
+.p-infoList li {
+	color: #555;
+}
+
 .p-infoList .p-infoIcon {
 	position: relative;
 	padding-left: 44px;
 	margin-top: 16px;
 	font-size: 1rem;
+	line-height: normal;
 }
 
 .p-infoList .p-infoIcon::before {
@@ -733,6 +747,10 @@ a {
 .p-infoList .p-infoIcon.-url a {
 	color: #65B2F6;
 	text-decoration: underline;
+}
+
+.p-googleMap {
+	height: 100vw;
 }
 
 .p-traveler-name {
