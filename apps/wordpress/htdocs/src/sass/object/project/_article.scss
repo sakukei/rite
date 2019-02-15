@@ -32,6 +32,13 @@
     color: $text-color;
     line-height: 22px;
     letter-spacing: 3.4px;
+    -webkit-font-smoothing: antialiased;
+  }
+  li {
+    -webkit-font-smoothing: antialiased;
+  }
+  img {
+    border-radius: 4px;
   }
 }
 .p-thumbnail-hd2 {
@@ -87,11 +94,15 @@
   }
 }
 .p-infoList {
+  li {
+    color : #555;
+  }
   .p-infoIcon {
     position: relative;
     padding-left: 44px;
     margin-top: 16px;
     font-size: _rem(16px);
+    line-height: normal;
     &::before {
       display: inline-block;
       content: '';
@@ -118,4 +129,8 @@
       text-decoration: underline;
     }
   }
+}
+
+.p-googleMap {
+  height: 100vw;
 }
