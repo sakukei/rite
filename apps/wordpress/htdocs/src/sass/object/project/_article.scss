@@ -41,6 +41,11 @@
 .p-thumbnail {
   padding-bottom: 32px;
 }
+.p-thumbnailImg {
+  img + img {
+    padding-top: 4px;
+  }
+}
 .p-thumbnailListImg {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
