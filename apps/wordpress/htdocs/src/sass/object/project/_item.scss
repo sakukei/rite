@@ -47,15 +47,19 @@
   text-align: right;
 }
 .p-item-box-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px 16px 0;
   .skuquantity {
-    margin-top: 12px;
+    //margin-top: 12px;
   }
 }
 .p-item-box-button {
   padding: 40px 16px 0;
   text-align: center;
   .skubutton {
+    width: 100%;
     background: #327FAA;
     color: #fff;
   }

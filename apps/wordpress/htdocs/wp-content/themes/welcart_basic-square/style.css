@@ -849,11 +849,16 @@ a {
 }
 
 .p-item-box-quantity {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 	padding: 20px 16px 0;
-}
-
-.p-item-box-quantity .skuquantity {
-	margin-top: 12px;
 }
 
 .p-item-box-button {
@@ -862,6 +867,7 @@ a {
 }
 
 .p-item-box-button .skubutton {
+	width: 100%;
 	background: #327FAA;
 	color: #fff;
 }
@@ -962,7 +968,10 @@ a {
 
 .p-modal-content {
 	position: fixed;
-	z-index: 2;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 20;
 	display: none;
 	width: 88%;
 	margin: 0 auto;
@@ -978,7 +987,7 @@ a {
 	display: none;
 	width: 100%;
 	height: 120%;
-	background-color: rgba(0, 0, 0, 0.75);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .p-more-btn {

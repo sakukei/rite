@@ -73,6 +73,14 @@ get_header();
                   <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_search_bar.svg" alt="">
                 </div>
                 <h2 class="p-item-box-name"><?php usces_the_itemName(); ?></h2>
+                <div class="p-item-box-price">
+                  <!----><?php //if (usces_the_itemCprice('return') > 0) : ?>
+                  <!--<span class="field_cprice ss_cprice">-->
+                  <?php //usces_the_itemCpriceCr(); ?><!--</span>-->
+                  <!----><?php //endif; ?>
+                  <?php usces_the_itemPriceCr(); ?>
+                  <!----><?php //usces_guid_tax(); ?>
+                </div>
                 <?php wcct_produt_tag(); ?>
                 <?php welcart_basic_campaign_message(); ?>
                 <?php if ('continue' == welcart_basic_get_item_chargingtype($post->ID)) : ?>
@@ -130,15 +138,6 @@ get_header();
                       </span>
                     </div>
                   <?php endif; ?>
-
-                  <div class="p-item-box-price">
-                    <!----><?php //if (usces_the_itemCprice('return') > 0) : ?>
-                    <!--<span class="field_cprice ss_cprice">-->
-                    <?php //usces_the_itemCpriceCr(); ?><!--</span>-->
-                    <!----><?php //endif; ?>
-                    <?php usces_the_itemPriceCr(); ?>
-                    <!----><?php //usces_guid_tax(); ?>
-                  </div>
 
                   <div id="checkout_box">
                     <?php if (wcct_get_options('inquiry_link_button')): ?>
