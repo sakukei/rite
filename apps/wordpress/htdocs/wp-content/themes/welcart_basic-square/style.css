@@ -618,6 +618,9 @@ a {
 	padding-bottom: 5px;
 	border-bottom: 1px solid #ccc;
 	font-size: 1rem;
+	line-height: 24px;
+	letter-spacing: 1.8px;
+	color: #555;
 }
 
 .p-article p {
@@ -675,7 +678,8 @@ a {
 .p-thumbnailListLead li {
 	counter-increment: section;
 	padding-left: 2.4em;
-	text-indent: -2.8em;
+	text-indent: -3.2em;
+	letter-spacing: 3.4px;
 }
 
 .p-thumbnailListLead li::before {
