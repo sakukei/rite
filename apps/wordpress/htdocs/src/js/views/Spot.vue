@@ -55,10 +55,13 @@
       });
       this.$store.dispatch('getCategory').then((res)=> {
         this.$store.commit('getCategory', res.data);
-        const spotLength = this.$store.state.categories.find(function(category){
-          return category.slug === 'spot';
+        const spotCategory = this.$store.state.categories.filter(function(category){
+          return category.slug === 'spot' || category.slug === 'spot-item';
         });
-        this.count = spotLength.count;
+        const spotLength = spotCategory.reduce(function(previous,category){
+          return previous + category.count;
+        },0);
+        this.count = spotLength;
       })
     },
     methods: {

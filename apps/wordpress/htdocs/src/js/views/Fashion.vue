@@ -55,10 +55,13 @@
       });
       this.$store.dispatch('getCategory').then((res)=> {
         this.$store.commit('getCategory', res.data);
-        const fashionLength = this.$store.state.categories.find(function(category){
-          return category.slug === 'fashion';
+        const fashionCategory = this.$store.state.categories.filter(function(category){
+          return category.slug === 'fashion' || category.slug === 'fashion-item';
         });
-        this.count = fashionLength.count;
+        const fashionLength = fashionCategory.reduce(function(previous,category){
+          return previous + category.count;
+        },0);
+        this.count = fashionLength;
       })
     },
     methods: {
