@@ -1320,10 +1320,6 @@ input[type=button].allocation_edit_button,
 	position: relative;
 }
 
-.p-traveler-post .itemsoldout {
-	visibility: hidden;
-}
-
 .p-traveler-post__price {
 	background-color: rgba(255, 255, 255, 0.8);
 	color: #333;

@@ -239,21 +239,21 @@ get_header(); ?>
                 <div class="p-traveler-post">
                   <a href="<?php the_permalink() ?>">
                     <?php usces_the_itemImage(0, 1000, 9999); ?>
-                    <?php if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
-                      <div class="itemsoldout">
-
-                        <div class="inner">
-
-                          <?php _e('SOLD OUT', 'welcart_basic_square'); ?>
-
-                          <?php if (wcct_get_options('display_inquiry')): ?>
-                            <span class="text"><?php wcct_options('display_inquiry_text'); ?></span>
-                          <?php endif; ?>
-
-                        </div>
-
-                      </div>
-                    <?php endif; ?>
+<!--                    --><?php //if (wcct_get_options('display_soldout') && !usces_have_zaiko_anyone()): ?>
+<!--                      <div class="itemsoldout">-->
+<!---->
+<!--                        <div class="inner">-->
+<!---->
+<!--                          --><?php //_e('SOLD OUT', 'welcart_basic_square'); ?>
+<!---->
+<!--                          --><?php //if (wcct_get_options('display_inquiry')): ?>
+<!--                            <span class="text">--><?php //wcct_options('display_inquiry_text'); ?><!--</span>-->
+<!--                          --><?php //endif; ?>
+<!---->
+<!--                        </div>-->
+<!---->
+<!--                      </div>-->
+<!--                    --><?php //endif; ?>
                   </a>
                     <div class="p-traveler-post__price"><?php usces_crform(usces_the_firstPrice('return'), true, false)?></div>
                 </div>
