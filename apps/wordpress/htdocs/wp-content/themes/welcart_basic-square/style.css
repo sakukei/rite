@@ -1209,6 +1209,11 @@ input[type=button].allocation_edit_button,
 	display: block;
 }
 
+.p-tab-contents .p-main-grid img {
+	width: 50vw;
+	height: 50vw;
+}
+
 .p-tag-list {
 	position: absolute;
 	top: 5px;
@@ -1333,13 +1338,6 @@ input[type=button].allocation_edit_button,
 
 .p-traveler-post__item {
 	position: relative;
-}
-
-.p-traveler-post__item:nth-child(5n) {
-	-ms-grid-column-span: 2;
-	grid-column: span 2;
-	-ms-grid-row-span: 2;
-	grid-row: span 2;
 }
 
 .p-user {
