@@ -7,6 +7,7 @@
 .p-footer {
   padding-top: 24px;
   background: none;
+  border: none;
   @include _mq-min(){
     width: 840px;
     margin: 0 auto;
