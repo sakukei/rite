@@ -847,7 +847,7 @@ input[type=button].allocation_edit_button,
 }
 
 .p-traveler-name.-ayumi::before {
-	background-image: url(images/icon_traveler_oayumi.jpg);
+	background-image: url(images/icon_traveler_oayumi.png);
 }
 
 .p-grid-section {
@@ -1386,6 +1386,8 @@ input[type=button].allocation_edit_button,
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .p-category-head {
