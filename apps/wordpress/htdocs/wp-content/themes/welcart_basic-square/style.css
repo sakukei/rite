@@ -1485,6 +1485,15 @@ html {
 	right: 23%;
 }
 
+.p-tab-contents .p-main-grid {
+	grid-auto-rows: calc(840px / 2);
+}
+
+.p-tab-contents .p-main-grid img {
+	width: calc(840px/2);
+	height: calc(840px/2);
+}
+
 }
 
 @-webkit-keyframes load3 {

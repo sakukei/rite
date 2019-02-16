@@ -26,9 +26,18 @@
     &.is-current {
       display: block;
     }
+    .p-main-grid {
+      @include _mq-min() {
+        grid-auto-rows: calc(840px / 2);
+      }
+    }
     .p-main-grid img {
       width: 50vw;
       height: 50vw;
+      @include _mq-min(){
+        width: calc(840px/2);
+        height: calc(840px/2);
+      }
     }
   }
 }
