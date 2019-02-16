@@ -265,7 +265,6 @@ a {
 
 .p-banner {
 	padding: 0 4px;
-	margin-top: 30px;
 }
 
 .l-header {
@@ -556,6 +555,10 @@ a {
 	font-size: 0.6875rem;
 }
 
+.p-main {
+	padding-bottom: 136px;
+}
+
 .p-main-content {
 	position: relative;
 	top: 55px;
@@ -592,6 +595,10 @@ a {
 
 .c-icon-user {
 	border-radius: 50%;
+}
+
+.single .p-main {
+	padding-bottom: 0;
 }
 
 .p-content {
