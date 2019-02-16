@@ -1466,6 +1466,7 @@ html {
 .p-header {
 	width: 840px;
 	margin: 0 auto;
+	border: none;
 }
 
 .p-main {
