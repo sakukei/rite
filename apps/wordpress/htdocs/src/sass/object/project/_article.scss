@@ -1,4 +1,9 @@
 // 記事ページ
+.single {
+  .p-main {
+    padding-bottom: 0;
+  }
+}
 .p-content {
   position: relative;
   top: -60px;

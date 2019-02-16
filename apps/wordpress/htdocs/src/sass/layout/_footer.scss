@@ -109,7 +109,6 @@
 //バナー
 .p-banner {
   padding: 0 4px;
-  margin-top: 30px;
   @include _mq-min(){
     width: 840px;
     margin: 0 auto;
