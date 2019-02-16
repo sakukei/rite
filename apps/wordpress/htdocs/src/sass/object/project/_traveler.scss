@@ -1,5 +1,8 @@
 .p-traveler-post {
   position: relative;
+  .itemsoldout {
+    display: none;
+  }
 }
 
 .p-traveler-post__price {
