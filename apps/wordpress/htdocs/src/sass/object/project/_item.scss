@@ -6,6 +6,13 @@
 .p-item-hero {
   position: relative;
 }
+.p-item-img {
+  img {
+    @include _mq-min(){
+      width: 100%;
+    }
+  }
+}
 
 .p-item-title {
   position: absolute;
@@ -20,6 +27,9 @@
   right: 10px;
   bottom: 10px;
   z-index: 10;
+  @include _mq-min(){
+    right: 23%;
+  }
   &-btn {
     position: relative;
     width: 64px;

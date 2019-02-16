@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="p-feature-pickup">
-      <swiper class="p-feature-pickup__list">
+      <swiper :options="swiperOption" class="p-feature-pickup__list">
         <swiper-slide v-for="item in featurePickup" :key="item.id">
           <a :href="item.link">
             <div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>
@@ -9,6 +9,8 @@
             <p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,19)}}</p>
           </a>
         </swiper-slide>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </div>
     <ul class="p-main-grid">
@@ -154,6 +156,11 @@
     width: 100% !important;
     margin: 0 auto;
     text-align: center;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
   }
   .p-feature-pickup__image {
     width: 240px;

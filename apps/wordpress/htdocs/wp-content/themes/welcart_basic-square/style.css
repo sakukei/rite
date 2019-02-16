@@ -168,6 +168,7 @@ a {
 .p-footer {
 	padding-top: 24px;
 	background: none;
+	border: none;
 }
 
 .p-footer-nav {
@@ -1298,6 +1299,23 @@ input[type=button].allocation_edit_button,
 	display: none;
 }
 
+.post-281 p,
+.post-3 p {
+	padding-top: 12px;
+	font-size: 0.75rem;
+}
+
+.post-281 h2,
+.post-3 h2 {
+	padding-: 16px;
+	font-size: 0.875rem;
+}
+
+.tokuteisyou tr,
+.tokuteisyou td {
+	padding: 6px;
+}
+
 .p-traveler-post {
 	position: relative;
 }
@@ -1453,6 +1471,14 @@ html {
 .p-main {
 	width: 840px;
 	margin: 0 auto;
+}
+
+.p-item-img img {
+	width: 100%;
+}
+
+.p-item-buy {
+	right: 23%;
 }
 
 }
