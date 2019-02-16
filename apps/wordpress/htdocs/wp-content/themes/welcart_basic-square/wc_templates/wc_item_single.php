@@ -192,7 +192,7 @@ get_header();
           <!--              --><?php //endif; ?>
           <!--            </ul>-->
 
-          <?php the_content(); ?>l
+          <?php the_content(); ?>
           <?php if (wcct_get_options('review')) comments_template('/wc_templates/wc_review.php', false); ?>
 
           <!-- ユーザー情報 -->
