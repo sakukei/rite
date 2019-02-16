@@ -1337,6 +1337,10 @@ input[type=button].allocation_edit_button,
 
 .p-traveler-post__item {
 	position: relative;
+	-ms-grid-column-span: 2;
+	grid-column: span 2;
+	-ms-grid-row-span: 2;
+	grid-row: span 2;
 }
 
 .p-user {
