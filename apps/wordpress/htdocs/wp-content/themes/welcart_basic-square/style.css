@@ -934,7 +934,12 @@ input[type=button].allocation_edit_button,
 
 .p-item-box-info .itemsoldout {
 	padding: 0 16px;
+	text-align: center;
 	color: #f54640;
+}
+
+.p-item-box-info .skuname {
+	display: none;
 }
 
 .p-info .hd2 {
@@ -1295,6 +1300,10 @@ input[type=button].allocation_edit_button,
 
 .p-traveler-post {
 	position: relative;
+}
+
+.p-traveler-post .itemsoldout {
+	display: none;
 }
 
 .p-traveler-post__price {
