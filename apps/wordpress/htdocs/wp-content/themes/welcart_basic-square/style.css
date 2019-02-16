@@ -802,7 +802,7 @@ input[type=button].allocation_edit_button,
 .entry-content input[type="submit"],
 .item-description input[type="submit"],
 .inqbox .send input {
-	background: #327faa;
+	background: #327faa !important;
 }
 
 .p-traveler-name {
