@@ -1321,7 +1321,7 @@ input[type=button].allocation_edit_button,
 }
 
 .p-traveler-post .itemsoldout {
-	display: none;
+	visibility: hidden;
 }
 
 .p-traveler-post__price {
