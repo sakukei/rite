@@ -112,7 +112,7 @@ get_header();
               <form action="<?php echo USCES_CART_URL; ?>" method="post">
 
                 <div id="skuform" class="skuform">
-
+                  <?php if ( usces_have_zaiko_anyone() ) : ?>
                   <?php wcex_sku_select_form(); ?>
 
                   <?php //usces_the_itemGpExp(); ?>
@@ -147,21 +147,27 @@ get_header();
                           <?php _e('Inquiries regarding this item', 'welcart_basic_square'); ?>
                         </a>
                       </div>
+                      <div class="p-item-box-quantity">
+                        <div class="p-item-box-quantity-text">
+                          <?php _e('Quantity', 'usces'); ?>
+                        </div>
+                        <?php wcct_the_itemQuant_select(); ?>
+                        <?php usces_the_itemSkuUnit(); ?>
+                      </div>
+                      <div class="p-item-box-button">
+                        <?php usces_the_itemSkuButton('' . __('Add to Shopping Cart', 'usces'), 0); ?>
+                      </div>
                     <?php else: ?>
                       <div class="itemsoldout">
                         <?php echo apply_filters('usces_filters_single_sku_zaiko_message', __('At present we cannot deal with this product.', 'welcart_basic')); ?>
                       </div>
                     <?php endif; ?>
-                    <div class="p-item-box-quantity">
-                      <div class="p-item-box-quantity-text">
-                        <?php _e('Quantity', 'usces'); ?>
-                      </div>
-                      <?php wcct_the_itemQuant_select(); ?>
-                      <?php usces_the_itemSkuUnit(); ?>
-                    </div>
-                    <div class="p-item-box-button">
-                      <?php usces_the_itemSkuButton('' . __('Add to Shopping Cart', 'usces'), 0); ?>
-                    </div>
+                    <?php endif; ?>
+                    <?php if ( !usces_have_zaiko_anyone() ) : ?>
+                        aaaaaaaa
+<!--                        --><?php //echo apply_filters('usces_filters_single_sku_zaiko_message', __('At present we cannot deal with this product.', 'welcart_basic')); ?>
+
+                    <?php endif; ?>
                   </div>
                   <div class="error_message">
                     <?php usces_singleitem_error_message($post->ID, usces_the_itemSku('return')); ?>
