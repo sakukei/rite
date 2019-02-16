@@ -17,3 +17,11 @@
     padding-bottom: 60px;
   }
 }
+
+.to_customerinfo_button {
+  margin-top: 12px;
+  background: #327faa;
+}
+.send input.to_customerinfo_button, .send input.to_memberlogin_button, .send input.to_deliveryinfo_button, .send input.to_confirm_button, .send input#purchase_button, #wc_customer .send input.to_reganddeliveryinfo_button, #wc_login .loginbox #member_login, #wc_member .loginbox #member_login, #wc_login .loginbox .new-entry #nav a, #wc_member .loginbox .new-entry #nav a, .member-page .send input, #wc_lostmemberpassword #member_login, #wc_changepassword #member_login, #add_destination, #edit_destination, #new_destination, #determine, input[type=button].allocation_edit_button, .entry-content input[type="submit"], .item-description input[type="submit"], .inqbox .send input {
+  background: #327faa;
+}
