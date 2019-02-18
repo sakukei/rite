@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="p-feature-pickup">
-      <swiper :options="swiperOption" class="p-feature-pickup__list">
+      <swiper v-if="featurePickup.length > 0" :options="swiperOption" class="p-feature-pickup__list">
         <swiper-slide v-for="item in featurePickup" :key="item.id">
           <a :href="item.link">
             <div class="p-feature-pickup__image"><img :src="item.featured_image.src"/></div>
@@ -42,17 +42,14 @@
     data() {
       return {
         swiperOption: {
-          slidesPerView: 3,
+          slidesPerView: 'auto',
           spaceBetween: 30,
-          freeMode: true,
-          slidesPerGroup: 3,
           loop: true,
         },
         offSet: 15,
         count:'',
         loading: false,
         moreView: false
-
       }
     },
     computed: {
@@ -144,10 +141,6 @@
   .swiper-container {
     width: 100%;
     height: 100%;
-  }
-  .swiper-wrapper {
-    /*width: 256px;*/
-    /*margin: 0 auto;*/
   }
   .swiper-slide {
     display: flex;
