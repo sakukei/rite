@@ -249,7 +249,6 @@
     &.is-hidden {
     display: none
     }
-
   }
   .p-sub-grid {
     display: grid;
