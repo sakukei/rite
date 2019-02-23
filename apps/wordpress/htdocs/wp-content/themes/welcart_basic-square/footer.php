@@ -71,16 +71,15 @@
     });
 
     // hashでファーストビューを出し分ける
-    var hash = location.hash;
-    console.log(hash);
-    var regexpItem = /^#\/\#item/;
+    const hash = location.hash;
+    const regexpItem = /^#\/\#item/;
     //hashの中に#itemが存在するか確かめる
     if (hash.match(regexpItem)) {
       $(window).on('load', function () {
-        var $tabList = $(".p-tab-list li");
-        var $noViewtabList = $("li.js-noView");
-        var $tabContents = $(".p-tab-contents");
-        var $noView = $(".js-noView");
+        const $tabList = $(".p-tab-list li");
+        const $noViewtabList = $("li.js-noView");
+        const $tabContents = $(".p-tab-contents");
+        const $noView = $(".js-noView");
         $tabList.removeClass("is-current");
         $tabList.removeClass("select");
         $tabContents.removeClass("is-current");
