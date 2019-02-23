@@ -71,14 +71,15 @@
     });
 
     // hashでファーストビューを出し分ける
-    var hash = location.hash;
+    const hash = location.hash;
+    const regexpItem = /^#\/\#item/;
     //hashの中に#itemが存在するか確かめる
-    if (hash.match(/^#item/)) {
+    if (hash.match(regexpItem)) {
       $(window).on('load', function () {
-        var $tabList = $(".p-tab-list li");
-        var $noViewtabList = $("li.no-view");
-        var $tabContents = $(".p-tab-contents");
-        var $noView = $(".no-view");
+        const $tabList = $(".p-tab-list li");
+        const $noViewtabList = $("li.js-noView");
+        const $tabContents = $(".p-tab-contents");
+        const $noView = $(".js-noView");
         $tabList.removeClass("is-current");
         $tabList.removeClass("select");
         $tabContents.removeClass("is-current");
@@ -154,10 +155,6 @@
     });
 
 
-
-
-  // カートの中のボタン文言変更
-    $('.to_customerinfo_button').val('購入へ進む');
 
   })(jQuery);
 </script>

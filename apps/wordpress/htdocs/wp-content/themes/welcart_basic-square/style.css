@@ -1214,6 +1214,10 @@ input[type=button].allocation_edit_button,
 	height: 50vw;
 }
 
+.select {
+	display: block;
+}
+
 .p-tag-list {
 	position: absolute;
 	top: 5px;
