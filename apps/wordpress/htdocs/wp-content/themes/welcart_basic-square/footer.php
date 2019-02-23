@@ -72,13 +72,15 @@
 
     // hashでファーストビューを出し分ける
     var hash = location.hash;
+    console.log(hash);
+    var regexpItem = /^#\/\#item/;
     //hashの中に#itemが存在するか確かめる
-    if (hash.match(/^#item/)) {
+    if (hash.match(regexpItem)) {
       $(window).on('load', function () {
         var $tabList = $(".p-tab-list li");
-        var $noViewtabList = $("li.no-view");
+        var $noViewtabList = $("li.js-noView");
         var $tabContents = $(".p-tab-contents");
-        var $noView = $(".no-view");
+        var $noView = $(".js-noView");
         $tabList.removeClass("is-current");
         $tabList.removeClass("select");
         $tabContents.removeClass("is-current");
@@ -154,10 +156,6 @@
     });
 
 
-
-
-  // カートの中のボタン文言変更
-    $('.to_customerinfo_button').val('購入へ進む');
 
   })(jQuery);
 </script>
