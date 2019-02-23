@@ -43,7 +43,8 @@
       return {
         swiperOption: {
           slidesPerView: 'auto',
-          spaceBetween: 30,
+          centeredSlides: true,
+          spaceBetween: 16,
           loop: true,
         },
         offSet: 15,
@@ -138,17 +139,10 @@
     font-size: 12px;
     line-height: 16px;
   }
-  .swiper-container {
-    width: 100%;
-    height: 100%;
-  }
   .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100% !important;
-    margin: 0 auto;
-    text-align: center;
+    width: 240px;
+    padding: 50px 0;
+    color: #fff;
   }
   .swiper-button-prev, .swiper-button-next {
     width: 16px;
