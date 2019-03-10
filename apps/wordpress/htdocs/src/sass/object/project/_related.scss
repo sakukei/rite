@@ -15,13 +15,22 @@
       &:first-child {
         grid-column: span 2;
         grid-row: span 2;
+        img {
+          height: 343px;
+          @include _mq-min(){
+            height: 100%;
+          }
+        }
       }
     }
     img {
       width: 100%;
-      height: 100%;
+      height: 168px;
       object-fit: cover;
       vertical-align: bottom;
+      @include _mq-min(){
+        height: 100%;
+      }
     }
   }
   .detail {
