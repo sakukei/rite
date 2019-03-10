@@ -69,6 +69,12 @@
     &:first-child {
       grid-column: span 2;
       grid-row: span 2;
+      img {
+        height: 343px;
+        @include _mq-min(){
+          height: 100%;
+        }
+      }
     }
     &::before {
       position: absolute;
@@ -77,6 +83,15 @@
       font-size: _rem(14px);
       color: $article-thumbnail-color;
       content: counter(list, decimal-leading-zero);
+    }
+  }
+  img {
+    width: 100%;
+    height: 168px;
+    object-fit: cover;
+    vertical-align: bottom;
+    @include _mq-min(){
+      height: 100%;
     }
   }
 }
