@@ -141,13 +141,13 @@
   }
   .swiper-slide {
     width: 240px;
-    padding: 50px 0;
     color: #fff;
   }
   .swiper-button-prev, .swiper-button-next {
     width: 16px;
     height: 16px;
     background-size: 16px;
+    margin-top: -40px;
   }
   .p-feature-pickup__image {
     width: 240px;
