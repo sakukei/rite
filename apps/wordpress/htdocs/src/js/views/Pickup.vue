@@ -9,8 +9,6 @@
             <p class="p-feature-pickup__text">{{item.excerpt.rendered.slice(0,19)}}</p>
           </a>
         </swiper-slide>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </div>
     <ul class="p-main-grid">
@@ -143,12 +141,6 @@
     width: 240px;
     color: #fff;
   }
-  .swiper-button-prev, .swiper-button-next {
-    width: 16px;
-    height: 16px;
-    background-size: 16px;
-    margin-top: -40px;
-  }
   .p-feature-pickup__image {
     width: 240px;
     height: 160px;
@@ -162,6 +154,4 @@
       border-radius: 8px;
     }
   }
-
-
 </style>
