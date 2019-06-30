@@ -318,6 +318,27 @@ function get_sku_name( $object ) {
 
   return null;
 }
+
+add_action( 'rest_api_init', 'register_influncer_product' );
+
+function register_influncer_product() {
+  register_rest_field( 'post',
+    'influncer_product',
+    array(
+      'get_callback'    => 'get_influncer_product'
+    )
+  );
+}
+
+function get_influncer_product( $object ) {
+  $product = get_post_meta($object[ 'id' ], 'influncer_product', true);
+  if ( ! empty( $product ) ) {
+    return $product;
+  }
+
+  return null;
+}
+
 add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
 function wp_add_thumbnail_to_JSON() {
 //Add featured image
