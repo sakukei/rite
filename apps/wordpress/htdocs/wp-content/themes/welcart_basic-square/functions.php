@@ -299,6 +299,25 @@ function get_sku( $object ) {
   return null;
 }
 
+add_action( 'rest_api_init', 'register_sku_name' );
+
+function register_sku_name() {
+  register_rest_field( 'post',
+    'sku_name',
+    array(
+      'get_callback'    => 'get_sku_name'
+    )
+  );
+}
+
+function get_sku_name( $object ) {
+  $product = get_post_meta($object[ 'id' ], '_itemName', true);
+  if ( ! empty( $product ) ) {
+    return $product;
+  }
+
+  return null;
+}
 add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
 function wp_add_thumbnail_to_JSON() {
 //Add featured image
