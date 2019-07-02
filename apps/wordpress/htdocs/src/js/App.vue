@@ -25,6 +25,9 @@
 </script>
 
 <style lang="scss">
+.p-category-nav {
+  display: none;
+}
 .p-main-grid {
   display: grid;
   grid-auto-rows: 50vw;

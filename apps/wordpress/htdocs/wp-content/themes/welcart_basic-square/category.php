@@ -163,16 +163,16 @@ get_header(); ?>
     </div>
 
     <!-- タブ -->
-    <div class="p-tab" id="js-tab">
-      <ul class="p-tab-list">
-        <li class="js-firstView is-current">記事</li>
-        <li class="js-noView">商品</li>
-      </ul>
-    </div>
+<!--    <div class="p-tab" id="js-tab">-->
+<!--      <ul class="p-tab-list">-->
+<!--        <li class="js-noView">記事</li>-->
+<!--        <li class="js-firstView is-current">商品</li>-->
+<!--      </ul>-->
+<!--    </div>-->
 
     <!-- タブの中身 -->
     <div class="p-tab-container">
-      <div class="p-tab-contents js-firstView is-current">
+      <div class="p-tab-contents js-noView">
         <ul class="p-main-grid">
           <?php while (have_posts()) : the_post(); ?>
             <?php if (has_post_thumbnail()): ?>
@@ -205,7 +205,7 @@ get_header(); ?>
       <?php endif; ?>
 
       <?php endif; ?>
-      <div class="p-tab-contents js-noView">
+      <div class="p-tab-contents js-firstView is-current">
 
         <div class="p-main-grid">
           <?php
