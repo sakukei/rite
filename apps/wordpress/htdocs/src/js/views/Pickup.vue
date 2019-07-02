@@ -120,11 +120,11 @@
   }
 
   .p-feature-pickup {
+    display: none;
     background-color: #f6f5f3;
     padding: 40px 0 24px;
     overflow: auto;
     margin: 12px 0 40px;
-
   }
   .p-feature-pickup__title {
     max-width: 240px;
