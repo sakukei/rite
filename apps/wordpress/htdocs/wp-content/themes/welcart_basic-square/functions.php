@@ -279,6 +279,26 @@ function get_price( $object ) {
   }
 }
 
+add_action( 'rest_api_init', 'register_select_sku' );
+
+function register_select_sku() {
+  register_rest_field( 'post',
+    'select_sku_info',
+    array(
+      'get_callback'    => 'get_select_sku'
+    )
+  );
+}
+
+function get_select_sku( $object ) {
+  $sku = get_post_meta($object[ 'id' ], '_select_sku', false);
+  if ( ! empty( $sku ) ) {
+    return $sku;
+  }
+
+  return null;
+}
+
 add_action( 'rest_api_init', 'register_sku' );
 
 function register_sku() {
