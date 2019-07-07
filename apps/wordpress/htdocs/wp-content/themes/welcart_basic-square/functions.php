@@ -291,7 +291,7 @@ function register_select_sku() {
 }
 
 function get_select_sku( $object ) {
-  $sku = get_post_meta($object[ 'id' ], '_select_sku', false);
+  $sku = get_post_meta($object[ 'id' ], '_select_sku', true);
   if ( ! empty( $sku ) ) {
     return $sku;
   }
