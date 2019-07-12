@@ -279,7 +279,105 @@ function get_price( $object ) {
   }
 }
 
+add_action( 'rest_api_init', 'register_select_sku' );
 
+function register_select_sku() {
+  register_rest_field( 'post',
+    'select_sku_info',
+    array(
+      'get_callback'    => 'get_select_sku'
+    )
+  );
+}
+
+function get_select_sku( $object ) {
+  $sku = get_post_meta($object[ 'id' ], '_select_sku', true);
+  if ( ! empty( $sku ) ) {
+    return $sku;
+  }
+
+  return null;
+}
+
+add_action( 'rest_api_init', 'register_sku' );
+
+function register_sku() {
+  register_rest_field( 'post',
+    'sku_info',
+    array(
+      'get_callback'    => 'get_sku'
+    )
+  );
+}
+
+function get_sku( $object ) {
+  $sku = get_post_meta($object[ 'id' ], '_isku_', false);
+  if ( ! empty( $sku ) ) {
+    return $sku;
+  }
+
+  return null;
+}
+
+add_action( 'rest_api_init', 'register_sku_name' );
+
+function register_sku_name() {
+  register_rest_field( 'post',
+    'sku_name',
+    array(
+      'get_callback'    => 'get_sku_name'
+    )
+  );
+}
+
+function get_sku_name( $object ) {
+  $product = get_post_meta($object[ 'id' ], '_itemName', true);
+  if ( ! empty( $product ) ) {
+    return $product;
+  }
+
+  return null;
+}
+
+add_action( 'rest_api_init', 'register_influncer_product' );
+
+function register_influncer_product() {
+  register_rest_field( 'post',
+    'influncer_product',
+    array(
+      'get_callback'    => 'get_influncer_product'
+    )
+  );
+}
+
+function get_influncer_product( $object ) {
+  $product = get_post_meta($object[ 'id' ], 'influncer_product', true);
+  if ( ! empty( $product ) ) {
+    return $product;
+  }
+
+  return null;
+}
+
+add_action( 'rest_api_init', 'register_influncer_input' );
+
+function register_influncer_input() {
+  register_rest_field( 'post',
+    'influncer_input',
+    array(
+      'get_callback'    => 'get_product_input_option'
+    )
+  );
+}
+
+function get_product_input_option( $object ) {
+  $product = get_post_meta($object[ 'id' ], '_iopt_', true);
+  if ( ! empty( $product ) ) {
+    return $product;
+  }
+
+  return null;
+}
 
 add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
 function wp_add_thumbnail_to_JSON() {
