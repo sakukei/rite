@@ -359,6 +359,26 @@ function get_influncer_product( $object ) {
   return null;
 }
 
+add_action( 'rest_api_init', 'register_influncer_input' );
+
+function register_influncer_input() {
+  register_rest_field( 'post',
+    'influncer_input',
+    array(
+      'get_callback'    => 'get_product_input_option'
+    )
+  );
+}
+
+function get_product_input_option( $object ) {
+  $product = get_post_meta($object[ 'id' ], '_iopt_', true);
+  if ( ! empty( $product ) ) {
+    return $product;
+  }
+
+  return null;
+}
+
 add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
 function wp_add_thumbnail_to_JSON() {
 //Add featured image
