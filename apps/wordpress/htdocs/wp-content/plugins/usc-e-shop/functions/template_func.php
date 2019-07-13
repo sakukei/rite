@@ -3234,13 +3234,14 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 			<th class="th" scope="row">' . usces_get_essential_mark('address3', $data).__('building name', 'usces').'</th>
 			<td class="td" colspan="2"><input name="' . $type . '[address3]" id="address3" type="text" value="' . esc_attr($values['address3']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" placeholder="'. apply_filters( 'usces_filter_after_address3', __('tuhanbuild 4F', 'usces'), $applyform ) . '"/></td>
 			</tr>
-			<tr id="tel_row">
-			<th scope="row">' . usces_get_essential_mark('tel', $data).__('Phone number', 'usces').'</th>
-			<td colspan="2"><input name="' . $type . '[tel]" id="tel" type="text" value="' . esc_attr($values['tel']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" />' . apply_filters( 'usces_filter_after_tel', '1000-10-1000', $applyform ) . '</td>
+			<tr id="tel_row"><th>連絡先</th></tr>
+			<tr class="tr">
+			<th class="th" scope="row">' . usces_get_essential_mark('tel', $data).__('Phone number', 'usces').'</th>
+			<td class="td" colspan="2"><input name="' . $type . '[tel]" id="tel" type="text" value="' . esc_attr($values['tel']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" placeholder="' . apply_filters( 'usces_filter_after_tel', '1000-10-1000', $applyform ) . '"/></td>
 			</tr>
-			<tr id="fax_row">
-			<th scope="row">' . usces_get_essential_mark('fax', $data).__('FAX number', 'usces').'</th>
-			<td colspan="2"><input name="' . $type . '[fax]" id="fax" type="text" value="' . esc_attr($values['fax']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" />' . apply_filters( 'usces_filter_after_fax', '1000-10-1000', $applyform ) . '</td>
+			<tr class="tr" id="fax_row">
+			<th class="th" scope="row">' . usces_get_essential_mark('fax', $data).__('FAX number', 'usces').'</th>
+			<td class="td" colspan="2"><input name="' . $type . '[fax]" id="fax" type="text" value="' . esc_attr($values['fax']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" placeholder="' . apply_filters( 'usces_filter_after_fax', '1000-10-1000', $applyform ) . '"/></td>
 			</tr>';
 			$formtag .= usces_custom_field_input($data, $type, 'fax_after', 'return');
 			break;
