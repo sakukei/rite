@@ -1174,6 +1174,15 @@ input[type=button].allocation_edit_button,
 	width: 58%;
 }
 
+.customer_form #furikana_row {
+	display: none;
+}
+
+.customer_form #zipcode_row,
+.customer_form #tel_row {
+	padding-top: 40px;
+}
+
 .p-related {
 	padding: 32px 16px 40px;
 }

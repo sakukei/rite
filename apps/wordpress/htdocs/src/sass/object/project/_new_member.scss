@@ -30,13 +30,17 @@
     font-size: 12px;
     color: #555;
   }
-
   .th {
     width: 42%;
   }
-
   .td {
     width: 58%;
   }
-
+  #furikana_row {
+    display: none;
+  }
+  #zipcode_row,
+  #tel_row {
+    padding-top: 40px;
+  }
 }

@@ -3190,8 +3190,8 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 				$formtag .= '<tr class="tr"><th class="th"></th><td class="name_td td">' . '<input name="' . $type . '[name2]" id="name2" type="text" value="' . esc_attr($values['name2']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" placeholder="' . __('Given name', 'usces') . '"/></td></tr>';
 			}
 			$formtag .= '</tr>';
-			$furigana = '<!--<tr id="furikana_row" class="inp1">
-			<th scope="row">' . usces_get_essential_mark('name3', $data).__('furigana', 'usces').'</th>-->';
+			$furigana = '<tr id="furikana_row" class="inp1">
+			<th scope="row">' . usces_get_essential_mark('name3', $data).__('furigana', 'usces').'</th>';
 			if( $nameform ){
 				$furigana .= '<tr class="tr"><td>'.__('Given name', 'usces').'<input name="' . $type . '[name4]" id="name4" type="text" value="' . esc_attr($values['name4']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td></tr>';
 				$furigana .= '<tr class="tr"><td>'.__('Familly name', 'usces').'<input name="' . $type . '[name3]" id="name3" type="text" value="' . esc_attr($values['name3']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td></tr>';
@@ -3203,8 +3203,10 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 			$formtag .= apply_filters( 'usces_filter_furigana_form', $furigana, $type, $values );
 			$formtag .= usces_custom_field_input($data, $type, 'name_after', 'return');
 			$formtag .= '<tr id="zipcode_row">
-			<th scope="row">' . usces_get_essential_mark('zipcode', $data).__('Zip/Postal Code', 'usces').'</th>
-			<td colspan="2"><input name="' . $type . '[zipcode]" id="zipcode" type="text" value="' . esc_attr($values['zipcode']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" />' . usces_postal_code_address_search( $type ) . apply_filters( 'usces_filter_addressform_zipcode', NULL, $type ) . apply_filters( 'usces_filter_after_zipcode', '100-1000', $applyform ) . '</td>
+      <th>住所</th>
+      </tr>
+			<tr class="tr"><td scope="row">' . usces_get_essential_mark('zipcode', $data).__('Zip/Postal Code', 'usces').'</td>
+			<td colspan="2"><input name="' . $type . '[zipcode]" id="zipcode" type="text" value="' . esc_attr($values['zipcode']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" placeholder="'  . usces_postal_code_address_search( $type ) . apply_filters( 'usces_filter_addressform_zipcode', NULL, $type ) . apply_filters( 'usces_filter_after_zipcode', '100-1000', $applyform ) . '"/>'.'</td>
 			</tr>';
 //20131213_kitamura_start
 			if( count( $options['system']['target_market'] ) == 1 ){
