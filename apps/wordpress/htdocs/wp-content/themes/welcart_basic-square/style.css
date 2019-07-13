@@ -1183,6 +1183,15 @@ input[type=button].allocation_edit_button,
 	padding-top: 40px;
 }
 
+.customer_form .pref {
+	width: 100%;
+	border: none;
+}
+
+.customer_form select {
+	color: #555;
+}
+
 .p-related {
 	padding: 32px 16px 40px;
 }

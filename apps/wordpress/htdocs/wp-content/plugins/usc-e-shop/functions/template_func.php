@@ -3218,9 +3218,9 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 				</tr>';
 			}
 //20131213_kitamura_end
-			$formtag .= '<tr id="states_row">
-			<th scope="row">' . usces_get_essential_mark('states', $data).__('Province', 'usces').'</th>
-			<td colspan="2">' . usces_pref_select( $type, $values ) . apply_filters( 'usces_filter_after_states', NULL, $applyform ) . '</td>
+			$formtag .= '<tr id="states_row" class="tr">
+			<th class="th" scope="row">' . usces_get_essential_mark('states', $data).__('Province', 'usces').'</th>
+			<td class="td" colspan="2">' . usces_pref_select( $type, $values ) . apply_filters( 'usces_filter_after_states', NULL, $applyform ) . '</td>
 			</tr>
 			<tr id="address1_row" class="inp2">
 			<th scope="row">' . usces_get_essential_mark('address1', $data).__('city', 'usces').'</th>
