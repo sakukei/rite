@@ -3205,8 +3205,8 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 			$formtag .= '<tr id="zipcode_row">
       <th>住所</th>
       </tr>
-			<tr class="tr"><td scope="row">' . usces_get_essential_mark('zipcode', $data).__('Zip/Postal Code', 'usces').'</td>
-			<td colspan="2"><input name="' . $type . '[zipcode]" id="zipcode" type="text" value="' . esc_attr($values['zipcode']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" placeholder="'  . usces_postal_code_address_search( $type ) . apply_filters( 'usces_filter_addressform_zipcode', NULL, $type ) . apply_filters( 'usces_filter_after_zipcode', '100-1000', $applyform ) . '"/>'.'</td>
+			<tr class="tr"><th class="th" scope="row">' . usces_get_essential_mark('zipcode', $data).__('Zip/Postal Code', 'usces').'</th>
+			<td class="td" colspan="2"><input name="' . $type . '[zipcode]" id="zipcode" type="text" value="' . esc_attr($values['zipcode']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" placeholder="'  . usces_postal_code_address_search( $type ) . apply_filters( 'usces_filter_addressform_zipcode', NULL, $type ) . apply_filters( 'usces_filter_after_zipcode', '100-1000', $applyform ) . '"/>'.'</td>
 			</tr>';
 //20131213_kitamura_start
 			if( count( $options['system']['target_market'] ) == 1 ){
