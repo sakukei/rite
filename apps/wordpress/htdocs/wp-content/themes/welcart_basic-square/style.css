@@ -1178,9 +1178,13 @@ input[type=button].allocation_edit_button,
 	display: none;
 }
 
-.customer_form #zipcode_row,
-.customer_form #tel_row {
+.customer_form .section {
 	padding-top: 40px;
+}
+
+.customer_form .section th {
+	padding-bottom: 7px;
+	font-size: 12px;
 }
 
 .customer_form .pref {

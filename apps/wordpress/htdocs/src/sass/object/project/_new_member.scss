@@ -39,9 +39,12 @@
   #furikana_row {
     display: none;
   }
-  #zipcode_row,
-  #tel_row {
+  .section {
     padding-top: 40px;
+    th {
+      padding-bottom: 7px;
+      font-size: 12px;
+    }
   }
   .pref {
     width: 100%;

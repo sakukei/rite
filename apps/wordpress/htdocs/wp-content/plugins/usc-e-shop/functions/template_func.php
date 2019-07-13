@@ -3180,7 +3180,7 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 		
 		case 'JP':
 			$formtag .= usces_custom_field_input($data, $type, 'name_pre', 'return');
-			$formtag .= '<tr id="name_row" class="inp1">
+			$formtag .= '<tr id="name_row" class="inp1 section">
 			<th width="127" scope="row">' . usces_get_essential_mark('name1', $data) . apply_filters( 'usces_filters_addressform_name_label', __('Full name', 'usces'), $type, $values, $applyform ).'</th>';
 			if( $nameform ){
 				$formtag .= '<tr class="tr"><td class="name_td">'.__('Given name', 'usces').'<input name="' . $type . '[name2]" id="name2" type="text" value="' . esc_attr($values['name2']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td></tr>';
@@ -3202,7 +3202,7 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 			$furigana .= '</tr>';
 			$formtag .= apply_filters( 'usces_filter_furigana_form', $furigana, $type, $values );
 			$formtag .= usces_custom_field_input($data, $type, 'name_after', 'return');
-			$formtag .= '<tr id="zipcode_row">
+			$formtag .= '<tr class="section" id="zipcode_row">
       <th>住所</th>
       </tr>
 			<tr class="tr"><th class="th" scope="row">' . usces_get_essential_mark('zipcode', $data).__('Zip/Postal Code', 'usces').'</th>
@@ -3234,7 +3234,7 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 			<th class="th" scope="row">' . usces_get_essential_mark('address3', $data).__('building name', 'usces').'</th>
 			<td class="td" colspan="2"><input name="' . $type . '[address3]" id="address3" type="text" value="' . esc_attr($values['address3']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" placeholder="'. apply_filters( 'usces_filter_after_address3', __('tuhanbuild 4F', 'usces'), $applyform ) . '"/></td>
 			</tr>
-			<tr id="tel_row"><th>連絡先</th></tr>
+			<tr class="section" id="tel_row"><th>連絡先</th></tr>
 			<tr class="tr">
 			<th class="th" scope="row">' . usces_get_essential_mark('tel', $data).__('Phone number', 'usces').'</th>
 			<td class="td" colspan="2"><input name="' . $type . '[tel]" id="tel" type="text" value="' . esc_attr($values['tel']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" placeholder="' . apply_filters( 'usces_filter_after_tel', '1000-10-1000', $applyform ) . '"/></td>
