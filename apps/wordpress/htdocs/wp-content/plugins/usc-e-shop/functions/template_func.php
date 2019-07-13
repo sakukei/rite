@@ -3190,14 +3190,14 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 				$formtag .= '<tr class="tr"><th class="th"></th><td class="name_td td">' . '<input name="' . $type . '[name2]" id="name2" type="text" value="' . esc_attr($values['name2']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" placeholder="' . __('Given name', 'usces') . '"/></td></tr>';
 			}
 			$formtag .= '</tr>';
-			$furigana = '<tr id="furikana_row" class="inp1">
-			<th scope="row">' . usces_get_essential_mark('name3', $data).__('furigana', 'usces').'</th>';
+			$furigana = '<!--<tr id="furikana_row" class="inp1">
+			<th scope="row">' . usces_get_essential_mark('name3', $data).__('furigana', 'usces').'</th>-->';
 			if( $nameform ){
-				$furigana .= '<td>'.__('Given name', 'usces').'<input name="' . $type . '[name4]" id="name4" type="text" value="' . esc_attr($values['name4']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td>';
-				$furigana .= '<td>'.__('Familly name', 'usces').'<input name="' . $type . '[name3]" id="name3" type="text" value="' . esc_attr($values['name3']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td>';
+				$furigana .= '<tr class="tr"><td>'.__('Given name', 'usces').'<input name="' . $type . '[name4]" id="name4" type="text" value="' . esc_attr($values['name4']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td></tr>';
+				$furigana .= '<tr class="tr"><td>'.__('Familly name', 'usces').'<input name="' . $type . '[name3]" id="name3" type="text" value="' . esc_attr($values['name3']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td></tr>';
 			}else{
-				$furigana .= '<td>'.__('Familly name', 'usces').'<input name="' . $type . '[name3]" id="name3" type="text" value="' . esc_attr($values['name3']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td>';
-				$furigana .= '<td>'.__('Given name', 'usces').'<input name="' . $type . '[name4]" id="name4" type="text" value="' . esc_attr($values['name4']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" /></td>';
+				$furigana .= '<tr class="tr"><th class="th">フリガナ</th><td class="td">'.'<input name="' . $type . '[name3]" id="name3" type="text" value="' . esc_attr($values['name3']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" placeholder="セイ"/></td></tr>';
+				$furigana .= '<tr class="tr"><th class="th"></th><td class="td">'.'<input name="' . $type . '[name4]" id="name4" type="text" value="' . esc_attr($values['name4']) . '" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" placeholder="メイ" /></td></tr>';
 			}
 			$furigana .= '</tr>';
 			$formtag .= apply_filters( 'usces_filter_furigana_form', $furigana, $type, $values );
