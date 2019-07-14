@@ -379,6 +379,25 @@ function get_product_input_option( $object ) {
   return null;
 }
 
+add_action( 'rest_api_init', 'register_user_category' );
+
+function register_user_category() {
+  register_rest_field( 'user',
+    'category',
+    array(
+      'get_callback'    => 'get_user_cagtegory'
+    )
+  );
+}
+
+function get_user_cagtegory( $user ) {
+  $influncer_name = get_user_meta($user[ 'id' ], 'influncerName', true);
+  if (empty($influncer_name)) {
+    return null;
+  }
+  return get_category(get_cat_ID( $influncer_name ));
+}
+
 add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
 function wp_add_thumbnail_to_JSON() {
 //Add featured image
@@ -399,4 +418,25 @@ function wp_get_image($object, $field_name, $request) {
     'width' => $feat_img_array[1],
     'height' => $feat_img_array[2],
   ];
+}
+
+add_action( 'rest_api_init', 'register_related_posts' );
+
+function register_related_posts() {
+  register_rest_field( 'post',
+    'related_posts',
+    array(
+      'get_callback'    => 'get_related_posts'
+    )
+  );
+}
+
+function get_related_posts( $object ) {
+  global $yarpp;
+  $posts = array();
+  foreach ($yarpp->get_related($object['id']) as $related ) {
+    $posts[] = $related->ID;
+  }
+
+  return $posts;
 }
