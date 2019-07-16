@@ -1045,69 +1045,116 @@ input[type=button].allocation_edit_button,
 	background: #f8ee6a;
 }
 
-.login #content {
+.login #content,
+.lostpassword #content {
 	padding: 0 16px;
 }
 
-.login .member_page_title {
+.login .member_page_title,
+.lostpassword .member_page_title {
 	display: none;
 }
 
-.login #wc_login .loginbox {
+.login #wc_login .loginbox,
+.login #wc_lostmemberpassword .loginbox,
+.lostpassword #wc_login .loginbox,
+.lostpassword #wc_lostmemberpassword .loginbox {
 	padding: 0;
 }
 
 .login #wc_login .loginbox .loginmail,
-.login #wc_login .loginbox .loginpass {
+.login #wc_login .loginbox .loginpass,
+.login #wc_lostmemberpassword .loginbox .loginmail,
+.login #wc_lostmemberpassword .loginbox .loginpass,
+.lostpassword #wc_login .loginbox .loginmail,
+.lostpassword #wc_login .loginbox .loginpass,
+.lostpassword #wc_lostmemberpassword .loginbox .loginmail,
+.lostpassword #wc_lostmemberpassword .loginbox .loginpass {
 	margin-bottom: 8px;
 }
 
-.login #wc_login .loginbox .member-box .title {
+.login #wc_login .loginbox .member-box .title,
+.login #wc_lostmemberpassword .loginbox .member-box .title,
+.lostpassword #wc_login .loginbox .member-box .title,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .title {
 	padding-bottom: 16px;
 	font-size: 12px;
 }
 
-.login #wc_login .loginbox .member-box .loginform {
+.login #wc_login .loginbox .member-box .loginform,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform,
+.lostpassword #wc_login .loginbox .member-box .loginform,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform {
 	padding: 0 12px;
 }
 
-.login #wc_login .loginbox .member-box .loginform input {
+.login #wc_login .loginbox .member-box .loginform input,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform input,
+.lostpassword #wc_login .loginbox .member-box .loginform input,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform input {
 	border: 2px solid #ccc;
 	border-radius: 4px;
 }
 
 .login #wc_login .loginbox .member-box .loginform input[type="text"],
-.login #wc_login .loginbox .member-box .loginform input[type="password"] {
+.login #wc_login .loginbox .member-box .loginform input[type="password"],
+.login #wc_lostmemberpassword .loginbox .member-box .loginform input[type="text"],
+.login #wc_lostmemberpassword .loginbox .member-box .loginform input[type="password"],
+.lostpassword #wc_login .loginbox .member-box .loginform input[type="text"],
+.lostpassword #wc_login .loginbox .member-box .loginform input[type="password"],
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform input[type="text"],
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform input[type="password"] {
 	width: 100%;
 	padding: 16px;
 }
 
-.login #wc_login .loginbox .member-box .loginform input[type="checkbox"] {
+.login #wc_login .loginbox .member-box .loginform input[type="checkbox"],
+.login #wc_lostmemberpassword .loginbox .member-box .loginform input[type="checkbox"],
+.lostpassword #wc_login .loginbox .member-box .loginform input[type="checkbox"],
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform input[type="checkbox"] {
 	background: #fff;
 	border: 1px solid #757575;
 }
 
-.login #wc_login .loginbox .member-box .loginform ::-webkit-input-placeholder {
+.login #wc_login .loginbox .member-box .loginform ::-webkit-input-placeholder,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform ::-webkit-input-placeholder,
+.lostpassword #wc_login .loginbox .member-box .loginform ::-webkit-input-placeholder,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform ::-webkit-input-placeholder {
 	font-size: 12px;
 }
 
-.login #wc_login .loginbox .member-box .loginform :-ms-input-placeholder {
+.login #wc_login .loginbox .member-box .loginform :-ms-input-placeholder,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform :-ms-input-placeholder,
+.lostpassword #wc_login .loginbox .member-box .loginform :-ms-input-placeholder,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform :-ms-input-placeholder {
 	font-size: 12px;
 }
 
-.login #wc_login .loginbox .member-box .loginform ::-ms-input-placeholder {
+.login #wc_login .loginbox .member-box .loginform ::-ms-input-placeholder,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform ::-ms-input-placeholder,
+.lostpassword #wc_login .loginbox .member-box .loginform ::-ms-input-placeholder,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform ::-ms-input-placeholder {
 	font-size: 12px;
 }
 
-.login #wc_login .loginbox .member-box .loginform ::placeholder {
+.login #wc_login .loginbox .member-box .loginform ::placeholder,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform ::placeholder,
+.lostpassword #wc_login .loginbox .member-box .loginform ::placeholder,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform ::placeholder {
 	font-size: 12px;
 }
 
-.login #wc_login .loginbox .member-box .loginform .checkbox {
+.login #wc_login .loginbox .member-box .loginform .checkbox,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox,
+.lostpassword #wc_login .loginbox .member-box .loginform .checkbox,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox {
 	display: none;
 }
 
-.login #wc_login .loginbox .member-box .loginform .checkbox:checked + .checkbox-text::after {
+.login #wc_login .loginbox .member-box .loginform .checkbox:checked + .checkbox-text::after,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox:checked + .checkbox-text::after,
+.lostpassword #wc_login .loginbox .member-box .loginform .checkbox:checked + .checkbox-text::after,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox:checked + .checkbox-text::after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -1121,12 +1168,18 @@ input[type=button].allocation_edit_button,
 	border-right: 3px solid #4682aa;
 }
 
-.login #wc_login .loginbox .member-box .loginform .checkbox-text {
+.login #wc_login .loginbox .member-box .loginform .checkbox-text,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox-text,
+.lostpassword #wc_login .loginbox .member-box .loginform .checkbox-text,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox-text {
 	position: relative;
 	padding-left: 20px;
 }
 
-.login #wc_login .loginbox .member-box .loginform .checkbox-text::before {
+.login #wc_login .loginbox .member-box .loginform .checkbox-text::before,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox-text::before,
+.lostpassword #wc_login .loginbox .member-box .loginform .checkbox-text::before,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox-text::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -1138,42 +1191,94 @@ input[type=button].allocation_edit_button,
 	border-radius: 4px;
 }
 
-.login #wc_login .loginbox .member-box .loginform .submit {
+.login #wc_login .loginbox .member-box .loginform .submit,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform .submit,
+.lostpassword #wc_login .loginbox .member-box .loginform .submit,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform .submit {
 	padding: 24px 0 0;
 }
 
-.login #wc_login .loginbox .member-box .loginform .member_login_button {
+.login #wc_login .loginbox .member-box .loginform .member_login_button,
+.login #wc_lostmemberpassword .loginbox .member-box .loginform .member_login_button,
+.lostpassword #wc_login .loginbox .member-box .loginform .member_login_button,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box .loginform .member_login_button {
 	width: 100%;
 	padding: 10px 14px;
 	font-size: 14px;
 	line-height: 16px;
 }
 
-.login #wc_login .loginbox .member-box #nav {
+.login #wc_login .loginbox .member-box #nav,
+.login #wc_lostmemberpassword .loginbox .member-box #nav,
+.lostpassword #wc_login .loginbox .member-box #nav,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box #nav {
 	padding-top: 16px;
 	text-align: center;
 }
 
-.login #wc_login .loginbox .member-box #nav a {
+.login #wc_login .loginbox .member-box #nav a,
+.login #wc_lostmemberpassword .loginbox .member-box #nav a,
+.lostpassword #wc_login .loginbox .member-box #nav a,
+.lostpassword #wc_lostmemberpassword .loginbox .member-box #nav a {
 	background: none;
 	font-size: 12px;
 }
 
-.login #wc_login .loginbox .new-entry {
+.login #wc_login .loginbox .new-entry,
+.login #wc_lostmemberpassword .loginbox .new-entry,
+.lostpassword #wc_login .loginbox .new-entry,
+.lostpassword #wc_lostmemberpassword .loginbox .new-entry {
 	padding: 0 12px;
 	margin: 64px 0 0;
 	background: none;
 }
 
-.login #wc_login .loginbox .new-entry .title {
+.login #wc_login .loginbox .new-entry .title,
+.login #wc_lostmemberpassword .loginbox .new-entry .title,
+.lostpassword #wc_login .loginbox .new-entry .title,
+.lostpassword #wc_lostmemberpassword .loginbox .new-entry .title {
 	font-size: 12px;
 }
 
-.login #wc_login .loginbox .new-entry #nav a {
+.login #wc_login .loginbox .new-entry #nav a,
+.login #wc_lostmemberpassword .loginbox .new-entry #nav a,
+.lostpassword #wc_login .loginbox .new-entry #nav a,
+.lostpassword #wc_lostmemberpassword .loginbox .new-entry #nav a {
 	width: 100%;
 	padding: 10px 14px;
 	font-size: 14px;
 	line-height: 16px;
+}
+
+.login #wc_login .change,
+.login #wc_lostmemberpassword .change,
+.lostpassword #wc_login .change,
+.lostpassword #wc_lostmemberpassword .change {
+	padding-top: 64px;
+}
+
+.login #wc_login .change .text,
+.login #wc_lostmemberpassword .change .text,
+.lostpassword #wc_login .change .text,
+.lostpassword #wc_lostmemberpassword .change .text {
+	font-size: 12px;
+}
+
+.login #wc_login .change #nav a,
+.login #wc_lostmemberpassword .change #nav a,
+.lostpassword #wc_login .change #nav a,
+.lostpassword #wc_lostmemberpassword .change #nav a {
+	width: 100%;
+	padding: 10px 14px;
+	margin-top: 16px;
+	font-size: 12px;
+}
+
+.login #member_login,
+.lostpassword #member_login {
+	width: 100%;
+	padding: 10px 14px;
+	font-size: 12px;
 }
 
 .p-modal-content {

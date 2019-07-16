@@ -1,4 +1,5 @@
-.login {
+.login,
+.lostpassword {
   #content {
     padding: 0 16px;
   }
@@ -7,7 +8,8 @@
     display: none;
   }
 
-  #wc_login {
+  #wc_login,
+  #wc_lostmemberpassword {
     .loginbox {
       padding: 0;
 
@@ -116,5 +118,23 @@
         }
       }
     }
+    .change {
+      padding-top: 64px;
+      .text {
+        font-size: 12px;
+      }
+      #nav a {
+        width: 100%;
+        padding: 10px 14px;
+        margin-top: 16px;
+        font-size: 12px;
+      }
+    }
+  }
+  // lost password
+  #member_login {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 12px;
   }
 }
