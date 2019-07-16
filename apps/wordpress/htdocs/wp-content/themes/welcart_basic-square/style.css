@@ -1045,6 +1045,137 @@ input[type=button].allocation_edit_button,
 	background: #f8ee6a;
 }
 
+.login #content {
+	padding: 0 16px;
+}
+
+.login .member_page_title {
+	display: none;
+}
+
+.login #wc_login .loginbox {
+	padding: 0;
+}
+
+.login #wc_login .loginbox .loginmail,
+.login #wc_login .loginbox .loginpass {
+	margin-bottom: 8px;
+}
+
+.login #wc_login .loginbox .member-box .title {
+	padding-bottom: 16px;
+	font-size: 12px;
+}
+
+.login #wc_login .loginbox .member-box .loginform {
+	padding: 0 12px;
+}
+
+.login #wc_login .loginbox .member-box .loginform input {
+	border: 2px solid #ccc;
+	border-radius: 4px;
+}
+
+.login #wc_login .loginbox .member-box .loginform input[type="text"],
+.login #wc_login .loginbox .member-box .loginform input[type="password"] {
+	width: 100%;
+	padding: 16px;
+}
+
+.login #wc_login .loginbox .member-box .loginform input[type="checkbox"] {
+	background: #fff;
+	border: 1px solid #757575;
+}
+
+.login #wc_login .loginbox .member-box .loginform ::-webkit-input-placeholder {
+	font-size: 12px;
+}
+
+.login #wc_login .loginbox .member-box .loginform :-ms-input-placeholder {
+	font-size: 12px;
+}
+
+.login #wc_login .loginbox .member-box .loginform ::-ms-input-placeholder {
+	font-size: 12px;
+}
+
+.login #wc_login .loginbox .member-box .loginform ::placeholder {
+	font-size: 12px;
+}
+
+.login #wc_login .loginbox .member-box .loginform .checkbox {
+	display: none;
+}
+
+.login #wc_login .loginbox .member-box .loginform .checkbox:checked + .checkbox-text::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 5px;
+	width: 7px;
+	height: 14px;
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);
+	border-bottom: 3px solid #4682aa;
+	border-right: 3px solid #4682aa;
+}
+
+.login #wc_login .loginbox .member-box .loginform .checkbox-text {
+	position: relative;
+	padding-left: 20px;
+}
+
+.login #wc_login .loginbox .member-box .loginform .checkbox-text::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #757575;
+	border-radius: 4px;
+}
+
+.login #wc_login .loginbox .member-box .loginform .submit {
+	padding: 24px 0 0;
+}
+
+.login #wc_login .loginbox .member-box .loginform .member_login_button {
+	width: 100%;
+	padding: 10px 14px;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.login #wc_login .loginbox .member-box #nav {
+	padding-top: 16px;
+	text-align: center;
+}
+
+.login #wc_login .loginbox .member-box #nav a {
+	background: none;
+	font-size: 12px;
+}
+
+.login #wc_login .loginbox .new-entry {
+	padding: 0 12px;
+	margin: 64px 0 0;
+	background: none;
+}
+
+.login #wc_login .loginbox .new-entry .title {
+	font-size: 12px;
+}
+
+.login #wc_login .loginbox .new-entry #nav a {
+	width: 100%;
+	padding: 10px 14px;
+	font-size: 14px;
+	line-height: 16px;
+}
+
 .p-modal-content {
 	position: fixed;
 	right: 0;
