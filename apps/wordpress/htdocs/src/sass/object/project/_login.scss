@@ -1,5 +1,4 @@
-.login,
-.lostpassword {
+.member {
   #content {
     padding: 0 16px;
   }
@@ -7,6 +6,8 @@
   .member_page_title {
     display: none;
   }
+
+
 
   #wc_login,
   #wc_lostmemberpassword {
@@ -132,7 +133,9 @@
     }
   }
   // lost password
-  #member_login {
+  #member_login,
+  #wc_newcompletion #memberpages p a,
+  #wc_newcompletion .send a {
     width: 100%;
     padding: 10px 14px;
     font-size: 12px;

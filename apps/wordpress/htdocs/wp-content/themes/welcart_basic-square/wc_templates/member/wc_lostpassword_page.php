@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-<div id="primary" class="site-content lostpassword">
+<div id="primary" class="site-content member">
   <div id="content" role="main">
 
 
