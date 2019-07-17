@@ -279,6 +279,7 @@ function get_price( $object ) {
   }
 }
 
+// SKUの選択情報を追加
 add_action( 'rest_api_init', 'register_select_sku' );
 
 function register_select_sku() {
@@ -299,6 +300,7 @@ function get_select_sku( $object ) {
   return null;
 }
 
+// SKU情報を追加
 add_action( 'rest_api_init', 'register_sku' );
 
 function register_sku() {
@@ -319,6 +321,7 @@ function get_sku( $object ) {
   return null;
 }
 
+// SKU名
 add_action( 'rest_api_init', 'register_sku_name' );
 
 function register_sku_name() {
@@ -339,6 +342,7 @@ function get_sku_name( $object ) {
   return null;
 }
 
+// 記事と商品紐づけmeta情報
 add_action( 'rest_api_init', 'register_influncer_product' );
 
 function register_influncer_product() {
@@ -359,6 +363,7 @@ function get_influncer_product( $object ) {
   return null;
 }
 
+// 購入情報に紐付けるインフルエンサー入力情報
 add_action( 'rest_api_init', 'register_influncer_input' );
 
 function register_influncer_input() {
@@ -377,6 +382,80 @@ function get_product_input_option( $object ) {
   }
 
   return null;
+}
+
+// カテゴリー画像、インスタグラムリンク、ブランドのスラッグ
+add_action( 'rest_api_init', 'register_category_image' );
+
+function register_category_image() {
+  register_rest_field( 'category',
+    'image',
+    array(
+      'get_callback'    => 'get_category_image'
+    )
+  );
+  register_rest_field( 'category',
+    'instagram',
+    array(
+      'get_callback'    => 'get_category_instagram'
+    )
+  );
+
+  register_rest_field( 'category',
+    'brand_slug',
+    array(
+      'get_callback'    => 'get_category_brand_slug'
+    )
+  );
+}
+
+function get_category_image( $cat ) {
+  $image_path = get_term_meta($cat[ 'id' ], 'wcct-tag-thumbnail-url', true);
+  if (! empty($image_path)) {
+    return $image_path;
+  }
+  return null;
+}
+
+function get_category_instagram( $cat ) {
+  $url = get_term_meta($cat[ 'id' ], 'instagram', true);
+  if (! empty($url)) {
+    return $url;
+  }
+  return null;
+}
+
+function get_category_brand_slug( $cat ) {
+  $url = get_term_meta($cat[ 'id' ], 'brand-slug', true);
+  if (! empty($url)) {
+    return $url;
+  }
+  return null;
+}
+
+// ユーザーとカテゴリーの紐づけ
+// ユーザーAPIにカテゴリー情報を付加する
+add_action( 'rest_api_init', 'register_user_category' );
+
+function register_user_category() {
+  register_rest_field( 'user',
+    'category',
+    array(
+      'get_callback'    => 'get_user_cagtegory'
+    )
+  );
+}
+
+function get_user_cagtegory( $user ) {
+  $influncer_name = get_user_meta($user[ 'id' ], 'influncerName', true);
+  if (empty($influncer_name)) {
+    return null;
+  }
+  $cat_id = get_cat_ID( $influncer_name );
+  $cat = get_category($cat_id, ARRAY_A);
+  $cat['image'] = get_term_meta($cat_id, 'wcct-tag-thumbnail-url', true);;
+  $cat['instagram'] = get_term_meta($cat_id, 'instagram', true);;
+  return $cat;
 }
 
 add_action('rest_api_init', 'wp_add_thumbnail_to_JSON');
@@ -399,4 +478,26 @@ function wp_get_image($object, $field_name, $request) {
     'width' => $feat_img_array[1],
     'height' => $feat_img_array[2],
   ];
+}
+
+// 関連記事情報
+add_action( 'rest_api_init', 'register_related_posts' );
+
+function register_related_posts() {
+  register_rest_field( 'post',
+    'related_posts',
+    array(
+      'get_callback'    => 'get_related_posts'
+    )
+  );
+}
+
+function get_related_posts( $object ) {
+  global $yarpp;
+  $posts = array();
+  foreach ($yarpp->get_related($object['id']) as $related ) {
+    $posts[] = $related->ID;
+  }
+
+  return $posts;
 }

@@ -1045,6 +1045,187 @@ input[type=button].allocation_edit_button,
 	background: #f8ee6a;
 }
 
+.member #content {
+	padding: 0 16px;
+}
+
+.member .member_page_title {
+	display: none;
+}
+
+.member #wc_login .loginbox,
+.member #wc_lostmemberpassword .loginbox {
+	padding: 0;
+}
+
+.member #wc_login .loginbox .loginmail,
+.member #wc_login .loginbox .loginpass,
+.member #wc_lostmemberpassword .loginbox .loginmail,
+.member #wc_lostmemberpassword .loginbox .loginpass {
+	margin-bottom: 8px;
+}
+
+.member #wc_login .loginbox .member-box .title,
+.member #wc_lostmemberpassword .loginbox .member-box .title {
+	padding-bottom: 16px;
+	font-size: 12px;
+}
+
+.member #wc_login .loginbox .member-box .loginform,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform {
+	padding: 0 12px;
+}
+
+.member #wc_login .loginbox .member-box .loginform input,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform input {
+	border: 2px solid #ccc;
+	border-radius: 4px;
+}
+
+.member #wc_login .loginbox .member-box .loginform input[type="text"],
+.member #wc_login .loginbox .member-box .loginform input[type="password"],
+.member #wc_lostmemberpassword .loginbox .member-box .loginform input[type="text"],
+.member #wc_lostmemberpassword .loginbox .member-box .loginform input[type="password"] {
+	width: 100%;
+	padding: 16px;
+}
+
+.member #wc_login .loginbox .member-box .loginform input[type="checkbox"],
+.member #wc_lostmemberpassword .loginbox .member-box .loginform input[type="checkbox"] {
+	background: #fff;
+	border: 1px solid #757575;
+}
+
+.member #wc_login .loginbox .member-box .loginform ::-webkit-input-placeholder,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform ::-webkit-input-placeholder {
+	font-size: 12px;
+}
+
+.member #wc_login .loginbox .member-box .loginform :-ms-input-placeholder,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform :-ms-input-placeholder {
+	font-size: 12px;
+}
+
+.member #wc_login .loginbox .member-box .loginform ::-ms-input-placeholder,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform ::-ms-input-placeholder {
+	font-size: 12px;
+}
+
+.member #wc_login .loginbox .member-box .loginform ::placeholder,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform ::placeholder {
+	font-size: 12px;
+}
+
+.member #wc_login .loginbox .member-box .loginform .checkbox,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox {
+	display: none;
+}
+
+.member #wc_login .loginbox .member-box .loginform .checkbox:checked + .checkbox-text::after,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox:checked + .checkbox-text::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 5px;
+	width: 7px;
+	height: 14px;
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);
+	border-bottom: 3px solid #4682aa;
+	border-right: 3px solid #4682aa;
+}
+
+.member #wc_login .loginbox .member-box .loginform .checkbox-text,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox-text {
+	position: relative;
+	padding-left: 20px;
+}
+
+.member #wc_login .loginbox .member-box .loginform .checkbox-text::before,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform .checkbox-text::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #757575;
+	border-radius: 4px;
+}
+
+.member #wc_login .loginbox .member-box .loginform .submit,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform .submit {
+	padding: 24px 0 0;
+}
+
+.member #wc_login .loginbox .member-box .loginform .member_login_button,
+.member #wc_lostmemberpassword .loginbox .member-box .loginform .member_login_button {
+	width: 100%;
+	padding: 10px 14px;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.member #wc_login .loginbox .member-box #nav,
+.member #wc_lostmemberpassword .loginbox .member-box #nav {
+	padding-top: 16px;
+	text-align: center;
+}
+
+.member #wc_login .loginbox .member-box #nav a,
+.member #wc_lostmemberpassword .loginbox .member-box #nav a {
+	background: none;
+	font-size: 12px;
+}
+
+.member #wc_login .loginbox .new-entry,
+.member #wc_lostmemberpassword .loginbox .new-entry {
+	padding: 0 12px;
+	margin: 64px 0 0;
+	background: none;
+}
+
+.member #wc_login .loginbox .new-entry .title,
+.member #wc_lostmemberpassword .loginbox .new-entry .title {
+	font-size: 12px;
+}
+
+.member #wc_login .loginbox .new-entry #nav a,
+.member #wc_lostmemberpassword .loginbox .new-entry #nav a {
+	width: 100%;
+	padding: 10px 14px;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.member #wc_login .change,
+.member #wc_lostmemberpassword .change {
+	padding-top: 64px;
+}
+
+.member #wc_login .change .text,
+.member #wc_lostmemberpassword .change .text {
+	font-size: 12px;
+}
+
+.member #wc_login .change #nav a,
+.member #wc_lostmemberpassword .change #nav a {
+	width: 100%;
+	padding: 10px 14px;
+	margin-top: 16px;
+	font-size: 12px;
+}
+
+.member #member_login,
+.member #wc_newcompletion #memberpages p a,
+.member #wc_newcompletion .send a {
+	width: 100%;
+	padding: 10px 14px;
+	font-size: 12px;
+}
+
 .p-modal-content {
 	position: fixed;
 	right: 0;

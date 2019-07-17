@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<div id="primary" class="site-content">
+<div id="primary" class="site-content member">
 	<div id="content" role="main">
 
 		<div class="column-wrap">
@@ -67,4 +67,4 @@ get_header();
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
