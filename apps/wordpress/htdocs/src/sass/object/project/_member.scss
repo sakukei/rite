@@ -1,0 +1,130 @@
+.member {
+  #content {
+    padding: 0;
+  }
+}
+
+// 新規登録
+.member_page_title,
+.header_explanation {
+  display: none;
+}
+
+// form
+.customer_form {
+  em {
+    display: none;
+  }
+  tr {
+    padding: 0;
+    margin: 0;
+  }
+  td {
+    input {
+      border: 2px solid #efefef;
+    }
+  }
+  .tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+  .th,
+  .td {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #555;
+  }
+  .th {
+    width: 42%;
+    padding-left: 8px;
+  }
+  .td {
+    width: 58%;
+  }
+  #furikana_row {
+    display: none;
+  }
+  .section {
+    padding-top: 40px;
+    th {
+      padding-bottom: 7px;
+      font-size: 12px;
+    }
+  }
+  .pref {
+    width: 100%;
+    border: none;
+  }
+  select {
+    color: #555;
+  }
+}
+
+// メンバー情報変更ページ
+.member_icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+.member_name {
+  padding-top: 26px;
+  text-align: center;
+  font-size: 20px;
+}
+#wc_member h3 {
+  font-size: 12px;
+}
+#memberinfo table {
+  border: none;
+}
+#memberinfo #history_head td {
+  text-align: center;
+  border: none;
+}
+.edit {
+  display: none;
+}
+#memberinfo table tr {
+  display: flex;
+}
+#memberinfo .customer_form th {
+  padding-left: 8px;
+}
+#memberinfo .customer_form .caution {
+  padding: 4px 0 0 8px;
+  border-bottom: none;
+  font-size: 12px;
+}
+.customer_form input[type="text"] {
+  margin-right: 0;
+}
+.customer_form input#mailaddress1,
+.customer_form input#mailaddress2 {
+  width: auto;
+}
+.form_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .top,
+  .editmember {
+    padding: 8px 10px;
+    background: none;
+    font-size: 14px;
+    color: #546E7A;
+    &:hover {
+      background: none;
+    }
+  }
+}
+.member-page #memberinfo .send input.deletemember {
+  padding: 8px 10px;
+  background: none!important;
+  font-size: 14px;
+  color: #546E7A;
+  &:hover {
+    background: none;
+  }
+}

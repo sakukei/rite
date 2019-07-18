@@ -23,38 +23,52 @@ get_header();
               <div class="whitebox">
                 <div id="memberinfo">
 
-                  <table>
-                    <tr>
-                      <th scope="row"><?php _e('member number', 'usces'); ?></th>
-                      <td class="num"><?php usces_memberinfo('ID'); ?></td>
-                      <th><?php _e('Strated date', 'usces'); ?></th>
-                      <td><?php usces_memberinfo('registered'); ?></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"><?php _e('Full name', 'usces'); ?></th>
-                      <td><?php esc_html_e(sprintf(_x('%s', 'honorific', 'usces'), usces_localized_name(usces_memberinfo('name1', 'return'), usces_memberinfo('name2', 'return'), 'return'))); ?></td>
-                      <?php if (usces_is_membersystem_point()) : ?>
-                        <th><?php _e('The current point', 'usces'); ?></th>
-                        <td class="num"><?php usces_memberinfo('point'); ?></td>
-                      <?php else : ?>
-                        <th class="space"></th>
-                        <td class="space"></td>
-                      <?php endif; ?>
-                    </tr>
-                    <tr>
-                      <th scope="row"><?php _e('e-mail adress', 'usces'); ?></th>
-                      <td><?php usces_memberinfo('mailaddress1'); ?></td>
-                      <?php $html_reserve = '<th class="space"></th><td class="space"></td>'; ?>
-                      <?php echo apply_filters('usces_filter_memberinfo_page_reserve', $html_reserve, usces_memberinfo('ID', 'return')); ?>
-                    </tr>
-                  </table>
+                  <form action="<?php usces_url('member'); ?>#edit" method="post"
+                        onKeyDown="if(event.keyCode == 13){return false;}">
+                    <div class="form_header">
+                      <input name="top" class="top" type="button" value="<?php _e('Back to the top page.', 'usces'); ?>"
+                             onclick="location.href='<?php echo home_url(); ?>'"/>
+                      <input name="editmember" class="editmember" type="submit"
+                             value="<?php _e('update it', 'usces'); ?>"/>
+                    </div>
 
-                  <ul class="member_submenu">
-                    <li class="member-edit"><a href="#edit"><?php _e('To member information editing', 'usces'); ?></a>
-                    </li>
-                    <?php do_action('usces_action_member_submenu_list'); ?>
-                    <li class="member-logout"><?php usces_loginout(); ?></li>
-                  </ul>
+                  <div class="member_icon">
+                    <img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_account.svg"/>
+                  </div>
+                  <p class="member_name"><?php esc_html_e(sprintf(_x('%s', '', 'usces'), usces_localized_name(usces_memberinfo('name1', 'return'), usces_memberinfo('name2', 'return'), 'return'))); ?></p>
+
+<!--                  <table>-->
+<!--                    <tr>-->
+<!--                      <th scope="row">--><?php //_e('member number', 'usces'); ?><!--</th>-->
+<!--                      <td class="num">--><?php //usces_memberinfo('ID'); ?><!--</td>-->
+<!--                      <th>--><?php //_e('Strated date', 'usces'); ?><!--</th>-->
+<!--                      <td>--><?php //usces_memberinfo('registered'); ?><!--</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                      <th scope="row">--><?php //_e('Full name', 'usces'); ?><!--</th>-->
+<!--                      <td>--><?php //esc_html_e(sprintf(_x('%s', 'honorific', 'usces'), usces_localized_name(usces_memberinfo('name1', 'return'), usces_memberinfo('name2', 'return'), 'return'))); ?><!--</td>-->
+<!--                      --><?php //if (usces_is_membersystem_point()) : ?>
+<!--                        <th>--><?php //_e('The current point', 'usces'); ?><!--</th>-->
+<!--                        <td class="num">--><?php //usces_memberinfo('point'); ?><!--</td>-->
+<!--                      --><?php //else : ?>
+<!--                        <th class="space"></th>-->
+<!--                        <td class="space"></td>-->
+<!--                      --><?php //endif; ?>
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                      <th scope="row">--><?php //_e('e-mail adress', 'usces'); ?><!--</th>-->
+<!--                      <td>--><?php //usces_memberinfo('mailaddress1'); ?><!--</td>-->
+<!--                      --><?php //$html_reserve = '<th class="space"></th><td class="space"></td>'; ?>
+<!--                      --><?php //echo apply_filters('usces_filter_memberinfo_page_reserve', $html_reserve, usces_memberinfo('ID', 'return')); ?>
+<!--                    </tr>-->
+<!--                  </table>-->
+
+<!--                  <ul class="member_submenu">-->
+<!--                    <li class="member-edit"><a href="#edit">--><?php //_e('To member information editing', 'usces'); ?><!--</a>-->
+<!--                    </li>-->
+<!--                    --><?php //do_action('usces_action_member_submenu_list'); ?>
+<!--                    <li class="member-logout">--><?php //usces_loginout(); ?><!--</li>-->
+<!--                  </ul>-->
 
                   <div class="header_explanation">
                     <?php do_action('usces_action_memberinfo_page_header'); ?>
@@ -65,39 +79,39 @@ get_header();
                   <div class="currency_code"><?php _e('Currency', 'usces'); ?> : <?php usces_crcode(); ?></div>
                   <?php usces_member_history(); ?>
 
-                  <h3><a name="edit"></a><?php _e('Member information editing', 'usces'); ?></h3>
+                  <h3 class="edit"><a name="edit"></a><?php _e('Member information editing', 'usces'); ?></h3>
 
                   <div class="error_message"><?php usces_error_message(); ?></div>
 
-                  <form action="<?php usces_url('member'); ?>#edit" method="post"
-                        onKeyDown="if(event.keyCode == 13){return false;}">
                     <table class="customer_form">
                       <?php uesces_addressform('member', usces_memberinfo(NULL), 'echo'); ?>
-                      <tr>
-                        <th scope="row"><?php _e('e-mail adress', 'usces'); ?></th>
-                        <td colspan="2"><input name="member[mailaddress1]" id="mailaddress1" type="text"
+                      <tr class="tr">
+                        <th class="th" scope="row"><?php _e('e-mail adress', 'usces'); ?></th>
+                        <td class="td" colspan="2"><input name="member[mailaddress1]" id="mailaddress1" type="text"
                                                value="<?php usces_memberinfo('mailaddress1'); ?>"/></td>
                       </tr>
-                      <tr>
-                        <th scope="row"><?php _e('password', 'usces'); ?></th>
-                        <td colspan="2"><input name="member[password1]" id="password1" type="password"
-                                               value="<?php usces_memberinfo('password1'); ?>"/>
-                          <?php _e('Leave it blank in case of no change.', 'usces'); ?></td>
+                      <tr class="section">
+                        <th>パスワード</th>
                       </tr>
-                      <tr>
-                        <th scope="row"><?php _e('Password (confirm)', 'usces'); ?></th>
-                        <td colspan="2"><input name="member[password2]" id="password2" type="password"
+                      <tr class="tr">
+                        <th class="th" scope="row"><?php _e('password', 'usces'); ?></th>
+                        <td class="td" colspan="2"><input name="member[password1]" id="password1" type="password"
+                                               value="<?php usces_memberinfo('password1'); ?>"/>
+                        </td>
+                      </tr>
+                      <tr class="tr">
+                        <th class="th" scope="row"><?php _e('Password (confirm)', 'usces'); ?></th>
+                        <td class="td" colspan="2"><input name="member[password2]" id="password2" type="password"
                                                value="<?php usces_memberinfo('password2'); ?>"/>
-                          <?php _e('Leave it blank in case of no change.', 'usces'); ?></td>
+                        </td>
+                      </tr>
+                      <tr class="caution">
+                        <th><span class="caution"><?php _e('Leave it blank in case of no change.', 'usces'); ?></span></th>
                       </tr>
                     </table>
 
                     <input name="member_regmode" type="hidden" value="editmemberform"/>
                     <div class="send">
-                      <input name="top" class="top" type="button" value="<?php _e('Back to the top page.', 'usces'); ?>"
-                             onclick="location.href='<?php echo home_url(); ?>'"/>
-                      <input name="editmember" class="editmember" type="submit"
-                             value="<?php _e('update it', 'usces'); ?>"/>
                       <input name="deletemember" class="deletemember" type="submit"
                              value="<?php _e('delete it', 'usces'); ?>"
                              onclick="return confirm('<?php _e('All information about the member is deleted. Are you all right?', 'usces'); ?>');"/>
