@@ -1226,6 +1226,14 @@ input[type=button].allocation_edit_button,
 	font-size: 12px;
 }
 
+.no-customize-support .p-header {
+	display: none;
+}
+
+.no-customize-support .p-main {
+	margin-top: -94px;
+}
+
 .member #content {
 	padding: 0;
 }
@@ -1245,6 +1253,7 @@ input[type=button].allocation_edit_button,
 }
 
 .customer_form td input {
+	width: 100%;
 	border: 2px solid #efefef;
 }
 
@@ -1292,7 +1301,7 @@ input[type=button].allocation_edit_button,
 
 .customer_form .pref {
 	width: 100%;
-	border: none;
+	border: 2px solid #efefef;
 }
 
 .customer_form select {
@@ -1302,7 +1311,7 @@ input[type=button].allocation_edit_button,
 .member_icon {
 	width: 40px;
 	height: 40px;
-	margin: 0 auto;
+	margin: 46px auto 0;
 }
 
 .member_name {
@@ -1387,6 +1396,10 @@ input[type=button].allocation_edit_button,
 
 .member-page #memberinfo .send input.deletemember:hover {
 	background: none;
+}
+
+.error_message {
+	padding-left: 8px;
 }
 
 .p-modal-content {
