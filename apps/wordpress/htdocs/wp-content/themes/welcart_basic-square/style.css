@@ -1055,7 +1055,7 @@ input[type=button].allocation_edit_button,
 
 .member #wc_login .loginbox,
 .member #wc_lostmemberpassword .loginbox {
-	padding: 0;
+	padding: 20px 0 0;
 }
 
 .member #wc_login .loginbox .loginmail,
@@ -1068,6 +1068,7 @@ input[type=button].allocation_edit_button,
 .member #wc_login .loginbox .member-box .title,
 .member #wc_lostmemberpassword .loginbox .member-box .title {
 	padding-bottom: 16px;
+	padding-left: 8px;
 	font-size: 12px;
 }
 
@@ -1238,6 +1239,12 @@ input[type=button].allocation_edit_button,
 	padding: 0;
 }
 
+.member .logo {
+	width: 80px;
+	height: 38px;
+	margin: 50px auto 10px;
+}
+
 .member_page_title,
 .header_explanation {
 	display: none;
@@ -1296,6 +1303,7 @@ input[type=button].allocation_edit_button,
 
 .customer_form .section th {
 	padding-bottom: 7px;
+	padding-left: 8px;
 	font-size: 12px;
 }
 
@@ -1359,7 +1367,7 @@ input[type=button].allocation_edit_button,
 
 .customer_form input#mailaddress1,
 .customer_form input#mailaddress2 {
-	width: auto;
+	width: 100%;
 }
 
 .form_header {

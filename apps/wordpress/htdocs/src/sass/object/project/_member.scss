@@ -11,6 +11,11 @@
   #content {
     padding: 0;
   }
+  .logo {
+    width: 80px;
+    height: 38px;
+    margin: 50px auto 10px;
+  }
 }
 
 // 新規登録
@@ -60,6 +65,7 @@
     padding-top: 40px;
     th {
       padding-bottom: 7px;
+      padding-left: 8px;
       font-size: 12px;
     }
   }
@@ -112,7 +118,7 @@
 }
 .customer_form input#mailaddress1,
 .customer_form input#mailaddress2 {
-  width: auto;
+  width: 100%;
 }
 .form_header {
   display: flex;

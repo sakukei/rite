@@ -22,6 +22,20 @@ get_header();
 
             <div id="memberpages">
               <div id="newmember">
+                <form
+                  action="<?php echo apply_filters('usces_filter_newmember_form_action', usces_url('member', 'return')); ?>"
+                  method="post" onKeyDown="if(event.keyCode == 13){return false;}">
+
+                <div class="form_header">
+                  <input name="top" class="top" type="button" value="<?php _e('閉じる', 'usces'); ?>"
+                         onclick="location.href='<?php echo home_url(); ?>'"/>
+                  <input name="editmember" class="editmember" type="submit"
+                         value="<?php _e('update it', 'usces'); ?>"/>
+                </div>
+
+                  <div class="logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_black.svg" alt="rite">
+                  </div>
 
                 <div class="header_explanation">
                   <ul>
@@ -35,9 +49,6 @@ get_header();
 
                 <div class="error_message"><?php usces_error_message(); ?></div>
 
-                <form
-                  action="<?php echo apply_filters('usces_filter_newmember_form_action', usces_url('member', 'return')); ?>"
-                  method="post" onKeyDown="if(event.keyCode == 13){return false;}">
                   <table border="0" cellpadding="0" cellspacing="0" class="customer_form">
                     <?php uesces_addressform('member', usces_memberinfo(NULL), 'echo'); ?>
                     <tr class="tr">

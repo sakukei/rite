@@ -21,6 +21,15 @@ get_header();
 	
 				<div id="memberpages">
 					<div class="whitebox">
+
+            <div class="form_header">
+              <input name="top" class="top" type="button" value="<?php _e('閉じる', 'usces'); ?>"
+                     onclick="location.href='<?php echo home_url(); ?>'"/>
+            </div>
+
+            <div class="logo">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_black.svg" alt="rite">
+            </div>
 	
 						<div class="header_explanation">
 							<?php do_action( 'usces_action_login_page_header' ); ?>

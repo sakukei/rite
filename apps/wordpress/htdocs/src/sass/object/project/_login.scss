@@ -12,7 +12,7 @@
   #wc_login,
   #wc_lostmemberpassword {
     .loginbox {
-      padding: 0;
+      padding: 20px 0 0;
 
       .loginmail,
       .loginpass {
@@ -22,6 +22,7 @@
 
         .title {
           padding-bottom: 16px;
+          padding-left: 8px;
           font-size: 12px;
         }
 
