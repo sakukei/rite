@@ -57,12 +57,10 @@ get_header();
                       <td class="td" colspan="2"><input name="member[mailaddress1]" id="mailaddress1" type="text"
                                                         value="<?php usces_memberinfo('mailaddress1'); ?>"/></td>
                     </tr>
-                    <!--								<tr>-->
-                    <!--									<th scope="row"><em>--><?php //_e('*', 'usces'); ?><!--</em>-->
-                    <?php //_e('E-mail address (for verification)', 'usces'); ?><!--</th>-->
-                    <!--									<td colspan="2"><input name="member[mailaddress2]" id="mailaddress2" type="text" value="-->
-                    <?php //usces_memberinfo('mailaddress2'); ?><!--" /></td>-->
-                    <!--								</tr>-->
+                    <tr class="tr">
+                      <th class="th" scope="row"><em><?php _e('*', 'usces'); ?></em><?php _e('E-mail address (for verification)', 'usces'); ?></th>
+                      <td class="td" colspan="2"><input name="member[mailaddress2]" id="mailaddress2" type="text" value="<?php usces_memberinfo('mailaddress2'); ?>"/></td>
+                    </tr>
                     <tr class="section">
                       <th>パスワード</th>
                     </tr>

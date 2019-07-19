@@ -1227,6 +1227,24 @@ input[type=button].allocation_edit_button,
 	font-size: 12px;
 }
 
+.member #wc_newcompletion {
+	padding: 0 26px;
+}
+
+.member #wc_newcompletion .completion-text {
+	padding-top: 40px;
+}
+
+.member #wc_newcompletion .completion-btn {
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	padding: 0;
+	background: #4682aa;
+	font-size: 14px;
+	color: #fff;
+}
+
 .no-customize-support .p-header {
 	display: none;
 }

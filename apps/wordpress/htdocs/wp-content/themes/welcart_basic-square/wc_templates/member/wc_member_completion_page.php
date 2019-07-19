@@ -21,6 +21,10 @@ get_header();
 				<article class="post" id="wc_<?php usces_page_name(); ?>">
 		
 					<div id="memberpages">
+
+            <div class="logo">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_black.svg" alt="rite">
+            </div>
 		
 						<div class="header_explanation">
 							<?php do_action( 'usces_action_membercompletion_page_header' ); ?>
@@ -30,7 +34,7 @@ get_header();
 						<div class="completion-text">
 							<?php if( 'newcompletion' == $member_compmode ) : ?>
 								<p><?php _e('Thank you in new membership.', 'usces'); ?></p>
-			
+
 							<?php elseif( 'editcompletion' == $member_compmode ) : ?>
 								<p><?php _e('Membership information has been updated.', 'usces'); ?></p>
 			
@@ -48,10 +52,10 @@ get_header();
 							<?php do_action( 'usces_action_membercompletion_page_footer' ); ?>
 						</div><!-- .footer_explanation -->
 		
-						<p><a href="<?php usces_url('member'); ?>"><?php _e('to vist membership information page', 'usces'); ?></a></p>
+						<p><a href="<?php usces_url('member'); ?>" class=" class="completion-btn""><?php _e('to vist membership information page', 'usces'); ?></a></p>
 		
 						<div class="send">
-							<a href="<?php echo home_url(); ?>" class="back_to_top_button"><?php _e('Back to the top page.', 'usces'); ?></a>
+							<a href="<?php echo home_url(); ?>" class="back_to_top_button completion-btn"><?php _e('Back to the top page.', 'usces'); ?></a>
 						</div>
 					</div><!-- #memberpages -->
 		
