@@ -1053,6 +1053,10 @@ input[type=button].allocation_edit_button,
 	display: none;
 }
 
+.member .member_submenu {
+	display: none;
+}
+
 .member #wc_login .loginbox,
 .member #wc_lostmemberpassword .loginbox {
 	padding: 20px 0 0;
