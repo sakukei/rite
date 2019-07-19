@@ -89,9 +89,10 @@
 
           .member_login_button {
             width: 100%;
-            padding: 10px 14px;
+            height: 42px;
+            line-height: 42px;
+            padding: 0;
             font-size: 14px;
-            line-height: 16px;
           }
         }
 
@@ -114,9 +115,10 @@
         }
         #nav a {
           width: 100%;
-          padding: 10px 14px;
+          height: 42px;
+          line-height: 42px;
+          padding: 0;
           font-size: 14px;
-          line-height: 16px;
         }
       }
     }
@@ -127,7 +129,9 @@
       }
       #nav a {
         width: 100%;
-        padding: 10px 14px;
+        height: 42px;
+        line-height: 42px;
+        padding: 0;
         margin-top: 16px;
         font-size: 12px;
       }
@@ -138,7 +142,9 @@
   #wc_newcompletion #memberpages p a,
   #wc_newcompletion .send a {
     width: 100%;
-    padding: 10px 14px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0;
     font-size: 12px;
   }
 
