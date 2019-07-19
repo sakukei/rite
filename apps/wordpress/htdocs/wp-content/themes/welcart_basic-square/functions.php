@@ -407,6 +407,13 @@ function register_category_image() {
       'get_callback'    => 'get_category_brand_slug'
     )
   );
+
+  register_rest_field( 'category',
+    'brand_business_law',
+    array(
+      'get_callback'    => 'get_category_brand_business_law'
+    )
+  );
 }
 
 function get_category_image( $cat ) {
@@ -427,6 +434,14 @@ function get_category_instagram( $cat ) {
 
 function get_category_brand_slug( $cat ) {
   $url = get_term_meta($cat[ 'id' ], 'brand-slug', true);
+  if (! empty($url)) {
+    return $url;
+  }
+  return null;
+}
+
+function get_category_brand_business_law( $cat ) {
+  $url = get_term_meta($cat[ 'id' ], 'business-law-notation', true);
   if (! empty($url)) {
     return $url;
   }
