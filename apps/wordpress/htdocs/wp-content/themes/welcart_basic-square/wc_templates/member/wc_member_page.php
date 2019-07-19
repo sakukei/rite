@@ -63,12 +63,12 @@ get_header();
 <!--                    </tr>-->
 <!--                  </table>-->
 
-                  <ul class="member_submenu">
-                    <li class="member-edit"><a href="#edit"><?php _e('To member information editing', 'usces'); ?></a>
-                    </li>
-                    <?php do_action('usces_action_member_submenu_list'); ?>
-                    <li class="member-logout"><?php usces_loginout(); ?></li>
-                  </ul>
+<!--                  <ul class="member_submenu">-->
+<!--                    <li class="member-edit"><a href="#edit">--><?php //_e('To member information editing', 'usces'); ?><!--</a>-->
+<!--                    </li>-->
+<!--                    --><?php //do_action('usces_action_member_submenu_list'); ?>
+<!--                    <li class="member-logout">--><?php //usces_loginout(); ?><!--</li>-->
+<!--                  </ul>-->
 
                   <div class="header_explanation">
                     <?php do_action('usces_action_memberinfo_page_header'); ?>
