@@ -52,7 +52,7 @@ get_header();
 							<?php do_action( 'usces_action_membercompletion_page_footer' ); ?>
 						</div><!-- .footer_explanation -->
 		
-						<p><a href="<?php usces_url('member'); ?>" class=" class="completion-btn""><?php _e('to vist membership information page', 'usces'); ?></a></p>
+						<p><a href="<?php usces_url('member'); ?>" class="completion-btn"><?php _e('to vist membership information page', 'usces'); ?></a></p>
 		
 						<div class="send">
 							<a href="<?php echo home_url(); ?>" class="back_to_top_button completion-btn"><?php _e('Back to the top page.', 'usces'); ?></a>

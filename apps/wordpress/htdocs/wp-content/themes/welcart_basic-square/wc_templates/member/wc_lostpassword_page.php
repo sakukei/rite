@@ -21,6 +21,11 @@ get_header();
           <article class="post" id="wc_<?php usces_page_name(); ?>">
 
             <div id="memberpages">
+
+              <div class="logo">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_black.svg" alt="rite">
+              </div>
+
               <div class="whitebox">
 
                 <div class="header_explanation">
