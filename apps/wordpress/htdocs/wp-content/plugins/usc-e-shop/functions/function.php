@@ -3935,7 +3935,7 @@ function usces_pref_select( $type, $values, $out = 'return' ){
 	//	$html .= "\t".'<option value="' . esc_attr($pref) . '"' . ($pref == $values['pref'] ? ' selected="selected"' : '') . '>' . esc_html($pref) . "</option>\n";
 	$prefs_count = count($prefs);
 	if($prefs_count > 0) {
-		$select = __('-- Select --', 'usces_dual');
+		$select = __('選択してください', 'usces_dual');
 		$html .= "\t".'<option value="' . esc_attr($select) . '">' . esc_html($select) . "</option>\n";
 		for($i = 1; $i < $prefs_count; $i++) 
 			$html .= "\t".'<option value="' . esc_attr($prefs[$i]) . '"' . ($prefs[$i] == $values['pref'] ? ' selected="selected"' : '') . '>' . esc_html($prefs[$i]) . "</option>\n";
