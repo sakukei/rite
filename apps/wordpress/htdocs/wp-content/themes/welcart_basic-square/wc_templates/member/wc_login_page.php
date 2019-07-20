@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-<div id="primary" class="site-content">
+<div id="primary" class="site-content member">
 	<div id="content" role="main">
 
 	<div class="column-wrap">
@@ -21,6 +21,15 @@ get_header();
 	
 				<div id="memberpages">
 					<div class="whitebox">
+
+            <div class="form_header">
+              <input name="top" class="top" type="button" value="<?php _e('閉じる', 'usces'); ?>"
+                     onclick="location.href='<?php echo home_url(); ?>'"/>
+            </div>
+
+            <div class="logo">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_black.svg" alt="rite">
+            </div>
 	
 						<div class="header_explanation">
 							<?php do_action( 'usces_action_login_page_header' ); ?>
@@ -31,20 +40,16 @@ get_header();
 						<div class="loginbox cf">
 						
 							<div class="member-box">
-							
-								<form name="loginform" id="loginform" action="<?php echo apply_filters( 'usces_filter_login_form_action', USCES_MEMBER_URL ); ?>" method="post">
-									<table>
-										<tr>
-											<th><label><?php _e('e-mail adress', 'usces'); ?></label></th>
-											<td><input type="text" name="loginmail" id="loginmail" class="loginmail" value="<?php esc_attr_e(usces_remembername('return')); ?>" size="20" /></td>
-										</tr>
-										<tr>
-											<th><label><?php _e('password', 'usces'); ?></label></th>
-											<td><input type="password" name="loginpass" id="loginpass" class="loginpass" size="20" /></td>
-										</tr>	
-									</table>
+                <p class="title">ログイン</p>
+								<form name="loginform" id="loginform" class="loginform" action="<?php echo apply_filters( 'usces_filter_login_form_action', USCES_MEMBER_URL ); ?>" method="post">
+                  <div class="loginmail">
+                    <input type="text" name="loginmail" id="loginmail" value="<?php esc_attr_e(usces_remembername('return')); ?>" size="20" placeholder="<?php _e('e-mail adress', 'usces'); ?>"/>
+                  </div>
+                  <div class="loginpass">
+                    <input type="password" name="loginpass" id="loginpass" size="20" placeholder="<?php _e('password', 'usces'); ?>"/>
+                  </div>
 									<p class="forgetmenot">
-										<label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e('memorize login information', 'usces'); ?></label>
+										<label><input name="rememberme" type="checkbox" class="checkbox" id="rememberme" value="forever" /> <span class="checkbox-text"><?php _e('memorize login information', 'usces'); ?></span></label>
 									</p>
 									<div class="submit">
 										<?php usces_login_button(); ?>
@@ -59,9 +64,9 @@ get_header();
 							</div><!-- memebr-box -->
 							
 							<div class="new-entry">
-								<h2><?php _e('Customers who are not member registration' , 'welcart_basic'); ?></h2>
+								<p class="title"><?php _e('Customers who are not member registration' , 'welcart_basic'); ?></p>
 								<p id="nav">
-									<a href="<?php usces_url('newmember') . apply_filters( 'usces_filter_newmember_urlquery', NULL ); ?>" title="<?php _e('New enrollment for membership.', 'usces'); ?>"><?php _e('New enrollment for membership.', 'usces'); ?></a>
+									<a class="button" href="<?php usces_url('newmember') . apply_filters( 'usces_filter_newmember_urlquery', NULL ); ?>" title="<?php _e('New enrollment for membership.', 'usces'); ?>"><?php _e('New enrollment for membership.', 'usces'); ?></a>
 								</p>
 							</div><!-- new-entry -->
 						
@@ -99,4 +104,4 @@ get_header();
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
