@@ -818,6 +818,34 @@ input[type=button].allocation_edit_button,
 	background: #327faa !important;
 }
 
+.cart_item {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	-ms-grid-rows: 1fr;
+	grid-template-rows: 1fr;
+}
+
+.cart_item > *:nth-child(1) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+}
+
+.cart_item > *:nth-child(2) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 2;
+}
+
+.cart_item > *:nth-child(3) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 3;
+}
+
+.cart_item .stock {
+	display: none;
+}
+
 .p-traveler-name {
 	font-size: 18px;
 	margin: 0 0 20px;
