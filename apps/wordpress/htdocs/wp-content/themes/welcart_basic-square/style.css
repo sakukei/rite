@@ -842,7 +842,8 @@ input[type=button].allocation_edit_button,
 	-ms-grid-column: 3;
 }
 
-.cart_item .stock {
+.cart_item .stock,
+.cart_item .subtotal {
 	display: none;
 }
 

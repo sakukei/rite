@@ -2880,7 +2880,7 @@ function usces_get_cart_rows( $out = '' ) {
 			<!-- /.info -->
 			</div>
 			<!-- /.detail -->
-			<div class="quantity">';
+			<div class="num"><div class="quantity">';
 		$row_quant = '<input name="quant[' . $i . '][' . $post_id . '][' . $sku . ']" class="quantity" type="text" value="' . esc_attr($cart_row['quantity']) . '" />';
 		$row .= apply_filters( 'usces_filter_cart_rows_quant', $row_quant, $args );
 		$row .= '</div>
@@ -2907,7 +2907,7 @@ function usces_get_cart_rows( $out = '' ) {
 			<input name="delButton[' . $i . '][' . $post_id . '][' . $sku . ']" class="delButton" type="submit" value="' . __('Delete','usces') . '" />
 			</div>
 			<!-- /.action -->
-		</div>';
+		</div></div>';
 		$materials = compact('i', 'cart_row', 'post_id', 'sku', 'sku_code', 'quantity', 'options', 'advance',
 						'itemCode', 'itemName', 'cartItemName', 'itemRestriction', 'skuPrice', 'skuZaikonum',
 						'stockid', 'stock', 'red', 'pictid');

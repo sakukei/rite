@@ -41,6 +41,12 @@ get_header();
               <!-- 購入動線のテンプレート -->
               <?php usces_get_cart_rows(); ?>
               <!------------------------->
+              <div class="total_quantity">
+                <?php usces_totalquantity_in_cart()	; ?>
+              </div>
+              <div class="result">
+                <?php usces_crform(usces_total_price('return'), true, false); ?>
+              </div>
 <!--							<table cellspacing="0" id="cart_table">-->
 <!--								<thead>-->
 <!--								<tr>-->
