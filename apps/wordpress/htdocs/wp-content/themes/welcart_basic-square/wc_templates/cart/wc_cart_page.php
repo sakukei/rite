@@ -41,11 +41,19 @@ get_header();
               <!-- 購入動線のテンプレート -->
               <?php usces_get_cart_rows(); ?>
               <!------------------------->
-              <div class="total_quantity">
-                <?php usces_totalquantity_in_cart()	; ?>
-              </div>
-              <div class="result">
-                <?php usces_crform(usces_total_price('return'), true, false); ?>
+
+              <div class="cart_result">
+                <p class="title">注文内容</p>
+                <dl class="dl">
+                  <div class="inner">
+                    <dt class="dt">商品点数</dt>
+                    <dd class="dd"><?php usces_totalquantity_in_cart()	; ?></dd>
+                  </div>
+                  <div class="inner">
+                  <dt class="dt">合計</dt>
+                  <dd class="dd"><span class="sum"><?php usces_crform(usces_total_price('return'), true, false); ?></span></dd>
+                  </div>
+                </dl>
               </div>
 <!--							<table cellspacing="0" id="cart_table">-->
 <!--								<thead>-->

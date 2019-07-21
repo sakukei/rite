@@ -32,9 +32,65 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  & + .cart_item {
+    margin-top: 24px;
+  }
+  .thumbnail {
+    max-width: 90px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .detail {
+    max-width: 180px;
+  }
+  .num {
+    max-width: 40px;
+  }
+  .quantity {
+    input {
+      max-width: 40px;
+    }
+  }
+  .unitprice {
+    margin-top: 8px;
+  }
+  .delButton {
+    padding: 0;
+    margin-top: 8px;
+    background: none;
+    text-decoration: underline;
+    font-size: 12px;
+  }
   .stock,
   .subtotal {
     display: none;
   }
 }
 
+.cart_result {
+  margin-top: 42px;
+  .title {
+    font-size: 16px;
+  }
+  .dl {
+    margin-top: 24px;
+  }
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    & + .inner {
+      margin-top: 12px;
+    }
+  }
+  .dt,
+  .dd {
+    font-size: 12px;
+  }
+  .sum {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

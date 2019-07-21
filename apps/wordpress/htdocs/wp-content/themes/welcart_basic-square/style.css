@@ -842,9 +842,83 @@ input[type=button].allocation_edit_button,
 	-ms-grid-column: 3;
 }
 
+.cart_item + .cart_item {
+	margin-top: 24px;
+}
+
+.cart_item .thumbnail {
+	max-width: 90px;
+}
+
+.cart_item .thumbnail img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.cart_item .detail {
+	max-width: 180px;
+}
+
+.cart_item .num {
+	max-width: 40px;
+}
+
+.cart_item .quantity input {
+	max-width: 40px;
+}
+
+.cart_item .unitprice {
+	margin-top: 8px;
+}
+
+.cart_item .delButton {
+	padding: 0;
+	margin-top: 8px;
+	background: none;
+	text-decoration: underline;
+	font-size: 12px;
+}
+
 .cart_item .stock,
 .cart_item .subtotal {
 	display: none;
+}
+
+.cart_result {
+	margin-top: 42px;
+}
+
+.cart_result .title {
+	font-size: 16px;
+}
+
+.cart_result .dl {
+	margin-top: 24px;
+}
+
+.cart_result .inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.cart_result .inner + .inner {
+	margin-top: 12px;
+}
+
+.cart_result .dt,
+.cart_result .dd {
+	font-size: 12px;
+}
+
+.cart_result .sum {
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .p-traveler-name {

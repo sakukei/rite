@@ -2838,7 +2838,7 @@ function usces_get_cart_rows( $out = '' ) {
 		}
 		$row .= '<div class="cart_item">
 			<div class="thumbnail">';
-			$cart_thumbnail = '<a href="' . get_permalink($post_id) . '">' . wp_get_attachment_image( $pictid, array(60, 60), true ) . '</a>';
+			$cart_thumbnail = '<a href="' . get_permalink($post_id) . '">' . wp_get_attachment_image( $pictid, array(), true ) . '</a>';
 			$row .= apply_filters('usces_filter_cart_thumbnail', $cart_thumbnail, $post_id, $pictid, $i,$cart_row);
 			$row .= '</div>
       <div class="detail">
