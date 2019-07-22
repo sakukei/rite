@@ -15,14 +15,14 @@ get_header(); ?>
 
 		<div class="column">
 
-		<div class="cart_navi">
-			<ul>
-				<li><span class="number"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span><br /><?php _e('1.Cart','usces'); ?></li>
-				<li class="current"><span class="number"><i class="fa fa-user" aria-hidden="true"></i></span><br /><?php _e('2.Customer Info','usces'); ?></li>
-				<li><span class="number"><i class="fa fa-truck" aria-hidden="true"></i></span><br /><?php _e('3.Deli. & Pay.','usces'); ?></li>
-				<li><span class="number"><i class="fa fa-check" aria-hidden="true"></i></span><br /><?php _e('4.Confirm','usces'); ?></li>
-			</ul>
-		</div>
+<!--		<div class="cart_navi">-->
+<!--			<ul>-->
+<!--				<li><span class="number"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span><br />--><?php //_e('1.Cart','usces'); ?><!--</li>-->
+<!--				<li class="current"><span class="number"><i class="fa fa-user" aria-hidden="true"></i></span><br />--><?php //_e('2.Customer Info','usces'); ?><!--</li>-->
+<!--				<li><span class="number"><i class="fa fa-truck" aria-hidden="true"></i></span><br />--><?php //_e('3.Deli. & Pay.','usces'); ?><!--</li>-->
+<!--				<li><span class="number"><i class="fa fa-check" aria-hidden="true"></i></span><br />--><?php //_e('4.Confirm','usces'); ?><!--</li>-->
+<!--			</ul>-->
+<!--		</div>-->
 
 		<?php if( have_posts() ) : usces_remove_filter(); ?>
 	
@@ -125,4 +125,4 @@ get_header(); ?>
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
