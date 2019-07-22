@@ -919,6 +919,22 @@ input[type=button].allocation_edit_button,
 	width: 100%;
 }
 
+.customer_form td input {
+	margin-bottom: 8px;
+}
+
+.customer_form td label {
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 4px;
+	text-align: center;
+}
+
+#wc_delivery .customer_form dd {
+	line-height: 1.4;
+}
+
 .p-traveler-name {
 	font-size: 18px;
 	margin: 0 0 20px;
