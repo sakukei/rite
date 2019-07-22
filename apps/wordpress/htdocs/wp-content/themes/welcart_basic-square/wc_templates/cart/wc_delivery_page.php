@@ -41,12 +41,16 @@ usces_delivery_info_script();
 	
 						<?php if( welcart_basic_have_shipped() ) : ?>
 						<table class="customer_form" id="delivery_flag">
+              <tr class="tr section">
+                <th class="th" rowspan="2" scope="row"><?php _e('shipping address', 'usces'); ?></th>
+              </tr>
 							<tr class="tr">
-								<th class="th" rowspan="2" scope="row"><?php _e('shipping address', 'usces'); ?></th>
-								<td class="td"><input name="delivery[delivery_flag]" type="radio" id="delivery_flag1" onclick="document.getElementById('delivery_table').style.display = 'none';" value="0"<?php if($usces_entries['delivery']['delivery_flag'] == 0) echo ' checked'; ?> onKeyDown="if (event.keyCode == 13) {return false;}" /> <label for="delivery_flag1"><?php _e('same as customer information', 'usces'); ?></label></td>
+                <th class="th"><label for="delivery_flag1"><?php _e('same as customer information', 'usces'); ?></label></th>
+								<td class="td"><input name="delivery[delivery_flag]" type="radio" id="delivery_flag1" onclick="document.getElementById('delivery_table').style.display = 'none';" value="0"<?php if($usces_entries['delivery']['delivery_flag'] == 0) echo ' checked'; ?> onKeyDown="if (event.keyCode == 13) {return false;}" /></td>
 							</tr>
 							<tr class="tr">
-								<td class="td"><input name="delivery[delivery_flag]" id="delivery_flag2" onclick="document.getElementById('delivery_table').style.display = 'table'" type="radio" value="1"<?php if($usces_entries['delivery']['delivery_flag'] == 1) echo ' checked'; ?> onKeyDown="if (event.keyCode == 13) {return false;}" /> <label for="delivery_flag2"><?php _e('Chose another shipping address.', 'usces'); ?></label></td>
+                <th class="th"><label for="delivery_flag2"><?php _e('Chose another shipping address.', 'usces'); ?></label></th>
+								<td class="td"><input name="delivery[delivery_flag]" id="delivery_flag2" onclick="document.getElementById('delivery_table').style.display = 'table'" type="radio" value="1"<?php if($usces_entries['delivery']['delivery_flag'] == 1) echo ' checked'; ?> onKeyDown="if (event.keyCode == 13) {return false;}" /></td>
 							</tr>
 						</table>
 						<?php do_action( 'usces_action_delivery_flag' ); ?>
