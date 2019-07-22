@@ -201,3 +201,32 @@
     }
   }
 }
+
+// 完了
+#wc_ordercompletion {
+  margin-top: 60px;
+  .logo {
+    width: 40px;
+    margin: 0 auto;
+  }
+  .h3 {
+    margin-top: 44px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .completion_text {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .send a {
+    display: block;
+    width: 100%;
+    padding: .714288em 1.42857em;
+    background: #327faa;
+    color: #fff;
+    &:hover {
+      background: #327faa;
+    }
+  }
+}

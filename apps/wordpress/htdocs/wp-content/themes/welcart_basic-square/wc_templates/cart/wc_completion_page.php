@@ -20,9 +20,15 @@ get_header();
 			<article class="post" id="wc_<?php usces_page_name(); ?>">
 	
 				<div id="cart_completion">
-	
-					<h3><?php _e('It has been sent succesfully.', 'usces'); ?></h3>
-	
+
+          <div class="logo">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_black.svg" alt="rite">
+          </div>
+
+					<h3 class="h3"><?php _e('It has been sent succesfully.', 'usces'); ?></h3>
+
+          <p class="completion_text">この度はriteでのお買い物ありがとうございます。ご注文情報をお送りしましたのでご確認ください。発送手続き完了後、メールを再度配信いたしますので発送完了までもうしばらくお待ち下さい。</p>
+
 					<div class="header_explanation">
 						<p><?php _e('Thank you for shopping.', 'usces'); ?><br /><?php _e("If you have any questions, please contact us by 'Contact'.", 'usces'); ?></p>
 						<?php do_action( 'usces_action_cartcompletion_page_header', $usces_entries, $usces_carts ); ?>
@@ -57,4 +63,4 @@ get_header();
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>

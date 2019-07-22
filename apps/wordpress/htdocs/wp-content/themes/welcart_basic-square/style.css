@@ -1033,6 +1033,39 @@ input[type=button].allocation_edit_button,
 	margin-top: 12px;
 }
 
+#wc_ordercompletion {
+	margin-top: 60px;
+}
+
+#wc_ordercompletion .logo {
+	width: 40px;
+	margin: 0 auto;
+}
+
+#wc_ordercompletion .h3 {
+	margin-top: 44px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#wc_ordercompletion .completion_text {
+	margin-top: 12px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#wc_ordercompletion .send a {
+	display: block;
+	width: 100%;
+	padding: .714288em 1.42857em;
+	background: #327faa;
+	color: #fff;
+}
+
+#wc_ordercompletion .send a:hover {
+	background: #327faa;
+}
+
 .p-traveler-name {
 	font-size: 18px;
 	margin: 0 0 20px;
