@@ -4014,12 +4014,12 @@ function usces_get_cart_button( $out = '' ) {
 	if($usces->use_js){
 		$res .= '<input name="previous" type="button" id="previouscart" class="continue_shopping_button" value="' . __('continue shopping','usces') . '"' . apply_filters('usces_filter_cart_prebutton', ' onclick="uscesCart.previousCart();"') . ' />&nbsp;&nbsp;';
 		if( usces_is_cart() ) {
-			$res .= '<input name="customerinfo" type="submit" class="to_customerinfo_button" value="' . __(' Next ','usces') . '"' . apply_filters('usces_filter_cart_nextbutton', ' onclick="return uscesCart.cartNext();"') . ' />';
+			$res .= '<input name="customerinfo" type="submit" class="to_customerinfo_button" value="' . __(' 購入手続きへ ','usces') . '"' . apply_filters('usces_filter_cart_nextbutton', ' onclick="return uscesCart.cartNext();"') . ' />';
 		}
 	}else{
 		$res .= '<a href="' . get_home_url() . '" class="continue_shopping_button">' . __('continue shopping','usces') . '</a>&nbsp;&nbsp;';
 		if( usces_is_cart() ) {
-			$res .= '<input name="customerinfo" type="submit" class="to_customerinfo_button" value="' . __(' Next ','usces') . '"' . apply_filters('usces_filter_cart_nextbutton', NULL) . ' />';
+			$res .= '<input name="customerinfo" type="submit" class="to_customerinfo_button" value="' . __(' 購入手続きへ ','usces') . '"' . apply_filters('usces_filter_cart_nextbutton', NULL) . ' />';
 		}
 	}
 	$res = apply_filters('usces_filter_get_cart_button', $res);
