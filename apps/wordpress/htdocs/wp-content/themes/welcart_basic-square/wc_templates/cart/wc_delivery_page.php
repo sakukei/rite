@@ -62,15 +62,15 @@ usces_delivery_info_script();
 	
 						<table class="customer_form" id="time">
 						<?php if( welcart_basic_have_shipped() ) : ?>
-							<tr class="tr">
+							<tr class="tr delivery_item">
 								<th class="th" scope="row"><?php _e('shipping option', 'usces'); ?></th>
 								<td class="td" colspan="2"><?php usces_the_delivery_method( $usces_entries['order']['delivery_method'] ); ?></td>
 							</tr>
-							<tr class="tr">
+							<tr class="tr delivery_item">
 								<th class="th" scope="row"><?php _e('Delivery date', 'usces'); ?></th>
 								<td class="td" colspan="2"><?php usces_the_delivery_date( $usces_entries['order']['delivery_date'] ); ?></td>
 							</tr>
-							<tr class="tr">
+							<tr class="tr delivery_item">
 								<th class="th" scope="row"><?php _e('Delivery Time', 'usces'); ?></th>
 								<td class="td" colspan="2"><?php usces_the_delivery_time( $usces_entries['order']['delivery_time'] ); ?></td>
 							</tr>
@@ -95,6 +95,7 @@ usces_delivery_info_script();
 							<tr class="tr">
 								<th class="th" rowspan="2" scope="row"><em><?php _e('*', 'usces'); ?></em><?php _e('Terms of Use', 'dlseller'); ?></th>
 								<td class="td" colspan="2"><div class="dlseller_terms"><?php dlseller_terms(); ?></div></td>
+							</tr>
 							</tr>
 							<tr class="tr">
 								<td class="td" colspan="2"><label for="terms"><input type="checkbox" name="offer[terms]" id="terms" /><?php _e('Agree', 'dlseller'); ?></label></td>

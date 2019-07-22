@@ -99,24 +99,30 @@
   flex-direction: column-reverse;
   margin-top: 60px;
 }
-
-.customer_form {
-  select {
-    width: 100%;
-  }
-  td {
-    input {
-      margin-bottom: 8px;
-    }
-    label {
-      display: inline-block;
+#wc_delivery {
+  .customer_form {
+    select {
       width: 100%;
-      margin: 0 auto;
-      padding-top: 4px;
-      text-align: center;
+    }
+    tr {
+      &.delivery_item {
+        display: none;
+      }
+    }
+    td {
+      input {
+        margin-bottom: 8px;
+      }
+      label {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 4px;
+        text-align: center;
+      }
+    }
+    dd {
+      line-height: 1.4;
     }
   }
-}
-#wc_delivery .customer_form dd {
-  line-height: 1.4;
 }

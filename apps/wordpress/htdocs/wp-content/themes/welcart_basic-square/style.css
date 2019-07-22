@@ -915,15 +915,19 @@ input[type=button].allocation_edit_button,
 	margin-top: 60px;
 }
 
-.customer_form select {
+#wc_delivery .customer_form select {
 	width: 100%;
 }
 
-.customer_form td input {
+#wc_delivery .customer_form tr.delivery_item {
+	display: none;
+}
+
+#wc_delivery .customer_form td input {
 	margin-bottom: 8px;
 }
 
-.customer_form td label {
+#wc_delivery .customer_form td label {
 	display: inline-block;
 	width: 100%;
 	margin: 0 auto;
