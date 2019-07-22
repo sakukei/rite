@@ -179,4 +179,14 @@
       }
     }
   }
+  #purchase_form {
+    .send {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 60px;
+      .back_to_delivery_button {
+        margin-top: 12px;
+      }
+    }
+  }
 }

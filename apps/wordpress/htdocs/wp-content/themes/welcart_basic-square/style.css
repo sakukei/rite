@@ -1004,6 +1004,21 @@ input[type=button].allocation_edit_button,
 	font-size: 12px;
 }
 
+#wc_confirm #purchase_form .send {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse;
+	margin-top: 60px;
+}
+
+#wc_confirm #purchase_form .send .back_to_delivery_button {
+	margin-top: 12px;
+}
+
 .p-traveler-name {
 	font-size: 18px;
 	margin: 0 0 20px;
