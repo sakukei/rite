@@ -42,92 +42,94 @@ get_header();
 	
 					<div id="cart">
 						<div class="currency_code"><?php _e('Currency','usces'); ?> : <?php usces_crcode(); ?></div>
-						<table cellspacing="0" id="cart_table">
-							<thead>
-							<tr>
-								<th scope="row" class="num"><?php _e('No.','usces'); ?></th>
-								<th class="thumbnail"></th>
-								<th class="productname"><?php _e('item name','usces'); ?></th>
-								<th class="price"><?php _e('Unit price','usces'); ?></th>
-								<th class="quantity"><?php _e('Quantity', 'usces'); ?></th>
-								<th class="subtotal"><?php _e('Amount', 'usces'); ?></th>
-								<th class="action"></th>
-							</tr>
-							</thead>
-							<tbody>
-								<?php usces_get_confirm_rows(); ?>
-							</tbody>
-							<tfoot>
-							<tr>
-								<th class="num"></th>
-								<th class="thumbnail"></th>
-								<th colspan="3" class="aright"><?php _e('total items', 'usces'); ?></th>
-								<th class="aright amount"><?php usces_crform($usces_entries['order']['total_items_price'], true, false); ?></th>
-							</tr>
-						<?php if( !empty($usces_entries['order']['discount']) ) : ?>
-							<tr>
-								<td class="num"></td>
-								<td class="thumbnail"></td>
-								<td colspan="3" class="aright"><?php echo apply_filters('usces_confirm_discount_label', __('Campaign disnount', 'usces')); ?></td>
-								<td class="aright" style="color:#FF0000"><?php usces_crform($usces_entries['order']['discount'], true, false); ?></td>
-							</tr>
-						<?php endif; ?>
-						<?php if( usces_is_tax_display() && 'products' == usces_get_tax_target() ) : ?>
-							<tr>
-								<td class="num"></td>
-								<td class="thumbnail"></td>
-								<td colspan="3" class="aright"><?php usces_tax_label(); ?></td>
-								<td class="aright"><?php usces_tax($usces_entries); ?></td>
-							</tr>
-						<?php endif; ?>
-						<?php if( usces_is_member_system() && usces_is_member_system_point() && !empty($usces_entries['order']['usedpoint']) && 0 == usces_point_coverage() ) : ?>
-							<tr>
-								<td class="num"></td>
-								<td class="thumbnail"></td>
-								<td colspan="3" class="aright"><?php _e('Used points', 'usces'); ?></td>
-								<td class="aright" style="color:#FF0000"><?php echo number_format($usces_entries['order']['usedpoint']); ?></td>
-							</tr>
-						<?php endif; ?>
-						<?php if( welcart_basic_have_shipped() ) : ?>
-							<tr>
-								<td class="num"></td>
-								<td class="thumbnail"></td>
-								<td colspan="3" class="aright"><?php _e('Shipping', 'usces'); ?></td>
-								<td class="aright"><?php usces_crform($usces_entries['order']['shipping_charge'], true, false); ?></td>
-							</tr>
-						<?php endif; ?>
-						<?php if( !empty($usces_entries['order']['cod_fee']) ) : ?>
-							<tr>
-								<td class="num"></td>
-								<td class="thumbnail"></td>
-								<td colspan="3" class="aright"><?php echo apply_filters('usces_filter_cod_label', __('COD fee', 'usces')); ?></td>
-								<td class="aright"><?php usces_crform($usces_entries['order']['cod_fee'], true, false); ?></td>
-							</tr>
-						<?php endif; ?>
-						<?php if( usces_is_tax_display() && 'all' == usces_get_tax_target() ) : ?>
-							<tr>
-								<td class="num"></td>
-								<td class="thumbnail"></td>
-								<td colspan="3" class="aright"><?php usces_tax_label(); ?></td>
-								<td class="aright"><?php usces_tax($usces_entries); ?></td>
-							</tr>
-						<?php endif; ?>
-						<?php if( usces_is_member_system() && usces_is_member_system_point() && !empty($usces_entries['order']['usedpoint']) && 1 == usces_point_coverage() ) : ?>
-							<tr>
-								<td class="num"></td>
-								<td class="thumbnail"></td>
-								<td colspan="3" class="aright"><?php _e('Used points', 'usces'); ?></td>
-								<td class="aright" style="color:#FF0000"><?php echo number_format($usces_entries['order']['usedpoint']); ?></td>
-							</tr>
-						<?php endif; ?>
-							<tr>
-								<th class="num"></th>
-								<th class="thumbnail"></th>
-								<th colspan="3" class="aright"><?php _e('Total Amount', 'usces'); ?></th>
-								<th class="aright amount"><?php usces_crform($usces_entries['order']['total_full_price'], true, false); ?></th>
-							</tr>
-							</tfoot>
-						</table>
+
+            <?php usces_get_confirm_rows(); ?>
+<!--						<table cellspacing="0" id="cart_table">-->
+<!--							<thead>-->
+<!--							<tr>-->
+<!--								<th scope="row" class="num">--><?php //_e('No.','usces'); ?><!--</th>-->
+<!--								<th class="thumbnail"></th>-->
+<!--								<th class="productname">--><?php //_e('item name','usces'); ?><!--</th>-->
+<!--								<th class="price">--><?php //_e('Unit price','usces'); ?><!--</th>-->
+<!--								<th class="quantity">--><?php //_e('Quantity', 'usces'); ?><!--</th>-->
+<!--								<th class="subtotal">--><?php //_e('Amount', 'usces'); ?><!--</th>-->
+<!--								<th class="action"></th>-->
+<!--							</tr>-->
+<!--							</thead>-->
+<!--							<tbody>-->
+<!--								--><?php //usces_get_confirm_rows(); ?>
+<!--							</tbody>-->
+<!--							<tfoot>-->
+<!--							<tr>-->
+<!--								<th class="num"></th>-->
+<!--								<th class="thumbnail"></th>-->
+<!--								<th colspan="3" class="aright">--><?php //_e('total items', 'usces'); ?><!--</th>-->
+<!--								<th class="aright amount">--><?php //usces_crform($usces_entries['order']['total_items_price'], true, false); ?><!--</th>-->
+<!--							</tr>-->
+<!--						--><?php //if( !empty($usces_entries['order']['discount']) ) : ?>
+<!--							<tr>-->
+<!--								<td class="num"></td>-->
+<!--								<td class="thumbnail"></td>-->
+<!--								<td colspan="3" class="aright">--><?php //echo apply_filters('usces_confirm_discount_label', __('Campaign disnount', 'usces')); ?><!--</td>-->
+<!--								<td class="aright" style="color:#FF0000">--><?php //usces_crform($usces_entries['order']['discount'], true, false); ?><!--</td>-->
+<!--							</tr>-->
+<!--						--><?php //endif; ?>
+<!--						--><?php //if( usces_is_tax_display() && 'products' == usces_get_tax_target() ) : ?>
+<!--							<tr>-->
+<!--								<td class="num"></td>-->
+<!--								<td class="thumbnail"></td>-->
+<!--								<td colspan="3" class="aright">--><?php //usces_tax_label(); ?><!--</td>-->
+<!--								<td class="aright">--><?php //usces_tax($usces_entries); ?><!--</td>-->
+<!--							</tr>-->
+<!--						--><?php //endif; ?>
+<!--						--><?php //if( usces_is_member_system() && usces_is_member_system_point() && !empty($usces_entries['order']['usedpoint']) && 0 == usces_point_coverage() ) : ?>
+<!--							<tr>-->
+<!--								<td class="num"></td>-->
+<!--								<td class="thumbnail"></td>-->
+<!--								<td colspan="3" class="aright">--><?php //_e('Used points', 'usces'); ?><!--</td>-->
+<!--								<td class="aright" style="color:#FF0000">--><?php //echo number_format($usces_entries['order']['usedpoint']); ?><!--</td>-->
+<!--							</tr>-->
+<!--						--><?php //endif; ?>
+<!--						--><?php //if( welcart_basic_have_shipped() ) : ?>
+<!--							<tr>-->
+<!--								<td class="num"></td>-->
+<!--								<td class="thumbnail"></td>-->
+<!--								<td colspan="3" class="aright">--><?php //_e('Shipping', 'usces'); ?><!--</td>-->
+<!--								<td class="aright">--><?php //usces_crform($usces_entries['order']['shipping_charge'], true, false); ?><!--</td>-->
+<!--							</tr>-->
+<!--						--><?php //endif; ?>
+<!--						--><?php //if( !empty($usces_entries['order']['cod_fee']) ) : ?>
+<!--							<tr>-->
+<!--								<td class="num"></td>-->
+<!--								<td class="thumbnail"></td>-->
+<!--								<td colspan="3" class="aright">--><?php //echo apply_filters('usces_filter_cod_label', __('COD fee', 'usces')); ?><!--</td>-->
+<!--								<td class="aright">--><?php //usces_crform($usces_entries['order']['cod_fee'], true, false); ?><!--</td>-->
+<!--							</tr>-->
+<!--						--><?php //endif; ?>
+<!--						--><?php //if( usces_is_tax_display() && 'all' == usces_get_tax_target() ) : ?>
+<!--							<tr>-->
+<!--								<td class="num"></td>-->
+<!--								<td class="thumbnail"></td>-->
+<!--								<td colspan="3" class="aright">--><?php //usces_tax_label(); ?><!--</td>-->
+<!--								<td class="aright">--><?php //usces_tax($usces_entries); ?><!--</td>-->
+<!--							</tr>-->
+<!--						--><?php //endif; ?>
+<!--						--><?php //if( usces_is_member_system() && usces_is_member_system_point() && !empty($usces_entries['order']['usedpoint']) && 1 == usces_point_coverage() ) : ?>
+<!--							<tr>-->
+<!--								<td class="num"></td>-->
+<!--								<td class="thumbnail"></td>-->
+<!--								<td colspan="3" class="aright">--><?php //_e('Used points', 'usces'); ?><!--</td>-->
+<!--								<td class="aright" style="color:#FF0000">--><?php //echo number_format($usces_entries['order']['usedpoint']); ?><!--</td>-->
+<!--							</tr>-->
+<!--						--><?php //endif; ?>
+<!--							<tr>-->
+<!--								<th class="num"></th>-->
+<!--								<th class="thumbnail"></th>-->
+<!--								<th colspan="3" class="aright">--><?php //_e('Total Amount', 'usces'); ?><!--</th>-->
+<!--								<th class="aright amount">--><?php //usces_crform($usces_entries['order']['total_full_price'], true, false); ?><!--</th>-->
+<!--							</tr>-->
+<!--							</tfoot>-->
+<!--						</table>-->
 	
 					<?//php if( usces_is_member_system() && usces_is_member_system_point() && usces_is_login() && welcart_basic_is_available_point() && 0 < $usces_entries['order']['total_full_price'] ) : ?>
 <!--						<form action="--><?php //usces_url('cart'); ?><!--" method="post" onKeyDown="if(event.keyCode == 13){return false;}">-->

@@ -99,6 +99,8 @@
   flex-direction: column-reverse;
   margin-top: 60px;
 }
+
+// 配送
 #wc_delivery {
   .customer_form {
     select {
@@ -125,4 +127,9 @@
       line-height: 1.4;
     }
   }
+}
+
+// 内容確認
+#wc_confirm {
+
 }
