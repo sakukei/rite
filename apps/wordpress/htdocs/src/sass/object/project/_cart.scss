@@ -131,5 +131,18 @@
 
 // 内容確認
 #wc_confirm {
-
+  #confirm_table {
+    tr {
+      padding: 0;
+      margin: 0;
+    }
+    th {
+      background: none;
+      border: none;
+    }
+    td {
+      background: none;
+      border: none;
+    }
+  }
 }

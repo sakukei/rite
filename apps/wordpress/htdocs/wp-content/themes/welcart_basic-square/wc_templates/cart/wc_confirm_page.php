@@ -171,44 +171,44 @@ get_header();
 					</div><!-- #cart -->
 	
 					<table id="confirm_table">
-						<tr class="ttl">
-							<td colspan="2"><h3><?php _e('Customer Information', 'usces'); ?></h3></td>
+						<tr class="tr">
+              <th class="th"><?php _e('Customer Information', 'usces'); ?></th>
 						</tr>
-						<tr>
-							<th><?php _e('e-mail adress', 'usces'); ?></th>
-							<td><?php esc_html_e($usces_entries['customer']['mailaddress1']); ?></td>
+						<tr class="tr">
+							<th class="th"><?php _e('e-mail adress', 'usces'); ?></th>
+							<td class="td"><?php esc_html_e($usces_entries['customer']['mailaddress1']); ?></td>
 						</tr>
 						<?php uesces_addressform( 'confirm', $usces_entries, 'echo' ); ?>
-						<tr class="ttl">
-							<td colspan="2"><h3><?php _e('Others', 'usces'); ?></h3></td>
+						<tr class="tr">
+							<th class="td" colspan="2"><?php _e('Others', 'usces'); ?></th>
 						</tr>
 					<?php if( welcart_basic_have_shipped() ) : ?>
-						<tr>
-							<th><?php _e('shipping option', 'usces'); ?></th>
-							<td><?php esc_html_e(usces_delivery_method_name( $usces_entries['order']['delivery_method'], 'return' )); ?></td>
+						<tr class="tr">
+							<th class="th"><?php _e('shipping option', 'usces'); ?></th>
+							<td class="td"><?php esc_html_e(usces_delivery_method_name( $usces_entries['order']['delivery_method'], 'return' )); ?></td>
 						</tr>
-						<tr>
-							<th><?php _e('Delivery date', 'usces'); ?></th>
-							<td><?php esc_html_e($usces_entries['order']['delivery_date']); ?></td>
+						<tr class="tr">
+							<th class="th"><?php _e('Delivery date', 'usces'); ?></th>
+							<td class="td"><?php esc_html_e($usces_entries['order']['delivery_date']); ?></td>
 						</tr>
-						<tr>
-							<th><?php _e('Delivery Time', 'usces'); ?></th>
-							<td><?php esc_html_e($usces_entries['order']['delivery_time']); ?></td>
+						<tr class="tr">
+							<th class="th"><?php _e('Delivery Time', 'usces'); ?></th>
+							<td class="td"><?php esc_html_e($usces_entries['order']['delivery_time']); ?></td>
 						</tr>
 					<?php endif; ?>
-						<tr>
-							<th><?php _e('payment method', 'usces'); ?></th>
-							<td><?php esc_html_e($usces_entries['order']['payment_name'] . usces_payment_detail($usces_entries)); ?></td>
+						<tr class="tr">
+							<th class="th"><?php _e('payment method', 'usces'); ?></th>
+							<td class="td"><?php esc_html_e($usces_entries['order']['payment_name'] . usces_payment_detail($usces_entries)); ?></td>
 						</tr>
 						<?php usces_custom_field_info( $usces_entries, 'order', '' ); ?>
-						<tr>
-							<th><?php _e('Notes', 'usces'); ?></th>
-							<td><?php echo nl2br(esc_html($usces_entries['order']['note'])); ?></td>
+						<tr class="tr">
+							<th class="th"><?php _e('Notes', 'usces'); ?></th>
+							<td class="td"><?php echo nl2br(esc_html($usces_entries['order']['note'])); ?></td>
 						</tr>
 					<?php if( welcart_basic_have_dlseller_content() ) : ?>
-						<tr>
-							<th><?php _e('Terms of Use', 'dlseller'); ?></th>
-							<td><?php echo( $usces_entries['order']['terms'] ? __('Agree','welcart_basic') : '' ); ?></td>
+						<tr class="tr">
+							<th class="th"><?php _e('Terms of Use', 'dlseller'); ?></th>
+							<td class="td"><?php echo( $usces_entries['order']['terms'] ? __('Agree','welcart_basic') : '' ); ?></td>
 						</tr>
 					<?php endif; ?>
 					</table>

@@ -939,6 +939,21 @@ input[type=button].allocation_edit_button,
 	line-height: 1.4;
 }
 
+#wc_confirm #confirm_table tr {
+	padding: 0;
+	margin: 0;
+}
+
+#wc_confirm #confirm_table th {
+	background: none;
+	border: none;
+}
+
+#wc_confirm #confirm_table td {
+	background: none;
+	border: none;
+}
+
 .p-traveler-name {
 	font-size: 18px;
 	margin: 0 0 20px;
