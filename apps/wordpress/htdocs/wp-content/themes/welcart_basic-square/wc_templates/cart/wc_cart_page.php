@@ -91,7 +91,7 @@ get_header();
 						<div class="no_cart"><?php _e('There are no items in your cart.','usces'); ?></div>
 					<?php endif; ?>
 		
-						<div class="send"><?php usces_get_cart_button(); ?></div>
+						<div class="send cart_send"><?php usces_get_cart_button(); ?></div>
 						<?php do_action( 'usces_action_cart_page_inform' ); ?>
 					</form>
 		
