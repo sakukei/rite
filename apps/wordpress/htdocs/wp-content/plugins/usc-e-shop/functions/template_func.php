@@ -3032,52 +3032,52 @@ function uesces_addressform( $type, $data, $out = 'return' ){
 
 		case 'JP':
 			$formtag .= usces_custom_field_info($data, 'customer', 'name_pre', 'return');
-			$formtag .= '<tr class="name-row member-name-row"><th>'.apply_filters( 'usces_filters_addressform_name_label', __('Full name', 'usces'), $type, $values, $applyform ).'</th><td>' . sprintf(_x('%s', 'honorific', 'usces'), (esc_html($values['customer']['name1']) . ' ' . esc_html($values['customer']['name2'])) ) . '</td></tr>';
+			$formtag .= '<tr class="tr name-row member-name-row"><th class="th">'.apply_filters( 'usces_filters_addressform_name_label', __('Full name', 'usces'), $type, $values, $applyform ).'</th><td class="td">' . sprintf(_x('%s', 'honorific', 'usces'), (esc_html($values['customer']['name1']) . ' ' . esc_html($values['customer']['name2'])) ) . '</td></tr>';
 			$furigana = ( '' == (trim($values['customer']['name3']) . trim($values['customer']['name4'])) ) ? '' : sprintf(_x('%s', 'honorific', 'usces'), (esc_html($values['customer']['name3']) . ' ' . esc_html($values['customer']['name4'])) );
-			$furigana_customer = '<tr class="furikana-row member-furikana-row"><th>'.__('furigana', 'usces').'</th><td>' . $furigana . '</td></tr>';
+			$furigana_customer = '<tr class="tr furikana-row member-furikana-row"><th class="th">'.__('furigana', 'usces').'</th><td class="td">' . $furigana . '</td></tr>';
 			$formtag .= apply_filters( 'usces_filter_furigana_confirm_customer', $furigana_customer, $type, $values );
 			$formtag .= usces_custom_field_info($data, 'customer', 'name_after', 'return');
-			$formtag .= '<tr class="zipcode-row member-zipcode-row"><th>'.__('Zip/Postal Code', 'usces').'</th><td>' . esc_html($values['customer']['zipcode']) . '</td></tr>';
+			$formtag .= '<tr class="tr zipcode-row member-zipcode-row"><th class="th">'.__('Zip/Postal Code', 'usces').'</th><td class="td">' . esc_html($values['customer']['zipcode']) . '</td></tr>';
 //20131213_kitamura_start
 			if( count( $options['system']['target_market'] ) != 1 ){
 				$customer_country = (!empty($usces_settings['country'][$values['customer']['country']])) ? $usces_settings['country'][$values['customer']['country']] : '';
-				$formtag .= '<tr class="country-row member-country-row"><th>'.__('Country', 'usces').'</th><td>' . esc_html($customer_country) . '</td></tr>';
+				$formtag .= '<tr class="tr country-row member-country-row"><th class="th">'.__('Country', 'usces').'</th><td class="td">' . esc_html($customer_country) . '</td></tr>';
 			}
 //20131213_kitamura_end
 			$customer_pref = ( $values['customer']['pref'] == __('-- Select --','usces') || $values['customer']['pref'] == '-- Select --' ) ? '' : $values['customer']['pref'];
 			$formtag .= '
-			<tr class="states-row member-states-row"><th>'.__('Province', 'usces').'</th><td>' . esc_html($customer_pref) . '</td></tr>
-			<tr class="address1-row member-address1-row"><th>'.__('city', 'usces').'</th><td>' . esc_html($values['customer']['address1']) . '</td></tr>
-			<tr class="address2-row member-address2-row"><th>'.__('numbers', 'usces').'</th><td>' . esc_html($values['customer']['address2']) . '</td></tr>
-			<tr class="address3-row member-address3-row"><th>'.__('building name', 'usces').'</th><td>' . esc_html($values['customer']['address3']) . '</td></tr>
-			<tr class="tel-row member-tel-row"><th>'.__('Phone number', 'usces').'</th><td>' . esc_html($values['customer']['tel']) . '</td></tr>
-			<tr class="fax-row member-fax-row"><th>'.__('FAX number', 'usces').'</th><td>' . esc_html($values['customer']['fax']) . '</td></tr>';
+			<tr class="tr states-row member-states-row"><th class="th">'.__('Province', 'usces').'</th><td class="td">' . esc_html($customer_pref) . '</td></tr>
+			<tr class="tr address1-row member-address1-row"><th class="th">'.__('city', 'usces').'</th><td class="td">' . esc_html($values['customer']['address1']) . '</td></tr>
+			<tr class="tr address2-row member-address2-row"><th class="th">'.__('numbers', 'usces').'</th><td class="td">' . esc_html($values['customer']['address2']) . '</td></tr>
+			<tr class="tr address3-row member-address3-row"><th class="th">'.__('building name', 'usces').'</th><td class="td">' . esc_html($values['customer']['address3']) . '</td></tr>
+			<tr class="tr tel-row member-tel-row"><th class="th">'.__('Phone number', 'usces').'</th><td class="td">' . esc_html($values['customer']['tel']) . '</td></tr>
+			<tr class="tr fax-row member-fax-row"><th class="th">'.__('FAX number', 'usces').'</th><td class="td">' . esc_html($values['customer']['fax']) . '</td></tr>';
 			$formtag .= usces_custom_field_info($data, 'customer', 'fax_after', 'return');
 
 			$shipping_address_info = '';
 			if( isset($values['delivery']) ) {
-				$shipping_address_info = '<tr class="ttl"><td colspan="2"><h3>'.__('Shipping address information', 'usces').'</h3></td></tr>';
+				$shipping_address_info = '<tr class="tr ttl"><td class="td" colspan="2"><h3>'.__('Shipping address information', 'usces').'</h3></td></tr>';
 				$shipping_address_info .= usces_custom_field_info($data, 'delivery', 'name_pre', 'return');
-				$shipping_address_info .= '<tr class="name-row delivery-name-row"><th>'.apply_filters( 'usces_filters_addressform_name_label', __('Full name', 'usces'), $type, $values, $applyform ).'</th><td>' . sprintf(_x('%s', 'honorific', 'usces'), (esc_html($values['delivery']['name1']) . ' ' . esc_html($values['delivery']['name2'])) ) . '</td></tr>';
+				$shipping_address_info .= '<tr class="tr name-row delivery-name-row"><th class="th">'.apply_filters( 'usces_filters_addressform_name_label', __('Full name', 'usces'), $type, $values, $applyform ).'</th><td class="td">' . sprintf(_x('%s', 'honorific', 'usces'), (esc_html($values['delivery']['name1']) . ' ' . esc_html($values['delivery']['name2'])) ) . '</td></tr>';
 				$deli_furigana = ( '' == (trim($values['delivery']['name3']) . trim($values['delivery']['name4'])) ) ? '' : sprintf(_x('%s', 'honorific', 'usces'), (esc_html($values['delivery']['name3']) . ' ' . esc_html($values['delivery']['name4'])) );
-				$furigana_delivery = '<tr class="furikana-row delivery-furikana-row"><th>'.__('furigana', 'usces').'</th><td>' . $deli_furigana . '</td></tr>';
+				$furigana_delivery = '<tr class="tr furikana-row delivery-furikana-row"><th class="th">'.__('furigana', 'usces').'</th><td class="td">' . $deli_furigana . '</td></tr>';
 				$shipping_address_info .= apply_filters( 'usces_filter_furigana_confirm_delivery', $furigana_delivery, $type, $values );
 				$shipping_address_info .= usces_custom_field_info($values, 'delivery', 'name_after', 'return');
-				$shipping_address_info .= '<tr class="zipcode-row delivery-zipcode-row"><th>'.__('Zip/Postal Code', 'usces').'</th><td>' . esc_html($values['delivery']['zipcode']) . '</td></tr>';
+				$shipping_address_info .= '<tr class="tr zipcode-row delivery-zipcode-row"><th class="th">'.__('Zip/Postal Code', 'usces').'</th><td class="td">' . esc_html($values['delivery']['zipcode']) . '</td></tr>';
 	//20131213_kitamura_start
 				if( count( $options['system']['target_market'] ) != 1 ){
 					$shipping_country = (!empty($usces_settings['country'][$values['delivery']['country']])) ? $usces_settings['country'][$values['delivery']['country']] : '';
-					$shipping_address_info .= '<tr class="country-row delivery-country-row"><th>'.__('Country', 'usces').'</th><td>' . esc_html($shipping_country) . '</td></tr>';
+					$shipping_address_info .= '<tr class="tr country-row delivery-country-row"><th class="th">'.__('Country', 'usces').'</th><td class="td">' . esc_html($shipping_country) . '</td></tr>';
 				}
 	//20131213_kitamura_end
 				$delivery_pref = ( $values['delivery']['pref'] == __('-- Select --','usces') || $values['delivery']['pref'] == '-- Select --' ) ? '' : $values['delivery']['pref'];
 				$shipping_address_info .= '
-				<tr class="states-row delivery-states-row"><th>'.__('Province', 'usces').'</th><td>' . esc_html($delivery_pref) . '</td></tr>
-				<tr class="address1-row delivery-address1-row"><th>'.__('city', 'usces').'</th><td>' . esc_html($values['delivery']['address1']) . '</td></tr>
-				<tr class="address2-row delivery-address2-row"><th>'.__('numbers', 'usces').'</th><td>' . esc_html($values['delivery']['address2']) . '</td></tr>
-				<tr class="address3-row delivery-address3-row"><th>'.__('building name', 'usces').'</th><td>' . esc_html($values['delivery']['address3']) . '</td></tr>
-				<tr class="tel-row delivery-tel-row"><th>'.__('Phone number', 'usces').'</th><td>' . esc_html($values['delivery']['tel']) . '</td></tr>
-				<tr class="fax-row delivery-fax-row"><th>'.__('FAX number', 'usces').'</th><td>' . esc_html($values['delivery']['fax']) . '</td></tr>';
+				<tr class="tr states-row delivery-states-row"><th class="th">'.__('Province', 'usces').'</th><td class="td">' . esc_html($delivery_pref) . '</td></tr>
+				<tr class="tr address1-row delivery-address1-row"><th class="th">'.__('city', 'usces').'</th><td class="td">' . esc_html($values['delivery']['address1']) . '</td></tr>
+				<tr class="tr address2-row delivery-address2-row"><th class="th">'.__('numbers', 'usces').'</th><td class="td">' . esc_html($values['delivery']['address2']) . '</td></tr>
+				<tr class="tr address3-row delivery-address3-row"><th class="th">'.__('building name', 'usces').'</th><td class="td">' . esc_html($values['delivery']['address3']) . '</td></tr>
+				<tr class="tr tel-row delivery-tel-row"><th class="th">'.__('Phone number', 'usces').'</th><td class="td">' . esc_html($values['delivery']['tel']) . '</td></tr>
+				<tr class="tr fax-row delivery-fax-row"><th class="th">'.__('FAX number', 'usces').'</th><td class="td">' . esc_html($values['delivery']['fax']) . '</td></tr>';
 				$shipping_address_info .= usces_custom_field_info($data, 'delivery', 'fax_after', 'return');
 			}
 			$formtag .= apply_filters('usces_filter_shipping_address_info', $shipping_address_info);
