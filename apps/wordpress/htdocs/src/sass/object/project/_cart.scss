@@ -137,8 +137,11 @@
       display: block;
     }
     tr {
+      display: block;
+      width: 100%;
       padding: 0;
       margin: 0;
+      border-bottom: 2px solid #efefef;
     }
     th {
       background: none;
@@ -153,7 +156,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 16px;
-      border-bottom: 2px solid #efefef;
     }
     .th,
     .td {
@@ -167,6 +169,14 @@
     }
     .td {
       width: 58%;
+    }
+    .section {
+      padding-top: 40px;
+      th {
+        padding-bottom: 7px;
+        padding-left: 8px;
+        font-size: 12px;
+      }
     }
   }
 }

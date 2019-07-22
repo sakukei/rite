@@ -948,8 +948,11 @@ input[type=button].allocation_edit_button,
 }
 
 #wc_confirm #confirm_table tr {
+	display: block;
+	width: 100%;
 	padding: 0;
 	margin: 0;
+	border-bottom: 2px solid #efefef;
 }
 
 #wc_confirm #confirm_table th {
@@ -973,7 +976,6 @@ input[type=button].allocation_edit_button,
 	-ms-flex-align: center;
 	align-items: center;
 	padding: 16px;
-	border-bottom: 2px solid #efefef;
 }
 
 #wc_confirm #confirm_table .th,
@@ -990,6 +992,16 @@ input[type=button].allocation_edit_button,
 
 #wc_confirm #confirm_table .td {
 	width: 58%;
+}
+
+#wc_confirm #confirm_table .section {
+	padding-top: 40px;
+}
+
+#wc_confirm #confirm_table .section th {
+	padding-bottom: 7px;
+	padding-left: 8px;
+	font-size: 12px;
 }
 
 .p-traveler-name {
