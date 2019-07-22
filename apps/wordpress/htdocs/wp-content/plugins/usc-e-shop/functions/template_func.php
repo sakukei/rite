@@ -2954,12 +2954,11 @@ function usces_get_confirm_rows( $out = '' ) {
 			$options =  array();
 		}
 
-		$row .= '<tr>
-			<td class="num">' . ($i + 1) . '</td>
-			<td class="thumbnail">';
+		$row .= '<div class="cart_item">
+			<div class="thumbnail">';
 		$cart_thumbnail = wp_get_attachment_image( $pictid, array(60, 60), true );
 		$row .= apply_filters('usces_filter_cart_thumbnail', $cart_thumbnail, $post_id, $pictid, $i, $cart_row);
-		$row .= '</td><td class="productname">' . apply_filters('usces_filter_cart_item_name', esc_html($cartItemName), $args ) . '<br />';
+		$row .= '</div><div class="detail"><div class="info"><div class="productname">' . apply_filters('usces_filter_cart_item_name', esc_html($cartItemName), $args ) . '<br />';
 		if( is_array($options) && count($options) > 0 ){
 			$optstr = '';
 			foreach($options as $key => $value){
@@ -2980,17 +2979,17 @@ function usces_get_confirm_rows( $out = '' ) {
 					}
 				}
 			}
-			$row .= apply_filters( 'usces_filter_option_confirm', $optstr, $options);
+			//$row .= apply_filters( 'usces_filter_option_confirm', $optstr, $options);
 		}
 		$row .= apply_filters( 'usces_filter_option_info_confirm', '', $cart_row, $args );
-		$row .= '</td>
-			<td class="unitprice">' . usces_crform($skuPrice, true, false, 'return') . '</td>
-			<td class="quantity">' . $cart_row['quantity'] . '</td>
-			<td class="subtotal">' . usces_crform(($skuPrice * $cart_row['quantity']), true, false, 'return') . '</td>
-			<td class="action">';
+		$row .= '</div>
+			<div class="unitprice">' . usces_crform($skuPrice, true, false, 'return') . '</div></div></div>
+			<div class="num"><div class="quantity">' . $cart_row['quantity'] . '</div>
+			<div class="subtotal">' . usces_crform(($skuPrice * $cart_row['quantity']), true, false, 'return') . '</div>
+			<div class="action">';
 		$row .= apply_filters('usces_additional_confirm', '', array($i, $post_id, $sku_code));
-		$row .= '</td>
-		</tr>';
+		$row .= '</div></div>
+		</div>';
 
 		$materials = compact('i', 'cart_row', 'post_id', 'sku', 'sku_code', 'quantity', 'options', 'advance',
 						'itemCode', 'itemName', 'cartItemName', 'skuPrice', 'pictid');
