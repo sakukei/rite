@@ -939,8 +939,17 @@ input[type=button].allocation_edit_button,
 	line-height: 1.4;
 }
 
-#cart .cart_item {
+.order_item {
 	margin-top: 60px;
+}
+
+.order_item .title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.order_item .cart_item {
+	margin-top: 24px;
 }
 
 #wc_confirm #confirm_table {

@@ -57,7 +57,10 @@ get_header();
               </dl>
             </div>
 
-            <?php usces_get_confirm_rows(); ?>
+            <div class="order_item">
+              <p class="title">注文商品</p>
+              <?php usces_get_confirm_rows(); ?>
+            </div>
 <!--						<table cellspacing="0" id="cart_table">-->
 <!--							<thead>-->
 <!--							<tr>-->
