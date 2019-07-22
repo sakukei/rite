@@ -875,6 +875,7 @@ input[type=button].allocation_edit_button,
 
 .cart_result .title {
 	font-size: 16px;
+	font-weight: bold;
 }
 
 .cart_result .dl {
@@ -896,7 +897,7 @@ input[type=button].allocation_edit_button,
 
 .cart_result .dt,
 .cart_result .dd {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .cart_result .sum {
