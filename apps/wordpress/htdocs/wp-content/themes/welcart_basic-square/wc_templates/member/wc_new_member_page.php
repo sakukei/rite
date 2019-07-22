@@ -54,7 +54,8 @@ get_header();
                     <tr class="tr">
                       <th class="th" scope="row">
                         <em><?php _e('*', 'usces'); ?></em><?php _e('e-mail adress', 'usces'); ?></th>
-                      <td class="td" colspan="2"><input name="member[mailaddress1]" id="mailaddress1" type="text" value="<?php usces_memberinfo('mailaddress1'); ?>"/></td>
+                      <td class="td" colspan="2"><input name="member[mailaddress1]" id="mailaddress1" type="text"
+                                                        value="<?php usces_memberinfo('mailaddress1'); ?>"/></td>
                     </tr>
                     <tr class="tr">
                       <th class="th" scope="row"><em><?php _e('*', 'usces'); ?></em><?php _e('E-mail address (for verification)', 'usces'); ?></th>
