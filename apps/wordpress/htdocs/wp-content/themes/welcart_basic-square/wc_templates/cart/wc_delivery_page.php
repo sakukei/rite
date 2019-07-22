@@ -110,7 +110,7 @@ usces_delivery_info_script();
 							</tr>
 						</table>
 	
-						<div class="send">
+						<div class="send cart_send">
 							<input name="offer[cus_id]" type="hidden" value="" />
 							<input name="backCustomer" type="submit" class="back_to_customer_button" value="<?php _e('Back', 'usces'); ?>"<?php echo apply_filters( 'usces_filter_deliveryinfo_prebutton', NULL ); ?> />&nbsp;&nbsp;
 							<input name="confirm" type="submit" class="to_confirm_button" value="<?php _e(' Next ', 'usces'); ?>"<?php echo apply_filters( 'usces_filter_deliveryinfo_nextbutton', NULL ); ?> />
