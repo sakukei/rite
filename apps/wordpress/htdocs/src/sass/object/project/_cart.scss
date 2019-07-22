@@ -29,14 +29,12 @@
 // usces-cart
 
 .cart_item {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
   & + .cart_item {
     margin-top: 24px;
   }
   .thumbnail {
-    max-width: 90px;
+    width: 30%;
     img {
       width: 100%;
       height: 100%;
@@ -44,14 +42,15 @@
     }
   }
   .detail {
-    max-width: 180px;
+    width: 55%;
+    padding-left: 8px;
   }
   .num {
-    max-width: 40px;
+    width: 15%;
   }
   .quantity {
     input {
-      max-width: 40px;
+      width: 100%;
     }
   }
   .unitprice {
@@ -74,6 +73,7 @@
   margin-top: 42px;
   .title {
     font-size: 16px;
+    font-weight: bold;
   }
   .dl {
     margin-top: 24px;
@@ -87,10 +87,146 @@
   }
   .dt,
   .dd {
-    font-size: 12px;
+    font-size: 14px;
   }
   .sum {
     font-size: 16px;
     font-weight: bold;
+  }
+}
+
+.cart_send {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 60px;
+}
+
+// 配送
+#wc_delivery {
+  .customer_form {
+    select {
+      width: 100%;
+    }
+    tr {
+      &.delivery_item {
+        display: none;
+      }
+    }
+    td {
+      input {
+        margin-bottom: 8px;
+      }
+      label {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 4px;
+        text-align: center;
+      }
+    }
+    dd {
+      line-height: 1.4;
+    }
+  }
+}
+
+// 内容確認
+.order_item {
+  margin-top: 60px;
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .cart_item {
+    margin-top: 24px;
+  }
+}
+#wc_confirm {
+  #confirm_table {
+    margin-top: 60px;
+    tbody {
+      display: block;
+    }
+    tr {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border-bottom: 2px solid #efefef;
+    }
+    th {
+      background: none;
+      border: none;
+    }
+    td {
+      background: none;
+      border: none;
+    }
+    .tr {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+    }
+    .th,
+    .td {
+      margin-bottom: 0;
+      font-size: 12px;
+      color: #555;
+    }
+    .th {
+      width: 42%;
+      padding-left: 8px;
+    }
+    .td {
+      width: 58%;
+    }
+    .section {
+      padding-top: 40px;
+      th {
+        padding-bottom: 7px;
+        padding-left: 8px;
+        font-size: 12px;
+      }
+    }
+  }
+  #purchase_form {
+    .send {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 60px;
+      .back_to_delivery_button {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+// 完了
+#wc_ordercompletion {
+  margin-top: 60px;
+  .logo {
+    width: 40px;
+    margin: 0 auto;
+  }
+  .h3 {
+    margin-top: 44px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .completion_text {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .send a {
+    display: block;
+    width: 100%;
+    padding: .714288em 1.42857em;
+    background: #327faa;
+    color: #fff;
+    &:hover {
+      background: #327faa;
+    }
   }
 }

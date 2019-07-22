@@ -819,27 +819,9 @@ input[type=button].allocation_edit_button,
 }
 
 .cart_item {
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-columns: 1fr 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr;
-	-ms-grid-rows: 1fr;
-	grid-template-rows: 1fr;
-}
-
-.cart_item > *:nth-child(1) {
-	-ms-grid-row: 1;
-	-ms-grid-column: 1;
-}
-
-.cart_item > *:nth-child(2) {
-	-ms-grid-row: 1;
-	-ms-grid-column: 2;
-}
-
-.cart_item > *:nth-child(3) {
-	-ms-grid-row: 1;
-	-ms-grid-column: 3;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .cart_item + .cart_item {
@@ -847,7 +829,7 @@ input[type=button].allocation_edit_button,
 }
 
 .cart_item .thumbnail {
-	max-width: 90px;
+	width: 30%;
 }
 
 .cart_item .thumbnail img {
@@ -858,15 +840,16 @@ input[type=button].allocation_edit_button,
 }
 
 .cart_item .detail {
-	max-width: 180px;
+	width: 55%;
+	padding-left: 8px;
 }
 
 .cart_item .num {
-	max-width: 40px;
+	width: 15%;
 }
 
 .cart_item .quantity input {
-	max-width: 40px;
+	width: 100%;
 }
 
 .cart_item .unitprice {
@@ -892,6 +875,7 @@ input[type=button].allocation_edit_button,
 
 .cart_result .title {
 	font-size: 16px;
+	font-weight: bold;
 }
 
 .cart_result .dl {
@@ -913,12 +897,173 @@ input[type=button].allocation_edit_button,
 
 .cart_result .dt,
 .cart_result .dd {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .cart_result .sum {
 	font-size: 16px;
 	font-weight: bold;
+}
+
+.cart_send {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse;
+	margin-top: 60px;
+}
+
+#wc_delivery .customer_form select {
+	width: 100%;
+}
+
+#wc_delivery .customer_form tr.delivery_item {
+	display: none;
+}
+
+#wc_delivery .customer_form td input {
+	margin-bottom: 8px;
+}
+
+#wc_delivery .customer_form td label {
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 4px;
+	text-align: center;
+}
+
+#wc_delivery .customer_form dd {
+	line-height: 1.4;
+}
+
+.order_item {
+	margin-top: 60px;
+}
+
+.order_item .title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.order_item .cart_item {
+	margin-top: 24px;
+}
+
+#wc_confirm #confirm_table {
+	margin-top: 60px;
+}
+
+#wc_confirm #confirm_table tbody {
+	display: block;
+}
+
+#wc_confirm #confirm_table tr {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-bottom: 2px solid #efefef;
+}
+
+#wc_confirm #confirm_table th {
+	background: none;
+	border: none;
+}
+
+#wc_confirm #confirm_table td {
+	background: none;
+	border: none;
+}
+
+#wc_confirm #confirm_table .tr {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 16px;
+}
+
+#wc_confirm #confirm_table .th,
+#wc_confirm #confirm_table .td {
+	margin-bottom: 0;
+	font-size: 12px;
+	color: #555;
+}
+
+#wc_confirm #confirm_table .th {
+	width: 42%;
+	padding-left: 8px;
+}
+
+#wc_confirm #confirm_table .td {
+	width: 58%;
+}
+
+#wc_confirm #confirm_table .section {
+	padding-top: 40px;
+}
+
+#wc_confirm #confirm_table .section th {
+	padding-bottom: 7px;
+	padding-left: 8px;
+	font-size: 12px;
+}
+
+#wc_confirm #purchase_form .send {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse;
+	margin-top: 60px;
+}
+
+#wc_confirm #purchase_form .send .back_to_delivery_button {
+	margin-top: 12px;
+}
+
+#wc_ordercompletion {
+	margin-top: 60px;
+}
+
+#wc_ordercompletion .logo {
+	width: 40px;
+	margin: 0 auto;
+}
+
+#wc_ordercompletion .h3 {
+	margin-top: 44px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#wc_ordercompletion .completion_text {
+	margin-top: 12px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#wc_ordercompletion .send a {
+	display: block;
+	width: 100%;
+	padding: .714288em 1.42857em;
+	background: #327faa;
+	color: #fff;
+}
+
+#wc_ordercompletion .send a:hover {
+	background: #327faa;
 }
 
 .p-traveler-name {
