@@ -129,27 +129,27 @@ get_header();
 							</tfoot>
 						</table>
 	
-					<?php if( usces_is_member_system() && usces_is_member_system_point() && usces_is_login() && welcart_basic_is_available_point() && 0 < $usces_entries['order']['total_full_price'] ) : ?>
-						<form action="<?php usces_url('cart'); ?>" method="post" onKeyDown="if(event.keyCode == 13){return false;}">
-	
-							<div class="error_message"><?php usces_error_message(); ?></div>
-							<table cellspacing="0" id="point_table">
-								<tr>
-									<td class="c-point"><?php _e('The current point', 'usces'); ?></td>
-									<td><span class="point"><?php echo $usces_members['point']; ?></span>pt</td>
-								</tr>
-								<tr>
-									<td class="u-point"><?php _e('Points you are using here', 'usces'); ?></td>
-									<td><input name="offer[usedpoint]" class="used_point" type="text" value="<?php esc_attr_e($usces_entries['order']['usedpoint']); ?>" />pt</td>
-								</tr>
-								<tr>
-									<td colspan="2" class="point-btn"><input name="use_point" type="submit" class="use_point_button" value="<?php _e('Use the points', 'usces'); ?>" /></td>
-								</tr>
-							</table>
-							<?php do_action( 'usces_action_confirm_page_point_inform' ); ?>
-	
-						</form>
-					<?php endif; ?>
+					<?//php if( usces_is_member_system() && usces_is_member_system_point() && usces_is_login() && welcart_basic_is_available_point() && 0 < $usces_entries['order']['total_full_price'] ) : ?>
+<!--						<form action="--><?php //usces_url('cart'); ?><!--" method="post" onKeyDown="if(event.keyCode == 13){return false;}">-->
+<!--	-->
+<!--							<div class="error_message">--><?php //usces_error_message(); ?><!--</div>-->
+<!--							<table cellspacing="0" id="point_table">-->
+<!--								<tr>-->
+<!--									<td class="c-point">--><?php //_e('The current point', 'usces'); ?><!--</td>-->
+<!--									<td><span class="point">--><?php //echo $usces_members['point']; ?><!--</span>pt</td>-->
+<!--								</tr>-->
+<!--								<tr>-->
+<!--									<td class="u-point">--><?php //_e('Points you are using here', 'usces'); ?><!--</td>-->
+<!--									<td><input name="offer[usedpoint]" class="used_point" type="text" value="--><?php //esc_attr_e($usces_entries['order']['usedpoint']); ?><!--" />pt</td>-->
+<!--								</tr>-->
+<!--								<tr>-->
+<!--									<td colspan="2" class="point-btn"><input name="use_point" type="submit" class="use_point_button" value="--><?php //_e('Use the points', 'usces'); ?><!--" /></td>-->
+<!--								</tr>-->
+<!--							</table>-->
+<!--							--><?php //do_action( 'usces_action_confirm_page_point_inform' ); ?>
+<!--	-->
+<!--						</form>-->
+					<?//php endif; ?>
 						<?php do_action( 'usces_action_confirm_after_form' ); ?>
 	
 					</div><!-- #cart -->
