@@ -1,230 +1,127 @@
-.l-header {
-  width: 100%;
-  margin: 0 auto;
-  border-bottom: none;
-  &-column {
-    display: flex;
-  }
-}
+.header-header-vNoK7j {
+  height: 40px;
 
-.p-header {
-  position: fixed;
-  z-index: 2;
-  @include _mq-min(){
-    width: 840px;
-    margin: 0 auto;
-    border: none;
-  }
-  &-inner {
-    padding: 16px 20px;
-  }
-  &-logo {
-    width: 48px;
-    margin-right: auto;
-  }
-  &-nav {
+  .header-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 40px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #bababa;
+    z-index: 9999;
   }
-  &-nav-unshown {
-    display: none;
-  }
-  &-icon {
-    width: 20px;
-    &:not(:last-child) {
-      margin-right: 16px;
-    }
-  }
-  &-search {
-    position: relative;
-  }
-}
 
-// ドロワーメニュー
-.p-drawer {
-  display: none;
-  width: 100%;
-  margin: 0 auto;
-  background: #fff;
-  box-shadow: 3px -3px 3px -3px rgba(0,0,0,0.4);
-  position: relative;
-  top: -15px;
-  &.is-active {
+  .logo {
     display: block;
+    width: 40px;
+    margin: 0 auto;
   }
-  &-inner {
-    padding: 16px 16px 56px;
-  }
-  &-searchBar {
-    text-align: center;
-  }
-  &-searchBox {
-    padding-top: 32px;
-    .s-box {
-      position: relative;
-      display: block;
-      width: 100%;
-    }
-    input[type='text'] {
-      width: 100%;
-      height: 32px;
-      line-height: 32px;
-      padding: 0 12px;
-      background: #eee;
-      border: none;
-      border-radius: 32px;
-    }
-    #searchsubmit {
-      position: absolute;
-      top: 9px;
-      right: 12px;
-      background: url(images/icon_search.png) no-repeat;
-      background-size: contain;
-      border: none;
-    }
-  }
-  &-nav {
-    padding-top: 32px;
-    &-item {
-      &:not(:first-child) {
-        padding-top: 40px;
-      }
-    }
-    &-item-title {
-      font-size: _rem(20px);
-    }
-    &-item-list {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding-top: 16px;
-      &::before {
-        content: '';
-        display: block;
-        width: 23%;
-        order: 1;
-      }
-      &::after {
-        content: '';
-        display: block;
-        width: 23%;
-      }
-      li {
-        width: 23%;
-        padding: 16px 0;
-      }
-      a {
-        display: block;
-      }
-      img {
-        display: block;
-        width: 48px;
-        height: 48px;
-        margin: 0 auto;
-        border-radius: 100%;
-      }
-    }
-    &-item-list-name {
-      display: block;
-      padding-top: 8px;
-      text-align: center;
-      font-size: _rem(12px);
-    }
-    &-item-list-categoly {
-      img {
-        padding: 10px;
-        background-color: #f6f5f3;
-      }
-    }
-  }
-}
 
-.p-category-nav {
-  padding: 16px 0;
-  overflow-x: scroll;
-}
-.p-category-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 135%;
-  li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 84px;
-    height: 72px;
-    a {
-      display: block;
-      &.router-link-exact-active {
-        &::before {
-          background-color: #3ea0c1;
-        }
-        &.-pickup::before {
-          background-image: url(images/icon_pickup_on.svg);
-        }
-        &.-traveler::before {
-          background-image: url(images/icon_traveler_on.svg);
-        }
-        //&.-country::before {
-        //  background-image: url(images/icon_);
-        //}
-        &.-fashion::before {
-          background-image: url(images/icon_fashion_on.svg);
-        }
-        &.-food::before {
-          background-image: url(images/icon_food_on.svg);
-        }
-        &.-spot::before {
-          background-image: url(images/icon_spot_on.svg);
-        }
-        &.-all::before {
-          background-image: url(images/icon_all_on.svg);
-        }
-      }
-      &::before {
-        display: block;
-        content: '';
-        width: 48px;
-        height: 48px;
-        margin: 0 auto;
-        background-color: #f6f5f3;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 24px;
-        border-radius: 50%;
-      }
-      &.-pickup::before {
-        background-image: url(images/icon_pickup.svg);
-      }
-      &.-traveler::before {
-        background-image: url(images/icon_traveler.svg);
-      }
-      //&.-country::before {
-      //  background-image: url(images/icon_);
-      //}
-      &.-fashion::before {
-        background-image: url(images/icon_fashion.svg);
-      }
-      &.-food::before {
-        background-image: url(images/icon_food.svg);
-      }
-      &.-spot::before {
-        background-image: url(images/icon_spot.svg);
-      }
-      &.-all::before {
-        background-image: url(images/icon_all.svg);
-      }
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    top: 8px;
+  }
+
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    height: 3px!important;
+    background: #000;
+    border-radius: 4px;
+  }
+
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #000;
+  }
+
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #000;
+  }
+
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    top: 0;
+    height: 100%;
+  }
+
+  /* General sidebar styles */
+  .bm-menu {
+    background: #fff;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    & + .bm-item {
+      margin-top: 24px;
     }
   }
-  &-name {
-    display: inline-block;
-    width: 100%;
-    padding-top: 8px;
-    text-align: center;
-    font-size: _rem(11px);
+
+  /* Styling of overlay */
+  .bm-overlay {
+    background: none!important;
+  }
+
+  .menu-item {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: -28px;
+      display: block;
+      content: '';
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+    }
+    &-home {
+      &::before {
+        background: url(https://rite.co.jp/wp-content/uploads/2019/07/icon_home.svg);
+      }
+    }
+    &-myPage {
+      &::before {
+        background: url(https://rite.co.jp/wp-content/uploads/2019/07/icon_account.svg);
+      }
+    }
+    &-cart {
+      &::before {
+        background: url(https://rite.co.jp/wp-content/uploads/2019/07/icon_shopping_bag.svg);
+      }
+    }
   }
 }
