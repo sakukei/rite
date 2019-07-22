@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-<div id="InCart" class="site-content">
+<div id="primary" class="site-content">
 	<div id="content" role="main">
 
 		<?php if( have_posts() ) : usces_remove_filter(); ?>
@@ -17,14 +17,14 @@ get_header();
 			
 			<div class="column">
 
-<!--				<div class="cart_navi">-->
-<!--					<ul>-->
-<!--						<li class="current"><span class="number"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span><br />--><?php //_e('1.Cart','usces'); ?><!--</li>-->
-<!--						<li><span class="number"><i class="fa fa-user" aria-hidden="true"></i></span><br />--><?php //_e('2.Customer Info','usces'); ?><!--</li>-->
-<!--						<li><span class="number"><i class="fa fa-truck" aria-hidden="true"></i></span><br />--><?php //_e('3.Deli. & Pay.','usces'); ?><!--</li>-->
-<!--						<li><span class="number"><i class="fa fa-check" aria-hidden="true"></i></span><br />--><?php //_e('4.Confirm','usces'); ?><!--</li>-->
-<!--					</ul>-->
-<!--				</div>-->
+				<div class="cart_navi">
+					<ul>
+						<li class="current"><span class="number"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span><br /><?php _e('1.Cart','usces'); ?></li>
+						<li><span class="number"><i class="fa fa-user" aria-hidden="true"></i></span><br /><?php _e('2.Customer Info','usces'); ?></li>
+						<li><span class="number"><i class="fa fa-truck" aria-hidden="true"></i></span><br /><?php _e('3.Deli. & Pay.','usces'); ?></li>
+						<li><span class="number"><i class="fa fa-check" aria-hidden="true"></i></span><br /><?php _e('4.Confirm','usces'); ?></li>
+					</ul>
+				</div>
 
 				<article class="post" id="wc_<?php usces_page_name(); ?>">
 
@@ -38,50 +38,33 @@ get_header();
 					<?php if( usces_is_cart() ) : ?>
 						<div id="cart">
 							<div class="upbutton"><?php _e('Press the `update` button when you change the amount of items.','usces'); ?><input name="upButton" type="submit" value="<?php _e('Quantity renewal','usces'); ?>" onclick="return uscesCart.upCart()" /></div>
-              <!-- 購入動線のテンプレート -->
-              <?php usces_get_cart_rows(); ?>
-              <!------------------------->
-
-              <div class="cart_result">
-                <p class="title">注文内容</p>
-                <dl class="dl">
-                  <div class="inner">
-                    <dt class="dt">商品点数</dt>
-                    <dd class="dd"><?php usces_totalquantity_in_cart()	; ?></dd>
-                  </div>
-                  <div class="inner">
-                  <dt class="dt">合計</dt>
-                  <dd class="dd"><span class="sum"><?php usces_crform(usces_total_price('return'), true, false); ?></span></dd>
-                  </div>
-                </dl>
-              </div>
-<!--							<table cellspacing="0" id="cart_table">-->
-<!--								<thead>-->
-<!--								<tr>-->
-<!--									<th scope="row" class="num">No.</th>-->
-<!--									<th class="thumbnail"> </th>-->
-<!--									<th class="productname">--><?php //_e('item name','usces'); ?><!--</th>-->
-<!--									<th class="unitprice">--><?php //_e('Unit price','usces'); ?><!--</th>-->
-<!--									<th class="quantity">--><?php //_e('Quantity', 'usces'); ?><!--</th>-->
-<!--									<th class="subtotal">--><?php //_e('Amount','usces'); ?><!----><?php //usces_guid_tax(); ?><!--</th>-->
-<!--									<th class="stock">--><?php //_e('stock status','usces'); ?><!--</th>-->
-<!--									<th class="action"></th>-->
-<!--								</tr>-->
-<!--								</thead>-->
-<!--								<tbody>-->
-                      <?php //usces_get_cart_rows(); ?>
-<!--								</tbody>-->
-<!--								<tfoot>-->
-<!--								<tr>-->
-<!--									<th class="num"></th>-->
-<!--									<th class="thumbnail"></th>-->
-<!--									<th colspan="3" scope="row" class="aright">--><?php //_e('total items','usces'); ?><!----><?php //usces_guid_tax(); ?><!--</th>-->
-<!--									<th class="aright amount">--><?php //usces_crform(usces_total_price('return'), true, false); ?><!--</th>-->
-<!--									<th class="stock"></th>-->
-<!--									<th class="action"></th>-->
-<!--								</tr>-->
-<!--								</tfoot>-->
-<!--							</table>-->
+							<table cellspacing="0" id="cart_table">
+								<thead>
+								<tr>
+									<th scope="row" class="num">No.</th>
+									<th class="thumbnail"> </th>
+									<th class="productname"><?php _e('item name','usces'); ?></th>
+									<th class="unitprice"><?php _e('Unit price','usces'); ?></th>
+									<th class="quantity"><?php _e('Quantity','usces'); ?></th>
+									<th class="subtotal"><?php _e('Amount','usces'); ?><?php usces_guid_tax(); ?></th>
+									<th class="stock"><?php _e('stock status','usces'); ?></th>
+									<th class="action"></th>
+								</tr>
+								</thead>
+								<tbody>
+									<?php usces_get_cart_rows(); ?>
+								</tbody>
+								<tfoot>
+								<tr>
+									<th class="num"></th>
+									<th class="thumbnail"></th>
+									<th colspan="3" scope="row" class="aright"><?php _e('total items','usces'); ?><?php usces_guid_tax(); ?></th>
+									<th class="aright amount"><?php usces_crform(usces_total_price('return'), true, false); ?></th>
+									<th class="stock"></th>
+									<th class="action"></th>
+								</tr>
+								</tfoot>
+							</table>
 							<div class="currency_code"><?php _e('Currency','usces'); ?> : <?php usces_crcode(); ?></div>
 							<?php if( $usces_gp ) : ?>
 							<div class="gp"><img src="<?php bloginfo('template_directory'); ?>/images/gp.gif" alt="<?php _e('Business package discount','usces'); ?>" /><span><?php _e('The price with this mark applys to Business pack discount.','usces'); ?></span></div>
