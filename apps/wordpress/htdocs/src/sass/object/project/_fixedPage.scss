@@ -1,0 +1,27 @@
+// 固定ページ
+
+.fixed-bg {
+// 特定商取引法
+  .tokuteisyou {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      width: 100%;
+    }
+    th,
+    td {
+      padding: 12px;
+      font-size: 14px;
+      line-height: 1.4;
+      border: 2px solid #f9f9f9;
+    }
+  }
+  //利用規約
+  .terms {
+    padding: 12px;
+    h2 {
+      margin-top: 12px;
+    }
+  }
+}
+
