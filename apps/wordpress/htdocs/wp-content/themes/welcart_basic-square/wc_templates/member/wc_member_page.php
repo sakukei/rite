@@ -75,12 +75,12 @@ get_header();
 										<th scope="row"><?php _e('e-mail adress', 'usces'); ?></th>
 										<td colspan="2"><input name="member[mailaddress1]" id="mailaddress1" type="text" value="<?php usces_memberinfo('mailaddress1'); ?>" /></td>
 									</tr>
-									<tr>
+									<tr class="password">
 										<th scope="row"><?php _e('password', 'usces'); ?></th>
 										<td colspan="2"><input name="member[password1]" id="password1" type="password" value="<?php usces_memberinfo('password1'); ?>" />
 										<?php _e('Leave it blank in case of no change.', 'usces'); ?></td>
 									</tr>
-									<tr>
+									<tr class="password">
 										<th scope="row"><?php _e('Password (confirm)', 'usces'); ?></th>
 										<td colspan="2"><input name="member[password2]" id="password2" type="password" value="<?php usces_memberinfo('password2'); ?>" />
 										<?php _e('Leave it blank in case of no change.', 'usces'); ?></td>

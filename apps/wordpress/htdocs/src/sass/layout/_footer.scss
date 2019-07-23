@@ -1,8 +1,23 @@
 .footer-footer-1Dvec6 {
   position: relative;
+  @include _mq-min() {
+    max-width: 560px;
+    margin: 0 auto;
+  }
 
   .nav {
     padding: 0;
+    @include _mq-min() {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    li {
+      @include _mq-min() {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+      }
+    }
   }
   .item {
     margin-bottom: 0;

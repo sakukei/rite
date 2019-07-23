@@ -2705,7 +2705,7 @@ function usces_member_history( $out = '' ){
       $optstr = apply_filters( 'usces_filter_option_info_history', $optstr, $umhs, $cart_row, $i );
       $args = compact('cart', 'i', 'cart_row', 'post_id', 'sku' );
 
-      $cart_item_name = '<a href="' . get_permalink($post_id) . '">' . apply_filters('usces_filter_cart_item_name', esc_html($cartItemName), $args ) . '<br />' . $optstr . '</a>' . apply_filters('usces_filter_history_item_name', NULL, $umhs, $cart_row, $i);
+      $cart_item_name = '<a href="' . get_permalink($post_id) . '">' . apply_filters('usces_filter_cart_item_name', esc_html($cartItemName), $args ) . '<br /></a>' . apply_filters('usces_filter_history_item_name', NULL, $umhs, $cart_row, $i);
       $cart_item_name = apply_filters( 'usces_filter_history_cart_item_name', $cart_item_name, $cartItemName, $optstr, $cart_row, $i, $umhs );
 
       $history_cart_row = '<tr>
