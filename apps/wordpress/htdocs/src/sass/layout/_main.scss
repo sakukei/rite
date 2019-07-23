@@ -1,11 +1,6 @@
-//.p-main {
-//  padding-bottom: 136px;
-//  @include _mq-min(){
-//    width: 840px;
-//    margin: 0 auto;
-//  }
-//  &-content {
-//    position: relative;
-//    top: 55px;
-//  }
-//}
+.p-main {
+  @include _mq-min(){
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
