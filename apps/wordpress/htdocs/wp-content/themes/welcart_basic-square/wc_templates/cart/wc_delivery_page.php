@@ -7,7 +7,7 @@
 get_header();
 usces_delivery_info_script();
 ?>
-<div id="InCart" class="site-content">
+<div id="primary" class="site-content">
 	<div id="content" role="main">
 	
 	<div class="column-wrap">
@@ -62,11 +62,11 @@ usces_delivery_info_script();
 								<th scope="row"><?php _e('shipping option', 'usces'); ?></th>
 								<td colspan="2"><?php usces_the_delivery_method( $usces_entries['order']['delivery_method'] ); ?></td>
 							</tr>
-							<tr>
+							<tr class="delivery_item">
 								<th scope="row"><?php _e('Delivery date', 'usces'); ?></th>
 								<td colspan="2"><?php usces_the_delivery_date( $usces_entries['order']['delivery_date'] ); ?></td>
 							</tr>
-							<tr>
+							<tr class="delivery_item">
 								<th scope="row"><?php _e('Delivery Time', 'usces'); ?></th>
 								<td colspan="2"><?php usces_the_delivery_time( $usces_entries['order']['delivery_time'] ); ?></td>
 							</tr>

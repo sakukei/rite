@@ -26,71 +26,171 @@
   background: #327faa!important;
 }
 
-// usces-cart
-
-.cart_item {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  & + .cart_item {
-    margin-top: 24px;
+.cart-page {
+  margin-top: 60px;
+  .upbutton-lead {
+    font-size: 10px;
   }
-  .thumbnail {
-    max-width: 90px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  .detail {
-    max-width: 180px;
-  }
-  .num {
-    max-width: 40px;
-  }
-  .quantity {
+  .send {
     input {
-      max-width: 40px;
+      min-width: 124px;
+      height: 34px;
+      line-height: 34px;
+      padding: 0;
+      font-size: 12px;
     }
   }
-  .unitprice {
-    margin-top: 8px;
-  }
-  .delButton {
-    padding: 0;
-    margin-top: 8px;
-    background: none;
-    text-decoration: underline;
-    font-size: 12px;
-  }
-  .stock,
-  .subtotal {
+}
+.customer_form {
+  .delivery_item {
     display: none;
   }
+  input#search_zipcode {
+    padding: 6px 10px;
+    background: #eee;
+  }
 }
 
-.cart_result {
-  margin-top: 42px;
-  .title {
-    font-size: 16px;
-  }
-  .dl {
-    margin-top: 24px;
-  }
-  .inner {
-    display: flex;
-    justify-content: space-between;
-    & + .inner {
-      margin-top: 12px;
+#wc_customer {
+  .password {
+    input {
+      margin-bottom: 8px;
     }
   }
-  .dt,
-  .dd {
-    font-size: 12px;
-  }
-  .sum {
-    font-size: 16px;
-    font-weight: bold;
+  .send input.to_reganddeliveryinfo_button {
+    min-width: 160px;
+    margin-top: 18px;
   }
 }
+
+
+// クレジットカード記載モーダル
+#ui-id-1 {
+  font-size: 14px;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  display: none;
+}
+.ui-draggable .ui-dialog-titlebar {
+  background: none;
+  border: none;
+  padding: 16px!important;
+}
+#escott-token-form {
+  .attention {
+    margin: 8px 0;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+
+.settlement_form_send {
+  input {
+    min-width: 124px!important;
+    padding: 8px!important;
+    font-size: 12px!important;
+  }
+}
+
+//内容確認
+#info-confirm .confiem_notice {
+  font-size: 12px;
+}
+#wc_confirm .send input#back_button,
+#wc_confirm .send input#purchase_button {
+  min-width: 134px;
+  font-size: 10px;
+}
+
+//完了
+#wc_ordercompletion {
+  h3 {
+    font-size: 16px;
+  }
+  .header_explanation {
+    p {
+      font-size: 11px;
+      line-height: 1.5;
+    }
+  }
+  .send a {
+    min-width: 124px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    font-size: 12px;
+  }
+}
+
+.completion_footer {
+  margin-top: 290px;
+}
+
+// usces-cart
+
+//.cart_item {
+//  display: grid;
+//  grid-template-columns: 1fr 1fr 1fr;
+//  grid-template-rows: 1fr;
+//  & + .cart_item {
+//    margin-top: 24px;
+//  }
+//  .thumbnail {
+//    max-width: 90px;
+//    img {
+//      width: 100%;
+//      height: 100%;
+//      object-fit: cover;
+//    }
+//  }
+//  .detail {
+//    max-width: 180px;
+//  }
+//  .num {
+//    max-width: 40px;
+//  }
+//  .quantity {
+//    input {
+//      max-width: 40px;
+//    }
+//  }
+//  .unitprice {
+//    margin-top: 8px;
+//  }
+//  .delButton {
+//    padding: 0;
+//    margin-top: 8px;
+//    background: none;
+//    text-decoration: underline;
+//    font-size: 12px;
+//  }
+//  .stock,
+//  .subtotal {
+//    display: none;
+//  }
+//}
+//
+//.cart_result {
+//  margin-top: 42px;
+//  .title {
+//    font-size: 16px;
+//  }
+//  .dl {
+//    margin-top: 24px;
+//  }
+//  .inner {
+//    display: flex;
+//    justify-content: space-between;
+//    & + .inner {
+//      margin-top: 12px;
+//    }
+//  }
+//  .dt,
+//  .dd {
+//    font-size: 12px;
+//  }
+//  .sum {
+//    font-size: 16px;
+//    font-weight: bold;
+//  }
+//}

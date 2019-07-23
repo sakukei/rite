@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-<div id="InCart" class="site-content">
+<div id="primary" class="site-content">
 	<div id="content" role="main">
 
 	<div class="column-wrap">
@@ -57,4 +57,6 @@ get_header();
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<div class="completion_footer">
+  <?php get_footer(); ?>
+</div>

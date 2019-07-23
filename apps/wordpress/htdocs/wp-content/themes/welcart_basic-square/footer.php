@@ -6,45 +6,17 @@
 
 <?php endif; ?>
 
-<section class="p-banner">
-  <div class="p-banner-img">
-    <a href="https://www.instagram.com/ritetravel/" target="_blank">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner_follow.png" alt="rite travel follow画像">
-    </a>
-  </div>
-</section>
-
-<footer class="l-footer p-footer">
-
-  <div class="p-footer-menu">
-
-    <nav class="p-footer-nav">
-      <ul class="p-footer-nav-list">
-        <li>
-          <a href="https://tayori.com/form/8efb7c3fbcb6b6d6cf6ab92d35f8bb1b7d053978" target="_blank"
-             class="p-footer-link">お問い合わせ</a>
-        </li>
-      </ul>
-      <input type="checkbox" id="p-footer-accordion-label" class="c-accordion-check p-footer-accordion-check"/>
-      <label for="p-footer-accordion-label"
-             class="c-accordion-label p-footer-accordion-label p-footer-link">会社概要・規約</label>
-      <ul class="p-footer-nav-list-accordion">
-        <li class="page-item footer-about">
-          <a href="http://company.rite.co.jp/" target="_blank">会社概要</a>
-        </li>
-        <?php
-        $page_c = get_page_by_path('usces-cart');
-        $page_m = get_page_by_path('usces-member');
-        $pages = "{$page_c->ID},{$page_m->ID}";
-        wp_nav_menu(array('container' => 'ul', 'theme_location' => 'footer', 'exclude' => $pages, 'menu_class' => 'p-footer-menu-child'));
-        ?>
+<footer class="footer-footer-1Dvec6">
+  <div class="inner">
+    <nav class="nav">
+      <ul class="accordion">
+        <li class="item"><a href="https://tayori.com/form/8efb7c3fbcb6b6d6cf6ab92d35f8bb1b7d053978"
+                            target="_blank">お問い合わせ</a></li>
       </ul>
     </nav>
-    <p class="p-footer-copyright">&copy; 2019 rite inc.</p>
-
+    <p class="copyright">© 2019 rite inc.</p>
   </div>
-
-</footer><!-- #colophon -->
+</footer>
 
 </div><!-- wrapper -->
 
