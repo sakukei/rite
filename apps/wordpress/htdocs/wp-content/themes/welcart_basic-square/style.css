@@ -703,6 +703,31 @@ input[type=button].allocation_edit_button,
 	margin-top: 290px;
 }
 
+.fixed-bg .tokuteisyou {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.fixed-bg .tokuteisyou tr {
+	width: 100%;
+}
+
+.fixed-bg .tokuteisyou th,
+.fixed-bg .tokuteisyou td {
+	padding: 12px;
+	font-size: 14px;
+	line-height: 1.4;
+	border: 2px solid #f9f9f9;
+}
+
+.fixed-bg .terms {
+	padding: 12px;
+}
+
+.fixed-bg .terms h2 {
+	margin-top: 12px;
+}
+
 .p-traveler-name {
 	font-size: 18px;
 	margin: 0 0 20px;
