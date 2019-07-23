@@ -37,7 +37,7 @@ get_header();
 					<form action="<?php usces_url('cart'); ?>" method="post" onKeyDown="if(event.keyCode == 13){return false;}">
 					<?php if( usces_is_cart() ) : ?>
 						<div id="cart">
-							<div class="upbutton"><?php _e('Press the `update` button when you change the amount of items.','usces'); ?><input name="upButton" type="submit" value="<?php _e('Quantity renewal','usces'); ?>" onclick="return uscesCart.upCart()" /></div>
+							<div class="upbutton"><span class="upbutton-lead"><?php _e('Press the `update` button when you change the amount of items.','usces'); ?></span><input name="upButton" type="submit" value="<?php _e('Quantity renewal','usces'); ?>" onclick="return uscesCart.upCart()" /></div>
 							<table cellspacing="0" id="cart_table">
 								<thead>
 								<tr>
@@ -95,4 +95,6 @@ get_header();
 	</div><!-- #content -->
 </div><!-- #primary -->
 
+<div class="cart_footer">
 <?php get_footer(); ?>
+</div>

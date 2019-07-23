@@ -2861,7 +2861,7 @@ function usces_get_cart_rows( $out = '' ) {
           }
         }
       }
-      $row .= apply_filters( 'usces_filter_option_cart', $optstr, $options);
+      //$row .= apply_filters( 'usces_filter_option_cart', $optstr, $options);
     }
     $row .= apply_filters( 'usces_filter_option_info_cart', '', $cart_row, $args );
     $row .= '</td>
@@ -2971,7 +2971,7 @@ function usces_get_confirm_rows( $out = '' ) {
           }
         }
       }
-      $row .= apply_filters( 'usces_filter_option_confirm', $optstr, $options);
+      //$row .= apply_filters( 'usces_filter_option_confirm', $optstr, $options);
     }
     $row .= apply_filters( 'usces_filter_option_info_confirm', '', $cart_row, $args );
     $row .= '</td>

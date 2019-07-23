@@ -7,13 +7,16 @@
 <?php endif; ?>
 
 <footer class="footer-footer-1Dvec6">
-  <nav class="nav">
-    <ul class="accordion">
-      <li class="item"><a href="https://tayori.com/form/8efb7c3fbcb6b6d6cf6ab92d35f8bb1b7d053978"
-                          target="_blank">お問い合わせ</a></li>
-    </ul>
-  </nav>
-  <p class="copyright">© 2019 rite inc.</p></footer>
+  <div class="inner">
+    <nav class="nav">
+      <ul class="accordion">
+        <li class="item"><a href="https://tayori.com/form/8efb7c3fbcb6b6d6cf6ab92d35f8bb1b7d053978"
+                            target="_blank">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">© 2019 rite inc.</p>
+  </div>
+</footer>
 
 </div><!-- wrapper -->
 

@@ -57,4 +57,6 @@ get_header();
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<div class="completion_footer">
+  <?php get_footer(); ?>
+</div>

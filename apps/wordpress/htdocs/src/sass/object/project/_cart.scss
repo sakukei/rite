@@ -26,6 +26,92 @@
   background: #327faa!important;
 }
 
+.cart-page {
+  margin-top: 60px;
+  .upbutton-lead {
+    font-size: 10px;
+  }
+  .send {
+    input {
+      min-width: 124px;
+      height: 34px;
+      line-height: 34px;
+      padding: 0;
+      font-size: 12px;
+    }
+  }
+}
+.customer_form {
+  .delivery_item {
+    display: none;
+  }
+  input#search_zipcode {
+    padding: 6px 10px;
+    background: #eee;
+  }
+}
+// クレジットカード記載モーダル
+#ui-id-1 {
+  font-size: 14px;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  display: none;
+}
+.ui-draggable .ui-dialog-titlebar {
+  background: none;
+  border: none;
+  padding: 16px!important;
+}
+#escott-token-form {
+  .attention {
+    margin: 8px 0;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+
+.settlement_form_send {
+  input {
+    min-width: 124px!important;
+    padding: 8px!important;
+    font-size: 12px!important;
+  }
+}
+
+//内容確認
+#info-confirm .confiem_notice {
+  font-size: 12px;
+}
+#wc_confirm .send input#back_button,
+#wc_confirm .send input#purchase_button {
+  min-width: 134px;
+  font-size: 10px;
+}
+
+//完了
+#wc_ordercompletion {
+  h3 {
+    font-size: 16px;
+  }
+  .header_explanation {
+    p {
+      font-size: 11px;
+      line-height: 1.5;
+    }
+  }
+  .send a {
+    min-width: 124px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    font-size: 12px;
+  }
+}
+
+.completion_footer {
+  margin-top: 290px;
+}
+
 // usces-cart
 
 //.cart_item {

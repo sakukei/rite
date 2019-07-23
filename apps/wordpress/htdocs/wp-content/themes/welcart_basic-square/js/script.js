@@ -7,7 +7,7 @@ jQuery( function() {
       eventLabel: location.href
     });
   });
-  jQuery('.to_customerinfo_button').val('会員登録せずに購入');
+  // jQuery('.to_customerinfo_button').val('会員登録せずに購入');
 });
 
 
