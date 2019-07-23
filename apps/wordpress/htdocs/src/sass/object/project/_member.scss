@@ -57,7 +57,8 @@
 #memberinfo .customer_form td {
   margin-top: 4px;
 }
-#wc_newmemberform {
+#wc_newmemberform,
+#wc_member {
   .deletemember {
     display: none;
   }
@@ -97,6 +98,12 @@
   }
   label {
     font-size: 12px;
+  }
+}
+
+.password {
+  input {
+    margin-bottom: 4px;
   }
 }
 
