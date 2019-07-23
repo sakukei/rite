@@ -50,6 +50,20 @@
     background: #eee;
   }
 }
+
+#wc_customer {
+  .password {
+    input {
+      margin-bottom: 8px;
+    }
+  }
+  .send input.to_reganddeliveryinfo_button {
+    min-width: 160px;
+    margin-top: 18px;
+  }
+}
+
+
 // クレジットカード記載モーダル
 #ui-id-1 {
   font-size: 14px;

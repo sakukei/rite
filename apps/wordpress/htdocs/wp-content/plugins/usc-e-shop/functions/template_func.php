@@ -2655,7 +2655,7 @@ function usces_member_history( $out = '' ){
 				<table id="retail_table_' . $umhs['ID'] . '" class="retail">';
     $history_cart_head = '<thead><tr>
 				<th scope="row" class="cartrownum">No.</th>
-				<th class="thumbnail">&nbsp;</th>
+				<th class="thumbnail" style="display: none">&nbsp;</th>
 				<th class="productname">' . __('Items', 'usces') . '</th>
 				<th class="price">' . __('Unit price', 'usces') . '</th>
 				<th class="quantity">' . __('Quantity', 'usces') . '</th>
@@ -2710,7 +2710,7 @@ function usces_member_history( $out = '' ){
 
       $history_cart_row = '<tr>
 				<td class="cartrownum">' . ($i + 1) . '</td>
-				<td class="thumbnail">';
+				<td class="thumbnail" style="display: none">';
       $cart_thumbnail = '<a href="' . get_permalink($post_id) . '">' . wp_get_attachment_image( $pictid, array(60, 60), true ) . '</a>';
       $history_cart_row .= apply_filters('usces_filter_cart_thumbnail', $cart_thumbnail, $post_id, $pictid, $i, $cart_row);
       $history_cart_row .= '</td>

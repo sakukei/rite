@@ -1,3 +1,106 @@
+// マイページ
+#wc_login .loginbox input.loginmail, #wc_login .loginbox input.loginpass, #wc_member .loginbox input.loginmail, #wc_member .loginbox input.loginpass, #wc_lostmemberpassword .loginbox input.loginmail, #wc_changepassword .loginbox input.loginpass, #wc_changepassword .loginbox input.loginpass {
+  padding: 10px;
+}
+#wc_lostmemberpassword .loginbox label {
+  font-size: 14px;
+}
+#wc_lostmemberpassword {
+   #member_login,
+   #nav a {
+    min-width: 124px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    font-size: 12px;
+  }
+  div {
+    font-size: 12px;
+  }
+}
+#memberinfo th {
+  font-size: 14px;
+}
+#memberinfo td {
+  font-size: 12px;
+  padding-top: 8px;
+}
+#memberinfo h3 {
+  margin-top: 36px;
+  font-size: 14px;
+}
+
+.history-area {
+  padding-top: 12px;
+}
+
+.member_submenu {
+  a {
+    min-width: 124px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    font-size: 12px;
+  }
+}
+
+.member_page_title {
+  padding-top: 16px;
+}
+
+#memberinfo .customer_form {
+  margin-top: 12px;
+}
+#memberinfo .customer_form th {
+  font-size: 12px;
+}
+#memberinfo .customer_form td {
+  margin-top: 4px;
+}
+#wc_newmemberform {
+  .deletemember {
+    display: none;
+  }
+  .customer_form input[type="password"] {
+    margin-bottom: 4px;
+  }
+  .send input {
+    min-width: 124px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    font-size: 12px;
+  }
+  .send {
+    .top {
+      background-color: rgba(239, 239, 239, 1 )!important;
+    }
+  }
+}
+
+#wc_newmemberform {
+  .header_explanation {
+    li {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.agree_member_area .at_exp_text {
+  font-size: 12px;
+}
+.at_check_area {
+  input {
+    position: relative;
+    top: 2px;
+  }
+  label {
+    font-size: 12px;
+  }
+}
+
+
 //.no-customize-support {
 //  .p-header {
 //    display: none;

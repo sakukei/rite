@@ -84,11 +84,11 @@ get_header(); ?>
 								<td colspan="2"><input name="customer[mailaddress2]" id="mailaddress2" type="text" value="<?php esc_attr_e($usces_entries['customer']['mailaddress2']); ?>" style="ime-mode: inactive" /></td>
 							</tr>
 							<?php if( usces_is_membersystem_state() ) : ?>
-							<tr>
+							<tr class="password">
 								<th scope="row"><?php if( $member_regmode == 'editmemberfromcart' ) : ?><em><?php _e('*', 'usces'); ?></em><?php endif; ?><?php _e('password', 'usces'); ?></th>
 								<td colspan="2"><input name="customer[password1]" style="width:100px" type="password" value="<?php esc_attr_e($usces_entries['customer']['password1']); ?>" /><?php if( $member_regmode != 'editmemberfromcart' ) _e('When you enroll newly, please fill it out.', 'usces'); ?>	</td>
 							</tr>
-							<tr>
+							<tr class="password">
 								<th scope="row"><?php if( $member_regmode == 'editmemberfromcart' ) : ?><em><?php _e('*', 'usces'); ?></em><?php endif; ?><?php _e('Password (confirm)', 'usces'); ?></th>
 								<td colspan="2"><input name="customer[password2]" style="width:100px" type="password" value="<?php esc_attr_e($usces_entries['customer']['password2']); ?>" /><?php if( $member_regmode != 'editmemberfromcart' ) _e('When you enroll newly, please fill it out.', 'usces'); ?></td>
 							</tr>
