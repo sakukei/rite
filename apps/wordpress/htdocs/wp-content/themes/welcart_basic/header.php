@@ -11,6 +11,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta name="format-detection" content="telephone=no"/>
+  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
 	<?php wp_head(); ?>
 </head>
@@ -18,7 +20,7 @@
 <body <?php body_class(); ?>>
 
 	<header id="masthead" class="site-header" role="banner">
-		
+
 		<div class="inner cf">
 
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
@@ -26,13 +28,13 @@
 			<<?php echo $heading_tag; ?> class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></<?php echo $heading_tag; ?>>
 
 			<?php if(! welcart_basic_is_cart_page()): ?>
-			
+
 			<div class="snav cf">
 
 				<div class="search-box">
 					<i class="fa fa-search"></i>
 					<?php get_search_form(); ?>
-				
+
 				</div>
 
 				<?php if(usces_is_membersystem_state()): ?>
@@ -58,22 +60,22 @@
 			</div><!-- .snav -->
 
 			<?php endif; ?>
-			
+
 		</div><!-- .inner -->
 
 		<?php if(! welcart_basic_is_cart_page()): ?>
-		
+
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<label for="panel"><span></span></label>
 			<input type="checkbox" id="panel" class="on-off" />
-			<?php 
+			<?php
 				$page_c	=	get_page_by_path('usces-cart');
 				$page_m	=	get_page_by_path('usces-member');
 				$pages	=	"{$page_c->ID},{$page_m->ID}";
 				wp_nav_menu( array( 'theme_location' => 'header', 'container_class' => 'nav-menu-open' , 'exclude' => $pages ,  'menu_class' => 'header-nav-container cf' ) );
 			?>
 		</nav><!-- #site-navigation -->
-		
+
 		<?php endif; ?>
 
 	</header><!-- #masthead -->
@@ -83,13 +85,13 @@
 		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo('name'); ?>">
 	</div><!-- main-image -->
 	<?php endif; ?>
-	
-	<?php 
+
+	<?php
 		if( is_front_page() || is_home() || welcart_basic_is_cart_page() || welcart_basic_is_member_page() ) {
-			$class = 'one-column';	
+			$class = 'one-column';
 		}else {
 			$class = 'two-column right-set';
 		};
 	?>
-	
+
 	<div id="main" class="wrapper <?php echo $class;?>">
