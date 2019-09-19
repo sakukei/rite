@@ -279,6 +279,28 @@ function get_price( $object ) {
   }
 }
 
+//ブランドを取得する関数を登録
+add_action( 'rest_api_init', 'register_brand' );
+
+function register_brand() {
+  register_rest_field( 'post',
+    'tag_brand',
+    array(
+      'get_callback'    => 'get_brand'
+    )
+  );
+}
+
+//slugに"brand"が付いていたときbrand判定
+function get_brand( $object ) {
+  $tag = get_the_tags($object[ 'id' ]);
+  for ($i = 0; $i < count($tag); ++$i) {
+    if(strpos($tag[$i]->slug,'brand') !== false) {
+      return $tag_name[$i] = $tag[$i]->name;
+    }
+  }
+}
+
 // SKUの選択情報を追加
 add_action( 'rest_api_init', 'register_select_sku' );
 
