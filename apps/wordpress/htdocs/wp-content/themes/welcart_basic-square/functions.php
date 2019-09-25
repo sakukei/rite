@@ -406,7 +406,7 @@ function get_product_input_option( $object ) {
   return null;
 }
 
-// カテゴリー画像、カテゴリー背景画像、キャッチコピー、インスタグラムリンク、ブランドのスラッグ,
+// カテゴリー画像、カテゴリー背景画像、キャッチコピー、ラベル、インスタグラムリンク、ブランドのスラッグ,
 add_action( 'rest_api_init', 'register_category_image' );
 
 function register_category_image() {
@@ -428,6 +428,13 @@ function register_category_image() {
     'catch_copy',
     array(
       'get_callback'    => 'get_category_catch_copy'
+    )
+  );
+
+  register_rest_field( 'category',
+    'label',
+    array(
+      'get_callback'    => 'get_category_label'
     )
   );
 
@@ -471,6 +478,14 @@ function get_category_background_image( $cat ) {
 
 function get_category_catch_copy( $cat ) {
   $url = get_term_meta($cat[ 'id' ], 'catch_copy', true);
+  if (! empty($url)) {
+    return $url;
+  }
+  return null;
+}
+
+function get_category_label( $cat ) {
+  $url = get_term_meta($cat[ 'id' ], 'label', true);
   if (! empty($url)) {
     return $url;
   }
