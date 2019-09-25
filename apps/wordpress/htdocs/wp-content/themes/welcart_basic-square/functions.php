@@ -279,6 +279,28 @@ function get_price( $object ) {
   }
 }
 
+//ブランドを取得する関数を登録
+add_action( 'rest_api_init', 'register_brand' );
+
+function register_brand() {
+  register_rest_field( 'post',
+    'tag_brand',
+    array(
+      'get_callback'    => 'get_brand'
+    )
+  );
+}
+
+//slugに"brand"が付いていたときbrand判定
+function get_brand( $object ) {
+  $tag = get_the_tags($object[ 'id' ]);
+  for ($i = 0; $i < count($tag); ++$i) {
+    if(strpos($tag[$i]->slug,'brand') !== false) {
+      return $tag_name[$i] = $tag[$i]->name;
+    }
+  }
+}
+
 // SKUの選択情報を追加
 add_action( 'rest_api_init', 'register_select_sku' );
 
@@ -384,7 +406,7 @@ function get_product_input_option( $object ) {
   return null;
 }
 
-// カテゴリー画像、インスタグラムリンク、ブランドのスラッグ
+// カテゴリー画像、カテゴリー背景画像、キャッチコピー、ラベル、インスタグラムリンク、ブランドのスラッグ,
 add_action( 'rest_api_init', 'register_category_image' );
 
 function register_category_image() {
@@ -394,6 +416,28 @@ function register_category_image() {
       'get_callback'    => 'get_category_image'
     )
   );
+
+  register_rest_field( 'category',
+    'background_image',
+    array(
+      'get_callback'    => 'get_category_background_image'
+    )
+  );
+
+  register_rest_field( 'category',
+    'catch_copy',
+    array(
+      'get_callback'    => 'get_category_catch_copy'
+    )
+  );
+
+  register_rest_field( 'category',
+    'label',
+    array(
+      'get_callback'    => 'get_category_label'
+    )
+  );
+
   register_rest_field( 'category',
     'instagram',
     array(
@@ -420,6 +464,30 @@ function get_category_image( $cat ) {
   $image_path = get_term_meta($cat[ 'id' ], 'wcct-tag-thumbnail-url', true);
   if (! empty($image_path)) {
     return $image_path;
+  }
+  return null;
+}
+
+function get_category_background_image( $cat ) {
+  $image_path = get_term_meta($cat[ 'id' ], 'background_image', true);
+  if (! empty($image_path)) {
+    return $image_path;
+  }
+  return null;
+}
+
+function get_category_catch_copy( $cat ) {
+  $url = get_term_meta($cat[ 'id' ], 'catch_copy', true);
+  if (! empty($url)) {
+    return $url;
+  }
+  return null;
+}
+
+function get_category_label( $cat ) {
+  $url = get_term_meta($cat[ 'id' ], 'label', true);
+  if (! empty($url)) {
+    return $url;
   }
   return null;
 }
